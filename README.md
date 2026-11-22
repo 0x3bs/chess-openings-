@@ -48,7 +48,31 @@ Licensed under the [MIT License](LICENSE).
   clean runs get a stronger green mark. The board has a size slider with −/+
   controls that grow or shrink width and height together.
 
-## Quick start
+## Download and run
+
+No account, database or API key is needed. You only need **Node.js 22** or newer
+(`node -v`). [INSTALL.md](INSTALL.md) explains how to install Node on Windows,
+macOS and Linux.
+
+### 1. Get the project
+
+**Option A — download the ZIP (no Git needed)**
+
+1. Open <https://github.com/0x3bs/chess-openings->.
+2. Click the green **Code** button, then **Download ZIP**.
+3. Extract the ZIP and open a terminal in the extracted folder. It contains
+   `package.json`, `app/`, `lib/` and the other project files.
+
+**Option B — clone with Git**
+
+```bash
+git clone https://github.com/0x3bs/chess-openings-.git
+cd chess-openings-
+```
+
+If you forked the project, use your own repository URL instead.
+
+### 2. Start the server
 
 ```bash
 npm install
@@ -56,7 +80,15 @@ npm run dev
 ```
 
 Open <http://localhost:3000>. The first request redirects to `/en` or `/ar`
-based on the saved language cookie, then the browser language.
+based on the saved language cookie, then the browser language. Press `Ctrl+C`
+in the terminal to stop the server.
+
+For a production build:
+
+```bash
+npm run build
+npm start
+```
 
 > **Progress file.** On the first finished line the server creates
 > `data/progress.json`. It is git-ignored, needs no database or API key, and is
