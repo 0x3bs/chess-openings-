@@ -1,6 +1,13 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type CSSProperties,
+} from "react";
 import type { DrawShape } from "@lichess-org/chessground/draw";
 import type { Key } from "@lichess-org/chessground/types";
 import { ChessBoard } from "./ChessBoard";
@@ -32,9 +39,7 @@ import {
   loadRemoteProgress,
   loadRemoteStats,
   saveRemoteLine,
-  saveRemoteStats,
 } from "@/lib/db/progress";
-import { SyncNotice } from "./SyncNotice";
 
 type Mode = "learn" | "train" | "drill" | "exam";
 type DrillScope = "due" | "mix" | "line";
@@ -53,6 +58,17 @@ type DrillResult = {
 };
 
 const EMPTY_DESTS = new Map<string, string[]>();
+
+const BOARD_SIZE_KEY = "chess-coach-board-size";
+const BOARD_SIZE_DEFAULT = 460;
+const BOARD_SIZE_MIN = 280;
+const BOARD_SIZE_MAX = 640;
+const BOARD_SIZE_STEP = 20;
+
+function clampBoardSize(value: number): number {
+  if (!Number.isFinite(value)) return BOARD_SIZE_DEFAULT;
+  return Math.min(BOARD_SIZE_MAX, Math.max(BOARD_SIZE_MIN, Math.round(value)));
+}
 
 function toDrawShapes(point: CoachPoint): DrawShape[] {
   return point.shapes.map((shape) =>
@@ -127,6 +143,7 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
   const [completed, setCompleted] = useState(false);
   const [lastRunClean, setLastRunClean] = useState(false);
   const [syncToken, setSyncToken] = useState(0);
+  const [boardSize, setBoardSize] = useState(BOARD_SIZE_DEFAULT);
 
   const [drillQueue, setDrillQueue] = useState<string[]>([]);
   const [drillIndex, setDrillIndex] = useState(0);
@@ -147,6 +164,23 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
   useEffect(() => {
     statsRef.current = stats;
   }, [stats]);
+
+  useEffect(() => {
+    try {
+      const raw = window.localStorage.getItem(BOARD_SIZE_KEY);
+      if (raw !== null) setBoardSize(clampBoardSize(Number(raw)));
+    } catch {
+      // A blocked localStorage only means the default size is used.
+    }
+  }, []);
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(BOARD_SIZE_KEY, String(boardSize));
+    } catch {
+      // ignore
+    }
+  }, [boardSize]);
 
   useEffect(() => {
     let cancelled = false;
@@ -410,7 +444,6 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
     statsRef.current = nextStats;
     setStats(nextStats);
     void saveRemoteLine(next[line.id]);
-    void saveRemoteStats(nextStats);
 
     if (mode === "drill" || mode === "exam") {
       setDrillResults((previous) => [
@@ -679,7 +712,6 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
 
   return (
     <div className="study-page">
-      <SyncNotice />
       <section className="study-hero">
         <div className="study-hero-copy">
           <Link href="/openings" className="study-back">
@@ -799,6 +831,8 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
                 const itemProgress = progress[item.id];
                 const due = isDue(itemProgress);
                 const mastery = masteryOf(itemProgress);
+                const lineLearned = learnedOf(itemProgress);
+                const lineFinished = completedOf(itemProgress);
                 const notes = item.moves.reduce(
                   (sum, move) => sum + (move.coach?.length ?? 0),
                   0,
@@ -807,7 +841,11 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
                   <button
                     key={item.id}
                     type="button"
-                    className={`study-picker-line${item.id === line.id ? " is-current" : ""}`}
+                    className={`study-picker-line${
+                      item.id === line.id ? " is-current" : ""
+                    }${lineLearned ? " is-clean" : lineFinished ? " is-finished" : ""}${
+                      due ? " is-due" : ""
+                    }`}
                     onClick={() => selectLine(item.id)}
                   >
                     <span className="study-picker-line-top">
@@ -819,9 +857,9 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
                       {itemProgress
                         ? due
                           ? m.course.lineStatusDue
-                          : learnedOf(itemProgress)
+                          : lineLearned
                             ? fill(m.course.lineStatusClean, { mastery })
-                            : completedOf(itemProgress)
+                            : lineFinished
                               ? m.course.lineStatusFinished
                               : m.course.lineStatusLearning
                         : m.course.lineStatusNew}
@@ -881,6 +919,58 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
           </button>
         </div>
 
+        <div
+          className="board-size-control"
+          role="group"
+          aria-label={m.course.boardSize}
+        >
+          <span className="board-size-label">
+            {m.course.boardSize}
+            <small>{m.course.boardSizeHint}</small>
+          </span>
+          <button
+            type="button"
+            className="board-size-step"
+            onClick={() =>
+              setBoardSize((value) => clampBoardSize(value - BOARD_SIZE_STEP))
+            }
+            disabled={boardSize <= BOARD_SIZE_MIN}
+            aria-label={m.course.boardSizeDecrease}
+          >
+            −
+          </button>
+          <input
+            type="range"
+            min={BOARD_SIZE_MIN}
+            max={BOARD_SIZE_MAX}
+            step={BOARD_SIZE_STEP}
+            value={boardSize}
+            onChange={(event) =>
+              setBoardSize(clampBoardSize(Number(event.target.value)))
+            }
+            aria-label={m.course.boardSize}
+          />
+          <button
+            type="button"
+            className="board-size-step"
+            onClick={() =>
+              setBoardSize((value) => clampBoardSize(value + BOARD_SIZE_STEP))
+            }
+            disabled={boardSize >= BOARD_SIZE_MAX}
+            aria-label={m.course.boardSizeIncrease}
+          >
+            +
+          </button>
+          <span className="board-size-value">{boardSize}px</span>
+          <button
+            type="button"
+            className="board-size-reset"
+            onClick={() => setBoardSize(BOARD_SIZE_DEFAULT)}
+          >
+            {m.course.boardSizeReset}
+          </button>
+        </div>
+
         <span className="study-toolbar-note">
           {fill(m.course.toolbarNote, { count: opening.lines.length })}
         </span>
@@ -896,7 +986,10 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
         </button>
       </div>
 
-      <div className="study-layout">
+      <div
+        className="study-layout"
+        style={{ "--board-size": `${boardSize}px` } as CSSProperties}
+      >
         <section
           className="study-stage"
           aria-label={m.course.studyBoardAria}

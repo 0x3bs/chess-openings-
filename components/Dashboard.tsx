@@ -2,7 +2,6 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { LocaleLink as Link } from "./LocaleLink";
-import { SyncPanel } from "./SyncPanel";
 import { WeekStreak } from "./WeekStreak";
 import { useI18n } from "@/lib/i18n/LocaleProvider";
 import { fill } from "@/lib/i18n/plural";
@@ -203,11 +202,10 @@ export function Dashboard({ openings }: { openings: Opening[] }) {
           <p className="eyebrow">{m.dashboard.eyebrow}</p>
           <h1>{m.dashboard.title}</h1>
           <p>{m.dashboard.lead}</p>
+          <p className="server-progress-note">{m.dashboard.serverNote}</p>
         </div>
         <WeekStreak stats={stats} streak={streak} />
       </header>
-
-      <SyncPanel />
 
       <section className="today-panel">
         <div>

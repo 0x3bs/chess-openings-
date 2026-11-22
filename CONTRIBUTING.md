@@ -1,7 +1,8 @@
 # Contributing
 
-Thanks for helping ChessCoach. The project is a static Next.js trainer with two
-languages (English and Arabic) and a large, hand-checked opening catalogue.
+Thanks for helping ChessCoach. The project is a Next.js trainer with two
+languages (English and Arabic), a large hand-checked opening catalogue, and a
+small file-backed API for progress.
 
 ## Quick start
 
@@ -13,10 +14,10 @@ npm run dev
 Open <http://localhost:3000>. The first request redirects to `/en` (or `/ar`
 when the browser language is Arabic).
 
-Progress is stored in Postgres. For a full local setup, create a free Supabase
-project, run [`supabase/schema.sql`](supabase/schema.sql), copy `.env.example`
-to `.env.local` and fill the two public keys. Then open `/progress` and create
-a sync code. See [INSTALL.md](INSTALL.md) for the cross-platform walkthrough.
+Progress is stored in `data/progress.json` by `app/api/progress/route.ts`.
+No database or API key is needed. The server creates the file on the first
+finished line; it is git-ignored. Set `CHESSCOACH_DATA_FILE` to move it. See
+[INSTALL.md](INSTALL.md) for the cross-platform walkthrough and LAN/phone setup.
 
 ## Before opening a pull request
 
@@ -71,9 +72,8 @@ interface flips with `dir="rtl"`.
 - Prefer small, focused changes over broad rewrites.
 - Use the existing `LocaleLink` for internal links so the language prefix is
   preserved.
-- Do not commit `.env.local`, a `service_role` key or generated build output.
-  The `NEXT_PUBLIC_SUPABASE_ANON_KEY` is public by design; the schema revokes
-  direct table access and exposes only the sync-code RPCs.
+- Do not commit `.env.local`, `data/progress.json` or generated build output.
+  Keep file writes atomic and serialized in `lib/server/progress-store.ts`.
 
 ## Reporting problems
 

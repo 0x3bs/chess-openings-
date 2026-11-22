@@ -1,4 +1,3 @@
-import { supabase, supabaseConfigured } from "@/lib/supabase/client";
 import {
   emptyStats,
   type LineProgress,
@@ -7,256 +6,138 @@ import {
 } from "@/lib/progress";
 
 /**
- * Only the sync code is kept in the browser. Progress itself is always loaded
- * from Postgres, so opening the app on another device shows the same data.
+ * Progress is stored in `data/progress.json` by the server. Every device that
+ * opens this site reads and writes the same file, so no login or sync code is
+ * needed.
  */
-export const SYNC_CODE_KEY = "chess-coach-sync-code";
+const API_URL = "/api/progress";
 
-const ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
-const CODE_LENGTH = 20;
+const LEGACY_KEYS = [
+  "chess-coach-progress-v1",
+  "chess-coach-stats-v1",
+  "chess-coach-sync-code",
+];
 
-const LEGACY_KEYS = ["chess-coach-progress-v1", "chess-coach-stats-v1"];
 let legacyCleaned = false;
 
-/**
- * Older builds kept progress in localStorage. Remove those keys on the first
- * load so the database is the only source of truth.
- */
+/** Remove progress keys from older browser-only builds. */
 export function removeLegacyProgressStorage(): void {
   if (typeof window === "undefined" || legacyCleaned) return;
   legacyCleaned = true;
   try {
     for (const key of LEGACY_KEYS) window.localStorage.removeItem(key);
   } catch {
-    // Storage can be blocked; nothing else depends on it.
+    // Storage can be blocked; progress itself is not stored there anymore.
   }
 }
 
-export function normalizeSyncCode(value: string): string {
-  return value
-    .toUpperCase()
-    .replace(/[^A-Z2-9]/g, "")
-    .slice(0, CODE_LENGTH);
-}
-
-export function formatSyncCode(value: string): string {
-  const clean = normalizeSyncCode(value);
-  return clean.match(/.{1,4}/g)?.join("-") ?? clean;
-}
-
-export function generateSyncCode(): string {
-  const bytes = new Uint8Array(CODE_LENGTH);
-  crypto.getRandomValues(bytes);
-  let code = "";
-  for (const byte of bytes) {
-    code += ALPHABET[byte % ALPHABET.length];
-  }
-  return code;
-}
-
-export function getSyncCode(): string | null {
-  if (typeof window === "undefined") return null;
-  try {
-    const code = normalizeSyncCode(
-      window.localStorage.getItem(SYNC_CODE_KEY) ?? "",
-    );
-    return code.length === CODE_LENGTH ? code : null;
-  } catch {
-    return null;
-  }
-}
-
-export function setSyncCode(code: string): void {
-  if (typeof window === "undefined") return;
-  window.localStorage.setItem(SYNC_CODE_KEY, normalizeSyncCode(code));
-}
-
-export function clearSyncCode(): void {
-  if (typeof window === "undefined") return;
-  window.localStorage.removeItem(SYNC_CODE_KEY);
-}
-
-export function hasSyncCode(): boolean {
-  return Boolean(getSyncCode());
-}
-
-type ProgressRow = {
-  line_id: string;
-  attempts: number;
-  clean: number;
-  total_mistakes: number;
-  total_hints: number;
-  last_practiced: string;
-  interval: number;
-  ease: number;
-  reps: number;
-  due_at: string;
-  history: LineProgress["history"];
-  streak: number | null;
-  mastery: number | null;
-  last_mistakes: number | null;
-  last_hints: number | null;
-  last_quality: number | null;
+type ProgressState = {
+  progress: ProgressStore;
+  stats: TrainingStats;
 };
 
-function rowToProgress(row: ProgressRow): LineProgress {
+function normalizeStats(value: unknown): TrainingStats {
+  if (!value || typeof value !== "object") return { ...emptyStats };
+  const raw = value as { days?: unknown; sessions?: unknown };
   return {
-    lineId: row.line_id,
-    attempts: row.attempts,
-    clean: row.clean,
-    totalMistakes: row.total_mistakes,
-    totalHints: row.total_hints,
-    lastPracticed: row.last_practiced,
-    interval: row.interval,
-    ease: row.ease,
-    reps: row.reps,
-    dueAt: row.due_at,
-    streak: row.streak ?? 0,
-    mastery: row.mastery ?? 0,
-    lastMistakes: row.last_mistakes ?? 0,
-    lastHints: row.last_hints ?? 0,
-    lastQuality: row.last_quality ?? 0,
-    history: Array.isArray(row.history) ? row.history : [],
+    days: Array.isArray(raw.days)
+      ? raw.days.filter((day): day is string => typeof day === "string")
+      : [],
+    sessions:
+      typeof raw.sessions === "number" && Number.isFinite(raw.sessions)
+        ? Math.max(0, Math.trunc(raw.sessions))
+        : 0,
   };
 }
 
-export function databaseConfigured(): boolean {
-  return supabaseConfigured && Boolean(supabase);
+function normalizeState(value: unknown): ProgressState {
+  if (!value || typeof value !== "object") {
+    return { progress: {}, stats: { ...emptyStats } };
+  }
+  const raw = value as { progress?: unknown; stats?: unknown };
+  return {
+    progress:
+      raw.progress && typeof raw.progress === "object"
+        ? (raw.progress as ProgressStore)
+        : {},
+    stats: normalizeStats(raw.stats),
+  };
 }
 
-/** Load every progress row for the current sync code. */
-export async function loadRemoteProgress(): Promise<ProgressStore> {
+async function fetchState(): Promise<ProgressState> {
   removeLegacyProgressStorage();
-  const code = getSyncCode();
-  if (!supabase || !code) return {};
 
-  const { data, error } = await supabase.rpc("sync_load_progress", {
-    p_code: code,
-  });
-  if (error) {
-    console.warn("Could not load progress:", error.message);
-    return {};
+  try {
+    const response = await fetch(API_URL, { cache: "no-store" });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    return normalizeState(await response.json());
+  } catch (error) {
+    console.warn("Could not load progress from the server:", error);
+    return { progress: {}, stats: { ...emptyStats } };
   }
-
-  const store: ProgressStore = {};
-  for (const row of (data ?? []) as ProgressRow[]) {
-    store[row.line_id] = rowToProgress(row);
-  }
-  return store;
 }
 
+let inFlight: Promise<ProgressState> | null = null;
+
+function currentState(): Promise<ProgressState> {
+  if (!inFlight) {
+    inFlight = fetchState().finally(() => {
+      inFlight = null;
+    });
+  }
+  return inFlight;
+}
+
+function invalidate(): void {
+  inFlight = null;
+}
+
+/** Load every saved line for this server. */
+export async function loadRemoteProgress(): Promise<ProgressStore> {
+  return (await currentState()).progress;
+}
+
+/** Load streak days and session count for this server. */
+export async function loadRemoteStats(): Promise<TrainingStats> {
+  return (await currentState()).stats;
+}
+
+/** Save one finished line. The server updates stats in the same write. */
 export async function saveRemoteLine(
   entry: LineProgress | undefined,
 ): Promise<void> {
-  const code = getSyncCode();
-  if (!supabase || !code || !entry) return;
+  if (!entry) return;
+  invalidate();
 
-  const { error } = await supabase.rpc("sync_upsert_progress", {
-    p_code: code,
-    p_line_id: entry.lineId,
-    p_attempts: entry.attempts,
-    p_clean: entry.clean,
-    p_total_mistakes: entry.totalMistakes,
-    p_total_hints: entry.totalHints,
-    p_last_practiced: entry.lastPracticed,
-    p_interval: entry.interval,
-    p_ease: entry.ease,
-    p_reps: entry.reps,
-    p_due_at: entry.dueAt,
-    p_history: entry.history,
-    p_streak: entry.streak,
-    p_mastery: entry.mastery,
-    p_last_mistakes: entry.lastMistakes,
-    p_last_hints: entry.lastHints,
-    p_last_quality: entry.lastQuality,
-  });
-
-  if (error) console.warn("Could not save progress:", error.message);
-}
-
-export async function loadRemoteStats(): Promise<TrainingStats> {
-  removeLegacyProgressStorage();
-  const code = getSyncCode();
-  if (!supabase || !code) return emptyStats;
-
-  const { data, error } = await supabase.rpc("sync_load_stats", {
-    p_code: code,
-  });
-  if (error) {
-    console.warn("Could not load stats:", error.message);
-    return emptyStats;
+  try {
+    const response = await fetch(API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        action: "record",
+        lineId: entry.lineId,
+        mistakes: entry.lastMistakes,
+        hints: entry.lastHints,
+      }),
+    });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  } catch (error) {
+    console.warn("Could not save progress to the server:", error);
   }
-
-  const row = (Array.isArray(data) ? data[0] : data) as
-    | { days?: string[]; sessions?: number }
-    | undefined;
-  return {
-    days: Array.isArray(row?.days) ? row.days : [],
-    sessions: typeof row?.sessions === "number" ? row.sessions : 0,
-  };
 }
 
-export async function saveRemoteStats(stats: TrainingStats): Promise<void> {
-  const code = getSyncCode();
-  if (!supabase || !code) return;
-
-  const { error } = await supabase.rpc("sync_upsert_stats", {
-    p_code: code,
-    p_days: stats.days,
-    p_sessions: stats.sessions,
-  });
-  if (error) console.warn("Could not save stats:", error.message);
-}
-
+/** Clear every line for this server. */
 export async function clearRemoteProgress(): Promise<void> {
-  const code = getSyncCode();
-  if (!supabase || !code) return;
+  invalidate();
 
-  const { error } = await supabase.rpc("sync_clear_progress", {
-    p_code: code,
-  });
-  if (error) console.warn("Could not clear progress:", error.message);
-}
-
-export async function deleteRemoteProfile(): Promise<void> {
-  const code = getSyncCode();
-  if (!supabase || !code) return;
-
-  const { error } = await supabase.rpc("sync_delete_profile", {
-    p_code: code,
-  });
-  if (error) console.warn("Could not delete profile:", error.message);
-}
-
-/** Create a new code and start a fresh cloud profile. */
-export async function createSyncProfile(): Promise<string> {
-  if (!supabase) throw new Error("Supabase is not configured.");
-
-  const code = generateSyncCode();
-  const { error } = await supabase.rpc("sync_create_profile", {
-    p_code: code,
-  });
-  if (error) throw error;
-
-  setSyncCode(code);
-  return code;
-}
-
-/** Connect this browser to an existing code. */
-export async function connectSyncProfile(rawCode: string): Promise<string> {
-  if (!supabase) throw new Error("Supabase is not configured.");
-
-  const code = normalizeSyncCode(rawCode);
-  if (code.length !== CODE_LENGTH) {
-    throw new Error("The sync code must contain 20 letters and numbers.");
+  try {
+    const response = await fetch(API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ action: "reset" }),
+    });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  } catch (error) {
+    console.warn("Could not reset progress on the server:", error);
   }
-
-  const { data, error } = await supabase.rpc("sync_check_code", {
-    p_code: code,
-  });
-  if (error) throw error;
-  if (!data) throw new Error("No profile was found for that code.");
-
-  setSyncCode(code);
-  return code;
 }

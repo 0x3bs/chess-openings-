@@ -271,9 +271,15 @@ export function OpeningsCatalogue({ openings }: { openings: Opening[] }) {
                 isDue(store[line.id]),
               ).length;
               const pct = total ? (clean / total) * 100 : 0;
+              const allClean = total > 0 && clean === total;
 
               return (
-                <article className="catalogue-card" key={opening.slug}>
+                <article
+                  className={`catalogue-card${finished > 0 ? " is-finished" : ""}${
+                    allClean ? " is-clean" : ""
+                  }`}
+                  key={opening.slug}
+                >
                   <Link
                     href={`/openings/${opening.slug}`}
                     className="catalogue-card-board"

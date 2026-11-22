@@ -41,8 +41,12 @@ Licensed under the [MIT License](LICENSE).
   due reviews, clean rate, attempts, recent practice and a weekly streak.
 - **Theme switch.** The header cycles Teal → Blue → Violet → Amber and
   remembers your choice.
-- **Database progress, no login.** Create one sync code, then enter it on any
-  device. Progress rows live in Postgres; the browser only remembers the code.
+- **Server progress, no login.** Every finished line is saved in
+  `data/progress.json` on the machine running the server. Any phone, tablet or
+  computer that opens the same server sees the same progress.
+- **Readable progress.** Finished lines are highlighted in the course list, and
+  clean runs get a stronger green mark. The board has a size slider with −/+
+  controls that grow or shrink width and height together.
 
 ## Quick start
 
@@ -54,10 +58,11 @@ npm run dev
 Open <http://localhost:3000>. The first request redirects to `/en` or `/ar`
 based on the saved language cookie, then the browser language.
 
-> **Database required for saving.** The app runs without configuration, but
-> progress is only persisted after you connect a Supabase project and run
-> [`supabase/schema.sql`](supabase/schema.sql). See
-> [INSTALL.md](INSTALL.md) for Windows, macOS and Linux steps.
+> **Progress file.** On the first finished line the server creates
+> `data/progress.json`. It is git-ignored, needs no database or API key, and is
+> shared by every device that opens this server. Back it up. See
+> [INSTALL.md](INSTALL.md) for Windows, macOS and Linux steps, including how to
+> open the site from your phone.
 
 ### Languages
 
@@ -121,52 +126,56 @@ sentence overlaps another source, open the line on Lichess and rewrite it.
   It does not prove every explanatory judgement is correct. If an explanation
   looks wrong, trust the board and fix the sentence.
 
-## Database setup and sync codes
+## Shared progress file (no database, no login)
 
-Progress is stored in Supabase/Postgres. There are **no email accounts and no
-password login**:
+The server keeps one JSON file:
 
-- The first device creates a 20-character sync code.
-- The database stores only a SHA-256 hash of that code.
-- The browser stores only the code (`chess-coach-sync-code`), never the
-  progress rows.
-- Enter the same code on Windows, macOS, Linux or a phone to load the same
-  progress.
-- The public `anon` key is safe to ship; direct table access is revoked, and
-  the `security definer` functions in
-  [`supabase/schema.sql`](supabase/schema.sql) are the only API.
+```text
+data/progress.json
+```
 
-Setup:
+Every device that opens the same running server reads and writes that file, so
+a phone, tablet and laptop all see the same lines, reviews, mastery and streak.
+There is no account, password, sync code or external service.
 
-1. Create a free project at <https://supabase.com>.
-2. In the SQL editor, run [`supabase/schema.sql`](supabase/schema.sql). It is
-   idempotent and uses new table names (`sync_profiles`, `sync_line_progress`,
-   `sync_stats`) so it does not clash with the old account tables.
-3. Copy `.env.example` to `.env.local` and fill in:
+- The first save creates `data/progress.json` automatically.
+- Writes are atomic (temporary file + rename) and serialized, so two devices
+  training at the same moment cannot leave a half-written file.
+- `data/progress.json` is git-ignored. Copy it to back up, or to move progress
+  to another machine.
+- Set `CHESSCOACH_DATA_FILE` in `.env.local` to store it somewhere else, such as
+  a Dropbox/iCloud folder. Relative names are resolved inside `data/`; absolute
+  paths are used as-is.
+- Everyone using the same server shares one profile. If you later need separate
+  profiles, add a profile key to the API rather than a browser-only login.
+
+### Opening the site from your phone
+
+1. Put the laptop and phone on the same Wi‑Fi.
+2. Find the laptop's local IP (`ipconfig` on Windows, `ipconfig getifaddr en0`
+   on macOS, `hostname -I` on Linux).
+3. Start the server with that address so Next.js allows it in development:
 
    ```bash
-   NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
-   NEXT_PUBLIC_SITE_URL=http://localhost:3000
+   npm run dev -- -H 192.168.1.50
    ```
 
-4. Restart the app and open `/progress`. In **Sync across devices**, create a
-   code and keep it somewhere safe.
-5. Open the same page on another device, enter the code, and the dashboard
-   loads the same rows.
+   Replace the address with your own IP.
+4. Allow Node.js or port 3000 through the firewall if the phone cannot connect.
+5. On the phone open `http://192.168.1.50:3000`.
 
-If you previously used the old email-account schema, you can drop the old
-`line_progress` and `user_stats` tables once you no longer need them; the new
-schema does not touch them.
+Both devices now use the same server and therefore the same progress file. If
+the laptop is off or the phone is on another network, the site is unreachable;
+deploy the server to a VPS or hosting provider if you need access from
+anywhere.
 
 ### What is stored where
 
 | Data | Where |
 | --- | --- |
-| Sync code | Browser `localStorage` (`chess-coach-sync-code`) |
-| Line progress, reviews, mastery, history | Postgres (`sync_line_progress`) |
-| Daily streak days and session count | Postgres (`sync_stats`) |
-| Language and theme preference | Browser `localStorage` (UI only) |
+| Line progress, reviews, mastery, history | `data/progress.json` on the server |
+| Daily streak days and session count | `data/progress.json` on the server |
+| Language, theme and board size | Browser `localStorage` (UI only) |
 
 ## Adding or editing a course
 
@@ -220,8 +229,9 @@ app/
   [locale]/page.tsx        landing page
   [locale]/openings/page.tsx        course catalogue
   [locale]/openings/[slug]/page.tsx generic course route
-  [locale]/progress/page.tsx        course dashboard, sync code and recent practice
+  [locale]/progress/page.tsx        course dashboard and recent practice
   [locale]/not-found.tsx   bilingual 404
+  api/progress/route.ts    GET/POST the shared progress file
   globals.css              all styling (dark theme, responsive, RTL)
   sitemap.ts               both locales and every course
   robots.ts                crawler rules and sitemap URL
@@ -231,8 +241,6 @@ components/
   LanguageSwitcher.tsx     English <-> العربية, saved in a cookie
   OpeningsCatalogue.tsx    course cards, filters, learned/last-played sorting
   Dashboard.tsx            progress dashboard and recent practice
-  SyncPanel.tsx            create/connect/delete a sync code
-  SyncNotice.tsx           warning when progress cannot be saved yet
   MiniBoard.tsx            lightweight 8x8 FEN preview
   EnglishCourse.tsx        focused study view, learn/train/drill/exam state
   ChessBoard.tsx           chessground wrapper, shapes, input handling
@@ -242,7 +250,8 @@ components/
 lib/
   chess.ts                 positions, legal moves, SAN lookup
   progress.ts              review ladder, mastery, streak and pure data helpers
-  db/progress.ts           Supabase RPC calls and sync-code storage
+  db/progress.ts           browser calls to /api/progress
+  server/progress-store.ts atomic reads/writes of data/progress.json
   i18n/config.ts           locales, direction, locale-aware paths
   i18n/messages/           English and Arabic UI dictionaries
   i18n/content/            Arabic course, summary, idea and coach tables
@@ -255,14 +264,13 @@ lib/
   openings/generated-lines.json  engine-checked branch lines
   openings/apply-ideas.ts  merge ideas, sources and locale-aware hotspots
   openings/index.ts        course registry
-  supabase/client.ts       public anon client (null when unconfigured)
 scripts/
   generate-lines.ts        Stockfish branch generator
   validate-lines.ts        line/idea/shape/source validator
   check-i18n.ts            Arabic structure + translation coverage gate
   audit-lines.ts           Stockfish blunder screen
-supabase/
-  schema.sql               sync-code tables + security-definer RPCs
+data/
+  progress.json            shared progress (git-ignored, created on first save)
 INSTALL.md                 Windows / macOS / Linux setup guide
 ```
 
@@ -272,7 +280,7 @@ INSTALL.md                 Windows / macOS / Linux setup guide
 - [chess.js](https://github.com/jhlywa/chess.js) for rules and SAN
 - [chessground](https://github.com/lichess-org/chessground) for the board and
   native coloured circles/arrows
-- [Supabase](https://supabase.com) Postgres for progress and sync codes
+- A local JSON file (`data/progress.json`) served by a Next.js route handler
 
 ## Notes
 

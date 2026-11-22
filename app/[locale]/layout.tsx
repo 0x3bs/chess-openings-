@@ -65,7 +65,6 @@ export default async function LocaleLayout({
               <ThemeSwitcher />
               <Link href="/openings">{m.nav.openings}</Link>
               <Link href="/progress">{m.nav.dashboard}</Link>
-              <Link href="/progress#sync">{m.nav.sync}</Link>
             </nav>
           </header>
           {children}
