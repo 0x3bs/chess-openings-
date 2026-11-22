@@ -40,31 +40,8 @@ export type TrainingStats = {
   sessions: number;
 };
 
-const STORAGE_KEY = "chess-coach-progress-v1";
-const STATS_KEY = "chess-coach-stats-v1";
-
-export function loadProgress(): ProgressStore {
-  if (typeof window === "undefined") return {};
-  try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
-    if (!raw) return {};
-    const parsed = JSON.parse(raw) as unknown;
-    return parsed && typeof parsed === "object"
-      ? (parsed as ProgressStore)
-      : {};
-  } catch {
-    return {};
-  }
-}
-
-export function saveProgress(store: ProgressStore): void {
-  if (typeof window === "undefined") return;
-  try {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(store));
-  } catch {
-    // Storage can be full or blocked; progress is non-critical.
-  }
-}
+export const emptyProgress: ProgressStore = {};
+export const emptyStats: TrainingStats = { days: [], sessions: 0 };
 
 export function qualityFor(result: LineResult): number {
   const penalty = result.mistakes + result.hints;
@@ -84,8 +61,8 @@ const REVIEW_LADDER = [1, 3, 7, 14, 30, 60];
 export function recordResult(
   lineId: string,
   result: LineResult,
+  store: ProgressStore = {},
 ): ProgressStore {
-  const store = loadProgress();
   const prev = store[lineId];
   const now = new Date();
   const quality = qualityFor(result);
@@ -119,40 +96,30 @@ export function recordResult(
 
   const due = new Date(now.getTime() + interval * 24 * 60 * 60 * 1000);
 
-  store[lineId] = {
-    lineId,
-    attempts: (prev?.attempts ?? 0) + 1,
-    clean: (prev?.clean ?? 0) + (quality === 5 ? 1 : 0),
-    totalMistakes: (prev?.totalMistakes ?? 0) + result.mistakes,
-    totalHints: (prev?.totalHints ?? 0) + result.hints,
-    lastPracticed: now.toISOString(),
-    interval,
-    ease,
-    reps,
-    dueAt: due.toISOString(),
-    streak,
-    mastery,
-    lastMistakes: result.mistakes,
-    lastHints: result.hints,
-    lastQuality: quality,
-    history: [
-      ...(prev?.history ?? []),
-      { at: now.toISOString(), ...result, quality },
-    ].slice(-30),
+  return {
+    ...store,
+    [lineId]: {
+      lineId,
+      attempts: (prev?.attempts ?? 0) + 1,
+      clean: (prev?.clean ?? 0) + (quality === 5 ? 1 : 0),
+      totalMistakes: (prev?.totalMistakes ?? 0) + result.mistakes,
+      totalHints: (prev?.totalHints ?? 0) + result.hints,
+      lastPracticed: now.toISOString(),
+      interval,
+      ease,
+      reps,
+      dueAt: due.toISOString(),
+      streak,
+      mastery,
+      lastMistakes: result.mistakes,
+      lastHints: result.hints,
+      lastQuality: quality,
+      history: [
+        ...(prev?.history ?? []),
+        { at: now.toISOString(), ...result, quality },
+      ].slice(-30),
+    },
   };
-
-  saveProgress(store);
-  return store;
-}
-
-export function clearProgress(): void {
-  if (typeof window === "undefined") return;
-  try {
-    window.localStorage.removeItem(STORAGE_KEY);
-    window.localStorage.removeItem(STATS_KEY);
-  } catch {
-    // ignore
-  }
 }
 
 export function isDue(progress: LineProgress | undefined, now = Date.now()): boolean {
@@ -190,41 +157,16 @@ function localDay(date: Date): string {
   return `${year}-${month}-${day}`;
 }
 
-export function loadStats(): TrainingStats {
-  if (typeof window === "undefined") return { days: [], sessions: 0 };
-  try {
-    const raw = window.localStorage.getItem(STATS_KEY);
-    if (!raw) return { days: [], sessions: 0 };
-    const parsed = JSON.parse(raw) as Partial<TrainingStats>;
-    return {
-      days: Array.isArray(parsed.days) ? parsed.days : [],
-      sessions: typeof parsed.sessions === "number" ? parsed.sessions : 0,
-    };
-  } catch {
-    return { days: [], sessions: 0 };
-  }
-}
-
-export function saveStats(stats: TrainingStats): void {
-  if (typeof window === "undefined") return;
-  try {
-    window.localStorage.setItem(STATS_KEY, JSON.stringify(stats));
-  } catch {
-    // ignore
-  }
-}
-
 /** Called when a line is finished; marks today as a training day. */
-export function recordTrainingDay(): TrainingStats {
-  const stats = loadStats();
+export function recordTrainingDay(
+  stats: TrainingStats = emptyStats,
+): TrainingStats {
   const today = localDay(new Date());
   const days = stats.days.includes(today)
     ? stats.days
     : [...stats.days, today].slice(-120);
 
-  const next: TrainingStats = { days, sessions: stats.sessions + 1 };
-  saveStats(next);
-  return next;
+  return { days, sessions: stats.sessions + 1 };
 }
 
 /**

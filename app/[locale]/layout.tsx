@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { notFound } from "next/navigation";
-import { AccountMenu } from "@/components/AccountMenu";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { LocaleLink as Link } from "@/components/LocaleLink";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
@@ -66,7 +65,7 @@ export default async function LocaleLayout({
               <ThemeSwitcher />
               <Link href="/openings">{m.nav.openings}</Link>
               <Link href="/progress">{m.nav.dashboard}</Link>
-              <AccountMenu />
+              <Link href="/progress#sync">{m.nav.sync}</Link>
             </nav>
           </header>
           {children}

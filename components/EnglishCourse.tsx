@@ -22,15 +22,19 @@ import {
   dayStreak,
   isDue,
   learnedOf,
-  loadProgress,
-  loadStats,
   masteryOf,
   recordResult,
   recordTrainingDay,
   type ProgressStore,
   type TrainingStats,
 } from "@/lib/progress";
-import { pushLineProgress, syncAllProgress } from "@/lib/supabase/sync";
+import {
+  loadRemoteProgress,
+  loadRemoteStats,
+  saveRemoteLine,
+  saveRemoteStats,
+} from "@/lib/db/progress";
+import { SyncNotice } from "./SyncNotice";
 
 type Mode = "learn" | "train" | "drill" | "exam";
 type DrillScope = "due" | "mix" | "line";
@@ -133,18 +137,28 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
   const pendingPlyRef = useRef<number | null>(null);
   const initializedRef = useRef(false);
   const pickerRef = useRef<HTMLDetailsElement | null>(null);
+  const progressRef = useRef(progress);
+  const statsRef = useRef(stats);
+
+  useEffect(() => {
+    progressRef.current = progress;
+  }, [progress]);
+
+  useEffect(() => {
+    statsRef.current = stats;
+  }, [stats]);
 
   useEffect(() => {
     let cancelled = false;
-    setProgress(loadProgress());
-    setStats(loadStats());
-    setProgressReady(true);
 
-    void syncAllProgress().then((merged) => {
-      if (cancelled) return;
-      setProgress(merged);
-      setStats(loadStats());
-    });
+    void Promise.all([loadRemoteProgress(), loadRemoteStats()]).then(
+      ([remoteProgress, remoteStats]) => {
+        if (cancelled) return;
+        setProgress(remoteProgress);
+        setStats(remoteStats);
+        setProgressReady(true);
+      },
+    );
 
     return () => {
       cancelled = true;
@@ -385,10 +399,18 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
     if (recordedRef.current) return;
     recordedRef.current = true;
 
-    const next = recordResult(line.id, { mistakes, hints });
+    const next = recordResult(
+      line.id,
+      { mistakes, hints },
+      progressRef.current,
+    );
+    progressRef.current = next;
     setProgress(next);
-    setStats(recordTrainingDay());
-    void pushLineProgress(next[line.id]);
+    const nextStats = recordTrainingDay(statsRef.current);
+    statsRef.current = nextStats;
+    setStats(nextStats);
+    void saveRemoteLine(next[line.id]);
+    void saveRemoteStats(nextStats);
 
     if (mode === "drill" || mode === "exam") {
       setDrillResults((previous) => [
@@ -657,6 +679,7 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
 
   return (
     <div className="study-page">
+      <SyncNotice />
       <section className="study-hero">
         <div className="study-hero-copy">
           <Link href="/openings" className="study-back">

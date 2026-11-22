@@ -13,12 +13,13 @@ import {
   dayStreak,
   isDue,
   learnedOf,
-  loadProgress,
-  loadStats,
   type ProgressStore,
   type TrainingStats,
 } from "@/lib/progress";
-import { syncAllProgress } from "@/lib/supabase/sync";
+import {
+  loadRemoteProgress,
+  loadRemoteStats,
+} from "@/lib/db/progress";
 
 type SideFilter = "all" | "white" | "black";
 type SortMode = "last" | "progress" | "az";
@@ -41,14 +42,14 @@ export function OpeningsCatalogue({ openings }: { openings: Opening[] }) {
 
   useEffect(() => {
     let cancelled = false;
-    setStore(loadProgress());
-    setStats(loadStats());
 
-    void syncAllProgress().then((merged) => {
-      if (cancelled) return;
-      setStore(merged);
-      setStats(loadStats());
-    });
+    void Promise.all([loadRemoteProgress(), loadRemoteStats()]).then(
+      ([remoteProgress, remoteStats]) => {
+        if (cancelled) return;
+        setStore(remoteProgress);
+        setStats(remoteStats);
+      },
+    );
 
     return () => {
       cancelled = true;

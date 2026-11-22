@@ -5,7 +5,7 @@ import { openings } from "@/lib/openings";
 const base = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const pages = ["", "/openings", "/progress", "/login"];
+  const pages = ["", "/openings", "/progress"];
 
   return locales.flatMap((locale) => [
     ...pages.map((page) => ({

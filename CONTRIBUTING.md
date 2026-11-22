@@ -13,6 +13,11 @@ npm run dev
 Open <http://localhost:3000>. The first request redirects to `/en` (or `/ar`
 when the browser language is Arabic).
 
+Progress is stored in Postgres. For a full local setup, create a free Supabase
+project, run [`supabase/schema.sql`](supabase/schema.sql), copy `.env.example`
+to `.env.local` and fill the two public keys. Then open `/progress` and create
+a sync code. See [INSTALL.md](INSTALL.md) for the cross-platform walkthrough.
+
 ## Before opening a pull request
 
 Run the same gates as CI:
@@ -66,7 +71,9 @@ interface flips with `dir="rtl"`.
 - Prefer small, focused changes over broad rewrites.
 - Use the existing `LocaleLink` for internal links so the language prefix is
   preserved.
-- Do not commit `.env.local`, Supabase keys or generated build output.
+- Do not commit `.env.local`, a `service_role` key or generated build output.
+  The `NEXT_PUBLIC_SUPABASE_ANON_KEY` is public by design; the schema revokes
+  direct table access and exposes only the sync-code RPCs.
 
 ## Reporting problems
 

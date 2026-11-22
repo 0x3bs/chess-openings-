@@ -2,24 +2,27 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { LocaleLink as Link } from "./LocaleLink";
+import { SyncPanel } from "./SyncPanel";
 import { WeekStreak } from "./WeekStreak";
 import { useI18n } from "@/lib/i18n/LocaleProvider";
 import { fill } from "@/lib/i18n/plural";
 import type { Opening, OpeningLine } from "@/lib/openings/types";
 import {
-  clearProgress,
   completedOf,
   dayStreak,
+  emptyStats,
   isDue,
   learnedOf,
-  loadProgress,
-  loadStats,
   masteryOf,
   type LineProgress,
   type ProgressStore,
   type TrainingStats,
 } from "@/lib/progress";
-import { syncAllProgress } from "@/lib/supabase/sync";
+import {
+  clearRemoteProgress,
+  loadRemoteProgress,
+  loadRemoteStats,
+} from "@/lib/db/progress";
 
 type LineRow = {
   opening: Opening;
@@ -68,15 +71,14 @@ export function Dashboard({ openings }: { openings: Opening[] }) {
   useEffect(() => {
     let cancelled = false;
 
-    setStore(loadProgress());
-    setStats(loadStats());
-    setReady(true);
-
-    void syncAllProgress().then((merged) => {
-      if (cancelled) return;
-      setStore(merged);
-      setStats(loadStats());
-    });
+    void Promise.all([loadRemoteProgress(), loadRemoteStats()]).then(
+      ([remoteProgress, remoteStats]) => {
+        if (cancelled) return;
+        setStore(remoteProgress);
+        setStats(remoteStats);
+        setReady(true);
+      },
+    );
 
     return () => {
       cancelled = true;
@@ -176,19 +178,22 @@ export function Dashboard({ openings }: { openings: Opening[] }) {
   async function syncNow() {
     setSyncing(true);
     try {
-      const merged = await syncAllProgress();
-      setStore(merged);
-      setStats(loadStats());
+      const [remoteProgress, remoteStats] = await Promise.all([
+        loadRemoteProgress(),
+        loadRemoteStats(),
+      ]);
+      setStore(remoteProgress);
+      setStats(remoteStats);
     } finally {
       setSyncing(false);
     }
   }
 
-  function reset() {
+  async function reset() {
     if (!window.confirm(m.dashboard.resetConfirm)) return;
-    clearProgress();
+    await clearRemoteProgress();
     setStore({});
-    setStats({ days: [], sessions: 0 });
+    setStats(emptyStats);
   }
 
   return (
@@ -201,6 +206,8 @@ export function Dashboard({ openings }: { openings: Opening[] }) {
         </div>
         <WeekStreak stats={stats} streak={streak} />
       </header>
+
+      <SyncPanel />
 
       <section className="today-panel">
         <div>

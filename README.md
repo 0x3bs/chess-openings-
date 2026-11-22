@@ -41,8 +41,8 @@ Licensed under the [MIT License](LICENSE).
   due reviews, clean rate, attempts, recent practice and a weekly streak.
 - **Theme switch.** The header cycles Teal → Blue → Violet → Amber and
   remembers your choice.
-- **Optional accounts.** Progress is always saved locally. Add Supabase keys
-  and sign in to sync it across devices.
+- **Database progress, no login.** Create one sync code, then enter it on any
+  device. Progress rows live in Postgres; the browser only remembers the code.
 
 ## Quick start
 
@@ -51,16 +51,18 @@ npm install
 npm run dev
 ```
 
-Open <http://localhost:3000>. No configuration is required. The first request
-redirects to `/en` or `/ar` based on the saved language cookie, then the browser
-language.
+Open <http://localhost:3000>. The first request redirects to `/en` or `/ar`
+based on the saved language cookie, then the browser language.
+
+> **Database required for saving.** The app runs without configuration, but
+> progress is only persisted after you connect a Supabase project and run
+> [`supabase/schema.sql`](supabase/schema.sql). See
+> [INSTALL.md](INSTALL.md) for Windows, macOS and Linux steps.
 
 ### Languages
 
-- English routes: `/en`, `/en/openings`, `/en/openings/[slug]`, `/en/progress`,
-  `/en/login`.
-- Arabic routes: `/ar`, `/ar/openings`, `/ar/openings/[slug]`, `/ar/progress`,
-  `/ar/login`.
+- English routes: `/en`, `/en/openings`, `/en/openings/[slug]`, `/en/progress`.
+- Arabic routes: `/ar`, `/ar/openings`, `/ar/openings/[slug]`, `/ar/progress`.
 - The header button switches language, keeps the current page and query string,
   and remembers the choice in the `chess-coach-locale` cookie.
 - Arabic sets `dir="rtl"` on the document. The chessboard and SAN notation stay
@@ -119,15 +121,27 @@ sentence overlaps another source, open the line on Lichess and rewrite it.
   It does not prove every explanatory judgement is correct. If an explanation
   looks wrong, trust the board and fix the sentence.
 
-## Optional: Supabase accounts and sync
+## Database setup and sync codes
 
-The app works without Supabase. To enable accounts:
+Progress is stored in Supabase/Postgres. There are **no email accounts and no
+password login**:
+
+- The first device creates a 20-character sync code.
+- The database stores only a SHA-256 hash of that code.
+- The browser stores only the code (`chess-coach-sync-code`), never the
+  progress rows.
+- Enter the same code on Windows, macOS, Linux or a phone to load the same
+  progress.
+- The public `anon` key is safe to ship; direct table access is revoked, and
+  the `security definer` functions in
+  [`supabase/schema.sql`](supabase/schema.sql) are the only API.
+
+Setup:
 
 1. Create a free project at <https://supabase.com>.
-2. In the SQL editor, run [`supabase/schema.sql`](supabase/schema.sql). It
-   creates the `line_progress` table with row-level security so each user can
-   only read and write their own rows. The script is idempotent: re-run it
-   after updating the app to add the newer mastery/streak columns.
+2. In the SQL editor, run [`supabase/schema.sql`](supabase/schema.sql). It is
+   idempotent and uses new table names (`sync_profiles`, `sync_line_progress`,
+   `sync_stats`) so it does not clash with the old account tables.
 3. Copy `.env.example` to `.env.local` and fill in:
 
    ```bash
@@ -136,23 +150,23 @@ The app works without Supabase. To enable accounts:
    NEXT_PUBLIC_SITE_URL=http://localhost:3000
    ```
 
-4. In Supabase, open **Authentication → URL Configuration** and add
-   `http://localhost:3000/login` (plus your production `/login` URL) as a
-   redirect URL.
-5. Restart the dev server and open `/login`. Create an account with email and
-   password.
+4. Restart the app and open `/progress`. In **Sync across devices**, create a
+   code and keep it somewhere safe.
+5. Open the same page on another device, enter the code, and the dashboard
+   loads the same rows.
 
-Without the environment variables the login page explains the setup and the
-app stays fully local. Progress lives in `localStorage` under
-`chess-coach-progress-v1` and daily training stats under
-`chess-coach-stats-v1`. When you sign in, the app pulls cloud rows, merges them
-with the local copy per line (most recent wins), then uploads the merged
-snapshot. That means progress made before creating an account is not lost. The
-same email on another computer loads the same rows from Supabase. Daily streak
-days and lifetime sessions are stored in `user_stats`, so the dashboard travels
-with the account too. Local progress is tagged with the signed-in account ID;
-signing into a different account on a shared browser does not upload the first
-account's data.
+If you previously used the old email-account schema, you can drop the old
+`line_progress` and `user_stats` tables once you no longer need them; the new
+schema does not touch them.
+
+### What is stored where
+
+| Data | Where |
+| --- | --- |
+| Sync code | Browser `localStorage` (`chess-coach-sync-code`) |
+| Line progress, reviews, mastery, history | Postgres (`sync_line_progress`) |
+| Daily streak days and session count | Postgres (`sync_stats`) |
+| Language and theme preference | Browser `localStorage` (UI only) |
 
 ## Adding or editing a course
 
@@ -206,8 +220,7 @@ app/
   [locale]/page.tsx        landing page
   [locale]/openings/page.tsx        course catalogue
   [locale]/openings/[slug]/page.tsx generic course route
-  [locale]/progress/page.tsx        course dashboard and recent practice
-  [locale]/login/page.tsx           optional Supabase auth
+  [locale]/progress/page.tsx        course dashboard, sync code and recent practice
   [locale]/not-found.tsx   bilingual 404
   globals.css              all styling (dark theme, responsive, RTL)
   sitemap.ts               both locales and every course
@@ -218,7 +231,8 @@ components/
   LanguageSwitcher.tsx     English <-> العربية, saved in a cookie
   OpeningsCatalogue.tsx    course cards, filters, learned/last-played sorting
   Dashboard.tsx            progress dashboard and recent practice
-  LoginForm.tsx            optional Supabase sign-in/sign-up UI
+  SyncPanel.tsx            create/connect/delete a sync code
+  SyncNotice.tsx           warning when progress cannot be saved yet
   MiniBoard.tsx            lightweight 8x8 FEN preview
   EnglishCourse.tsx        focused study view, learn/train/drill/exam state
   ChessBoard.tsx           chessground wrapper, shapes, input handling
@@ -227,7 +241,8 @@ components/
   ThemeSwitcher.tsx        teal / blue / violet / amber accent switch
 lib/
   chess.ts                 positions, legal moves, SAN lookup
-  progress.ts              localStorage + review ladder + mastery + streak
+  progress.ts              review ladder, mastery, streak and pure data helpers
+  db/progress.ts           Supabase RPC calls and sync-code storage
   i18n/config.ts           locales, direction, locale-aware paths
   i18n/messages/           English and Arabic UI dictionaries
   i18n/content/            Arabic course, summary, idea and coach tables
@@ -240,15 +255,15 @@ lib/
   openings/generated-lines.json  engine-checked branch lines
   openings/apply-ideas.ts  merge ideas, sources and locale-aware hotspots
   openings/index.ts        course registry
-  supabase/client.ts       optional client (null when unconfigured)
-  supabase/sync.ts         push/pull merge of progress
+  supabase/client.ts       public anon client (null when unconfigured)
 scripts/
   generate-lines.ts        Stockfish branch generator
   validate-lines.ts        line/idea/shape/source validator
   check-i18n.ts            Arabic structure + translation coverage gate
   audit-lines.ts           Stockfish blunder screen
 supabase/
-  schema.sql               table + RLS policies
+  schema.sql               sync-code tables + security-definer RPCs
+INSTALL.md                 Windows / macOS / Linux setup guide
 ```
 
 ## Stack
@@ -257,7 +272,7 @@ supabase/
 - [chess.js](https://github.com/jhlywa/chess.js) for rules and SAN
 - [chessground](https://github.com/lichess-org/chessground) for the board and
   native coloured circles/arrows
-- Optional [Supabase](https://supabase.com) for accounts and sync
+- [Supabase](https://supabase.com) Postgres for progress and sync codes
 
 ## Notes
 
