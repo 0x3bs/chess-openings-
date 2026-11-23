@@ -2,8 +2,22 @@ import { Chess, type Move } from "chess.js";
 import type { Locale } from "../i18n/config";
 import { translateSeed } from "../i18n/content/catalog-ar";
 import { attachIdeas } from "./apply-ideas";
-import generatedLines from "./generated-lines.json";
-import type { Opening, OpeningLine } from "./types";
+import lichessLines from "./lichess-lines.json";
+import type { LineLevel, Opening, OpeningLine } from "./types";
+
+type ImportedLine = {
+  id: string;
+  name: string;
+  eco: string;
+  summary: string;
+  tags: string[];
+  moves: string[];
+  parentName: string;
+  family: string;
+  level: LineLevel;
+  pgn: string;
+  i18n: { ar: { name: string; summary: string; tags: string[] } };
+};
 
 export type LineSeed = {
   id: string;
@@ -12,7 +26,14 @@ export type LineSeed = {
   summary: string;
   tags: string[];
   moves: string[];
+  parentName?: string;
+  family?: string;
+  level?: LineLevel;
+  source?: "lichess" | "manual";
+  i18n?: { ar: { name: string; summary: string; tags: string[] } };
 };
+
+const imported = lichessLines as unknown as Record<string, ImportedLine[]>;
 
 export type OpeningSeed = {
   slug: string;
@@ -203,6 +224,10 @@ export function buildOpening(
       summary: line.summary,
       tags: line.tags,
       moves: line.moves.map((san) => ({ san })),
+      parentName: line.parentName,
+      family: line.family,
+      level: line.level,
+      source: line.source ?? (line.parentName ? "lichess" : "manual"),
     })),
   };
 
@@ -1917,17 +1942,30 @@ const baseSeeds: OpeningSeed[] = seeds.map((seed) => ({
   lines: [...seed.lines, ...(extraLines[seed.slug] ?? [])],
 }));
 
-/** Course data before the generated branch lines are merged in. */
+/** Course data before the named Lichess lines are merged in. */
 export const catalogueBaseOpenings: Opening[] = baseSeeds.map((seed) =>
   buildOpening(seed),
 );
 
-const generated = generatedLines as unknown as Record<string, LineSeed[]>;
-
 function mergedSeeds(): OpeningSeed[] {
   return baseSeeds.map((seed) => ({
     ...seed,
-    lines: [...seed.lines, ...(generated[seed.slug] ?? [])],
+    lines: [
+      ...seed.lines,
+      ...(imported[seed.slug] ?? []).map((line) => ({
+        id: line.id,
+        name: line.name,
+        eco: line.eco,
+        summary: line.summary,
+        tags: line.tags,
+        moves: line.moves,
+        parentName: line.parentName,
+        family: line.family,
+        level: line.level,
+        source: "lichess" as const,
+        i18n: line.i18n,
+      })),
+    ],
   }));
 }
 

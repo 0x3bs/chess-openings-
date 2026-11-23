@@ -64,11 +64,14 @@ export function translateSeed(seed: OpeningSeed): OpeningSeed {
     name: openingNamesAr[seed.name] ?? seed.name,
     intro: openingIntrosAr[seed.intro] ?? seed.intro,
     themes: seed.themes.map((theme) => themesAr[theme] ?? theme),
-    lines: seed.lines.map((line) => ({
-      ...line,
-      name: translateLineName(line.name),
-      summary: translateSummary(line.summary),
-      tags: line.tags.map((tag) => tagsAr[tag] ?? tag),
-    })),
+    lines: seed.lines.map((line) => {
+      const prepared = line.i18n?.ar;
+      return {
+        ...line,
+        name: prepared?.name ?? translateLineName(line.name),
+        summary: prepared?.summary ?? translateSummary(line.summary),
+        tags: prepared?.tags ?? line.tags.map((tag) => tagsAr[tag] ?? tag),
+      };
+    }),
   };
 }

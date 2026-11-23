@@ -41,9 +41,11 @@ AUDIT_OPENING=italian npm run audit
 
 - Course seeds live in `lib/openings/catalog.ts`; the English course lives in
   `lib/openings/english.ts` with its ideas in `lib/openings/english-ideas.ts`.
-- Generated branch lines live in `lib/openings/generated-lines.json`. Do not
-  regenerate the whole file casually: generation depends on the bundled
-  Stockfish build.
+- Named branch lines live in `lib/openings/lichess-lines.json`. Regenerate them
+  with `npm run import:lines` after changing the CC0 TSV files in
+  `data/lichess-openings/`; rows that cannot be mapped are recorded in
+  `review/unmapped.md`.
+- Stockfish is a checker only (`npm run audit`). It never authors move orders.
 - Every move needs exactly one `idea` and at least one highlight. The validator
   checks this for you.
 - Add the new course to `lib/openings/index.ts`.

@@ -121,10 +121,10 @@ npm run i18n:check # Arabic structure + translation coverage
 npm run typecheck  # TypeScript
 npm run check      # validate + i18n:check + typecheck
 npm run audit      # Stockfish blunder screen (depth 12, 150cp threshold)
-npm run generate   # rebuild the generated branch lines with Stockfish
+npm run import:lines  # rebuild named lines from the CC0 Lichess TSV files
 ```
 
-`npm run validate` replays all 954 lines, checks every SAN move is legal, checks
+`npm run validate` replays every line, checks every SAN move is legal, checks
 that every move has an idea and a highlight, checks every source URL and
 hotspot, and checks for duplicate IDs. Run it after editing course data.
 
@@ -133,11 +133,13 @@ engine from the course side's perspective. It flags large eval drops, losing
 positions and free queen captures. The current catalogue passes with zero flags
 at depth 12. Intentional gambit pawns are allowed by the 150cp threshold.
 
-Both scripts can be narrowed while iterating: `AUDIT_OPENING=englund-gambit
-npm run audit` checks one course, and `GEN_ONLY=englund-gambit npm run generate`
-rewrites one course without touching the rest of
-`lib/openings/generated-lines.json`. `GEN_DEPTH` and `GEN_DROP` tune the search
-depth and the allowed centipawn drop.
+The audit can be narrowed while iterating:
+`AUDIT_OPENING=englund-gambit npm run audit` checks one course. `SF_DEPTH` and
+`DROP_THRESHOLD` tune the search depth and the allowed centipawn drop.
+
+`npm run import:lines` reads the five CC0 TSV files in
+`data/lichess-openings/`, writes `lib/openings/lichess-lines.json`, and records
+every row that could not be mapped in `review/unmapped.md`.
 
 ## Content and sources
 
@@ -148,10 +150,10 @@ sentence overlaps another source, open the line on Lichess and rewrite it.
 - Move orders are validated for legality with `chess.js`.
 - Every line is blunder-screened with Stockfish 19 from the course side's
   perspective. The English course and the named catalogue lines are
-  hand-written; the additional branch lines in
-  [`lib/openings/generated-lines.json`](lib/openings/generated-lines.json) are
-  built from engine-checked move trees and described with the same original
-  one-sentence templates as the rest of the catalogue.
+  hand-written; the additional named lines come from the
+  [CC0 lichess-org/chess-openings](https://github.com/lichess-org/chess-openings)
+  dataset and are grouped under their parent opening, family, ECO and level.
+  Stockfish only checks move quality — it never authors move orders.
 - Each line links to a **Lichess analysis of its exact final position**, plus
   a general opening index and ECO reference.
 - The validator only proves the moves are legal and the data is well formed.
@@ -293,16 +295,20 @@ lib/
   openings/english.ts      the 22 English lines and all deep notes
   openings/english-ideas.ts one idea for every English move
   openings/catalog.ts      29 catalogue courses and their named lines
-  openings/generated-lines.json  engine-checked branch lines
+  openings/lichess-lines.json  named lines from the CC0 Lichess dataset
   openings/apply-ideas.ts  merge ideas, sources and locale-aware hotspots
   openings/index.ts        course registry
 scripts/
-  generate-lines.ts        Stockfish branch generator
+  import-lichess-lines.ts  TSV -> named-line JSON converter
   validate-lines.ts        line/idea/shape/source validator
   check-i18n.ts            Arabic structure + translation coverage gate
   audit-lines.ts           Stockfish blunder screen
 data/
+  lichess-openings/        the five CC0 a.tsv–e.tsv source files
   progress.json            shared progress (git-ignored, created on first save)
+  progress.backup.json     local backup before a progress reset (git-ignored)
+review/
+  unmapped.md              dataset rows not imported, with reasons
 INSTALL.md                 Windows / macOS / Linux setup guide
 ```
 

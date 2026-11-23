@@ -2,6 +2,7 @@ import { Chess } from "chess.js";
 import { englishOpening } from "../lib/openings/english";
 import { englishIdeas } from "../lib/openings/english-ideas";
 import { openings } from "../lib/openings";
+import { minSideMovesForLine } from "../lib/openings/short-lines";
 
 const squareRe = /^[a-h][1-8]$/;
 let errors = 0;
@@ -195,8 +196,12 @@ for (const opening of openings) {
       }
     });
 
-    if (userMoves < 6) {
-      fail(owner, `line is too short (${userMoves} moves for your side)`);
+    const minMoves = minSideMovesForLine(line.name);
+    if (userMoves < minMoves) {
+      fail(
+        owner,
+        `line is too short (${userMoves} moves for your side, need ${minMoves})`,
+      );
     }
   }
 }
@@ -207,36 +212,36 @@ for (const id of Object.keys(englishIdeas)) {
 }
 
 const EXPECTED_LINES: Record<string, number> = {
-  english: 22,
-  italian: 26,
-  "ruy-lopez": 40,
-  scotch: 28,
-  vienna: 24,
-  "kings-gambit": 24,
-  london: 30,
-  "jobava-london": 35,
-  "bishops-opening": 34,
-  ponziani: 30,
-  "queens-gambit": 33,
-  "queens-gambit-accepted": 28,
-  "caro-kann": 35,
-  french: 40,
-  sicilian: 28,
-  scandinavian: 26,
-  pirc: 35,
-  "kings-indian": 29,
-  dutch: 34,
-  slav: 33,
-  "anti-london": 40,
-  petrov: 43,
-  "nimzo-indian": 24,
-  catalan: 24,
-  "fried-liver": 31,
-  "kings-indian-attack": 31,
-  "open-game": 40,
-  "vienna-gambit": 55,
-  "white-vs-caro-kann": 23,
-  "englund-gambit": 29,
+  english: 63,
+  italian: 129,
+  "ruy-lopez": 144,
+  scotch: 58,
+  vienna: 15,
+  "kings-gambit": 66,
+  london: 6,
+  "jobava-london": 5,
+  "bishops-opening": 9,
+  ponziani: 6,
+  "queens-gambit": 156,
+  "queens-gambit-accepted": 34,
+  "caro-kann": 27,
+  french: 79,
+  sicilian: 168,
+  scandinavian: 8,
+  pirc: 8,
+  "kings-indian": 91,
+  dutch: 21,
+  slav: 68,
+  "anti-london": 5,
+  petrov: 21,
+  "nimzo-indian": 62,
+  catalan: 26,
+  "fried-liver": 6,
+  "kings-indian-attack": 10,
+  "open-game": 15,
+  "vienna-gambit": 9,
+  "white-vs-caro-kann": 5,
+  "englund-gambit": 6,
 };
 
 for (const [slug, expected] of Object.entries(EXPECTED_LINES)) {

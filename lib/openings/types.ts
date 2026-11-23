@@ -53,6 +53,8 @@ export type LineMove = {
   coach?: CoachPoint[];
 };
 
+export type LineLevel = "basic" | "common" | "advanced";
+
 export type OpeningLine = {
   id: string;
   name: string;
@@ -63,6 +65,11 @@ export type OpeningLine = {
   /** Where the line and its explanations can be checked. */
   sources?: OpeningSource[];
   moves: LineMove[];
+  /** Tree metadata from the CC0 Lichess opening-name dataset. */
+  parentName?: string;
+  family?: string;
+  level?: LineLevel;
+  source?: "lichess" | "manual";
 };
 
 export type Opening = {

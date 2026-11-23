@@ -16,4 +16,5 @@ scripts/audit-report.json
 
 # Shared progress file written by the local server. Back it up, never commit it.
 data/progress.json
+data/progress.backup.json
 data/*.tmp

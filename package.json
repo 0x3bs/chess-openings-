@@ -13,7 +13,7 @@
     "typecheck": "tsc --noEmit",
     "check": "npm run validate && npm run i18n:check && npm run typecheck",
     "audit": "tsx scripts/audit-lines.ts",
-    "generate": "tsx scripts/generate-lines.ts"
+    "import:lines": "tsx scripts/import-lichess-lines.ts"
   },
   "dependencies": {
     "@lichess-org/chessground": "^10.5.0",

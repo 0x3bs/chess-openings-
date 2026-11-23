@@ -1,28 +1,28 @@
 import { buildOpening, catalogueOpenings, type LineSeed } from "./catalog";
 import { englishOpening } from "./english";
-import generatedLines from "./generated-lines.json";
+import lichessLines from "./lichess-lines.json";
 import type { Opening } from "./types";
 
-const generated = generatedLines as unknown as Record<string, LineSeed[]>;
-const englishGenerated = generated.english ?? [];
+const imported = lichessLines as unknown as Record<string, LineSeed[]>;
+const englishImported = imported.english ?? [];
 
-const englishWithGenerated: Opening = englishGenerated.length
+const englishWithImported: Opening = englishImported.length
   ? {
       ...englishOpening,
       lines: [
         ...englishOpening.lines,
         ...buildOpening({
-          slug: "english-generated",
+          slug: "english-imported",
           name: englishOpening.name,
           eco: englishOpening.eco,
           side: "white",
           intro: englishOpening.intro,
           themes: englishOpening.themes,
-          lines: englishGenerated,
+          lines: englishImported,
         }).lines,
       ],
     }
   : englishOpening;
 
 /** Every course the trainer knows about. Add a new Opening here. */
-export const openings: Opening[] = [englishWithGenerated, ...catalogueOpenings];
+export const openings: Opening[] = [englishWithImported, ...catalogueOpenings];

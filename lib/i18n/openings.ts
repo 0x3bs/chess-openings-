@@ -6,7 +6,7 @@ import {
 } from "@/lib/openings/catalog";
 import { englishBaseOpening, englishOpening } from "@/lib/openings/english";
 import { englishIdeas } from "@/lib/openings/english-ideas";
-import generatedLines from "@/lib/openings/generated-lines.json";
+import lichessLines from "@/lib/openings/lichess-lines.json";
 import { openings } from "@/lib/openings";
 import type { Opening } from "@/lib/openings/types";
 import type { Locale } from "./config";
@@ -23,7 +23,7 @@ import {
 const SOURCE_NOTE_AR =
   "كل نقلة لها فكرة أصلية من جملة واحدة، مكتوبة من نظرية الافتتاحية الإنجليزية المعتادة. يتم التحقق من ترتيب النقلات بـchess.js وفحصها بـStockfish. رابط Lichess يفتح الوضع النهائي بالضبط لتتحقق منه بنفسك.";
 
-const generated = generatedLines as unknown as Record<string, LineSeed[]>;
+const imported = lichessLines as unknown as Record<string, LineSeed[]>;
 
 function translateEnglishOpening(): Opening {
   const base: Opening = {
@@ -62,10 +62,10 @@ function translateEnglishOpening(): Opening {
   return attachIdeas(base, ideas, "ar");
 }
 
-function englishWithGenerated(locale: Locale): Opening {
+function englishWithImported(locale: Locale): Opening {
   const english =
     locale === "ar" ? translateEnglishOpening() : englishOpening;
-  const extra = generated.english ?? [];
+  const extra = imported.english ?? [];
   if (!extra.length) return english;
 
   return {
@@ -74,7 +74,7 @@ function englishWithGenerated(locale: Locale): Opening {
       ...english.lines,
       ...buildOpening(
         {
-          slug: "english-generated",
+          slug: "english-imported",
           name: english.name,
           eco: english.eco,
           side: "white",
@@ -99,7 +99,7 @@ export function getLocalizedOpenings(locale: Locale): Opening[] {
   if (locale === "en") return openings;
   if (!cache[locale]) {
     cache[locale] = [
-      englishWithGenerated(locale),
+      englishWithImported(locale),
       ...buildCatalogueOpenings(locale),
     ];
   }
