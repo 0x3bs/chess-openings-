@@ -6,6 +6,7 @@
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { Chess } from "chess.js";
+import { isMovePrefix, partialLineIds } from "../lib/openings/partial";
 import { minSideMovesForLine } from "../lib/openings/short-lines";
 
 type Level = "basic" | "common" | "advanced";
@@ -21,9 +22,17 @@ type ImportedLine = {
   parentName: string;
   level: Level;
   pgn: string;
+  /** Famous short entry line with a longer named continuation. */
+  partial?: boolean;
   i18n: {
     ar: { name: string; summary: string; tags: string[] };
   };
+};
+
+type RemovedDuplicate = {
+  slug: string;
+  line: ImportedLine;
+  kept: ImportedLine;
 };
 
 type Row = { eco: string; name: string; pgn: string };
@@ -31,6 +40,7 @@ type Row = { eco: string; name: string; pgn: string };
 const INPUT_DIR = "data/lichess-openings";
 const OUTPUT = "lib/openings/lichess-lines.json";
 const UNMAPPED = "review/unmapped.md";
+const DUPLICATES = "review/duplicate-lines.md";
 
 /** Same order as the course picker; English first. */
 const COURSE_ORDER = [
@@ -370,6 +380,61 @@ function assignCourse(row: Row): string | null {
   return null;
 }
 
+/**
+ * Keep only the longest line when the same course has several lines with the
+ * exact same name and a pure prefix move order. Different move orders with the
+ * same name are transpositions and are all kept.
+ */
+function dedupeCourse(
+  slug: string,
+  lines: ImportedLine[],
+  removed: RemovedDuplicate[],
+): ImportedLine[] {
+  const groups = new Map<string, ImportedLine[]>();
+  for (const line of lines) {
+    groups.set(line.name, [...(groups.get(line.name) ?? []), line]);
+  }
+
+  const keep = new Set<string>();
+  for (const group of groups.values()) {
+    if (group.length < 2) {
+      for (const line of group) keep.add(line.id);
+      continue;
+    }
+
+    const sorted = [...group].sort(
+      (a, b) =>
+        a.moves.length - b.moves.length || a.id.localeCompare(b.id),
+    );
+    const isChain = sorted.every((line, index) =>
+      index === 0 ? true : isMovePrefix(sorted[index - 1].moves, line.moves),
+    );
+    if (!isChain) {
+      for (const line of group) keep.add(line.id);
+      continue;
+    }
+
+    const longest = sorted[sorted.length - 1];
+    keep.add(longest.id);
+    for (const line of sorted.slice(0, -1)) {
+      removed.push({ slug, line, kept: longest });
+    }
+  }
+
+  return lines.filter((line) => keep.has(line.id));
+}
+
+function markPartialEntries(lines: ImportedLine[]): void {
+  const ids = partialLineIds(lines);
+  for (const line of lines) {
+    if (ids.has(line.id)) line.partial = true;
+  }
+}
+
+function escapeCell(value: string): string {
+  return value.replace(/\|/g, "\\|");
+}
+
 function main(): void {
   const rows = readRows();
   const manual = manualPgns();
@@ -377,7 +442,6 @@ function main(): void {
   const seenIds = new Set<string>();
   const seenPgns = new Set<string>();
   const unmapped: Array<{ row: Row; reason: string; detail: string }> = [];
-  const shortKept: string[] = [];
 
   for (const row of rows) {
     const chess = new Chess();
@@ -420,8 +484,6 @@ function main(): void {
     }
     seenPgns.add(history);
 
-    if (minimum < 6) shortKept.push(`${slug}: ${row.name}`);
-
     const [parentName, variation] = row.name.split(":", 2);
     const family = variation ? variation.split(",")[0].trim() : parentName.trim();
     const level = levelFor(row.name, moves.length);
@@ -462,6 +524,13 @@ function main(): void {
     byCourse[slug].push(line);
   }
 
+  const removedDuplicates: RemovedDuplicate[] = [];
+  for (const slug of COURSE_ORDER) {
+    if (!byCourse[slug]?.length) continue;
+    byCourse[slug] = dedupeCourse(slug, byCourse[slug], removedDuplicates);
+  }
+  markPartialEntries(Object.values(byCourse).flat());
+
   const output: Record<string, ImportedLine[]> = {};
   for (const slug of COURSE_ORDER) {
     if (!byCourse[slug]?.length) continue;
@@ -470,6 +539,12 @@ function main(): void {
     );
     output[slug] = byCourse[slug];
   }
+
+  const shortKept = Object.values(output)
+    .flat()
+    .filter((line) => line.partial)
+    .map((line) => line.name);
+  const partialCount = shortKept.length;
 
   mkdirSync("lib/openings", { recursive: true });
   mkdirSync("review", { recursive: true });
@@ -493,13 +568,41 @@ function main(): void {
   ];
   writeFileSync(UNMAPPED, lines.join("\n"));
 
+  removedDuplicates.sort(
+    (a, b) =>
+      a.slug.localeCompare(b.slug) ||
+      a.line.name.localeCompare(b.line.name, "en", { sensitivity: "base" }) ||
+      a.line.moves.length - b.line.moves.length,
+  );
+  const duplicateLines = [
+    "# Duplicate opening lines removed",
+    "",
+    "These imported lines had the same course, the exact same name and a pure",
+    "prefix move order as a longer line. Only the longest version is kept.",
+    "Different move orders with the same name are transpositions and stay.",
+    "",
+    "| Course | Name | ECO | Removed plies | Kept line | Kept plies | Removed PGN |",
+    "| --- | --- | --- | ---: | --- | ---: | --- |",
+    ...removedDuplicates.map(
+      ({ slug, line, kept }) =>
+        `| ${slug} | ${escapeCell(line.name)} | ${line.eco} | ${line.moves.length} | ${escapeCell(kept.id)} | ${kept.moves.length} | ${escapeCell(line.pgn)} |`,
+    ),
+    "",
+    `Total: ${removedDuplicates.length} duplicate lines removed.`,
+    "",
+  ];
+  writeFileSync(DUPLICATES, duplicateLines.join("\n"));
+
   const total = Object.values(output).reduce((sum, arr) => sum + arr.length, 0);
   console.log(`Imported ${total} named lines into ${OUTPUT}`);
   for (const [slug, arr] of Object.entries(output)) {
     console.log(`  ${slug.padEnd(24)} ${String(arr.length).padStart(4)}`);
   }
-  console.log(`Short famous lines kept: ${shortKept.length}`);
+  console.log(`Imported short entry lines marked partial: ${partialCount}`);
   for (const name of shortKept.slice(0, 20)) console.log(`  ${name}`);
+  console.log(
+    `Duplicate lines removed: ${removedDuplicates.length} (see ${DUPLICATES})`,
+  );
   console.log(`Unmapped rows: ${unmapped.length} (see ${UNMAPPED})`);
 }
 

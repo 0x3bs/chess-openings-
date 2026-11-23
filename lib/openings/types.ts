@@ -70,6 +70,8 @@ export type OpeningLine = {
   family?: string;
   level?: LineLevel;
   source?: "lichess" | "manual";
+  /** Famous short entry line that also has a longer named continuation. */
+  partial?: boolean;
 };
 
 export type Opening = {

@@ -45,6 +45,10 @@ AUDIT_OPENING=italian npm run audit
   with `npm run import:lines` after changing the CC0 TSV files in
   `data/lichess-openings/`; rows that cannot be mapped are recorded in
   `review/unmapped.md`.
+- The importer keeps only the longest line when the same course has duplicate
+  names with a pure prefix move order. Removed lines are listed in
+  `review/duplicate-lines.md`. Famous short entry lines are kept and marked
+  `partial: true` (metadata only).
 - Stockfish is a checker only (`npm run audit`). It never authors move orders.
 - Every move needs exactly one `idea` and at least one highlight. The validator
   checks this for you.

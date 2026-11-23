@@ -8,6 +8,7 @@ import { englishBaseOpening, englishOpening } from "@/lib/openings/english";
 import { englishIdeas } from "@/lib/openings/english-ideas";
 import lichessLines from "@/lib/openings/lichess-lines.json";
 import { openings } from "@/lib/openings";
+import { markPartialLines, partialLineIds } from "@/lib/openings/partial";
 import type { Opening } from "@/lib/openings/types";
 import type { Locale } from "./config";
 import { translateLineName, translateSummary } from "./content/catalog-ar";
@@ -26,17 +27,14 @@ const SOURCE_NOTE_AR =
 const imported = lichessLines as unknown as Record<string, LineSeed[]>;
 
 function translateEnglishOpening(): Opening {
+  const source = markPartialLines(englishBaseOpening);
   const base: Opening = {
-    ...englishBaseOpening,
-    name:
-      openingNamesAr[englishBaseOpening.name] ?? englishBaseOpening.name,
-    intro:
-      openingIntrosAr[englishBaseOpening.intro] ?? englishBaseOpening.intro,
-    themes: englishBaseOpening.themes.map(
-      (theme) => themesAr[theme] ?? theme,
-    ),
+    ...source,
+    name: openingNamesAr[source.name] ?? source.name,
+    intro: openingIntrosAr[source.intro] ?? source.intro,
+    themes: source.themes.map((theme) => themesAr[theme] ?? theme),
     sourceNote: SOURCE_NOTE_AR,
-    lines: englishBaseOpening.lines.map((line) => ({
+    lines: source.lines.map((line) => ({
       ...line,
       name: translateLineName(line.name),
       summary: translateSummary(line.summary),
@@ -98,10 +96,19 @@ const cache: Partial<Record<Locale, Opening[]>> = {};
 export function getLocalizedOpenings(locale: Locale): Opening[] {
   if (locale === "en") return openings;
   if (!cache[locale]) {
+    const partialIds = partialLineIds(
+      openings.flatMap((opening) =>
+        opening.lines.map((line) => ({
+          id: line.id,
+          name: line.name,
+          moves: line.moves.map((move) => move.san),
+        })),
+      ),
+    );
     cache[locale] = [
       englishWithImported(locale),
       ...buildCatalogueOpenings(locale),
-    ];
+    ].map((opening) => markPartialLines(opening, partialIds));
   }
   return cache[locale] as Opening[];
 }

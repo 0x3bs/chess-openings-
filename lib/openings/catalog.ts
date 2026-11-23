@@ -3,6 +3,7 @@ import type { Locale } from "../i18n/config";
 import { translateSeed } from "../i18n/content/catalog-ar";
 import { attachIdeas } from "./apply-ideas";
 import lichessLines from "./lichess-lines.json";
+import { partialLineIds } from "./partial";
 import type { LineLevel, Opening, OpeningLine } from "./types";
 
 type ImportedLine = {
@@ -16,6 +17,7 @@ type ImportedLine = {
   family: string;
   level: LineLevel;
   pgn: string;
+  partial?: boolean;
   i18n: { ar: { name: string; summary: string; tags: string[] } };
 };
 
@@ -30,6 +32,7 @@ export type LineSeed = {
   family?: string;
   level?: LineLevel;
   source?: "lichess" | "manual";
+  partial?: boolean;
   i18n?: { ar: { name: string; summary: string; tags: string[] } };
 };
 
@@ -207,6 +210,7 @@ export function buildOpening(
   locale: Locale = "en",
 ): Opening {
   const localized = locale === "ar" ? translateSeed(seed) : seed;
+  const partialIds = partialLineIds(seed.lines);
 
   const base: Opening = {
     slug: localized.slug,
@@ -228,6 +232,7 @@ export function buildOpening(
       family: line.family,
       level: line.level,
       source: line.source ?? (line.parentName ? "lichess" : "manual"),
+      partial: line.partial || partialIds.has(line.id) || undefined,
     })),
   };
 
@@ -1963,6 +1968,7 @@ function mergedSeeds(): OpeningSeed[] {
         family: line.family,
         level: line.level,
         source: "lichess" as const,
+        partial: line.partial,
         i18n: line.i18n,
       })),
     ],

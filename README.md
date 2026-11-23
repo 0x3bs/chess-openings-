@@ -1,12 +1,12 @@
 # ChessCoach
 
-A chess-opening trainer with **30 courses**, **954 lines** and **11,961
-explained moves**. The English Opening is the 22-line deep course; every other
-opening has a full branch set, from 23 to 55 lines.
+A chess-opening trainer with **30 courses**, **1,277 named lines** and
+**18,788 explained moves**. The English Opening is a 20-line deep course plus
+imported named branches; every course is a named-line tree, from 5 to 158 lines.
 
 This is a learning tool, not an engine: the value is in the explanations.
 
-**بالعربية:** مدرّب افتتاحيات شطرنج يضم 30 دورة و954 خطًا و11,961 فكرة مشروحة.
+**بالعربية:** مدرّب افتتاحيات شطرنج يضم 30 دورة و1,277 خطًا و18,788 فكرة مشروحة.
 الواجهة متاحة بالكامل بالعربية (RTL) والإنجليزية، وكل نقلة لها فكرة واحدة وإبراز
 واحد على الرقعة.
 
@@ -130,8 +130,9 @@ hotspot, and checks for duplicate IDs. Run it after editing course data.
 
 `npm run audit` evaluates every position with the bundled Stockfish 19 WASM
 engine from the course side's perspective. It flags large eval drops, losing
-positions and free queen captures. The current catalogue passes with zero flags
-at depth 12. Intentional gambit pawns are allowed by the 150cp threshold.
+positions and free queen captures. Intentional gambit pawns are allowed by the
+150cp threshold. Named gambit and trap lines can still flag because they are
+real published theory; those flags are reviewed, never deleted automatically.
 
 The audit can be narrowed while iterating:
 `AUDIT_OPENING=englund-gambit npm run audit` checks one course. `SF_DEPTH` and
@@ -140,6 +141,11 @@ The audit can be narrowed while iterating:
 `npm run import:lines` reads the five CC0 TSV files in
 `data/lichess-openings/`, writes `lib/openings/lichess-lines.json`, and records
 every row that could not be mapped in `review/unmapped.md`.
+
+The importer also removes exact duplicates: when the same course has several
+lines with the same name and a pure prefix move order, only the longest version
+is kept. Every deletion is listed in `review/duplicate-lines.md`. Famous short
+entry lines are kept and marked `partial: true` instead of being deleted.
 
 ## Content and sources
 
@@ -292,10 +298,11 @@ lib/
   i18n/openings.ts         localized catalogue builder (memoized)
   i18n/LocaleProvider.tsx  client locale context and plural helper
   openings/types.ts        course data types
-  openings/english.ts      the 22 English lines and all deep notes
+  openings/english.ts      the 20 English lines and all deep notes
   openings/english-ideas.ts one idea for every English move
   openings/catalog.ts      29 catalogue courses and their named lines
   openings/lichess-lines.json  named lines from the CC0 Lichess dataset
+  openings/partial.ts      marks famous short entry lines with a continuation
   openings/apply-ideas.ts  merge ideas, sources and locale-aware hotspots
   openings/index.ts        course registry
 scripts/
@@ -308,6 +315,7 @@ data/
   progress.json            shared progress (git-ignored, created on first save)
   progress.backup.json     local backup before a progress reset (git-ignored)
 review/
+  duplicate-lines.md       duplicate lines removed, with the kept line
   unmapped.md              dataset rows not imported, with reasons
 INSTALL.md                 Windows / macOS / Linux setup guide
 ```
