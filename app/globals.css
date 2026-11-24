@@ -2927,6 +2927,117 @@ p {
   font-weight: 650;
 }
 
+/* Auto-generated note for the whole line, shown directly under the board. */
+.study-line-note {
+  margin-top: 12px;
+  padding: 13px 15px;
+  border: 1px solid var(--border-soft);
+  border-radius: 12px;
+  background: var(--bg-soft);
+}
+
+.study-line-note-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.study-line-note-kicker {
+  color: var(--muted-2);
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.study-line-note-badge {
+  padding: 2px 7px;
+  border: 1px solid var(--border-soft);
+  border-radius: 999px;
+  background: var(--panel-3);
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.study-line-note-text {
+  margin: 0;
+  color: var(--text);
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+
+.study-line-note-report {
+  margin-top: 8px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--muted-2);
+  font: inherit;
+  font-size: 10.5px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+.study-line-note-report:hover {
+  color: var(--accent);
+}
+
+.study-line-note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.study-line-note-form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  resize: vertical;
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--text);
+  font: inherit;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.study-line-note-form textarea:focus-visible {
+  outline: 2px solid rgba(var(--accent-rgb), 0.55);
+  outline-offset: 1px;
+}
+
+.study-line-note-hint {
+  margin: 0;
+  color: var(--muted-2);
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.study-line-note-error {
+  margin: 0;
+  color: #f87171;
+  font-size: 11px;
+}
+
+.study-line-note-saved {
+  margin: 6px 0 0;
+  color: #86efac;
+  font-size: 11px;
+}
+
+.study-line-note-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
 .study-status {
   display: flex;
   flex-wrap: wrap;

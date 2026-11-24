@@ -1,0 +1,722 @@
+{
+  "english": {
+    "name": "English Opening",
+    "overview": {
+      "en": "A flexible flank opening where White controls the central dark squares with a queenside pawn and builds a kingside fianchetto.",
+      "ar": "افتتاحية جناحية مرنة يسيطر فيها الأبيض على المربعات المركزية الداكنة ببيدق وزيري ويبني فيانكيتو ملكيًا."
+    },
+    "whitePlan": {
+      "en": "White develops the minor pieces, castles early and prepares a central break or a queenside expansion.",
+      "ar": "يطوّر الأبيض القطع الصغيرة، ويحصّن مبكرًا، ويهيّئ كسرًا مركزيًا أو توسعًا وزيريًا."
+    },
+    "blackPlan": {
+      "en": "Black contests the centre, completes development and looks for counterplay before White's space becomes uncomfortable.",
+      "ar": "ينافس الأسود على المركز، ويكمل تطوير قطعه، ويبحث عن هجوم مضاد قبل أن تصبح مساحة الأبيض مزعجة."
+    },
+    "pawnStructure": {
+      "en": "A flexible structure with a queenside pawn duo and a fianchettoed bishop, often turning into a reversed Sicilian or a symmetrical centre.",
+      "ar": "بنية مرنة ببيدقين وزيريين وفيل فيانكيتو، تتحول غالبًا إلى صقلية معكوسة أو مركز متماثل."
+    },
+    "commonMistake": {
+      "en": "Pushing the central pawn too early before the flank pawns and the fianchettoed bishop are properly supported.",
+      "ar": "دفع البيدق المركزي مبكرًا قبل تأمين البيادق الجناحية ودعم فيل الفيانكيتو."
+    },
+    "source": "manual"
+  },
+  "italian": {
+    "name": "Italian Game",
+    "overview": {
+      "en": "A classical open game where White develops the bishop actively and pressures the weakest point in Black's camp.",
+      "ar": "لعبة مفتوحة كلاسيكية يطوّر فيها الأبيض فيله بنشاط ويضغط على أضعف نقطة في معسكر الأسود."
+    },
+    "whitePlan": {
+      "en": "White castles quickly, builds a broad centre and chooses between a slow positional squeeze and a direct attack.",
+      "ar": "يحصّن الأبيض مبكرًا، ويبني مركزًا عريضًا، ويختار بين ضغط موضعي بطيء وهجوم مباشر."
+    },
+    "blackPlan": {
+      "en": "Black mirrors development, challenges the centre and tries to equalise before White's initiative grows.",
+      "ar": "يقلّد الأسود تطوير الأبيض، وينافس على المركز، ويحاول التعادل قبل أن تكبر مبادرة الأبيض."
+    },
+    "pawnStructure": {
+      "en": "A symmetrical central structure with both sides able to open the position with a central pawn break.",
+      "ar": "بنية مركزية متماثلة يستطيع فيها الطرفان فتح الوضع بكسر بيدق مركزي."
+    },
+    "commonMistake": {
+      "en": "Launching a premature tactical attack before the centre is stable and the king is safe.",
+      "ar": "شن هجوم تكتيكي متسرّع قبل استقرار المركز وتأمين الملك."
+    },
+    "source": "manual"
+  },
+  "ruy-lopez": {
+    "name": "Ruy Lopez",
+    "overview": {
+      "en": "A classical Spanish game where White pins a knight and applies long-term pressure on Black's centre.",
+      "ar": "لعبة إسبانية كلاسيكية يثبّت فيها الأبيض حصانًا ويمارس ضغطًا طويل المدى على مركز الأسود."
+    },
+    "whitePlan": {
+      "en": "White builds a harmonious setup, keeps the bishop active and prepares a central or queenside advance.",
+      "ar": "يبني الأبيض ترتيبًا متناسقًا، ويُبقي فيله نشطًا، ويهيّئ تقدمًا مركزيًا أو وزيريًا."
+    },
+    "blackPlan": {
+      "en": "Black develops solidly, challenges the bishop and chooses between a closed defensive setup and a sharp counterattack.",
+      "ar": "يطوّر الأسود قطعه بثبات، وينافس الفيل، ويختار بين ترتيب دفاعي مغلق وهجوم مضاد حاد."
+    },
+    "pawnStructure": {
+      "en": "A closed central structure with pawn chains facing each other and play shifting to the wings.",
+      "ar": "بنية مركزية مغلقة بسلاسل بيادق متقابلة وينتقل اللعب إلى الأجنحة."
+    },
+    "commonMistake": {
+      "en": "Trading the active bishop too early and allowing Black to equalise without any real pressure.",
+      "ar": "تبادل الفيل النشط مبكرًا والسماح للأسود بالتعادل دون ضغط حقيقي."
+    },
+    "source": "manual"
+  },
+  "scotch": {
+    "name": "Scotch Game",
+    "overview": {
+      "en": "An open game where White strikes in the centre immediately and accepts an early clarification of the pawn structure.",
+      "ar": "لعبة مفتوحة يضرب فيها الأبيض في المركز فورًا ويقبل توضيحًا مبكرًا لبنية البيادق."
+    },
+    "whitePlan": {
+      "en": "White recaptures actively, develops with tempo and uses the open centre for rapid piece play.",
+      "ar": "يستعيد الأبيض البيدق بنشاط، ويطوّر قطعه مع كسب زمن، ويستفيد من المركز المفتوح للعب السريع."
+    },
+    "blackPlan": {
+      "en": "Black equalises by developing quickly and challenging the centre before White can organise an attack.",
+      "ar": "يعادل الأسود بتطوير سريع ومنافسة المركز قبل أن ينظّم الأبيض هجومه."
+    },
+    "pawnStructure": {
+      "en": "An open centre after the early pawn trade, often leaving active pieces and a temporary pawn imbalance.",
+      "ar": "مركز مفتوح بعد تبادل البيادق المبكر، وغالبًا ما يترك قطعًا نشطة واختلالًا مؤقتًا في البيادق."
+    },
+    "commonMistake": {
+      "en": "Grabbing material with the queen and falling behind in development.",
+      "ar": "جمع المادة بالملكة والتخلّف في التطوير."
+    },
+    "source": "manual"
+  },
+  "vienna": {
+    "name": "Vienna Game",
+    "overview": {
+      "en": "A flexible king-pawn opening where White develops a knight early and keeps the option of a kingside pawn storm.",
+      "ar": "افتتاحية مرنة ببيدق الملك يطوّر فيها الأبيض حصانًا مبكرًا ويُبقي خيار عاصفة بيادق ملكية."
+    },
+    "whitePlan": {
+      "en": "White supports the kingside advance, castles safely and opens lines against the enemy king.",
+      "ar": "يدعم الأبيض التقدم الملكي، ويحصّن بأمان، ويفتح خطوطًا ضد ملك الخصم."
+    },
+    "blackPlan": {
+      "en": "Black challenges the centre, develops actively and tries to blunt White's kingside initiative.",
+      "ar": "ينافس الأسود المركز، ويطوّر بنشاط، ويحاول إضعاف مبادرة الأبيض الملكية."
+    },
+    "pawnStructure": {
+      "en": "A tense central structure with an advanced kingside pawn and a possible central counterbreak.",
+      "ar": "بنية مركزية متوترة ببيدق ملكي متقدم وكسر مضاد مركزي محتمل."
+    },
+    "commonMistake": {
+      "en": "Starting the kingside attack before the king is safe and the centre is stable.",
+      "ar": "بدء الهجوم الملكي قبل تأمين الملك واستقرار المركز."
+    },
+    "source": "manual"
+  },
+  "kings-gambit": {
+    "name": "King's Gambit",
+    "overview": {
+      "en": "A romantic attacking opening where White offers a kingside pawn to open lines and seize the initiative.",
+      "ar": "افتتاحية هجومية رومانسية يقدّم فيها الأبيض بيدقًا ملكيًا لفتح الخطوط والاستيلاء على المبادرة."
+    },
+    "whitePlan": {
+      "en": "White develops quickly, castles and attacks along the opened files before Black consolidates.",
+      "ar": "يطوّر الأبيض بسرعة، ويحصّن، ويهاجم على الأعمدة المفتوحة قبل أن يتمكن الأسود من التحصين."
+    },
+    "blackPlan": {
+      "en": "Black accepts or declines the pawn, returns material at the right moment and tries to neutralise the attack.",
+      "ar": "يقبل الأسود البيدق أو يرفضه، ويعيد المادة في الوقت المناسب، ويحاول تحييد الهجوم."
+    },
+    "pawnStructure": {
+      "en": "An open kingside with a weakened White king and a temporary material imbalance.",
+      "ar": "جناح ملكي مفتوح بملك أبيض مكشوف واختلال مؤقت في المادة."
+    },
+    "commonMistake": {
+      "en": "Continuing the attack after the initiative has faded instead of restoring material balance.",
+      "ar": "مواصلة الهجوم بعد تلاشي المبادرة بدلًا من إعادة التوازن المادي."
+    },
+    "source": "manual"
+  },
+  "london": {
+    "name": "London System",
+    "overview": {
+      "en": "A solid queen-pawn system where White develops the dark-squared bishop early and avoids unnecessary pawn commitments.",
+      "ar": "نظام متين ببيدق الوزير يطوّر فيه الأبيض فيله الداكن مبكرًا ويتجنب التزامات البيادق غير الضرورية."
+    },
+    "whitePlan": {
+      "en": "White castles, supports the centre and improves the pieces before choosing a central or kingside expansion.",
+      "ar": "يحصّن الأبيض، ويدعم المركز، ويحسّن قطعه قبل اختيار توسع مركزي أو ملكي."
+    },
+    "blackPlan": {
+      "en": "Black challenges the bishop, contests the centre and looks for queenside counterplay.",
+      "ar": "ينافس الأسود الفيل، ويحتدم على المركز، ويبحث عن هجوم مضاد وزيري."
+    },
+    "pawnStructure": {
+      "en": "A closed queen-pawn centre with a possible central break and a queenside pawn majority.",
+      "ar": "مركز مغلق ببيدق الوزير مع كسر مركزي محتمل وأغلبية بيادق وزيرية."
+    },
+    "commonMistake": {
+      "en": "Leaving the dark-squared bishop passive and allowing Black to trade it off.",
+      "ar": "ترك الفيل الداكن سلبيًا والسماح للأسود بتبادله."
+    },
+    "source": "manual"
+  },
+  "jobava-london": {
+    "name": "Jobava London",
+    "overview": {
+      "en": "An aggressive London setup where White develops the bishop and knight actively and plays for quick piece pressure.",
+      "ar": "ترتيب لندن هجومي يطوّر فيه الأبيض الفيل والحصان بنشاط ويلعب من أجل ضغط سريع بالقطع."
+    },
+    "whitePlan": {
+      "en": "White castles quickly, creates tactical threats and uses the active pieces before the structure is fixed.",
+      "ar": "يحصّن الأبيض بسرعة، ويصنع تهديدات تكتيكية، ويستفيد من القطع النشطة قبل تثبيت البنية."
+    },
+    "blackPlan": {
+      "en": "Black challenges the centre and tries to exploit the early commitment of White's pieces.",
+      "ar": "ينافس الأسود المركز ويحاول استغلال التزام قطع الأبيض المبكر."
+    },
+    "pawnStructure": {
+      "en": "A flexible queen-pawn structure with active pieces and a delayed central decision.",
+      "ar": "بنية مرنة ببيدق الوزير مع قطع نشطة وتأجيل القرار المركزي."
+    },
+    "commonMistake": {
+      "en": "Pushing the central pawn too early and leaving holes around the king.",
+      "ar": "دفع البيدق المركزي مبكرًا وترك ثغرات حول الملك."
+    },
+    "source": "manual"
+  },
+  "bishops-opening": {
+    "name": "Bishop's Opening",
+    "overview": {
+      "en": "A classical king-pawn opening where White develops the bishop early and aims at the opponent's weak flank.",
+      "ar": "افتتاحية كلاسيكية ببيدق الملك يطوّر فيها الأبيض فيله مبكرًا ويستهدف جناح الخصم الضعيف."
+    },
+    "whitePlan": {
+      "en": "White builds a classical centre, castles and chooses the moment for a central or kingside attack.",
+      "ar": "يبني الأبيض مركزًا كلاسيكيًا، ويحصّن، ويختار لحظة الهجوم المركزي أو الملكي."
+    },
+    "blackPlan": {
+      "en": "Black develops solidly, challenges the bishop and seeks equality in the centre.",
+      "ar": "يطوّر الأسود بثبات، وينافس الفيل، ويبحث عن التعادل في المركز."
+    },
+    "pawnStructure": {
+      "en": "An open central structure with the bishop placed on a long diagonal.",
+      "ar": "بنية مركزية مفتوحة مع فيل على قطر طويل."
+    },
+    "commonMistake": {
+      "en": "Attacking the weak point before completing development and securing the centre.",
+      "ar": "مهاجمة النقطة الضعيفة قبل إكمال التطوير وتأمين المركز."
+    },
+    "source": "manual"
+  },
+  "ponziani": {
+    "name": "Ponziani Opening",
+    "overview": {
+      "en": "A classical opening where White prepares a broad pawn centre with an early queenside pawn move.",
+      "ar": "افتتاحية كلاسيكية يهيّئ فيها الأبيض مركز بيادق عريضًا بنقلة بيدق وزيري مبكرة."
+    },
+    "whitePlan": {
+      "en": "White supports the centre, develops the bishop actively and tries to gain space before Black equalises.",
+      "ar": "يدعم الأبيض المركز، ويطوّر فيله بنشاط، ويحاول كسب مساحة قبل تعادل الأسود."
+    },
+    "blackPlan": {
+      "en": "Black challenges the centre immediately and tries to free the position with active piece play.",
+      "ar": "ينافس الأسود المركز فورًا ويحاول تحرير الوضع بلعب نشط بالقطع."
+    },
+    "pawnStructure": {
+      "en": "A classical central pawn duo facing a solid black centre.",
+      "ar": "ثنائي بيادق مركزي كلاسيكي يواجه مركزًا أسود متينًا."
+    },
+    "commonMistake": {
+      "en": "Advancing the central pawn before the supporting pawn and bishop are ready.",
+      "ar": "تقديم البيدق المركزي قبل جاهزية البيدق الداعم والفيل."
+    },
+    "source": "manual"
+  },
+  "queens-gambit": {
+    "name": "Queen's Gambit",
+    "overview": {
+      "en": "A classical queen-pawn opening where White offers a wing pawn to distract Black and dominate the centre.",
+      "ar": "افتتاحية كلاسيكية ببيدق الوزير يقدّم فيها الأبيض بيدقًا جناحيًا لتشتيت الأسود والسيطرة على المركز."
+    },
+    "whitePlan": {
+      "en": "White develops harmoniously, supports the centre and uses the open files or a central break to press.",
+      "ar": "يطوّر الأبيض قطعه بتناسق، ويدعم المركز، ويستخدم الأعمدة المفتوحة أو كسرًا مركزيًا للضغط."
+    },
+    "blackPlan": {
+      "en": "Black holds the centre, completes development and seeks counterplay on the queenside or with a central break.",
+      "ar": "يحافظ الأسود على المركز، ويكمل تطويره، ويبحث عن هجوم مضاد وزيري أو كسر مركزي."
+    },
+    "pawnStructure": {
+      "en": "A closed queen-pawn structure that can become an isolated queen's pawn or a hanging-pawns position.",
+      "ar": "بنية مغلقة ببيدق الوزير قد تتحول إلى بيدق وزير معزول أو وضع بيادق معلقة."
+    },
+    "commonMistake": {
+      "en": "Recapturing on the wing without a plan and falling behind in development.",
+      "ar": "استعادة البيدق على الجناح دون خطة والتخلّف في التطوير."
+    },
+    "source": "manual"
+  },
+  "queens-gambit-accepted": {
+    "name": "Queen's Gambit Accepted",
+    "overview": {
+      "en": "Black accepts the offered wing pawn and tries to free the position with active piece play.",
+      "ar": "يقبل الأسود البيدق الجناحي المقدّم ويحاول تحرير الوضع بلعب نشط بالقطع."
+    },
+    "whitePlan": {
+      "en": "White uses the central majority and active pieces to regain the pawn or build a lasting initiative.",
+      "ar": "يستخدم الأبيض الأغلبية المركزية والقطع النشطة لاستعادة البيدق أو بناء مبادرة دائمة."
+    },
+    "blackPlan": {
+      "en": "Black returns the pawn at the right moment and tries to reach a comfortable equal position.",
+      "ar": "يعيد الأسود البيدق في الوقت المناسب ويحاول الوصول إلى وضع متعادل مريح."
+    },
+    "pawnStructure": {
+      "en": "An open queenside after the pawn capture, often leaving White with a central pawn majority.",
+      "ar": "جناح وزيري مفتوح بعد أخذ البيدق، وغالبًا ما يترك للأبيض أغلبية بيادق مركزية."
+    },
+    "commonMistake": {
+      "en": "Trying to hold the extra pawn too long and getting cramped.",
+      "ar": "محاولة الاحتفاظ بالبيدق الإضافي وقتًا طويلًا والتعرض للانحصار."
+    },
+    "source": "manual"
+  },
+  "caro-kann": {
+    "name": "Caro-Kann Defence",
+    "overview": {
+      "en": "A solid defence where Black supports the central pawn with a queenside pawn and aims for a healthy structure.",
+      "ar": "دفاع متين يدعم فيه الأسود بيدق المركز ببيدق وزيري ويهدف إلى بنية صحية."
+    },
+    "whitePlan": {
+      "en": "White uses the space advantage, develops actively and prepares a central or kingside advance.",
+      "ar": "يستفيد الأبيض من تفوق المساحة، ويطوّر بنشاط، ويهيّئ تقدمًا مركزيًا أو ملكيًا."
+    },
+    "blackPlan": {
+      "en": "Black develops the light-squared bishop actively and challenges the centre at the right moment.",
+      "ar": "يطوّر الأسود فيله الفاتح بنشاط وينافس المركز في اللحظة المناسبة."
+    },
+    "pawnStructure": {
+      "en": "A solid central pawn chain with a possible queenside break.",
+      "ar": "سلسلة بيادق مركزية متينة مع كسر وزيري محتمل."
+    },
+    "commonMistake": {
+      "en": "Leaving the light-squared bishop passive behind the pawn chain.",
+      "ar": "ترك الفيل الفاتح سلبيًا خلف سلسلة البيادق."
+    },
+    "source": "manual"
+  },
+  "french": {
+    "name": "French Defence",
+    "overview": {
+      "en": "A counterattacking defence where Black builds a central pawn chain and strikes at White's centre.",
+      "ar": "دفاع هجومي مضاد يبني فيه الأسود سلسلة بيادق مركزية ويضرب مركز الأبيض."
+    },
+    "whitePlan": {
+      "en": "White uses the space advantage and attacks the pawn chain before Black frees the position.",
+      "ar": "يستفيد الأبيض من تفوق المساحة ويهاجم سلسلة البيادق قبل أن يحرّر الأسود وضعه."
+    },
+    "blackPlan": {
+      "en": "Black strikes at the base of White's centre and develops the pieces behind the pawn chain.",
+      "ar": "يضرب الأسود قاعدة مركز الأبيض ويطوّر قطعه خلف سلسلة البيادق."
+    },
+    "pawnStructure": {
+      "en": "A closed central chain with Black's pawns facing White's advanced centre.",
+      "ar": "سلسلة مركزية مغلقة تواجه فيها بيادق الأسود مركز الأبيض المتقدم."
+    },
+    "commonMistake": {
+      "en": "Weakening the king with an early pawn advance before development is complete.",
+      "ar": "إضعاف الملك بتقدم بيدق مبكر قبل إكمال التطوير."
+    },
+    "source": "manual"
+  },
+  "sicilian": {
+    "name": "Sicilian Defence",
+    "overview": {
+      "en": "An unbalanced defence where Black answers the king-pawn opening with a flank pawn and plays for counterplay.",
+      "ar": "دفاع غير متوازن يرد فيه الأسود على افتتاحية بيدق الملك ببيدق جناحي ويلعب من أجل هجوم مضاد."
+    },
+    "whitePlan": {
+      "en": "White uses the space advantage and attacks on the kingside or in the centre before Black's counterplay arrives.",
+      "ar": "يستفيد الأبيض من تفوق المساحة ويهاجم على الجناح الملكي أو في المركز قبل وصول هجوم الأسود المضاد."
+    },
+    "blackPlan": {
+      "en": "Black trades the flank pawn for a central pawn and creates queenside counterplay.",
+      "ar": "يتبادل الأسود البيدق الجناحي ببيدق مركزي ويصنع هجومًا مضادًا وزيريًا."
+    },
+    "pawnStructure": {
+      "en": "An asymmetrical structure with a queenside pawn majority for Black and more central space for White.",
+      "ar": "بنية غير متماثلة بأغلبية بيادق وزيرية للأسود ومساحة مركزية أكبر للأبيض."
+    },
+    "commonMistake": {
+      "en": "Attacking before completing development and securing the king.",
+      "ar": "الهجوم قبل إكمال التطوير وتأمين الملك."
+    },
+    "source": "manual"
+  },
+  "scandinavian": {
+    "name": "Scandinavian Defence",
+    "overview": {
+      "en": "A direct defence where Black challenges the central pawn immediately.",
+      "ar": "دفاع مباشر ينافس فيه الأسود بيدق المركز فورًا."
+    },
+    "whitePlan": {
+      "en": "White gains space, develops quickly and tries to punish the early queen activity.",
+      "ar": "يكسب الأبيض مساحة، ويطوّر بسرعة، ويحاول معاقبة نشاط الملكة المبكر."
+    },
+    "blackPlan": {
+      "en": "Black develops the queen and bishop actively and tries to reach a solid equal position.",
+      "ar": "يطوّر الأسود الملكة والفيل بنشاط ويحاول الوصول إلى وضع متعادل متين."
+    },
+    "pawnStructure": {
+      "en": "An open centre after the early pawn trade, with Black often accepting a passive but solid setup.",
+      "ar": "مركز مفتوح بعد تبادل البيادق المبكر، وغالبًا ما يقبل الأسود ترتيبًا سلبيًا لكنه متين."
+    },
+    "commonMistake": {
+      "en": "Moving the queen repeatedly and falling behind in development.",
+      "ar": "تحريك الملكة مرارًا والتخلّف في التطوير."
+    },
+    "source": "manual"
+  },
+  "pirc": {
+    "name": "Pirc Defence",
+    "overview": {
+      "en": "A hypermodern defence where Black allows White to build a big centre and then attacks it.",
+      "ar": "دفاع فوق حديث يسمح فيه الأسود للأبيض ببناء مركز كبير ثم يهاجمه."
+    },
+    "whitePlan": {
+      "en": "White builds a broad centre and tries to overrun Black before the counterattack lands.",
+      "ar": "يبني الأبيض مركزًا عريضًا ويحاول اجتياح الأسود قبل وصول الهجوم المضاد."
+    },
+    "blackPlan": {
+      "en": "Black fianchettoes the king's bishop and strikes at the centre with pawn breaks.",
+      "ar": "يُنشئ الأسود فيانكيتو لفيله الملكي ويضرب المركز بكسرات بيادق."
+    },
+    "pawnStructure": {
+      "en": "A flexible structure with a large White centre and Black's pieces aimed at it.",
+      "ar": "بنية مرنة بمركز أبيض كبير وقطع سوداء موجهة إليه."
+    },
+    "commonMistake": {
+      "en": "Attacking the centre before the king is safe and the pieces are coordinated.",
+      "ar": "مهاجمة المركز قبل تأمين الملك وتنسيق القطع."
+    },
+    "source": "manual"
+  },
+  "kings-indian": {
+    "name": "King's Indian Defence",
+    "overview": {
+      "en": "A dynamic defence where Black concedes space and builds a kingside attack behind a fianchettoed bishop.",
+      "ar": "دفاع ديناميكي يتنازل فيه الأسود عن المساحة ويبني هجومًا ملكيًا خلف فيل فيانكيتو."
+    },
+    "whitePlan": {
+      "en": "White uses the queenside space and tries to break through before Black's kingside attack arrives.",
+      "ar": "يستخدم الأبيض المساحة الوزيرية ويحاول الاختراق قبل وصول هجوم الأسود الملكي."
+    },
+    "blackPlan": {
+      "en": "Black advances the kingside pawns, opens lines and attacks the enemy king.",
+      "ar": "يقدّم الأسود بيادق الجناح الملكي، ويفتح الخطوط، ويهاجم ملك الخصم."
+    },
+    "pawnStructure": {
+      "en": "A closed centre with Black's pawn chain facing White's central pawns and play on opposite wings.",
+      "ar": "مركز مغلق بسلسلة بيادق سوداء تواجه بيادق الأبيض المركزية ولعب على جناحين متقابلين."
+    },
+    "commonMistake": {
+      "en": "Delaying the kingside attack and allowing White to break through on the queenside.",
+      "ar": "تأخير الهجوم الملكي والسماح للأبيض بالاختراق على الجناح الوزيري."
+    },
+    "source": "manual"
+  },
+  "dutch": {
+    "name": "Dutch Defence",
+    "overview": {
+      "en": "An ambitious defence where Black uses a kingside pawn move to control the central light squares.",
+      "ar": "دفاع طموح يستخدم فيه الأسود نقلة بيدق ملكي للسيطرة على المربعات المركزية الفاتحة."
+    },
+    "whitePlan": {
+      "en": "White exploits the weakened enemy king and prepares a central or queenside advance.",
+      "ar": "يستغل الأبيض ملك الخصم المكشوف ويهيّئ تقدمًا مركزيًا أو وزيريًا."
+    },
+    "blackPlan": {
+      "en": "Black builds a kingside attack and tries to justify the early pawn commitment.",
+      "ar": "يبني الأسود هجومًا ملكيًا ويحاول تبرير التزام البيدق المبكر."
+    },
+    "pawnStructure": {
+      "en": "A Dutch structure with an advanced kingside pawn and a possible central break.",
+      "ar": "بنية هولندية ببيدق ملكي متقدم وكسر مركزي محتمل."
+    },
+    "commonMistake": {
+      "en": "Weakening the king with the early pawn move without completing development.",
+      "ar": "إضعاف الملك بنقلة البيدق المبكرة دون إكمال التطوير."
+    },
+    "source": "manual"
+  },
+  "slav": {
+    "name": "Slav Defence",
+    "overview": {
+      "en": "A solid queen-pawn defence where Black supports the centre and keeps the light-squared bishop free.",
+      "ar": "دفاع متين ببيدق الوزير يدعم فيه الأسود المركز ويُبقي الفيل الفاتح حرًا."
+    },
+    "whitePlan": {
+      "en": "White pressures the centre, develops actively and tries to exploit the space advantage.",
+      "ar": "يضغط الأبيض على المركز، ويطوّر بنشاط، ويحاول استغلال تفوق المساحة."
+    },
+    "blackPlan": {
+      "en": "Black develops the bishop actively and seeks counterplay on the queenside.",
+      "ar": "يطوّر الأسود فيله بنشاط ويبحث عن هجوم مضاد وزيري."
+    },
+    "pawnStructure": {
+      "en": "A solid central structure with a possible wing pawn trade and active piece play.",
+      "ar": "بنية مركزية متينة مع تبادل بيدق جناحي محتمل ولعب نشط بالقطع."
+    },
+    "commonMistake": {
+      "en": "Trading the light-squared bishop too early and accepting a passive position.",
+      "ar": "تبادل الفيل الفاتح مبكرًا وقبول وضع سلبي."
+    },
+    "source": "manual"
+  },
+  "anti-london": {
+    "name": "Anti-London",
+    "overview": {
+      "en": "A black system that meets the London setup by attacking the central pawn and creating queenside pressure.",
+      "ar": "نظام أسود يواجه ترتيب لندن بمهاجمة البيدق المركزي وصنع ضغط وزيري."
+    },
+    "whitePlan": {
+      "en": "White keeps the centre stable, develops harmoniously and avoids weakening the king.",
+      "ar": "يحافظ الأبيض على استقرار المركز، ويطوّر بتناسق، ويتجنب إضعاف الملك."
+    },
+    "blackPlan": {
+      "en": "Black pressures the central pawn and tries to create queenside chances.",
+      "ar": "يضغط الأسود على البيدق المركزي ويحاول صنع فرص وزيرية."
+    },
+    "pawnStructure": {
+      "en": "A closed central structure with Black's pawns pressing from the queenside.",
+      "ar": "بنية مركزية مغلقة ببيادق سوداء تضغط من الجناح الوزيري."
+    },
+    "commonMistake": {
+      "en": "Attacking too early and leaving the king exposed.",
+      "ar": "الهجوم مبكرًا وترك الملك مكشوفًا."
+    },
+    "source": "manual"
+  },
+  "petrov": {
+    "name": "Petrov Defence",
+    "overview": {
+      "en": "A symmetrical defence where Black mirrors the central pawn move and counterattacks the advanced pawn.",
+      "ar": "دفاع متماثل يقلّد فيه الأسود نقلة البيدق المركزي ويهاجم البيدق المتقدم."
+    },
+    "whitePlan": {
+      "en": "White avoids the symmetrical trade and tries to keep a small initiative with active pieces.",
+      "ar": "يتجنب الأبيض التبادل المتماثل ويحاول الاحتفاظ بمبادرة صغيرة بقطع نشطة."
+    },
+    "blackPlan": {
+      "en": "Black equalises through active piece play and precise defence.",
+      "ar": "يعادل الأسود بلعب نشط بالقطع ودفاع دقيق."
+    },
+    "pawnStructure": {
+      "en": "A symmetrical central structure with a possible early pawn trade.",
+      "ar": "بنية مركزية متماثلة مع تبادل بيدق مبكر محتمل."
+    },
+    "commonMistake": {
+      "en": "Grabbing the advanced pawn and falling behind in development.",
+      "ar": "أخذ البيدق المتقدم والتخلّف في التطوير."
+    },
+    "source": "manual"
+  },
+  "nimzo-indian": {
+    "name": "Nimzo-Indian Defence",
+    "overview": {
+      "en": "A flexible defence where Black pins a knight and fights for control of the central squares.",
+      "ar": "دفاع مرن يثبّت فيه الأسود حصانًا وينافس على السيطرة على المربعات المركزية."
+    },
+    "whitePlan": {
+      "en": "White builds a broad centre and tries to use the bishop pair or a space advantage.",
+      "ar": "يبني الأبيض مركزًا عريضًا ويحاول استخدام زوج الفيلة أو تفوق المساحة."
+    },
+    "blackPlan": {
+      "en": "Black trades the bishop for the knight and targets the resulting pawn weaknesses.",
+      "ar": "يتبادل الأسود الفيل بالحصان ويستهدف ضعف البيادق الناتج."
+    },
+    "pawnStructure": {
+      "en": "A flexible structure that can leave White with doubled pawns and a central majority.",
+      "ar": "بنية مرنة قد تترك للأبيض بيادق مزدوجة وأغلبية مركزية."
+    },
+    "commonMistake": {
+      "en": "Trading on the pinned knight without a clear plan for the resulting structure.",
+      "ar": "التبادل على الحصان المثبّت دون خطة واضحة للبنية الناتجة."
+    },
+    "source": "manual"
+  },
+  "catalan": {
+    "name": "Catalan Opening",
+    "overview": {
+      "en": "A positional queen-pawn opening where White combines a central setup with a kingside fianchetto.",
+      "ar": "افتتاحية موضعية ببيدق الوزير يجمع فيها الأبيض بين ترتيب مركزي وفيانكيتو ملكي."
+    },
+    "whitePlan": {
+      "en": "White builds long-term pressure with the fianchettoed bishop and prepares a queenside expansion.",
+      "ar": "يبني الأبيض ضغطًا طويل المدى بفيل الفيانكيتو ويهيّئ توسعًا وزيريًا."
+    },
+    "blackPlan": {
+      "en": "Black challenges the centre, frees the position and seeks active piece play.",
+      "ar": "ينافس الأسود المركز، ويحرّر وضعه، ويبحث عن لعب نشط بالقطع."
+    },
+    "pawnStructure": {
+      "en": "A closed queen-pawn structure with a fianchettoed bishop and a possible central break.",
+      "ar": "بنية مغلقة ببيدق الوزير مع فيل فيانكيتو وكسر مركزي محتمل."
+    },
+    "commonMistake": {
+      "en": "Releasing the central tension too early and losing the bishop's long-term scope.",
+      "ar": "تخفيف التوتر المركزي مبكرًا وفقدان مدى الفيل الطويل."
+    },
+    "source": "manual"
+  },
+  "fried-liver": {
+    "name": "Fried Liver Attack",
+    "overview": {
+      "en": "A sharp attacking line where White sacrifices a knight to drag the enemy king into the open.",
+      "ar": "خط هجومي حاد يضحّي فيه الأبيض بحصان لجرّ ملك الخصم إلى العراء."
+    },
+    "whitePlan": {
+      "en": "White uses the exposed king and active pieces to build a direct attack.",
+      "ar": "يستفيد الأبيض من الملك المكشوف والقطع النشطة لبناء هجوم مباشر."
+    },
+    "blackPlan": {
+      "en": "Black tries to survive the attack, consolidate and convert the extra material.",
+      "ar": "يحاول الأسود النجاة من الهجوم والتحصين وتحويل المادة الإضافية."
+    },
+    "pawnStructure": {
+      "en": "An open centre with the enemy king exposed and pieces actively placed.",
+      "ar": "مركز مفتوح بملك خصم مكشوف وقطع في مواقع نشطة."
+    },
+    "commonMistake": {
+      "en": "Playing the sacrifice without calculating the follow-up accurately.",
+      "ar": "تنفيذ التضحية دون حساب المتابعة بدقة."
+    },
+    "source": "manual"
+  },
+  "kings-indian-attack": {
+    "name": "King's Indian Attack",
+    "overview": {
+      "en": "A universal setup where White builds a fianchetto and a flexible central pawn formation against many defences.",
+      "ar": "ترتيب عالمي يبني فيه الأبيض فيانكيتو وتشكيل بيادق مركزي مرن ضد دفاعات متعددة."
+    },
+    "whitePlan": {
+      "en": "White castles, completes development and attacks on the kingside.",
+      "ar": "يحصّن الأبيض، ويكمل تطويره، ويهاجم على الجناح الملكي."
+    },
+    "blackPlan": {
+      "en": "Black challenges the centre and tries to create counterplay before the attack develops.",
+      "ar": "ينافس الأسود المركز ويحاول صنع هجوم مضاد قبل تطور هجوم الأبيض."
+    },
+    "pawnStructure": {
+      "en": "A flexible structure with a central pawn and a fianchettoed bishop.",
+      "ar": "بنية مرنة ببيدق مركزي وفيل فيانكيتو."
+    },
+    "commonMistake": {
+      "en": "Advancing the central pawn too early and weakening the centre.",
+      "ar": "تقديم البيدق المركزي مبكرًا وإضعاف المركز."
+    },
+    "source": "manual"
+  },
+  "open-game": {
+    "name": "Open Game",
+    "overview": {
+      "en": "A family of open king-pawn openings where both sides develop quickly and fight for central lines.",
+      "ar": "عائلة افتتاحيات مفتوحة ببيدق الملك يطوّر فيها الطرفان بسرعة ويتنافسان على الخطوط المركزية."
+    },
+    "whitePlan": {
+      "en": "White uses the open lines, active pieces and rapid development to create chances.",
+      "ar": "يستخدم الأبيض الخطوط المفتوحة والقطع النشطة والتطوير السريع لصنع الفرص."
+    },
+    "blackPlan": {
+      "en": "Black equalises with solid development and precise central play.",
+      "ar": "يعادل الأسود بتطوير متين ولعب مركزي دقيق."
+    },
+    "pawnStructure": {
+      "en": "An open central structure with rapid piece play and clear plans on both wings.",
+      "ar": "بنية مركزية مفتوحة مع لعب سريع بالقطع وخطط واضحة على الجناحين."
+    },
+    "commonMistake": {
+      "en": "Attacking before development is complete and the king is safe.",
+      "ar": "الهجوم قبل إكمال التطوير وتأمين الملك."
+    },
+    "source": "manual"
+  },
+  "vienna-gambit": {
+    "name": "Vienna Gambit",
+    "overview": {
+      "en": "An aggressive Vienna line where White advances the kingside pawn early and plays for a direct attack.",
+      "ar": "خط فيينا هجومي يقدّم فيه الأبيض بيدق الجناح الملكي مبكرًا ويلعب من أجل هجوم مباشر."
+    },
+    "whitePlan": {
+      "en": "White opens the kingside files and attacks before Black can organise a defence.",
+      "ar": "يفتح الأبيض أعمدة الجناح الملكي ويهاجم قبل أن ينظّم الأسود دفاعه."
+    },
+    "blackPlan": {
+      "en": "Black challenges the centre and tries to blunt the attack with accurate defence.",
+      "ar": "ينافس الأسود المركز ويحاول إضعاف الهجوم بدفاع دقيق."
+    },
+    "pawnStructure": {
+      "en": "A tense central structure with an advanced kingside pawn and open lines.",
+      "ar": "بنية مركزية متوترة ببيدق ملكي متقدم وخطوط مفتوحة."
+    },
+    "commonMistake": {
+      "en": "Attacking before the king is safe and the centre is stable.",
+      "ar": "الهجوم قبل تأمين الملك واستقرار المركز."
+    },
+    "source": "manual"
+  },
+  "white-vs-caro-kann": {
+    "name": "White vs Caro-Kann",
+    "overview": {
+      "en": "A white repertoire against the Caro-Kann that uses space and flexible development.",
+      "ar": "مجموعة أبيض ضد كارو-كان تستخدم المساحة والتطوير المرن."
+    },
+    "whitePlan": {
+      "en": "White builds a space advantage, develops actively and prepares a central or kingside advance.",
+      "ar": "يبني الأبيض تفوقًا في المساحة، ويطوّر بنشاط، ويهيّئ تقدمًا مركزيًا أو ملكيًا."
+    },
+    "blackPlan": {
+      "en": "Black develops solidly and challenges the centre at the right moment.",
+      "ar": "يطوّر الأسود بثبات وينافس المركز في اللحظة المناسبة."
+    },
+    "pawnStructure": {
+      "en": "A solid central structure with White holding more space.",
+      "ar": "بنية مركزية متينة يملك فيها الأبيض مساحة أكبر."
+    },
+    "commonMistake": {
+      "en": "Overextending before completing development.",
+      "ar": "التوسع الزائد قبل إكمال التطوير."
+    },
+    "source": "manual"
+  },
+  "englund-gambit": {
+    "name": "Englund Gambit",
+    "overview": {
+      "en": "A sharp queen-pawn gambit where Black offers a central pawn for rapid piece activity.",
+      "ar": "غامبيت حاد ببيدق الوزير يقدّم فيه الأسود بيدقًا مركزيًا مقابل نشاط سريع بالقطع."
+    },
+    "whitePlan": {
+      "en": "White accepts the pawn, consolidates and tries to neutralise Black's tactical chances.",
+      "ar": "يقبل الأبيض البيدق، ويحصّن وضعه، ويحاول تحييد فرص الأسود التكتيكية."
+    },
+    "blackPlan": {
+      "en": "Black develops quickly and attacks the centre before White consolidates.",
+      "ar": "يطوّر الأسود بسرعة ويهاجم المركز قبل أن يحصّن الأبيض وضعه."
+    },
+    "pawnStructure": {
+      "en": "An open centre with a temporary material imbalance and active pieces.",
+      "ar": "مركز مفتوح مع اختلال مؤقت في المادة وقطع نشطة."
+    },
+    "commonMistake": {
+      "en": "Grabbing too many pawns and falling behind in development.",
+      "ar": "جمع الكثير من البيادق والتخلّف في التطوير."
+    },
+    "source": "manual"
+  }
+}

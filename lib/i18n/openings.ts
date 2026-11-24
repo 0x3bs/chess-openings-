@@ -8,6 +8,7 @@ import { englishBaseOpening, englishOpening } from "@/lib/openings/english";
 import { englishIdeas } from "@/lib/openings/english-ideas";
 import lichessLines from "@/lib/openings/lichess-lines.json";
 import { openings } from "@/lib/openings";
+import { lineIdeaFor } from "@/lib/openings/line-ideas";
 import { markPartialLines, partialLineIds } from "@/lib/openings/partial";
 import type { Opening } from "@/lib/openings/types";
 import type { Locale } from "./config";
@@ -89,27 +90,48 @@ function englishWithImported(locale: Locale): Opening {
 const cache: Partial<Record<Locale, Opening[]>> = {};
 
 /**
+ * Attach the generated whole-line note in the active language. Only the note
+ * text is copied, so the rest of the course data stays shared and immutable.
+ */
+function withLineIdeas(list: Opening[], locale: Locale): Opening[] {
+  return list.map((opening) => ({
+    ...opening,
+    lines: opening.lines.map((line) => {
+      const idea = lineIdeaFor(line.id, locale);
+      return idea ? { ...line, idea } : line;
+    }),
+  }));
+}
+
+/**
  * Every course in the requested language. The Arabic catalogue is expensive to
  * build, so memoize it once per process instead of rebuilding it for each of
  * the 30 static course pages.
  */
 export function getLocalizedOpenings(locale: Locale): Opening[] {
-  if (locale === "en") return openings;
-  if (!cache[locale]) {
-    const partialIds = partialLineIds(
-      openings.flatMap((opening) =>
-        opening.lines.map((line) => ({
-          id: line.id,
-          name: line.name,
-          moves: line.moves.map((move) => move.san),
-        })),
-      ),
-    );
-    cache[locale] = [
+  if (cache[locale]) return cache[locale] as Opening[];
+
+  if (locale === "en") {
+    cache[locale] = withLineIdeas(openings, locale);
+    return cache[locale] as Opening[];
+  }
+
+  const partialIds = partialLineIds(
+    openings.flatMap((opening) =>
+      opening.lines.map((line) => ({
+        id: line.id,
+        name: line.name,
+        moves: line.moves.map((move) => move.san),
+      })),
+    ),
+  );
+  cache[locale] = withLineIdeas(
+    [
       englishWithImported(locale),
       ...buildCatalogueOpenings(locale),
-    ].map((opening) => markPartialLines(opening, partialIds));
-  }
+    ].map((opening) => markPartialLines(opening, partialIds)),
+    locale,
+  );
   return cache[locale] as Opening[];
 }
 

@@ -122,6 +122,8 @@ npm run typecheck  # TypeScript
 npm run check      # validate + i18n:check + typecheck
 npm run audit      # Stockfish blunder screen (depth 12, 150cp threshold)
 npm run import:lines  # rebuild named lines from the CC0 Lichess TSV files
+npm run ideas      # regenerate the per-line study notes
+npm run review:notes  # rebuild review/top-100.md, random sample and report
 ```
 
 `npm run validate` replays every line, checks every SAN move is legal, checks
@@ -146,6 +148,22 @@ The importer also removes exact duplicates: when the same course has several
 lines with the same name and a pure prefix move order, only the longest version
 is kept. Every deletion is listed in `review/duplicate-lines.md`. Famous short
 entry lines are kept and marked `partial: true` instead of being deleted.
+
+`npm run ideas` writes one short English + Arabic study note for every line.
+Each note is built from the line's branch move, its length and last move, and a
+Stockfish depth-12 evaluation of the final position, combined with one sentence
+from the hand-written course note in `data/parent-ideas.json`. Notes are
+checked before they are written: at most two sentences, only moves and squares
+that occur in the line, no evaluation contradiction, and no near-duplicate note
+inside the same course. A note that fails is dropped, listed in
+`review/idea-report.json`, and the line is shown without a note. Nothing is
+deleted silently and no external prose is copied.
+
+`npm run review:notes` turns that data into `review/top-100.md` (a curated
+study list in both languages), `review/random-sample.md` (seeded 5% spot-check)
+and `review/report.md` (generation and rejection report). The same notes appear
+under the board in the app with an `auto-generated` badge and a local
+"Report an issue" form that saves to this browser only.
 
 ## Content and sources
 
@@ -303,20 +321,32 @@ lib/
   openings/catalog.ts      29 catalogue courses and their named lines
   openings/lichess-lines.json  named lines from the CC0 Lichess dataset
   openings/partial.ts      marks famous short entry lines with a continuation
+  openings/idea-validation.ts  text, move, square and duplicate checks
+  openings/line-ideas.ts   looks up the generated note for a line
   openings/apply-ideas.ts  merge ideas, sources and locale-aware hotspots
   openings/index.ts        course registry
 scripts/
   import-lichess-lines.ts  TSV -> named-line JSON converter
   validate-lines.ts        line/idea/shape/source validator
+  validate-ideas.ts        parent notes + generated line-note gate
+  generate-ideas.ts        writes data/line-ideas.json from line facts
+  build-review.ts          writes the three review files
   check-i18n.ts            Arabic structure + translation coverage gate
   audit-lines.ts           Stockfish blunder screen
 data/
   lichess-openings/        the five CC0 a.tsv–e.tsv source files
+  parent-ideas.json        hand-written notes for all 30 courses (EN + AR)
+  line-ideas.json          accepted per-line notes (generated)
+  line-evals.json          Stockfish final-position cache (generated)
   progress.json            shared progress (git-ignored, created on first save)
   progress.backup.json     local backup before a progress reset (git-ignored)
 review/
   duplicate-lines.md       duplicate lines removed, with the kept line
   unmapped.md              dataset rows not imported, with reasons
+  idea-report.json         every dropped note and why
+  top-100.md               curated study list, English + Arabic
+  random-sample.md         seeded 5% explanation sample
+  report.md                generation and rejection report
 INSTALL.md                 Windows / macOS / Linux setup guide
 ```
 

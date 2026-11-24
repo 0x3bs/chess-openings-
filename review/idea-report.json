@@ -1,0 +1,2380 @@
+{
+  "generatedAt": "2026-11-24T00:18:43.725Z",
+  "totalLines": 1277,
+  "accepted": 1066,
+  "rejectedCount": 211,
+  "reasonCounts": {
+    "near-duplicate English explanation": 206,
+    "near-duplicate Arabic explanation": 141
+  },
+  "perOpening": {
+    "english": {
+      "total": 62,
+      "accepted": 55
+    },
+    "italian": {
+      "total": 128,
+      "accepted": 82
+    },
+    "ruy-lopez": {
+      "total": 134,
+      "accepted": 104
+    },
+    "scotch": {
+      "total": 53,
+      "accepted": 44
+    },
+    "vienna": {
+      "total": 15,
+      "accepted": 15
+    },
+    "kings-gambit": {
+      "total": 66,
+      "accepted": 61
+    },
+    "london": {
+      "total": 6,
+      "accepted": 6
+    },
+    "jobava-london": {
+      "total": 5,
+      "accepted": 5
+    },
+    "bishops-opening": {
+      "total": 9,
+      "accepted": 9
+    },
+    "ponziani": {
+      "total": 6,
+      "accepted": 6
+    },
+    "queens-gambit": {
+      "total": 150,
+      "accepted": 124
+    },
+    "queens-gambit-accepted": {
+      "total": 31,
+      "accepted": 25
+    },
+    "caro-kann": {
+      "total": 27,
+      "accepted": 25
+    },
+    "french": {
+      "total": 74,
+      "accepted": 60
+    },
+    "sicilian": {
+      "total": 158,
+      "accepted": 134
+    },
+    "scandinavian": {
+      "total": 8,
+      "accepted": 8
+    },
+    "pirc": {
+      "total": 8,
+      "accepted": 8
+    },
+    "kings-indian": {
+      "total": 89,
+      "accepted": 75
+    },
+    "dutch": {
+      "total": 21,
+      "accepted": 18
+    },
+    "slav": {
+      "total": 68,
+      "accepted": 60
+    },
+    "anti-london": {
+      "total": 5,
+      "accepted": 5
+    },
+    "petrov": {
+      "total": 21,
+      "accepted": 15
+    },
+    "nimzo-indian": {
+      "total": 56,
+      "accepted": 50
+    },
+    "catalan": {
+      "total": 26,
+      "accepted": 22
+    },
+    "fried-liver": {
+      "total": 6,
+      "accepted": 6
+    },
+    "kings-indian-attack": {
+      "total": 10,
+      "accepted": 9
+    },
+    "open-game": {
+      "total": 15,
+      "accepted": 15
+    },
+    "vienna-gambit": {
+      "total": 9,
+      "accepted": 9
+    },
+    "white-vs-caro-kann": {
+      "total": 5,
+      "accepted": 5
+    },
+    "englund-gambit": {
+      "total": 6,
+      "accepted": 6
+    }
+  },
+  "rejected": [
+    {
+      "lineId": "anglo-scandinavian-qa5",
+      "name": "Anglo-Scandinavian: ...Qa5",
+      "opening": "english",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Anglo-Scandinavian (ECO A10) diverges with the queen move to a5 on move 3 and closes with short castling on move 9 after 18 plies. Black should contest the centre, and the final position is slightly better for White.",
+      "ar": "يختلف خط Anglo-Scandinavian (ECO A10) بنقلة الملكة إلى a5 في النقلة 3 وينتهي بالتحصيل القصير في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن ينافس على المركز، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "lichess-english-a29-english-opening-kings-english-variation-four-knights-variation-fianchetto-line-3",
+      "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line",
+      "opening": "english",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The King's English Variation (ECO A29) turns on the bishop move to e7 on move 6; the line runs 14 plies and closes with short castling on move 7. White should develop the minor pieces, and the final position is balanced.",
+      "ar": "يقوم خط King's English Variation (ECO A29) على نقلة الفيل إلى e7 في النقلة 6؛ ويمتد 14 نصف نقلة وينتهي بالتحصيل القصير في النقلة 7. خطة الأبيض هي أن يطوّر القطع الصغيرة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-english-a29-english-opening-kings-english-variation-four-knights-variation-fianchetto-line-with-d6-be7",
+      "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with .. d6, Be7",
+      "opening": "english",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "King's English Variation (ECO A29) diverges with the knight move to c6 on move 3 and closes with short castling on move 6 after 12 plies. Black should contest the centre, and the final position is balanced.",
+      "ar": "يختلف خط King's English Variation (ECO A29) بنقلة الحصان إلى c6 في النقلة 3 وينتهي بالتحصيل القصير في النقلة 6 بعد 12 نصف نقلة. خطة الأسود هي أن ينافس على المركز، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-english-a29-english-opening-kings-english-variation-four-knights-variation-fianchetto-line-with-d6-h6",
+      "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with .. d6, h6",
+      "opening": "english",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "King's English Variation (ECO A29) reaches the pawn move to h6 on move 6 and stops after 12 plies. Black should contest the centre, and the final position is balanced.",
+      "ar": "يصل خط King's English Variation (ECO A29) إلى نقلة البيدق إلى h6 في النقلة 6 ويتوقف بعد 12 نصف نقلة. خطة الأسود هي أن ينافس على المركز، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-english-a29-english-opening-kings-english-variation-four-knights-variation-fianchetto-line-with-nb6",
+      "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6",
+      "opening": "english",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the King's English Variation (ECO A29), the 12-ply line closes with the knight move to b6 on move 6. The typical mistake is pushing the central pawn too early before the flank pawns and the fianchettoed bishop are properly supported, and the final position is balanced.",
+      "ar": "في خط King's English Variation (ECO A29) ينتهي الخط المكوّن من 12 نصف نقلة بنقلة الحصان إلى b6 في النقلة 6. الخطأ الشائع هو دفع البيدق المركزي مبكرًا قبل تأمين البيادق الجناحية ودعم فيل الفيانكيتو، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-english-a28-english-opening-kings-english-variation-four-knights-variation-quiet-line",
+      "name": "English Opening: King's English Variation, Four Knights Variation, Quiet Line",
+      "opening": "english",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the King's English Variation (ECO A28), the knight move to d5 on move 6 is the branch point; play runs 13 plies and ends with the queen move to f5 on move 7. The typical mistake is pushing the central pawn too early before the flank pawns and the fianchettoed bishop are properly supported, and the final position is balanced.",
+      "ar": "في خط King's English Variation (ECO A28) يكون نقلة الحصان إلى d5 في النقلة 6 نقطة التفرّع؛ ويمتد اللعب 13 نصف نقلة وينتهي بنقلة الملكة إلى f5 في النقلة 7. الخطأ الشائع هو دفع البيدق المركزي مبكرًا قبل تأمين البيادق الجناحية ودعم فيل الفيانكيتو، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-english-a37-english-opening-symmetrical-variation-botvinnik-system-reversed-with-nf3-3",
+      "name": "English Opening: Symmetrical Variation, Botvinnik System Reversed, with Nf3",
+      "opening": "english",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Symmetrical Variation (ECO A37), the 13-ply line closes with the pawn move to a3 on move 7. The typical mistake is pushing the central pawn too early before the flank pawns and the fianchettoed bishop are properly supported, and the final position is balanced.",
+      "ar": "في خط Symmetrical Variation (ECO A37) ينتهي الخط المكوّن من 13 نصف نقلة بنقلة البيدق إلى a3 في النقلة 7. الخطأ الشائع هو دفع البيدق المركزي مبكرًا قبل تأمين البيادق الجناحية ودعم فيل الفيانكيتو، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c54-italian-game-classical-variation-giuoco-pianissimo-7",
+      "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Classical Variation (ECO C54) reaches short castling on move 6 and stops after 12 plies. Black should mirror development, challenge the centre and try to equalise before White's initiative grow, and the final position is balanced.",
+      "ar": "يصل خط Classical Variation (ECO C54) إلى التحصيل القصير في النقلة 6 ويتوقف بعد 12 نصف نقلة. خطة الأسود هي أن يقلّد تطوير الأبيض، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c54-italian-game-classical-variation-giuoco-pianissimo-8",
+      "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Classical Variation (ECO C54), the 13-ply line closes with the pawn move to a4 on move 7. The typical mistake is launching a premature tactical attack before the centre is stable and the king is safe, and the final position is balanced.",
+      "ar": "في خط Classical Variation (ECO C54) ينتهي الخط المكوّن من 13 نصف نقلة بنقلة البيدق إلى a4 في النقلة 7. الخطأ الشائع هو شن هجوم تكتيكي متسرّع قبل استقرار المركز وتأمين الملك، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c54-italian-game-classical-variation-giuoco-pianissimo-9",
+      "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Classical Variation (ECO C54) is a 14-ply line that ends on the bishop move to a7 on move 7. The line leads to a symmetrical central structure with both sides able to open the position with a central pawn break, and the final position is balanced.",
+      "ar": "خط Classical Variation (ECO C54) من 14 نصف نقلة ينتهي بنقلة الفيل إلى a7 في النقلة 7. ويؤدي الخط إلى بنية مركزية متماثلة يستطيع فيها الطرفان فتح الوضع بكسر بيدق مركزي، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c54-italian-game-classical-variation-giuoco-pianissimo-10",
+      "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Classical Variation (ECO C54) is a 14-ply line that ends on short castling on move 7. The line leads to a symmetrical central structure with both sides able to open the position with a central pawn break, and the final position is balanced.",
+      "ar": "خط Classical Variation (ECO C54) من 14 نصف نقلة ينتهي بالتحصيل القصير في النقلة 7. ويؤدي الخط إلى بنية مركزية متماثلة يستطيع فيها الطرفان فتح الوضع بكسر بيدق مركزي، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c54-italian-game-classical-variation-giuoco-pianissimo-11",
+      "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Classical Variation (ECO C54), the 13-ply line closes with the rook move to e1 on move 7. The typical mistake is launching a premature tactical attack before the centre is stable and the king is safe, and the final position is balanced.",
+      "ar": "في خط Classical Variation (ECO C54) ينتهي الخط المكوّن من 13 نصف نقلة بنقلة الرخ إلى e1 في النقلة 7. الخطأ الشائع هو شن هجوم تكتيكي متسرّع قبل استقرار المركز وتأمين الملك، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c54-italian-game-classical-variation-giuoco-pianissimo-12",
+      "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Classical Variation (ECO C54) reaches the bishop move to a7 on move 7 and stops after 14 plies. Black should mirror development, challenge the centre and try to equalise before White's initiative grow, and the final position is balanced.",
+      "ar": "يصل خط Classical Variation (ECO C54) إلى نقلة الفيل إلى a7 في النقلة 7 ويتوقف بعد 14 نصف نقلة. خطة الأسود هي أن يقلّد تطوير الأبيض، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c54-italian-game-classical-variation-giuoco-pianissimo-13",
+      "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Classical Variation (ECO C54) turns on the rook move to e1 on move 7, the last move of the 13-ply line. White should castle quickly, build a broad centre and choose between a slow positional squeeze and a direct attack, and the final position is balanced.",
+      "ar": "يقوم خط Classical Variation (ECO C54) على نقلة الرخ إلى e1 في النقلة 7، وهي النقلة الأخيرة في خط من 13 نصف نقلة. خطة الأبيض هي أن يحصّن مبكرًا, ويبني مركزًا عريضًا، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c54-italian-game-classical-variation-giuoco-pianissimo-14",
+      "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Classical Variation (ECO C54) is a 13-ply line that ends on the knight move to d2 on move 7. The line leads to a symmetrical central structure with both sides able to open the position with a central pawn break, and the final position is balanced.",
+      "ar": "خط Classical Variation (ECO C54) من 13 نصف نقلة ينتهي بنقلة الحصان إلى d2 في النقلة 7. ويؤدي الخط إلى بنية مركزية متماثلة يستطيع فيها الطرفان فتح الوضع بكسر بيدق مركزي، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c54-italian-game-classical-variation-giuoco-pianissimo-albin-variation",
+      "name": "Italian Game: Classical Variation, Giuoco Pianissimo, Albin Variation",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Classical Variation (ECO C54) turns on the pawn move to b4 on move 6, the last move of the 11-ply line. White should castle quickly, build a broad centre and choose between a slow positional squeeze and a direct attack, and the final position is balanced.",
+      "ar": "يقوم خط Classical Variation (ECO C54) على نقلة البيدق إلى b4 في النقلة 6، وهي النقلة الأخيرة في خط من 11 نصف نقلة. خطة الأبيض هي أن يحصّن مبكرًا, ويبني مركزًا عريضًا، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c54-italian-game-classical-variation-giuoco-pianissimo-main-line",
+      "name": "Italian Game: Classical Variation, Giuoco Pianissimo, Main Line",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Classical Variation (ECO C54) turns on the bishop move to a7 on move 8; the line runs 17 plies and closes with the pawn move to h3 on move 9. White should castle quickly, build a broad centre and choose between a slow positional squeeze and a direct attack, and the final position is balanced.",
+      "ar": "يقوم خط Classical Variation (ECO C54) على نقلة الفيل إلى a7 في النقلة 8؛ ويمتد 17 نصف نقلة وينتهي بنقلة البيدق إلى h3 في النقلة 9. خطة الأبيض هي أن يحصّن مبكرًا, ويبني مركزًا عريضًا، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c54-italian-game-classical-variation-giuoco-pianissimo-with-a5",
+      "name": "Italian Game: Classical Variation, Giuoco Pianissimo, with a5",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Classical Variation (ECO C54) diverges with the pawn move to a5 on move 5 and closes with the pawn move to c3 on move 6 after 11 plies. Black should mirror development, challenge the centre and try to equalise before White's initiative grow, and the final position is balanced.",
+      "ar": "يختلف خط Classical Variation (ECO C54) بنقلة البيدق إلى a5 في النقلة 5 وينتهي بنقلة البيدق إلى c3 في النقلة 6 بعد 11 نصف نقلة. خطة الأسود هي أن يقلّد تطوير الأبيض، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c54-italian-game-classical-variation-giuoco-pianissimo-with-a6",
+      "name": "Italian Game: Classical Variation, Giuoco Pianissimo, with a6",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Classical Variation (ECO C54), the 12-ply line closes with the pawn move to a6 on move 6. The typical mistake is launching a premature tactical attack before the centre is stable and the king is safe, and the final position is balanced.",
+      "ar": "في خط Classical Variation (ECO C54) ينتهي الخط المكوّن من 12 نصف نقلة بنقلة البيدق إلى a6 في النقلة 6. الخطأ الشائع هو شن هجوم تكتيكي متسرّع قبل استقرار المركز وتأمين الملك، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c54-italian-game-classical-variation-giuoco-pianissimo-with-h6",
+      "name": "Italian Game: Classical Variation, Giuoco Pianissimo, with h6",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Classical Variation (ECO C54) reaches the pawn move to h6 on move 6 and stops after 12 plies. Black should mirror development, challenge the centre and try to equalise before White's initiative grow, and the final position is balanced.",
+      "ar": "يصل خط Classical Variation (ECO C54) إلى نقلة البيدق إلى h6 في النقلة 6 ويتوقف بعد 12 نصف نقلة. خطة الأسود هي أن يقلّد تطوير الأبيض، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c54-italian-game-classical-variation-greco-gambit-dubov-italian",
+      "name": "Italian Game: Classical Variation, Greco Gambit, Dubov Italian",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Classical Variation (ECO C54) is a 11-ply line that ends on the pawn move to b4 on move 6. The line leads to a symmetrical central structure with both sides able to open the position with a central pawn break, and the final position is balanced.",
+      "ar": "خط Classical Variation (ECO C54) من 11 نصف نقلة ينتهي بنقلة البيدق إلى b4 في النقلة 6. ويؤدي الخط إلى بنية مركزية متماثلة يستطيع فيها الطرفان فتح الوضع بكسر بيدق مركزي، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c54-italian-game-classical-variation-greco-gambit-greco-variation",
+      "name": "Italian Game: Classical Variation, Greco Gambit, Greco Variation",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Classical Variation (ECO C54) turns on the capture on c3 on move 8, the last move of the 16-ply line. White should castle quickly, build a broad centre and choose between a slow positional squeeze and a direct attack, and the final position is balanced.",
+      "ar": "يقوم خط Classical Variation (ECO C54) على التبادل على c3 في النقلة 8، وهي النقلة الأخيرة في خط من 16 نصف نقلة. خطة الأبيض هي أن يحصّن مبكرًا, ويبني مركزًا عريضًا، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c54-italian-game-classical-variation-greco-gambit-main-line",
+      "name": "Italian Game: Classical Variation, Greco Gambit, Main Line",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Classical Variation (ECO C54) turns on the capture on c3 on move 8, the last move of the 16-ply line. White should castle quickly, build a broad centre and choose between a slow positional squeeze and a direct attack, and the final position is balanced.",
+      "ar": "يقوم خط Classical Variation (ECO C54) على التبادل على c3 في النقلة 8، وهي النقلة الأخيرة في خط من 16 نصف نقلة. خطة الأبيض هي أن يحصّن مبكرًا, ويبني مركزًا عريضًا، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c54-italian-game-classical-variation-greco-gambit-modern-line-2",
+      "name": "Italian Game: Classical Variation, Greco Gambit, Modern Line",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Classical Variation (ECO C54) is a 12-ply line that ends on the pawn move to d5 on move 6. The line leads to a symmetrical central structure with both sides able to open the position with a central pawn break, and the final position is balanced.",
+      "ar": "خط Classical Variation (ECO C54) من 12 نصف نقلة ينتهي بنقلة البيدق إلى d5 في النقلة 6. ويؤدي الخط إلى بنية مركزية متماثلة يستطيع فيها الطرفان فتح الوضع بكسر بيدق مركزي، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c54-italian-game-classical-variation-greco-gambit-moeller-bayonet-attack",
+      "name": "Italian Game: Classical Variation, Greco Gambit, Moeller-Bayonet Attack",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Classical Variation (ECO C54) turns on the pawn move to g4 on move 12, the last move of the 23-ply line. White should castle quickly, build a broad centre and choose between a slow positional squeeze and a direct attack, and the final position is balanced.",
+      "ar": "يقوم خط Classical Variation (ECO C54) على نقلة البيدق إلى g4 في النقلة 12، وهي النقلة الأخيرة في خط من 23 نصف نقلة. خطة الأبيض هي أن يحصّن مبكرًا, ويبني مركزًا عريضًا، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c54-italian-game-classical-variation-greco-gambit-moeller-therkatz-attack",
+      "name": "Italian Game: Classical Variation, Greco Gambit, Moeller-Therkatz Attack",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Classical Variation (ECO C54) reaches the pawn move to d5 on move 9 and stops after 17 plies. Black should mirror development, challenge the centre and try to equalise before White's initiative grow, and the final position is balanced.",
+      "ar": "يصل خط Classical Variation (ECO C54) إلى نقلة البيدق إلى d5 في النقلة 9 ويتوقف بعد 17 نصف نقلة. خطة الأسود هي أن يقلّد تطوير الأبيض، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c54-italian-game-classical-variation-greco-gambit-traditional-line",
+      "name": "Italian Game: Classical Variation, Greco Gambit, Traditional Line",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "In the Classical Variation (ECO C54), the 11-ply line closes with the capture on d4 on move 6. The typical mistake is launching a premature tactical attack before the centre is stable and the king is safe, and the final position is balanced.",
+      "ar": "في خط Classical Variation (ECO C54) ينتهي الخط المكوّن من 11 نصف نقلة بالتبادل على d4 في النقلة 6. الخطأ الشائع هو شن هجوم تكتيكي متسرّع قبل استقرار المركز وتأمين الملك، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c53-italian-game-classical-variation-la-bourdonnais-variation",
+      "name": "Italian Game: Classical Variation, La Bourdonnais Variation",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Classical Variation (ECO C53) diverges with the pawn move to d6 on move 4 and closes with the bishop move to b6 on move 6 after 12 plies. Black should mirror development, challenge the centre and try to equalise before White's initiative grow, and the final position is slightly better for White.",
+      "ar": "يختلف خط Classical Variation (ECO C53) بنقلة البيدق إلى d6 في النقلة 4 وينتهي بنقلة الفيل إلى b6 في النقلة 6 بعد 12 نصف نقلة. خطة الأسود هي أن يقلّد تطوير الأبيض، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "lichess-italian-c52-italian-game-evans-gambit",
+      "name": "Italian Game: Evans Gambit",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Evans Gambit (ECO C52) turns on the pawn move to d6 on move 6, the last move of the 12-ply line. White should castle quickly, build a broad centre and choose between a slow positional squeeze and a direct attack, and the final position is balanced.",
+      "ar": "يقوم خط Evans Gambit (ECO C52) على نقلة البيدق إلى d6 في النقلة 6، وهي النقلة الأخيرة في خط من 12 نصف نقلة. خطة الأبيض هي أن يحصّن مبكرًا, ويبني مركزًا عريضًا، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c52-italian-game-evans-gambit-alapin-steinitz-variation",
+      "name": "Italian Game: Evans Gambit, Alapin-Steinitz Variation",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Evans Gambit (ECO C52) is a 14-ply line that ends on the bishop move to g4 on move 7. The line leads to a symmetrical central structure with both sides able to open the position with a central pawn break, and the final position is balanced.",
+      "ar": "خط Evans Gambit (ECO C52) من 14 نصف نقلة ينتهي بنقلة الفيل إلى g4 في النقلة 7. ويؤدي الخط إلى بنية مركزية متماثلة يستطيع فيها الطرفان فتح الوضع بكسر بيدق مركزي، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c52-italian-game-evans-gambit-compromised-defense-main-line",
+      "name": "Italian Game: Evans Gambit, Compromised Defense, Main Line",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Evans Gambit (ECO C52) is a 21-ply line that ends on the bishop move to a3 on move 11. The line leads to a symmetrical central structure with both sides able to open the position with a central pawn break, and the final position is balanced.",
+      "ar": "خط Evans Gambit (ECO C52) من 21 نصف نقلة ينتهي بنقلة الفيل إلى a3 في النقلة 11. ويؤدي الخط إلى بنية مركزية متماثلة يستطيع فيها الطرفان فتح الوضع بكسر بيدق مركزي، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c52-italian-game-evans-gambit-dufresne-defense",
+      "name": "Italian Game: Evans Gambit, Dufresne Defense",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Evans Gambit (ECO C52), the 14-ply line closes with the pawn move to d3 on move 7. The typical mistake is launching a premature tactical attack before the centre is stable and the king is safe, and the final position is balanced.",
+      "ar": "في خط Evans Gambit (ECO C52) ينتهي الخط المكوّن من 14 نصف نقلة بنقلة البيدق إلى d3 في النقلة 7. الخطأ الشائع هو شن هجوم تكتيكي متسرّع قبل استقرار المركز وتأمين الملك، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c52-italian-game-evans-gambit-johner-defense",
+      "name": "Italian Game: Evans Gambit, Johner Defense",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "In the Evans Gambit (ECO C52), the 14-ply line closes with the pawn move to b5 on move 7. The typical mistake is launching a premature tactical attack before the centre is stable and the king is safe, and the final position is slightly better for White.",
+      "ar": "في خط Evans Gambit (ECO C52) ينتهي الخط المكوّن من 14 نصف نقلة بنقلة البيدق إلى b5 في النقلة 7. الخطأ الشائع هو شن هجوم تكتيكي متسرّع قبل استقرار المركز وتأمين الملك، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "lichess-italian-c52-italian-game-evans-gambit-lasker-defense",
+      "name": "Italian Game: Evans Gambit, Lasker Defense",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Evans Gambit (ECO C52), the 14-ply line closes with the bishop move to b6 on move 7. The typical mistake is launching a premature tactical attack before the centre is stable and the king is safe, and the final position is balanced.",
+      "ar": "في خط Evans Gambit (ECO C52) ينتهي الخط المكوّن من 14 نصف نقلة بنقلة الفيل إلى b6 في النقلة 7. الخطأ الشائع هو شن هجوم تكتيكي متسرّع قبل استقرار المركز وتأمين الملك، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c52-italian-game-evans-gambit-leonhardt-countergambit",
+      "name": "Italian Game: Evans Gambit, Leonhardt Countergambit",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Evans Gambit (ECO C52) reaches the pawn move to b5 on move 6 and stops after 12 plies. Black should mirror development, challenge the centre and try to equalise before White's initiative grow, and the final position is balanced.",
+      "ar": "يصل خط Evans Gambit (ECO C52) إلى نقلة البيدق إلى b5 في النقلة 6 ويتوقف بعد 12 نصف نقلة. خطة الأسود هي أن يقلّد تطوير الأبيض، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c51-italian-game-evans-gambit-mcdonnell-defense-main-line",
+      "name": "Italian Game: Evans Gambit, McDonnell Defense, Main Line",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Evans Gambit (ECO C51), the 16-ply line closes with the bishop move to b6 on move 8. The typical mistake is launching a premature tactical attack before the centre is stable and the king is safe, and the final position is balanced.",
+      "ar": "في خط Evans Gambit (ECO C51) ينتهي الخط المكوّن من 16 نصف نقلة بنقلة الفيل إلى b6 في النقلة 8. الخطأ الشائع هو شن هجوم تكتيكي متسرّع قبل استقرار المركز وتأمين الملك، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c52-italian-game-evans-gambit-mieses-defense",
+      "name": "Italian Game: Evans Gambit, Mieses Defense",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Evans Gambit (ECO C52), the 14-ply line closes with the knight move to e7 on move 7. The typical mistake is launching a premature tactical attack before the centre is stable and the king is safe, and the final position is balanced.",
+      "ar": "في خط Evans Gambit (ECO C52) ينتهي الخط المكوّن من 14 نصف نقلة بنقلة الحصان إلى e7 في النقلة 7. الخطأ الشائع هو شن هجوم تكتيكي متسرّع قبل استقرار المركز وتأمين الملك، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c51-italian-game-evans-gambit-paulsen-variation",
+      "name": "Italian Game: Evans Gambit, Paulsen Variation",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Evans Gambit (ECO C51) turns on the knight move to e7 on move 10, the last move of the 20-ply line. White should castle quickly, build a broad centre and choose between a slow positional squeeze and a direct attack, and the final position is balanced.",
+      "ar": "يقوم خط Evans Gambit (ECO C51) على نقلة الحصان إلى e7 في النقلة 10، وهي النقلة الأخيرة في خط من 20 نصف نقلة. خطة الأبيض هي أن يحصّن مبكرًا, ويبني مركزًا عريضًا، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c52-italian-game-evans-gambit-pierce-defense",
+      "name": "Italian Game: Evans Gambit, Pierce Defense",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Evans Gambit (ECO C52) turns on the capture on d4 on move 6, the last move of the 12-ply line. White should castle quickly, build a broad centre and choose between a slow positional squeeze and a direct attack, and the final position is balanced.",
+      "ar": "يقوم خط Evans Gambit (ECO C52) على التبادل على d4 في النقلة 6، وهي النقلة الأخيرة في خط من 12 نصف نقلة. خطة الأبيض هي أن يحصّن مبكرًا, ويبني مركزًا عريضًا، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c52-italian-game-evans-gambit-sanders-alapin-variation",
+      "name": "Italian Game: Evans Gambit, Sanders-Alapin Variation",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Evans Gambit (ECO C52) reaches the bishop move to d7 on move 7 and stops after 14 plies. Black should mirror development, challenge the centre and try to equalise before White's initiative grow, and the final position is balanced.",
+      "ar": "يصل خط Evans Gambit (ECO C52) إلى نقلة الفيل إلى d7 في النقلة 7 ويتوقف بعد 14 نصف نقلة. خطة الأسود هي أن يقلّد تطوير الأبيض، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c52-italian-game-evans-gambit-slow-variation",
+      "name": "Italian Game: Evans Gambit, Slow Variation",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Evans Gambit (ECO C52) turns on short castling on move 6, the last move of the 11-ply line. White should castle quickly, build a broad centre and choose between a slow positional squeeze and a direct attack, and the final position is balanced.",
+      "ar": "يقوم خط Evans Gambit (ECO C52) على التحصيل القصير في النقلة 6، وهي النقلة الأخيرة في خط من 11 نصف نقلة. خطة الأبيض هي أن يحصّن مبكرًا, ويبني مركزًا عريضًا، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c52-italian-game-evans-gambit-tartakower-attack",
+      "name": "Italian Game: Evans Gambit, Tartakower Attack",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Evans Gambit (ECO C52), the 13-ply line closes with the queen move to b3 on move 7. The typical mistake is launching a premature tactical attack before the centre is stable and the king is safe, and the final position is balanced.",
+      "ar": "في خط Evans Gambit (ECO C52) ينتهي الخط المكوّن من 13 نصف نقلة بنقلة الملكة إلى b3 في النقلة 7. الخطأ الشائع هو شن هجوم تكتيكي متسرّع قبل استقرار المركز وتأمين الملك، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c51-italian-game-evans-gambit-ulvestad-variation",
+      "name": "Italian Game: Evans Gambit, Ulvestad Variation",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Evans Gambit (ECO C51) turns on the bishop move to b2 on move 10, the last move of the 19-ply line. White should castle quickly, build a broad centre and choose between a slow positional squeeze and a direct attack, and the final position is balanced.",
+      "ar": "يقوم خط Evans Gambit (ECO C51) على نقلة الفيل إلى b2 في النقلة 10، وهي النقلة الأخيرة في خط من 19 نصف نقلة. خطة الأبيض هي أن يحصّن مبكرًا, ويبني مركزًا عريضًا، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c52-italian-game-evans-gambit-waller-attack",
+      "name": "Italian Game: Evans Gambit, Waller Attack",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Evans Gambit (ECO C52) reaches the queen move to b3 on move 8 and stops after 15 plies. Black should mirror development, challenge the centre and try to equalise before White's initiative grow, and the final position is balanced.",
+      "ar": "يصل خط Evans Gambit (ECO C52) إلى نقلة الملكة إلى b3 في النقلة 8 ويتوقف بعد 15 نصف نقلة. خطة الأسود هي أن يقلّد تطوير الأبيض، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c54-italian-game-giuoco-piano-rosentreter-variation",
+      "name": "Italian Game: Giuoco Piano, Rosentreter Variation",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Giuoco Piano (ECO C54) turns on the pawn move to h6 on move 7; the line runs 17 plies and closes with the pawn move to f4 on move 9. White should castle quickly, build a broad centre and choose between a slow positional squeeze and a direct attack, and the final position is slightly better for White.",
+      "ar": "يقوم خط Giuoco Piano (ECO C54) على نقلة البيدق إلى h6 في النقلة 7؛ ويمتد 17 نصف نقلة وينتهي بنقلة البيدق إلى f4 في النقلة 9. خطة الأبيض هي أن يحصّن مبكرًا, ويبني مركزًا عريضًا، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "lichess-italian-c56-italian-game-scotch-gambit-max-lange-attack-spielmann-defense",
+      "name": "Italian Game: Scotch Gambit, Max Lange Attack, Spielmann Defense",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Scotch Gambit (ECO C56), the 12-ply line closes with the knight move to g4 on move 6. The typical mistake is launching a premature tactical attack before the centre is stable and the king is safe, and the final position is balanced.",
+      "ar": "في خط Scotch Gambit (ECO C56) ينتهي الخط المكوّن من 12 نصف نقلة بنقلة الحصان إلى g4 في النقلة 6. الخطأ الشائع هو شن هجوم تكتيكي متسرّع قبل استقرار المركز وتأمين الملك، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c56-italian-game-scotch-gambit-nakhmanson-gambit",
+      "name": "Italian Game: Scotch Gambit, Nakhmanson Gambit",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Scotch Gambit (ECO C56) is a 11-ply line that ends on the knight move to c3 on move 6. The line leads to a symmetrical central structure with both sides able to open the position with a central pawn break, and the final position is slightly better for Black.",
+      "ar": "خط Scotch Gambit (ECO C56) من 11 نصف نقلة ينتهي بنقلة الحصان إلى c3 في النقلة 6. ويؤدي الخط إلى بنية مركزية متماثلة يستطيع فيها الطرفان فتح الوضع بكسر بيدق مركزي، والوضع النهائي يميل قليلًا لصالح الأسود."
+    },
+    {
+      "lineId": "lichess-italian-c58-italian-game-two-knights-defense-blackburne-variation",
+      "name": "Italian Game: Two Knights Defense, Blackburne Variation",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "In the Two Knights Defense (ECO C58), the 16-ply line closes with the capture on b5 on move 8. The typical mistake is launching a premature tactical attack before the centre is stable and the king is safe, and the final position is balanced.",
+      "ar": "في خط Two Knights Defense (ECO C58) ينتهي الخط المكوّن من 16 نصف نقلة بالتبادل على b5 في النقلة 8. الخطأ الشائع هو شن هجوم تكتيكي متسرّع قبل استقرار المركز وتأمين الملك، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c58-italian-game-two-knights-defense-polerio-defense-bishop-check-line",
+      "name": "Italian Game: Two Knights Defense, Polerio Defense, Bishop Check Line",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Two Knights Defense (ECO C58), the 11-ply line closes with the bishop move to b5 on move 6. The typical mistake is launching a premature tactical attack before the centre is stable and the king is safe, and the final position is balanced.",
+      "ar": "في خط Two Knights Defense (ECO C58) ينتهي الخط المكوّن من 11 نصف نقلة بنقلة الفيل إلى b5 في النقلة 6. الخطأ الشائع هو شن هجوم تكتيكي متسرّع قبل استقرار المركز وتأمين الملك، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c58-italian-game-two-knights-defense-polerio-defense-bogoljubow-variation",
+      "name": "Italian Game: Two Knights Defense, Polerio Defense, Bogoljubow Variation",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Two Knights Defense (ECO C58) is a 15-ply line that ends on the queen move to f3 on move 8. The line leads to a symmetrical central structure with both sides able to open the position with a central pawn break, and the final position is balanced.",
+      "ar": "خط Two Knights Defense (ECO C58) من 15 نصف نقلة ينتهي بنقلة الملكة إلى f3 في النقلة 8. ويؤدي الخط إلى بنية مركزية متماثلة يستطيع فيها الطرفان فتح الوضع بكسر بيدق مركزي، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c58-italian-game-two-knights-defense-polerio-defense-kieseritzky-variation",
+      "name": "Italian Game: Two Knights Defense, Polerio Defense, Kieseritzky Variation",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Two Knights Defense (ECO C58) reaches the pawn move to d3 on move 6 and stops after 11 plies. Black should mirror development, challenge the centre and try to equalise before White's initiative grow, and the final position is balanced.",
+      "ar": "يصل خط Two Knights Defense (ECO C58) إلى نقلة البيدق إلى d3 في النقلة 6 ويتوقف بعد 11 نصف نقلة. خطة الأسود هي أن يقلّد تطوير الأبيض، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c59-italian-game-two-knights-defense-polerio-defense-suhle-defense",
+      "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Two Knights Defense (ECO C59) turns on the pawn move to h6 on move 8, the last move of the 16-ply line. White should castle quickly, build a broad centre and choose between a slow positional squeeze and a direct attack, and the final position is balanced.",
+      "ar": "يقوم خط Two Knights Defense (ECO C59) على نقلة البيدق إلى h6 في النقلة 8، وهي النقلة الأخيرة في خط من 16 نصف نقلة. خطة الأبيض هي أن يحصّن مبكرًا, ويبني مركزًا عريضًا، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-italian-c57-italian-game-two-knights-defense-traxler-counterattack-king-march-line",
+      "name": "Italian Game: Two Knights Defense, Traxler Counterattack, King March Line",
+      "opening": "italian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Two Knights Defense (ECO C57) turns on the capture on f7 on move 5; the line runs 13 plies and closes with the king move to e3 on move 7. White should castle quickly, build a broad centre and choose between a slow positional squeeze and a direct attack, and the final position is balanced.",
+      "ar": "يقوم خط Two Knights Defense (ECO C57) على التبادل على f7 في النقلة 5؛ ويمتد 13 نصف نقلة وينتهي بنقلة الملك إلى e3 في النقلة 7. خطة الأبيض هي أن يحصّن مبكرًا, ويبني مركزًا عريضًا، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c66-ruy-lopez-berlin-defense-hedgehog-variation",
+      "name": "Ruy Lopez: Berlin Defense, Hedgehog Variation",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Berlin Defense (ECO C66) is a 12-ply line that ends on the bishop move to e7 on move 6. The line leads to a closed central structure with pawn chains facing each other and play shifting to the wings, and the final position is slightly better for White.",
+      "ar": "خط Berlin Defense (ECO C66) من 12 نصف نقلة ينتهي بنقلة الفيل إلى e7 في النقلة 6. ويؤدي الخط إلى بنية مركزية مغلقة بسلاسل بيادق متقابلة وينتقل اللعب إلى الأجنحة، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c67-ruy-lopez-berlin-defense-minckwitz-variation",
+      "name": "Ruy Lopez: Berlin Defense, Minckwitz Variation",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Berlin Defense (ECO C67) reaches the capture on e5 on move 6 and stops after 11 plies. Black should develop solidly, challenge the bishop and choose between a closed defensive setup and a sharp counterattack, and the final position is balanced.",
+      "ar": "يصل خط Berlin Defense (ECO C67) إلى التبادل على e5 في النقلة 6 ويتوقف بعد 11 نصف نقلة. خطة الأسود هي أن يطوّر قطعه بثبات، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c67-ruy-lopez-berlin-defense-pillsbury-variation",
+      "name": "Ruy Lopez: Berlin Defense, Pillsbury Variation",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Berlin Defense (ECO C67) reaches the pawn move to b3 on move 9 and stops after 17 plies. Black should develop solidly, challenge the bishop and choose between a closed defensive setup and a sharp counterattack, and the final position is balanced.",
+      "ar": "يصل خط Berlin Defense (ECO C67) إلى نقلة البيدق إلى b3 في النقلة 9 ويتوقف بعد 17 نصف نقلة. خطة الأسود هي أن يطوّر قطعه بثبات، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c67-ruy-lopez-berlin-defense-rio-de-janeiro-variation",
+      "name": "Ruy Lopez: Berlin Defense, Rio de Janeiro Variation",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Berlin Defense (ECO C67) turns on the knight move to c3 on move 9; the line runs 26 plies and closes with the pawn move to c5 on move 13. White should build a harmonious setup, and the final position is balanced.",
+      "ar": "يقوم خط Berlin Defense (ECO C67) على نقلة الحصان إلى c3 في النقلة 9؛ ويمتد 26 نصف نقلة وينتهي بنقلة البيدق إلى c5 في النقلة 13. خطة الأبيض هي أن يبني ترتيبًا متناسقًا، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c67-ruy-lopez-berlin-defense-winawer-attack",
+      "name": "Ruy Lopez: Berlin Defense, Winawer Attack",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Berlin Defense (ECO C67) reaches the knight move to d4 on move 9 and stops after 17 plies. Black should develop solidly, challenge the bishop and choose between a closed defensive setup and a sharp counterattack, and the final position is balanced.",
+      "ar": "يصل خط Berlin Defense (ECO C67) إلى نقلة الحصان إلى d4 في النقلة 9 ويتوقف بعد 17 نصف نقلة. خطة الأسود هي أن يطوّر قطعه بثبات، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c90-ruy-lopez-closed",
+      "name": "Ruy Lopez: Closed",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Closed (ECO C90) is a 16-ply line that ends on short castling on move 8. The line leads to a closed central structure with pawn chains facing each other and play shifting to the wings, and the final position is balanced.",
+      "ar": "خط Closed (ECO C90) من 16 نصف نقلة ينتهي بالتحصيل القصير في النقلة 8. ويؤدي الخط إلى بنية مركزية مغلقة بسلاسل بيادق متقابلة وينتقل اللعب إلى الأجنحة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c88-ruy-lopez-closed-anti-marshall",
+      "name": "Ruy Lopez: Closed, Anti-Marshall",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Closed (ECO C88), the 15-ply line closes with the pawn move to a4 on move 8. The typical mistake is trading the active bishop too early and allowing Black to equalise without any real pressure, and the final position is balanced.",
+      "ar": "في خط Closed (ECO C88) ينتهي الخط المكوّن من 15 نصف نقلة بنقلة البيدق إلى a4 في النقلة 8. الخطأ الشائع هو تبادل الفيل النشط مبكرًا والسماح للأسود بالتعادل دون ضغط حقيقي، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c84-ruy-lopez-closed-basque-gambit",
+      "name": "Ruy Lopez: Closed, Basque Gambit",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Closed (ECO C84) reaches the pawn move to c3 on move 8 and stops after 15 plies. Black should develop solidly, challenge the bishop and choose between a closed defensive setup and a sharp counterattack, and the final position is balanced.",
+      "ar": "يصل خط Closed (ECO C84) إلى نقلة البيدق إلى c3 في النقلة 8 ويتوقف بعد 15 نصف نقلة. خطة الأسود هي أن يطوّر قطعه بثبات، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c94-ruy-lopez-closed-breyer-defense-quiet-variation",
+      "name": "Ruy Lopez: Closed, Breyer Defense, Quiet Variation",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Closed (ECO C94) reaches the pawn move to d3 on move 10 and stops after 19 plies. Black should develop solidly, challenge the bishop and choose between a closed defensive setup and a sharp counterattack, and the final position is balanced.",
+      "ar": "يصل خط Closed (ECO C94) إلى نقلة البيدق إلى d3 في النقلة 10 ويتوقف بعد 19 نصف نقلة. خطة الأسود هي أن يطوّر قطعه بثبات، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c84-ruy-lopez-closed-center-attack",
+      "name": "Ruy Lopez: Closed, Center Attack",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Closed (ECO C84) reaches the pawn move to d4 on move 6 and stops after 11 plies. Black should develop solidly, challenge the bishop and choose between a closed defensive setup and a sharp counterattack, and the final position is balanced.",
+      "ar": "يصل خط Closed (ECO C84) إلى نقلة البيدق إلى d4 في النقلة 6 ويتوقف بعد 11 نصف نقلة. خطة الأسود هي أن يطوّر قطعه بثبات، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c96-ruy-lopez-closed-chigorin-defense-gajewski-gambit",
+      "name": "Ruy Lopez: Closed, Chigorin Defense, Gajewski Gambit",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Closed (ECO C96) is a 20-ply line that ends on the pawn move to d5 on move 10. The line leads to a closed central structure with pawn chains facing each other and play shifting to the wings, and the final position is slightly better for White.",
+      "ar": "خط Closed (ECO C96) من 20 نصف نقلة ينتهي بنقلة البيدق إلى d5 في النقلة 10. ويؤدي الخط إلى بنية مركزية مغلقة بسلاسل بيادق متقابلة وينتقل اللعب إلى الأجنحة، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c96-ruy-lopez-closed-keres-defense",
+      "name": "Ruy Lopez: Closed, Keres Defense",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Closed (ECO C96) is a 22-ply line that ends on the knight move to d7 on move 11. The line leads to a closed central structure with pawn chains facing each other and play shifting to the wings, and the final position is slightly better for White.",
+      "ar": "خط Closed (ECO C96) من 22 نصف نقلة ينتهي بنقلة الحصان إلى d7 في النقلة 11. ويؤدي الخط إلى بنية مركزية مغلقة بسلاسل بيادق متقابلة وينتقل اللعب إلى الأجنحة، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c84-ruy-lopez-closed-martinez-variation",
+      "name": "Ruy Lopez: Closed, Martinez Variation",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Closed (ECO C84) reaches the pawn move to d3 on move 6 and stops after 11 plies. Black should develop solidly, challenge the bishop and choose between a closed defensive setup and a sharp counterattack, and the final position is balanced.",
+      "ar": "يصل خط Closed (ECO C84) إلى نقلة البيدق إلى d3 في النقلة 6 ويتوقف بعد 11 نصف نقلة. خطة الأسود هي أن يطوّر قطعه بثبات، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c88-ruy-lopez-closed-rosen-attack",
+      "name": "Ruy Lopez: Closed, Rosen Attack",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Closed (ECO C88) is a 15-ply line that ends on the pawn move to d4 on move 8. The line leads to a closed central structure with pawn chains facing each other and play shifting to the wings, and the final position is balanced.",
+      "ar": "خط Closed (ECO C88) من 15 نصف نقلة ينتهي بنقلة البيدق إلى d4 في النقلة 8. ويؤدي الخط إلى بنية مركزية مغلقة بسلاسل بيادق متقابلة وينتقل اللعب إلى الأجنحة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c93-ruy-lopez-closed-smyslov-defense",
+      "name": "Ruy Lopez: Closed, Smyslov Defense",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Closed (ECO C93) reaches the pawn move to h6 on move 9 and stops after 18 plies. Black should develop solidly, challenge the bishop and choose between a closed defensive setup and a sharp counterattack, and the final position is balanced.",
+      "ar": "يصل خط Closed (ECO C93) إلى نقلة البيدق إلى h6 في النقلة 9 ويتوقف بعد 18 نصف نقلة. خطة الأسود هي أن يطوّر قطعه بثبات، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c86-ruy-lopez-closed-worrall-attack-castling-line-2",
+      "name": "Ruy Lopez: Closed, Worrall Attack, Castling Line",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Closed (ECO C86) diverges with the bishop move to e7 on move 5 and closes with the pawn move to d3 on move 9 after 17 plies. Black should develop solidly, challenge the bishop and choose between a closed defensive setup and a sharp counterattack, and the final position is balanced.",
+      "ar": "يختلف خط Closed (ECO C86) بنقلة الفيل إلى e7 في النقلة 5 وينتهي بنقلة البيدق إلى d3 في النقلة 9 بعد 17 نصف نقلة. خطة الأسود هي أن يطوّر قطعه بثبات، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c86-ruy-lopez-closed-worrall-attack-delayed-castling-line",
+      "name": "Ruy Lopez: Closed, Worrall Attack, Delayed Castling Line",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Closed (ECO C86) reaches the pawn move to d6 on move 7 and stops after 14 plies. Black should develop solidly, challenge the bishop and choose between a closed defensive setup and a sharp counterattack, and the final position is balanced.",
+      "ar": "يصل خط Closed (ECO C86) إلى نقلة البيدق إلى d6 في النقلة 7 ويتوقف بعد 14 نصف نقلة. خطة الأسود هي أن يطوّر قطعه بثبات، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c91-ruy-lopez-closed-yates-variation",
+      "name": "Ruy Lopez: Closed, Yates Variation",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Closed (ECO C91) reaches the pawn move to d4 on move 9 and stops after 17 plies. Black should develop solidly, challenge the bishop and choose between a closed defensive setup and a sharp counterattack, and the final position is balanced.",
+      "ar": "يصل خط Closed (ECO C91) إلى نقلة البيدق إلى d4 في النقلة 9 ويتوقف بعد 17 نصف نقلة. خطة الأسود هي أن يطوّر قطعه بثبات، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c68-ruy-lopez-exchange-alekhine-variation",
+      "name": "Ruy Lopez: Exchange, Alekhine Variation",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Exchange (ECO C68) is a 14-ply line that ends on the bishop move to d7 on move 7. The line leads to a closed central structure with pawn chains facing each other and play shifting to the wings, and the final position is balanced.",
+      "ar": "خط Exchange (ECO C68) من 14 نصف نقلة ينتهي بنقلة الفيل إلى d7 في النقلة 7. ويؤدي الخط إلى بنية مركزية مغلقة بسلاسل بيادق متقابلة وينتقل اللعب إلى الأجنحة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c78-ruy-lopez-morphy-defense-arkhangelsk-variation",
+      "name": "Ruy Lopez: Morphy Defense, Arkhangelsk Variation",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Morphy Defense (ECO C78) is a 12-ply line that ends on the bishop move to b7 on move 6. The line leads to a closed central structure with pawn chains facing each other and play shifting to the wings, and the final position is balanced.",
+      "ar": "خط Morphy Defense (ECO C78) من 12 نصف نقلة ينتهي بنقلة الفيل إلى b7 في النقلة 6. ويؤدي الخط إلى بنية مركزية مغلقة بسلاسل بيادق متقابلة وينتقل اللعب إلى الأجنحة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c73-ruy-lopez-morphy-defense-modern-steinitz-defense-2",
+      "name": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Morphy Defense (ECO C73) reaches the pawn move to f6 on move 6 and stops after 12 plies. Black should develop solidly, challenge the bishop and choose between a closed defensive setup and a sharp counterattack, and the final position is balanced.",
+      "ar": "يصل خط Morphy Defense (ECO C73) إلى نقلة البيدق إلى f6 في النقلة 6 ويتوقف بعد 12 نصف نقلة. خطة الأسود هي أن يطوّر قطعه بثبات، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c67-ruy-lopez-open-berlin-defense-lhermet-variation",
+      "name": "Ruy Lopez: Open Berlin Defense, l'Hermet Variation",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Open Berlin Defense (ECO C67) reaches the capture on e5 on move 6 and stops after 11 plies. Black should develop solidly, challenge the bishop and choose between a closed defensive setup and a sharp counterattack, and the final position is balanced.",
+      "ar": "يصل خط Open Berlin Defense (ECO C67) إلى التبادل على e5 في النقلة 6 ويتوقف بعد 11 نصف نقلة. خطة الأسود هي أن يطوّر قطعه بثبات، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c67-ruy-lopez-open-berlin-defense-showalter-variation",
+      "name": "Ruy Lopez: Open Berlin Defense, Showalter Variation",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Open Berlin Defense (ECO C67) reaches the bishop move to a4 on move 6 and stops after 11 plies. Black should develop solidly, challenge the bishop and choose between a closed defensive setup and a sharp counterattack, and the final position is balanced.",
+      "ar": "يصل خط Open Berlin Defense (ECO C67) إلى نقلة الفيل إلى a4 في النقلة 6 ويتوقف بعد 11 نصف نقلة. خطة الأسود هي أن يطوّر قطعه بثبات، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c80-ruy-lopez-open-main-line",
+      "name": "Ruy Lopez: Open, Main Line",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Open (ECO C80) is a 16-ply line that ends on the bishop move to e6 on move 8. The line leads to a closed central structure with pawn chains facing each other and play shifting to the wings, and the final position is balanced.",
+      "ar": "خط Open (ECO C80) من 16 نصف نقلة ينتهي بنقلة الفيل إلى e6 في النقلة 8. ويؤدي الخط إلى بنية مركزية مغلقة بسلاسل بيادق متقابلة وينتقل اللعب إلى الأجنحة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c82-ruy-lopez-open-motzko-attack-nenarokov-variation",
+      "name": "Ruy Lopez: Open, Motzko Attack, Nenarokov Variation",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Open (ECO C82), the 20-ply line closes with the knight move to e7 on move 10. The typical mistake is trading the active bishop too early and allowing Black to equalise without any real pressure, and the final position is balanced.",
+      "ar": "في خط Open (ECO C82) ينتهي الخط المكوّن من 20 نصف نقلة بنقلة الحصان إلى e7 في النقلة 10. الخطأ الشائع هو تبادل الفيل النشط مبكرًا والسماح للأسود بالتعادل دون ضغط حقيقي، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c80-ruy-lopez-open-riga-variation",
+      "name": "Ruy Lopez: Open, Riga Variation",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "In the Open (ECO C80), the 12-ply line closes with the capture on d4 on move 6. The typical mistake is trading the active bishop too early and allowing Black to equalise without any real pressure, and the final position is slightly better for White.",
+      "ar": "في خط Open (ECO C80) ينتهي الخط المكوّن من 12 نصف نقلة بالتبادل على d4 في النقلة 6. الخطأ الشائع هو تبادل الفيل النشط مبكرًا والسماح للأسود بالتعادل دون ضغط حقيقي، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c82-ruy-lopez-open-st-petersburg-variation",
+      "name": "Ruy Lopez: Open, St. Petersburg Variation",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Open (ECO C82), the 19-ply line closes with the knight move to d2 on move 10. The typical mistake is trading the active bishop too early and allowing Black to equalise without any real pressure, and the final position is balanced.",
+      "ar": "في خط Open (ECO C82) ينتهي الخط المكوّن من 19 نصف نقلة بنقلة الحصان إلى d2 في النقلة 10. الخطأ الشائع هو تبادل الفيل النشط مبكرًا والسماح للأسود بالتعادل دون ضغط حقيقي، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c80-ruy-lopez-open-zukertort-variation",
+      "name": "Ruy Lopez: Open, Zukertort Variation",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Open (ECO C80) is a 16-ply line that ends on the knight move to e7 on move 8. The line leads to a closed central structure with pawn chains facing each other and play shifting to the wings, and the final position is slightly better for White.",
+      "ar": "خط Open (ECO C80) من 16 نصف نقلة ينتهي بنقلة الحصان إلى e7 في النقلة 8. ويؤدي الخط إلى بنية مركزية مغلقة بسلاسل بيادق متقابلة وينتقل اللعب إلى الأجنحة، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c63-ruy-lopez-schliemann-defense-mohring-variation",
+      "name": "Ruy Lopez: Schliemann Defense, Möhring Variation",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Schliemann Defense (ECO C63) reaches the queen move to d5 on move 7 and stops after 14 plies. Black should develop solidly, challenge the bishop and choose between a closed defensive setup and a sharp counterattack, and the final position is slightly better for White.",
+      "ar": "يصل خط Schliemann Defense (ECO C63) إلى نقلة الملكة إلى d5 في النقلة 7 ويتوقف بعد 14 نصف نقلة. خطة الأسود هي أن يطوّر قطعه بثبات، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "lichess-ruy-lopez-c62-ruy-lopez-steinitz-defense-nimzowitsch-attack",
+      "name": "Ruy Lopez: Steinitz Defense, Nimzowitsch Attack",
+      "opening": "ruy-lopez",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Steinitz Defense (ECO C62), the 11-ply line closes with the capture on c6 on move 6. The typical mistake is trading the active bishop too early and allowing Black to equalise without any real pressure, and the final position is slightly better for White.",
+      "ar": "في خط Steinitz Defense (ECO C62) ينتهي الخط المكوّن من 11 نصف نقلة بالتبادل على c6 في النقلة 6. الخطأ الشائع هو تبادل الفيل النشط مبكرًا والسماح للأسود بالتعادل دون ضغط حقيقي، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "lichess-scotch-c45-scotch-game-classical-variation-millennium-variation",
+      "name": "Scotch Game: Classical Variation, Millennium Variation",
+      "opening": "scotch",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Classical Variation (ECO C45) turns on the queen move to g6 on move 6, the last move of the 12-ply line. White should recapture actively, develop with tempo and use the open centre for rapid piece play, and the final position is balanced.",
+      "ar": "يقوم خط Classical Variation (ECO C45) على نقلة الملكة إلى g6 في النقلة 6، وهي النقلة الأخيرة في خط من 12 نصف نقلة. خطة الأبيض هي أن يستعيد البيدق بنشاط، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-scotch-c44-scotch-game-goring-gambit-main-line",
+      "name": "Scotch Game: Göring Gambit, Main Line",
+      "opening": "scotch",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Göring Gambit (ECO C44) is a 10-ply line that ends on the bishop move to b4 on move 5. The line leads to an open centre after the early pawn trade, and the final position is balanced.",
+      "ar": "خط Göring Gambit (ECO C44) من 10 نصف نقلة ينتهي بنقلة الفيل إلى b4 في النقلة 5. ويؤدي الخط إلى مركز مفتوح بعد تبادل البيادق المبكر، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-scotch-c45-scotch-game-horwitz-attack-blackburne-variation",
+      "name": "Scotch Game: Horwitz Attack, Blackburne Variation",
+      "opening": "scotch",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Horwitz Attack (ECO C45) turns on the capture on d2 on move 9, the last move of the 17-ply line. White should recapture actively, develop with tempo and use the open centre for rapid piece play, and the final position is balanced.",
+      "ar": "يقوم خط Horwitz Attack (ECO C45) على التبادل على d2 في النقلة 9، وهي النقلة الأخيرة في خط من 17 نصف نقلة. خطة الأبيض هي أن يستعيد البيدق بنشاط، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-scotch-c45-scotch-game-mieses-variation",
+      "name": "Scotch Game: Mieses Variation",
+      "opening": "scotch",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Mieses Variation (ECO C45) turns on the pawn move to e5 on move 6, the last move of the 11-ply line. White should recapture actively, develop with tempo and use the open centre for rapid piece play, and the final position is balanced.",
+      "ar": "يقوم خط Mieses Variation (ECO C45) على نقلة البيدق إلى e5 في النقلة 6، وهي النقلة الأخيرة في خط من 11 نصف نقلة. خطة الأبيض هي أن يستعيد البيدق بنشاط، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-scotch-c44-scotch-game-napoleon-gambit",
+      "name": "Scotch Game: Napoleon Gambit",
+      "opening": "scotch",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Napoleon Gambit (ECO C44) turns on the bishop move to c4 on move 5, the last move of the 9-ply line. White should recapture actively, develop with tempo and use the open centre for rapid piece play, and the final position is balanced.",
+      "ar": "يقوم خط Napoleon Gambit (ECO C44) على نقلة الفيل إلى c4 في النقلة 5، وهي النقلة الأخيرة في خط من 9 نصف نقلة. خطة الأبيض هي أن يستعيد البيدق بنشاط، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-scotch-c45-scotch-game-potter-variation",
+      "name": "Scotch Game: Potter Variation",
+      "opening": "scotch",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Potter Variation (ECO C45) turns on the knight move to b3 on move 5, the last move of the 9-ply line. White should recapture actively, develop with tempo and use the open centre for rapid piece play, and the final position is balanced.",
+      "ar": "يقوم خط Potter Variation (ECO C45) على نقلة الحصان إلى b3 في النقلة 5، وهي النقلة الأخيرة في خط من 9 نصف نقلة. خطة الأبيض هي أن يستعيد البيدق بنشاط، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-scotch-c45-scotch-game-romanishin-variation",
+      "name": "Scotch Game: Romanishin Variation",
+      "opening": "scotch",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Romanishin Variation (ECO C45), the 10-ply line closes with the bishop move to b4 on move 5. The typical mistake is grabbing material with the queen and falling behind in development, and the final position is balanced.",
+      "ar": "في خط Romanishin Variation (ECO C45) ينتهي الخط المكوّن من 10 نصف نقلة بنقلة الفيل إلى b4 في النقلة 5. الخطأ الشائع هو جمع المادة بالملكة والتخلّف في التطوير، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-scotch-c45-scotch-game-schmidt-variation",
+      "name": "Scotch Game: Schmidt Variation",
+      "opening": "scotch",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Schmidt Variation (ECO C45) turns on the knight move to f6 on move 4, the last move of the 8-ply line. White should recapture actively, develop with tempo and use the open centre for rapid piece play, and the final position is balanced.",
+      "ar": "يقوم خط Schmidt Variation (ECO C45) على نقلة الحصان إلى f6 في النقلة 4، وهي النقلة الأخيرة في خط من 8 نصف نقلة. خطة الأبيض هي أن يستعيد البيدق بنشاط، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-scotch-c44-scotch-game-scotch-gambit",
+      "name": "Scotch Game: Scotch Gambit",
+      "opening": "scotch",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Scotch Gambit (ECO C44) turns on the bishop move to c4 on move 4, the last move of the 7-ply line. White should recapture actively, develop with tempo and use the open centre for rapid piece play, and the final position is balanced.",
+      "ar": "يقوم خط Scotch Gambit (ECO C44) على نقلة الفيل إلى c4 في النقلة 4، وهي النقلة الأخيرة في خط من 7 نصف نقلة. خطة الأبيض هي أن يستعيد البيدق بنشاط، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-kings-gambit-c39-kings-gambit-accepted-allgaier-gambit-urusov-attack",
+      "name": "King's Gambit Accepted: Allgaier Gambit, Urusov Attack",
+      "opening": "kings-gambit",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Allgaier Gambit (ECO C39) turns on the bishop move to c4 on move 7, the last move of the 13-ply line. White should develop quickly, castle and attack along the opened files before Black consolidate, and the final position is slightly better for Black.",
+      "ar": "يقوم خط Allgaier Gambit (ECO C39) على نقلة الفيل إلى c4 في النقلة 7، وهي النقلة الأخيرة في خط من 13 نصف نقلة. خطة الأبيض هي أن يطوّر بسرعة, ويحصّن، والوضع النهائي يميل قليلًا لصالح الأسود."
+    },
+    {
+      "lineId": "lichess-kings-gambit-c37-kings-gambit-accepted-double-muzio-gambit-bello-gambit",
+      "name": "King's Gambit Accepted: Double Muzio Gambit, Bello Gambit",
+      "opening": "kings-gambit",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Double Muzio Gambit (ECO C37) is a 13-ply line that ends on the knight move to c3 on move 7. The line leads to an open kingside with a weakened White king and a temporary material imbalance, and the final position is clearly better for Black.",
+      "ar": "خط Double Muzio Gambit (ECO C37) من 13 نصف نقلة ينتهي بنقلة الحصان إلى c3 في النقلة 7. ويؤدي الخط إلى جناح ملكي مفتوح بملك أبيض مكشوف واختلال مؤقت في المادة، والوضع النهائي أفضل بوضوح للأسود."
+    },
+    {
+      "lineId": "lichess-kings-gambit-c39-kings-gambit-accepted-kieseritzky-gambit-cotter-gambit",
+      "name": "King's Gambit Accepted: Kieseritzky Gambit, Cotter Gambit",
+      "opening": "kings-gambit",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "In the Kieseritzky Gambit (ECO C39), the 11-ply line closes with the capture on f7 on move 6. The typical mistake is continuing the attack after the initiative has faded instead of restoring material balance, and the final position is slightly better for Black.",
+      "ar": "في خط Kieseritzky Gambit (ECO C39) ينتهي الخط المكوّن من 11 نصف نقلة بالتبادل على f7 في النقلة 6. الخطأ الشائع هو مواصلة الهجوم بعد تلاشي المبادرة بدلًا من إعادة التوازن المادي، والوضع النهائي يميل قليلًا لصالح الأسود."
+    },
+    {
+      "lineId": "lichess-kings-gambit-c37-kings-gambit-accepted-salvio-gambit-cochrane-gambit",
+      "name": "King's Gambit Accepted: Salvio Gambit, Cochrane Gambit",
+      "opening": "kings-gambit",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Salvio Gambit (ECO C37) turns on the pawn move to f3 on move 6, the last move of the 12-ply line. White should develop quickly, castle and attack along the opened files before Black consolidate, and the final position is balanced.",
+      "ar": "يقوم خط Salvio Gambit (ECO C37) على نقلة البيدق إلى f3 في النقلة 6، وهي النقلة الأخيرة في خط من 12 نصف نقلة. خطة الأبيض هي أن يطوّر بسرعة, ويحصّن، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-kings-gambit-c37-kings-gambit-accepted-salvio-gambit-silberschmidt-defense",
+      "name": "King's Gambit Accepted: Salvio Gambit, Silberschmidt Defense",
+      "opening": "kings-gambit",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Salvio Gambit (ECO C37) turns on the knight move to h6 on move 6, the last move of the 12-ply line. White should develop quickly, castle and attack along the opened files before Black consolidate, and the final position is balanced.",
+      "ar": "يقوم خط Salvio Gambit (ECO C37) على نقلة الحصان إلى h6 في النقلة 6، وهي النقلة الأخيرة في خط من 12 نصف نقلة. خطة الأبيض هي أن يطوّر بسرعة, ويحصّن، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-d52-queens-gambit-declined-cambridge-springs-defense-yugoslav-variation",
+      "name": "Queen's Gambit Declined: Cambridge Springs Defense, Yugoslav Variation",
+      "opening": "queens-gambit",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Cambridge Springs Defense (ECO D52) turns on the capture on d5 on move 7, the last move of the 14-ply line. White should develop harmoniously, support the centre and use the open files or a central break to press, and the final position is balanced.",
+      "ar": "يقوم خط Cambridge Springs Defense (ECO D52) على التبادل على d5 في النقلة 7، وهي النقلة الأخيرة في خط من 14 نصف نقلة. خطة الأبيض هي أن يطوّر قطعه بتناسق، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-d51-queens-gambit-declined-capablanca-variation-anti-cambridge-springs-variation",
+      "name": "Queen's Gambit Declined: Capablanca Variation, Anti-Cambridge Springs Variation",
+      "opening": "queens-gambit",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Capablanca Variation (ECO D51) is a 11-ply line that ends on the pawn move to a3 on move 6. The line leads to a closed queen-pawn structure that can become an isolated queen's pawn or a hanging-pawns position, and the final position is balanced.",
+      "ar": "خط Capablanca Variation (ECO D51) من 11 نصف نقلة ينتهي بنقلة البيدق إلى a3 في النقلة 6. ويؤدي الخط إلى بنية مغلقة ببيدق الوزير قد تتحول إلى بيدق وزير معزول أو وضع بيادق معلقة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-d35-queens-gambit-declined-exchange-variation-3",
+      "name": "Queen's Gambit Declined: Exchange Variation",
+      "opening": "queens-gambit",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Exchange Variation (ECO D35) branches with the capture on d5 on move 5 and runs 13 plies to the pawn move to e3 on move 7. The line leads to a closed queen-pawn structure that can become an isolated queen's pawn or a hanging-pawns position, and the final position is balanced.",
+      "ar": "يتفرّع خط Exchange Variation (ECO D35) بالتبادل على d5 في النقلة 5 ويمتد 13 نصف نقلة إلى نقلة البيدق إلى e3 في النقلة 7. ويؤدي الخط إلى بنية مغلقة ببيدق الوزير قد تتحول إلى بيدق وزير معزول أو وضع بيادق معلقة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-d36-queens-gambit-declined-exchange-variation-reshevsky-variation-9",
+      "name": "Queen's Gambit Declined: Exchange Variation, Reshevsky Variation",
+      "opening": "queens-gambit",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Exchange Variation (ECO D36) is a 20-ply line that ends on the knight move to f8 on move 10. The line leads to a closed queen-pawn structure that can become an isolated queen's pawn or a hanging-pawns position, and the final position is balanced.",
+      "ar": "خط Exchange Variation (ECO D36) من 20 نصف نقلة ينتهي بنقلة الحصان إلى f8 في النقلة 10. ويؤدي الخط إلى بنية مغلقة ببيدق الوزير قد تتحول إلى بيدق وزير معزول أو وضع بيادق معلقة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-d35-queens-gambit-declined-exchange-variation-samisch-variation",
+      "name": "Queen's Gambit Declined: Exchange Variation, Sämisch Variation",
+      "opening": "queens-gambit",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Exchange Variation (ECO D35) turns on the bishop move to f4 on move 6, the last move of the 11-ply line. White should develop harmoniously, support the centre and use the open files or a central break to press, and the final position is balanced.",
+      "ar": "يقوم خط Exchange Variation (ECO D35) على نقلة الفيل إلى f4 في النقلة 6، وهي النقلة الأخيرة في خط من 11 نصف نقلة. خطة الأبيض هي أن يطوّر قطعه بتناسق، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-d37-queens-gambit-declined-harrwitz-attack-orthodox-defense",
+      "name": "Queen's Gambit Declined: Harrwitz Attack, Orthodox Defense",
+      "opening": "queens-gambit",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Harrwitz Attack (ECO D37) branches with the bishop move to e7 on move 4 and runs 12 plies to the pawn move to c6 on move 6. The line leads to a closed queen-pawn structure that can become an isolated queen's pawn or a hanging-pawns position, and the final position is balanced.",
+      "ar": "يتفرّع خط Harrwitz Attack (ECO D37) بنقلة الفيل إلى e7 في النقلة 4 ويمتد 12 نصف نقلة إلى نقلة البيدق إلى c6 في النقلة 6. ويؤدي الخط إلى بنية مغلقة ببيدق الوزير قد تتحول إلى بيدق وزير معزول أو وضع بيادق معلقة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-d37-queens-gambit-declined-miles-variation",
+      "name": "Queen's Gambit Declined: Miles Variation",
+      "opening": "queens-gambit",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Miles Variation (ECO D37), the 11-ply line closes with the queen move to c2 on move 6. The typical mistake is recapturing on the wing without a plan and falling behind in development, and the final position is balanced.",
+      "ar": "في خط Miles Variation (ECO D37) ينتهي الخط المكوّن من 11 نصف نقلة بنقلة الملكة إلى c2 في النقلة 6. الخطأ الشائع هو استعادة البيدق على الجناح دون خطة والتخلّف في التطوير، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-d67-queens-gambit-declined-orthodox-defense-capablanca-system",
+      "name": "Queen's Gambit Declined: Orthodox Defense, Capablanca System",
+      "opening": "queens-gambit",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Orthodox Defense (ECO D67), the 18-ply line closes with the knight move to d5 on move 9. The typical mistake is recapturing on the wing without a plan and falling behind in development, and the final position is balanced.",
+      "ar": "في خط Orthodox Defense (ECO D67) ينتهي الخط المكوّن من 18 نصف نقلة بنقلة الحصان إلى d5 في النقلة 9. الخطأ الشائع هو استعادة البيدق على الجناح دون خطة والتخلّف في التطوير، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-d66-queens-gambit-declined-orthodox-defense-fianchetto-variation",
+      "name": "Queen's Gambit Declined: Orthodox Defense, Fianchetto Variation",
+      "opening": "queens-gambit",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Orthodox Defense (ECO D66) turns on the pawn move to c6 on move 4; the line runs 18 plies and closes with the pawn move to b5 on move 9. White should develop harmoniously, support the centre and use the open files or a central break to press, and the final position is balanced.",
+      "ar": "يقوم خط Orthodox Defense (ECO D66) على نقلة البيدق إلى c6 في النقلة 4؛ ويمتد 18 نصف نقلة وينتهي بنقلة البيدق إلى b5 في النقلة 9. خطة الأبيض هي أن يطوّر قطعه بتناسق، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-d63-queens-gambit-declined-orthodox-defense-henneberger-variation-4",
+      "name": "Queen's Gambit Declined: Orthodox Defense, Henneberger Variation",
+      "opening": "queens-gambit",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Orthodox Defense (ECO D63) turns on the pawn move to c5 on move 8; the line runs 17 plies and closes with the bishop move to d3 on move 9. White should develop harmoniously, support the centre and use the open files or a central break to press, and the final position is balanced.",
+      "ar": "يقوم خط Orthodox Defense (ECO D63) على نقلة البيدق إلى c5 في النقلة 8؛ ويمتد 17 نصف نقلة وينتهي بنقلة الفيل إلى d3 في النقلة 9. خطة الأبيض هي أن يطوّر قطعه بتناسق، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-d67-queens-gambit-declined-orthodox-defense-janowski-variation",
+      "name": "Queen's Gambit Declined: Orthodox Defense, Janowski Variation",
+      "opening": "queens-gambit",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Orthodox Defense (ECO D67) turns on the bishop move to d3 on move 8; the line runs 19 plies and closes with the pawn move to h4 on move 10. White should develop harmoniously, support the centre and use the open files or a central break to press, and the final position is balanced.",
+      "ar": "يقوم خط Orthodox Defense (ECO D67) على نقلة الفيل إلى d3 في النقلة 8؛ ويمتد 19 نصف نقلة وينتهي بنقلة البيدق إلى h4 في النقلة 10. خطة الأبيض هي أن يطوّر قطعه بتناسق، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-d67-queens-gambit-declined-orthodox-defense-main-line",
+      "name": "Queen's Gambit Declined: Orthodox Defense, Main Line",
+      "opening": "queens-gambit",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Orthodox Defense (ECO D67) turns on short castling on move 11, the last move of the 21-ply line. White should develop harmoniously, support the centre and use the open files or a central break to press, and the final position is balanced.",
+      "ar": "يقوم خط Orthodox Defense (ECO D67) على التحصيل القصير في النقلة 11، وهي النقلة الأخيرة في خط من 21 نصف نقلة. خطة الأبيض هي أن يطوّر قطعه بتناسق، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-d63-queens-gambit-declined-orthodox-defense-pillsbury-variation",
+      "name": "Queen's Gambit Declined: Orthodox Defense, Pillsbury Variation",
+      "opening": "queens-gambit",
+      "reasons": [
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Orthodox Defense (ECO D63), the knight move to f3 on move 6 is the branch point; play runs 17 plies and ends with the bishop move to d3 on move 9. The typical mistake is recapturing on the wing without a plan and falling behind in development, and the final position is balanced.",
+      "ar": "في خط Orthodox Defense (ECO D63) يكون نقلة الحصان إلى f3 في النقلة 6 نقطة التفرّع؛ ويمتد اللعب 17 نصف نقلة وينتهي بنقلة الفيل إلى d3 في النقلة 9. الخطأ الشائع هو استعادة البيدق على الجناح دون خطة والتخلّف في التطوير، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-d60-queens-gambit-declined-orthodox-defense-rauzer-variation",
+      "name": "Queen's Gambit Declined: Orthodox Defense, Rauzer Variation",
+      "opening": "queens-gambit",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Orthodox Defense (ECO D60), the 13-ply line closes with the queen move to b3 on move 7. The typical mistake is recapturing on the wing without a plan and falling behind in development, and the final position is balanced.",
+      "ar": "في خط Orthodox Defense (ECO D60) ينتهي الخط المكوّن من 13 نصف نقلة بنقلة الملكة إلى b3 في النقلة 7. الخطأ الشائع هو استعادة البيدق على الجناح دون خطة والتخلّف في التطوير، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-d61-queens-gambit-declined-orthodox-defense-rubinstein-variation",
+      "name": "Queen's Gambit Declined: Orthodox Defense, Rubinstein Variation",
+      "opening": "queens-gambit",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Orthodox Defense (ECO D61) is a 13-ply line that ends on the queen move to c2 on move 7. The line leads to a closed queen-pawn structure that can become an isolated queen's pawn or a hanging-pawns position, and the final position is balanced.",
+      "ar": "خط Orthodox Defense (ECO D61) من 13 نصف نقلة ينتهي بنقلة الملكة إلى c2 في النقلة 7. ويؤدي الخط إلى بنية مغلقة ببيدق الوزير قد تتحول إلى بيدق وزير معزول أو وضع بيادق معلقة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-d61-queens-gambit-declined-orthodox-defense-rubinstein-variation-2",
+      "name": "Queen's Gambit Declined: Orthodox Defense, Rubinstein Variation",
+      "opening": "queens-gambit",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Orthodox Defense (ECO D61), the 14-ply line closes with the pawn move to c5 on move 7. The typical mistake is recapturing on the wing without a plan and falling behind in development, and the final position is balanced.",
+      "ar": "في خط Orthodox Defense (ECO D61) ينتهي الخط المكوّن من 14 نصف نقلة بنقلة البيدق إلى c5 في النقلة 7. الخطأ الشائع هو استعادة البيدق على الجناح دون خطة والتخلّف في التطوير، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-d61-queens-gambit-declined-orthodox-defense-rubinstein-variation-3",
+      "name": "Queen's Gambit Declined: Orthodox Defense, Rubinstein Variation",
+      "opening": "queens-gambit",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Orthodox Defense (ECO D61) is a 14-ply line that ends on the pawn move to c6 on move 7. The line leads to a closed queen-pawn structure that can become an isolated queen's pawn or a hanging-pawns position, and the final position is balanced.",
+      "ar": "خط Orthodox Defense (ECO D61) من 14 نصف نقلة ينتهي بنقلة البيدق إلى c6 في النقلة 7. ويؤدي الخط إلى بنية مغلقة ببيدق الوزير قد تتحول إلى بيدق وزير معزول أو وضع بيادق معلقة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-d63-queens-gambit-declined-orthodox-defense-swiss-carlsbad-variation",
+      "name": "Queen's Gambit Declined: Orthodox Defense, Swiss, Carlsbad Variation",
+      "opening": "queens-gambit",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Orthodox Defense (ECO D63) turns on the capture on d5 on move 8, the last move of the 15-ply line. White should develop harmoniously, support the centre and use the open files or a central break to press, and the final position is balanced.",
+      "ar": "يقوم خط Orthodox Defense (ECO D63) على التبادل على d5 في النقلة 8، وهي النقلة الأخيرة في خط من 15 نصف نقلة. خطة الأبيض هي أن يطوّر قطعه بتناسق، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-d31-queens-gambit-declined-semi-slav-koomen-variation",
+      "name": "Queen's Gambit Declined: Semi-Slav, Koomen Variation",
+      "opening": "queens-gambit",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Semi-Slav (ECO D31) branches with the pawn move to e3 on move 5 and runs 14 plies to the queen move to e7 on move 7. The line leads to a closed queen-pawn structure that can become an isolated queen's pawn or a hanging-pawns position, and the final position is balanced.",
+      "ar": "يتفرّع خط Semi-Slav (ECO D31) بنقلة البيدق إلى e3 في النقلة 5 ويمتد 14 نصف نقلة إلى نقلة الملكة إلى e7 في النقلة 7. ويؤدي الخط إلى بنية مغلقة ببيدق الوزير قد تتحول إلى بيدق وزير معزول أو وضع بيادق معلقة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-d50-queens-gambit-declined-semi-tarrasch-defense-krause-variation",
+      "name": "Queen's Gambit Declined: Semi-Tarrasch Defense, Krause Variation",
+      "opening": "queens-gambit",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Semi-Tarrasch Defense (ECO D50) branches with the capture on d4 on move 6 and runs 15 plies to the queen move to a4 on move 8. The line leads to a closed queen-pawn structure that can become an isolated queen's pawn or a hanging-pawns position, and the final position is balanced.",
+      "ar": "يتفرّع خط Semi-Tarrasch Defense (ECO D50) بالتبادل على d4 في النقلة 6 ويمتد 15 نصف نقلة إلى نقلة الملكة إلى a4 في النقلة 8. ويؤدي الخط إلى بنية مغلقة ببيدق الوزير قد تتحول إلى بيدق وزير معزول أو وضع بيادق معلقة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-d58-queens-gambit-declined-tartakower-defense-exchange-variation",
+      "name": "Queen's Gambit Declined: Tartakower Defense, Exchange Variation",
+      "opening": "queens-gambit",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Tartakower Defense (ECO D58) turns on the capture on d5 on move 8, the last move of the 16-ply line. White should develop harmoniously, support the centre and use the open files or a central break to press, and the final position is balanced.",
+      "ar": "يقوم خط Tartakower Defense (ECO D58) على التبادل على d5 في النقلة 8، وهي النقلة الأخيرة في خط من 16 نصف نقلة. خطة الأبيض هي أن يطوّر قطعه بتناسق، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-d34-tarrasch-defense-classical-variation-bogoljubow-variation",
+      "name": "Tarrasch Defense: Classical Variation, Bogoljubow Variation",
+      "opening": "queens-gambit",
+      "reasons": [
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Classical Variation (ECO D34) branches with the pawn move to c5 on move 3 and runs 20 plies to the pawn move to c4 on move 10. The line leads to a closed queen-pawn structure that can become an isolated queen's pawn or a hanging-pawns position, and the final position is balanced.",
+      "ar": "يتفرّع خط Classical Variation (ECO D34) بنقلة البيدق إلى c5 في النقلة 3 ويمتد 20 نصف نقلة إلى نقلة البيدق إلى c4 في النقلة 10. ويؤدي الخط إلى بنية مغلقة ببيدق الوزير قد تتحول إلى بيدق وزير معزول أو وضع بيادق معلقة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-d34-tarrasch-defense-classical-variation-carlsbad-variation",
+      "name": "Tarrasch Defense: Classical Variation, Carlsbad Variation",
+      "opening": "queens-gambit",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Classical Variation (ECO D34) is a 17-ply line that ends on the bishop move to g5 on move 9. The line leads to a closed queen-pawn structure that can become an isolated queen's pawn or a hanging-pawns position, and the final position is balanced.",
+      "ar": "خط Classical Variation (ECO D34) من 17 نصف نقلة ينتهي بنقلة الفيل إلى g5 في النقلة 9. ويؤدي الخط إلى بنية مغلقة ببيدق الوزير قد تتحول إلى بيدق وزير معزول أو وضع بيادق معلقة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-d34-tarrasch-defense-classical-variation-main-line",
+      "name": "Tarrasch Defense: Classical Variation, Main Line",
+      "opening": "queens-gambit",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Classical Variation (ECO D34) is a 22-ply line that ends on the rook move to e8 on move 11. The line leads to a closed queen-pawn structure that can become an isolated queen's pawn or a hanging-pawns position, and the final position is balanced.",
+      "ar": "خط Classical Variation (ECO D34) من 22 نصف نقلة ينتهي بنقلة الرخ إلى e8 في النقلة 11. ويؤدي الخط إلى بنية مغلقة ببيدق الوزير قد تتحول إلى بيدق وزير معزول أو وضع بيادق معلقة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-d34-tarrasch-defense-classical-variation-petursson-variation",
+      "name": "Tarrasch Defense: Classical Variation, Petursson Variation",
+      "opening": "queens-gambit",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "In the Classical Variation (ECO D34), the 20-ply line closes with the rook move to e8 on move 10. The typical mistake is recapturing on the wing without a plan and falling behind in development, and the final position is balanced.",
+      "ar": "في خط Classical Variation (ECO D34) ينتهي الخط المكوّن من 20 نصف نقلة بنقلة الرخ إلى e8 في النقلة 10. الخطأ الشائع هو استعادة البيدق على الجناح دون خطة والتخلّف في التطوير، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-d33-tarrasch-defense-swedish-variation",
+      "name": "Tarrasch Defense: Swedish Variation",
+      "opening": "queens-gambit",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Swedish Variation (ECO D33) is a 12-ply line that ends on the pawn move to c4 on move 6. The line leads to a closed queen-pawn structure that can become an isolated queen's pawn or a hanging-pawns position, and the final position is balanced.",
+      "ar": "خط Swedish Variation (ECO D33) من 12 نصف نقلة ينتهي بنقلة البيدق إلى c4 في النقلة 6. ويؤدي الخط إلى بنية مغلقة ببيدق الوزير قد تتحول إلى بيدق وزير معزول أو وضع بيادق معلقة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-accepted-d27-queens-gambit-accepted-classical-defense-main-line-2",
+      "name": "Queen's Gambit Accepted: Classical Defense, Main Line",
+      "opening": "queens-gambit-accepted",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Classical Defense (ECO D27) turns on the knight move to c3 on move 7, the last move of the 13-ply line. White should use the central majority and active pieces to regain the pawn or build a lasting initiative, and the final position is balanced.",
+      "ar": "يقوم خط Classical Defense (ECO D27) على نقلة الحصان إلى c3 في النقلة 7، وهي النقلة الأخيرة في خط من 13 نصف نقلة. خطة الأبيض هي أن يستخدم الأغلبية المركزية والقطع النشطة لاستعادة البيدق أو بناء مبادرة دائمة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-accepted-d27-queens-gambit-accepted-classical-defense-main-line-3",
+      "name": "Queen's Gambit Accepted: Classical Defense, Main Line",
+      "opening": "queens-gambit-accepted",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Classical Defense (ECO D27) reaches the pawn move to c5 on move 8 and stops after 16 plies. Black should return the pawn at the right moment and try to reach a comfortable equal position, and the final position is balanced.",
+      "ar": "يصل خط Classical Defense (ECO D27) إلى نقلة البيدق إلى c5 في النقلة 8 ويتوقف بعد 16 نصف نقلة. خطة الأسود هي أن يعيد البيدق في الوقت المناسب ويحاول الوصول إلى وضع متعادل مريح، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-accepted-d27-queens-gambit-accepted-classical-defense-rubinstein-variation",
+      "name": "Queen's Gambit Accepted: Classical Defense, Rubinstein Variation",
+      "opening": "queens-gambit-accepted",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Classical Defense (ECO D27), the 13-ply line closes with the pawn move to a4 on move 7. The typical mistake is trying to hold the extra pawn too long and getting cramped, and the final position is balanced.",
+      "ar": "في خط Classical Defense (ECO D27) ينتهي الخط المكوّن من 13 نصف نقلة بنقلة البيدق إلى a4 في النقلة 7. الخطأ الشائع هو محاولة الاحتفاظ بالبيدق الإضافي وقتًا طويلًا والتعرض للانحصار، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-accepted-d26-queens-gambit-accepted-classical-defense-steinitz-variation-development-variation",
+      "name": "Queen's Gambit Accepted: Classical Defense, Steinitz Variation, Development Variation",
+      "opening": "queens-gambit-accepted",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Classical Defense (ECO D26) turns on the knight move to c6 on move 6, the last move of the 12-ply line. White should use the central majority and active pieces to regain the pawn or build a lasting initiative, and the final position is balanced.",
+      "ar": "يقوم خط Classical Defense (ECO D26) على نقلة الحصان إلى c6 في النقلة 6، وهي النقلة الأخيرة في خط من 12 نصف نقلة. خطة الأبيض هي أن يستخدم الأغلبية المركزية والقطع النشطة لاستعادة البيدق أو بناء مبادرة دائمة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-accepted-d26-queens-gambit-accepted-normal-variation-traditional-system-3",
+      "name": "Queen's Gambit Accepted: Normal Variation, Traditional System",
+      "opening": "queens-gambit-accepted",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Normal Variation (ECO D26), the 13-ply line closes with the knight move to c3 on move 7. The typical mistake is trying to hold the extra pawn too long and getting cramped, and the final position is balanced.",
+      "ar": "في خط Normal Variation (ECO D26) ينتهي الخط المكوّن من 13 نصف نقلة بنقلة الحصان إلى c3 في النقلة 7. الخطأ الشائع هو محاولة الاحتفاظ بالبيدق الإضافي وقتًا طويلًا والتعرض للانحصار، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-queens-gambit-accepted-d20-queens-gambit-accepted-old-variation-christensen-gambit",
+      "name": "Queen's Gambit Accepted: Old Variation, Christensen Gambit",
+      "opening": "queens-gambit-accepted",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Old Variation (ECO D20), the 11-ply line closes with the knight move to f3 on move 6. The typical mistake is trying to hold the extra pawn too long and getting cramped, and the final position is balanced.",
+      "ar": "في خط Old Variation (ECO D20) ينتهي الخط المكوّن من 11 نصف نقلة بنقلة الحصان إلى f3 في النقلة 6. الخطأ الشائع هو محاولة الاحتفاظ بالبيدق الإضافي وقتًا طويلًا والتعرض للانحصار، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-caro-kann-b13-caro-kann-defense-panov-attack-modern-defense-carlsbad-line",
+      "name": "Caro-Kann Defense: Panov Attack, Modern Defense, Carlsbad Line",
+      "opening": "caro-kann",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "In the Panov Attack (ECO B13), the 12-ply line closes with the pawn move to e6 on move 6. The typical mistake is leaving the light-squared bishop passive behind the pawn chain, and the final position is balanced.",
+      "ar": "في خط Panov Attack (ECO B13) ينتهي الخط المكوّن من 12 نصف نقلة بنقلة البيدق إلى e6 في النقلة 6. الخطأ الشائع هو ترك الفيل الفاتح سلبيًا خلف سلسلة البيادق، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-caro-kann-b13-caro-kann-defense-panov-attack-modern-defense-mieses-line",
+      "name": "Caro-Kann Defense: Panov Attack, Modern Defense, Mieses Line",
+      "opening": "caro-kann",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Panov Attack (ECO B13), the 12-ply line closes with the bishop move to g4 on move 6. The typical mistake is leaving the light-squared bishop passive behind the pawn chain, and the final position is balanced.",
+      "ar": "في خط Panov Attack (ECO B13) ينتهي الخط المكوّن من 12 نصف نقلة بنقلة الفيل إلى g4 في النقلة 6. الخطأ الشائع هو ترك الفيل الفاتح سلبيًا خلف سلسلة البيادق، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-french-c13-french-defense-alekhine-chatard-attack-maroczy-variation",
+      "name": "French Defense: Alekhine-Chatard Attack, Maróczy Variation",
+      "opening": "french",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Alekhine-Chatard Attack (ECO C13) is a 12-ply line that ends on the pawn move to a6 on move 6. The line leads to a closed central chain with Black's pawns facing White's advanced centre, and the final position is slightly better for White.",
+      "ar": "خط Alekhine-Chatard Attack (ECO C13) من 12 نصف نقلة ينتهي بنقلة البيدق إلى a6 في النقلة 6. ويؤدي الخط إلى سلسلة مركزية مغلقة تواجه فيها بيادق الأسود مركز الأبيض المتقدم، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "lichess-french-c13-french-defense-alekhine-chatard-attack-teichmann-variation",
+      "name": "French Defense: Alekhine-Chatard Attack, Teichmann Variation",
+      "opening": "french",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Alekhine-Chatard Attack (ECO C13) is a 12-ply line that ends on the pawn move to f6 on move 6. The line leads to a closed central chain with Black's pawns facing White's advanced centre, and the final position is slightly better for White.",
+      "ar": "خط Alekhine-Chatard Attack (ECO C13) من 12 نصف نقلة ينتهي بنقلة البيدق إلى f6 في النقلة 6. ويؤدي الخط إلى سلسلة مركزية مغلقة تواجه فيها بيادق الأسود مركز الأبيض المتقدم، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "lichess-french-c14-french-defense-classical-variation-rubinstein-variation",
+      "name": "French Defense: Classical Variation, Rubinstein Variation",
+      "opening": "french",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Classical Variation (ECO C14) is a 13-ply line that ends on the queen move to d2 on move 7. The line leads to a closed central chain with Black's pawns facing White's advanced centre, and the final position is balanced.",
+      "ar": "خط Classical Variation (ECO C14) من 13 نصف نقلة ينتهي بنقلة الملكة إلى d2 في النقلة 7. ويؤدي الخط إلى سلسلة مركزية مغلقة تواجه فيها بيادق الأسود مركز الأبيض المتقدم، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-french-c14-french-defense-classical-variation-steinitz-variation",
+      "name": "French Defense: Classical Variation, Steinitz Variation",
+      "opening": "french",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Classical Variation (ECO C14) turns on the pawn move to f4 on move 7, the last move of the 13-ply line. White should use the space advantage and attack the pawn chain before Black free the position, and the final position is balanced.",
+      "ar": "يقوم خط Classical Variation (ECO C14) على نقلة البيدق إلى f4 في النقلة 7، وهي النقلة الأخيرة في خط من 13 نصف نقلة. خطة الأبيض هي أن يستفيد من تفوق المساحة ويهاجم سلسلة البيادق قبل أن يحرّر الأسود وضعه، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-french-c12-french-defense-mccutcheon-variation-grigoriev-variation",
+      "name": "French Defense: McCutcheon Variation, Grigoriev Variation",
+      "opening": "french",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the McCutcheon Variation (ECO C12), the capture on f6 on move 6 is the branch point; play runs 17 plies and ends with the queen move to g4 on move 9. The typical mistake is weakening the king with an early pawn advance before development is complete, and the final position is balanced.",
+      "ar": "في خط McCutcheon Variation (ECO C12) يكون التبادل على f6 في النقلة 6 نقطة التفرّع؛ ويمتد اللعب 17 نصف نقلة وينتهي بنقلة الملكة إلى g4 في النقلة 9. الخطأ الشائع هو إضعاف الملك بتقدم بيدق مبكر قبل إكمال التطوير، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-french-c11-french-defense-steinitz-variation-boleslavsky-variation",
+      "name": "French Defense: Steinitz Variation, Boleslavsky Variation",
+      "opening": "french",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Steinitz Variation (ECO C11) reaches the bishop move to e3 on move 7 and stops after 13 plies. Black should strike at the base of White's centre and develop the pieces behind the pawn chain, and the final position is balanced.",
+      "ar": "يصل خط Steinitz Variation (ECO C11) إلى نقلة الفيل إلى e3 في النقلة 7 ويتوقف بعد 13 نصف نقلة. خطة الأسود هي أن يضرب قاعدة مركز الأبيض ويطوّر قطعه خلف سلسلة البيادق، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-french-c18-french-defense-winawer-variation-eingorn-variation",
+      "name": "French Defense: Winawer Variation, Eingorn Variation",
+      "opening": "french",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Winawer Variation (ECO C18), the 14-ply line closes with the king move to f8 on move 7. The typical mistake is weakening the king with an early pawn advance before development is complete, and the final position is slightly better for White.",
+      "ar": "في خط Winawer Variation (ECO C18) ينتهي الخط المكوّن من 14 نصف نقلة بنقلة الملك إلى f8 في النقلة 7. الخطأ الشائع هو إضعاف الملك بتقدم بيدق مبكر قبل إكمال التطوير، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "lichess-french-c18-french-defense-winawer-variation-poisoned-pawn-variation",
+      "name": "French Defense: Winawer Variation, Poisoned Pawn Variation",
+      "opening": "french",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Winawer Variation (ECO C18), the 14-ply line closes with the queen move to c7 on move 7. The typical mistake is weakening the king with an early pawn advance before development is complete, and the final position is slightly better for White.",
+      "ar": "في خط Winawer Variation (ECO C18) ينتهي الخط المكوّن من 14 نصف نقلة بنقلة الملكة إلى c7 في النقلة 7. الخطأ الشائع هو إضعاف الملك بتقدم بيدق مبكر قبل إكمال التطوير، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "lichess-french-c18-french-defense-winawer-variation-poisoned-pawn-variation-declined",
+      "name": "French Defense: Winawer Variation, Poisoned Pawn Variation Declined",
+      "opening": "french",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Winawer Variation (ECO C18) is a 15-ply line that ends on the bishop move to d3 on move 8. The line leads to a closed central chain with Black's pawns facing White's advanced centre, and the final position is balanced.",
+      "ar": "خط Winawer Variation (ECO C18) من 15 نصف نقلة ينتهي بنقلة الفيل إلى d3 في النقلة 8. ويؤدي الخط إلى سلسلة مركزية مغلقة تواجه فيها بيادق الأسود مركز الأبيض المتقدم، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-french-c18-french-defense-winawer-variation-poisoned-pawn-variation-main-line",
+      "name": "French Defense: Winawer Variation, Poisoned Pawn Variation, Main Line",
+      "opening": "french",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Winawer Variation (ECO C18) is a 19-ply line that ends on the knight move to e2 on move 10. The line leads to a closed central chain with Black's pawns facing White's advanced centre, and the final position is balanced.",
+      "ar": "خط Winawer Variation (ECO C18) من 19 نصف نقلة ينتهي بنقلة الحصان إلى e2 في النقلة 10. ويؤدي الخط إلى سلسلة مركزية مغلقة تواجه فيها بيادق الأسود مركز الأبيض المتقدم، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-french-c19-french-defense-winawer-variation-positional-variation-7",
+      "name": "French Defense: Winawer Variation, Positional Variation",
+      "opening": "french",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Winawer Variation (ECO C19) reaches the knight move to f3 on move 7 and stops after 13 plies. Black should strike at the base of White's centre and develop the pieces behind the pawn chain, and the final position is balanced.",
+      "ar": "يصل خط Winawer Variation (ECO C19) إلى نقلة الحصان إلى f3 في النقلة 7 ويتوقف بعد 13 نصف نقلة. خطة الأسود هي أن يضرب قاعدة مركز الأبيض ويطوّر قطعه خلف سلسلة البيادق، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-french-c19-french-defense-winawer-variation-positional-variation-8",
+      "name": "French Defense: Winawer Variation, Positional Variation",
+      "opening": "french",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Winawer Variation (ECO C19), the 14-ply line closes with the knight move to e7 on move 7. The typical mistake is weakening the king with an early pawn advance before development is complete, and the final position is balanced.",
+      "ar": "في خط Winawer Variation (ECO C19) ينتهي الخط المكوّن من 14 نصف نقلة بنقلة الحصان إلى e7 في النقلة 7. الخطأ الشائع هو إضعاف الملك بتقدم بيدق مبكر قبل إكمال التطوير، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-french-c19-french-defense-winawer-variation-positional-variation-9",
+      "name": "French Defense: Winawer Variation, Positional Variation",
+      "opening": "french",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Winawer Variation (ECO C19) is a 14-ply line that ends on the queen move to c7 on move 7. The line leads to a closed central chain with Black's pawns facing White's advanced centre, and the final position is slightly better for White.",
+      "ar": "خط Winawer Variation (ECO C19) من 14 نصف نقلة ينتهي بنقلة الملكة إلى c7 في النقلة 7. ويؤدي الخط إلى سلسلة مركزية مغلقة تواجه فيها بيادق الأسود مركز الأبيض المتقدم، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "lichess-french-c18-french-defense-winawer-variation-warsaw-variation",
+      "name": "French Defense: Winawer Variation, Warsaw Variation",
+      "opening": "french",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Winawer Variation (ECO C18) is a 14-ply line that ends on short castling on move 7. The line leads to a closed central chain with Black's pawns facing White's advanced centre, and the final position is slightly better for White.",
+      "ar": "خط Winawer Variation (ECO C18) من 14 نصف نقلة ينتهي بالتحصيل القصير في النقلة 7. ويؤدي الخط إلى سلسلة مركزية مغلقة تواجه فيها بيادق الأسود مركز الأبيض المتقدم، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "lichess-sicilian-b25-sicilian-defense-closed-botvinnik-defense-with-nge2",
+      "name": "Sicilian Defense: Closed, Botvinnik Defense, with Nge2",
+      "opening": "sicilian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Closed (ECO B25) diverges with the knight move to e2 on move 6 and closes with the pawn move to e5 on move 6 after 12 plies. Black should trade the flank pawn for a central pawn and create queenside counterplay, and the final position is balanced.",
+      "ar": "يختلف خط Closed (ECO B25) بنقلة الحصان إلى e2 في النقلة 6 وينتهي بنقلة البيدق إلى e5 في النقلة 6 بعد 12 نصف نقلة. خطة الأسود هي أن يتبادل البيدق الجناحي ببيدق مركزي ويصنع هجومًا مضادًا وزيريًا، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-sicilian-b72-sicilian-defense-dragon-variation-classical-variation-3",
+      "name": "Sicilian Defense: Dragon Variation, Classical Variation",
+      "opening": "sicilian",
+      "reasons": [
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Dragon Variation (ECO B72), the 15-ply line closes with the knight move to b3 on move 8. The typical mistake is attacking before completing development and securing the king, and the final position is balanced.",
+      "ar": "في خط Dragon Variation (ECO B72) ينتهي الخط المكوّن من 15 نصف نقلة بنقلة الحصان إلى b3 في النقلة 8. الخطأ الشائع هو الهجوم قبل إكمال التطوير وتأمين الملك، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-sicilian-b74-sicilian-defense-dragon-variation-classical-variation-maroczy-line",
+      "name": "Sicilian Defense: Dragon Variation, Classical Variation, Maróczy Line",
+      "opening": "sicilian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Dragon Variation (ECO B74) is a 20-ply line that ends on the knight move to a5 on move 10. The line leads to an asymmetrical structure with a queenside pawn majority for Black and more central space for White, and the final position is balanced.",
+      "ar": "خط Dragon Variation (ECO B74) من 20 نصف نقلة ينتهي بنقلة الحصان إلى a5 في النقلة 10. ويؤدي الخط إلى بنية غير متماثلة بأغلبية بيادق وزيرية للأسود ومساحة مركزية أكبر للأبيض، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-sicilian-b74-sicilian-defense-dragon-variation-classical-variation-normal-line",
+      "name": "Sicilian Defense: Dragon Variation, Classical Variation, Normal Line",
+      "opening": "sicilian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Dragon Variation (ECO B74) is a 17-ply line that ends on the knight move to b3 on move 9. The line leads to an asymmetrical structure with a queenside pawn majority for Black and more central space for White, and the final position is balanced.",
+      "ar": "خط Dragon Variation (ECO B74) من 17 نصف نقلة ينتهي بنقلة الحصان إلى b3 في النقلة 9. ويؤدي الخط إلى بنية غير متماثلة بأغلبية بيادق وزيرية للأسود ومساحة مركزية أكبر للأبيض، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-sicilian-b75-sicilian-defense-dragon-variation-yugoslav-attack-belezky-line",
+      "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Belezky Line",
+      "opening": "sicilian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Dragon Variation (ECO B75) reaches the knight move to c6 on move 7 and stops after 14 plies. Black should trade the flank pawn for a central pawn and create queenside counterplay, and the final position is slightly better for White.",
+      "ar": "يصل خط Dragon Variation (ECO B75) إلى نقلة الحصان إلى c6 في النقلة 7 ويتوقف بعد 14 نصف نقلة. خطة الأسود هي أن يتبادل البيدق الجناحي ببيدق مركزي ويصنع هجومًا مضادًا وزيريًا، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "lichess-sicilian-b76-sicilian-defense-dragon-variation-yugoslav-attack-panov-variation",
+      "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Panov Variation",
+      "opening": "sicilian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Dragon Variation (ECO B76) reaches the pawn move to g4 on move 9 and stops after 17 plies. Black should trade the flank pawn for a central pawn and create queenside counterplay, and the final position is slightly better for White.",
+      "ar": "يصل خط Dragon Variation (ECO B76) إلى نقلة البيدق إلى g4 في النقلة 9 ويتوقف بعد 17 نصف نقلة. خطة الأسود هي أن يتبادل البيدق الجناحي ببيدق مركزي ويصنع هجومًا مضادًا وزيريًا، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "lichess-sicilian-b77-sicilian-defense-dragon-variation-yugoslav-attack-sosonko-variation",
+      "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Sosonko Variation",
+      "opening": "sicilian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Dragon Variation (ECO B77), the 18-ply line closes with the knight move to d7 on move 9. The typical mistake is attacking before completing development and securing the king, and the final position is slightly better for White.",
+      "ar": "في خط Dragon Variation (ECO B77) ينتهي الخط المكوّن من 18 نصف نقلة بنقلة الحصان إلى d7 في النقلة 9. الخطأ الشائع هو الهجوم قبل إكمال التطوير وتأمين الملك، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "lichess-sicilian-b33-sicilian-defense-lasker-pelikan-variation-sveshnikov-variation-novosibirsk-variation",
+      "name": "Sicilian Defense: Lasker-Pelikan Variation, Sveshnikov Variation, Novosibirsk Variation",
+      "opening": "sicilian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Lasker-Pelikan Variation (ECO B33) turns on the bishop move to g7 on move 10, the last move of the 20-ply line. White should use the space advantage and attack on the kingside or in the centre before Black's counterplay arrive, and the final position is balanced.",
+      "ar": "يقوم خط Lasker-Pelikan Variation (ECO B33) على نقلة الفيل إلى g7 في النقلة 10، وهي النقلة الأخيرة في خط من 20 نصف نقلة. خطة الأبيض هي أن يستفيد من تفوق المساحة ويهاجم على الجناح الملكي أو في المركز قبل وصول هجوم الأسود المضاد، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-sicilian-b90-sicilian-defense-najdorf-variation-english-attack-3",
+      "name": "Sicilian Defense: Najdorf Variation, English Attack",
+      "opening": "sicilian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Najdorf Variation (ECO B90) is a 15-ply line that ends on the pawn move to h3 on move 8. The line leads to an asymmetrical structure with a queenside pawn majority for Black and more central space for White, and the final position is balanced.",
+      "ar": "خط Najdorf Variation (ECO B90) من 15 نصف نقلة ينتهي بنقلة البيدق إلى h3 في النقلة 8. ويؤدي الخط إلى بنية غير متماثلة بأغلبية بيادق وزيرية للأسود ومساحة مركزية أكبر للأبيض، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-sicilian-b92-sicilian-defense-najdorf-variation-opocensky-variation-traditional-line",
+      "name": "Sicilian Defense: Najdorf Variation, Opocensky Variation, Traditional Line",
+      "opening": "sicilian",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Najdorf Variation (ECO B92) turns on short castling on move 8, the last move of the 16-ply line. White should use the space advantage and attack on the kingside or in the centre before Black's counterplay arrive, and the final position is balanced.",
+      "ar": "يقوم خط Najdorf Variation (ECO B92) على التحصيل القصير في النقلة 8، وهي النقلة الأخيرة في خط من 16 نصف نقلة. خطة الأبيض هي أن يستفيد من تفوق المساحة ويهاجم على الجناح الملكي أو في المركز قبل وصول هجوم الأسود المضاد، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-sicilian-b63-sicilian-defense-richter-rauzer-variation-ivanov-variation",
+      "name": "Sicilian Defense: Richter-Rauzer Variation, Ivanov Variation",
+      "opening": "sicilian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Richter-Rauzer Variation (ECO B63), the 14-ply line closes with the queen move to b6 on move 7. The typical mistake is attacking before completing development and securing the king, and the final position is slightly better for White.",
+      "ar": "في خط Richter-Rauzer Variation (ECO B63) ينتهي الخط المكوّن من 14 نصف نقلة بنقلة الملكة إلى b6 في النقلة 7. الخطأ الشائع هو الهجوم قبل إكمال التطوير وتأمين الملك، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "lichess-sicilian-b60-sicilian-defense-richter-rauzer-variation-modern-variation",
+      "name": "Sicilian Defense: Richter-Rauzer Variation, Modern Variation",
+      "opening": "sicilian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Richter-Rauzer Variation (ECO B60) reaches the bishop move to d7 on move 6 and stops after 12 plies. Black should trade the flank pawn for a central pawn and create queenside counterplay, and the final position is slightly better for White.",
+      "ar": "يصل خط Richter-Rauzer Variation (ECO B60) إلى نقلة الفيل إلى d7 في النقلة 6 ويتوقف بعد 12 نصف نقلة. خطة الأسود هي أن يتبادل البيدق الجناحي ببيدق مركزي ويصنع هجومًا مضادًا وزيريًا، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "lichess-sicilian-b62-sicilian-defense-richter-rauzer-variation-podebrady-variation",
+      "name": "Sicilian Defense: Richter-Rauzer Variation, Podebrady Variation",
+      "opening": "sicilian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Richter-Rauzer Variation (ECO B62), the 13-ply line closes with the knight move to b3 on move 7. The typical mistake is attacking before completing development and securing the king, and the final position is balanced.",
+      "ar": "في خط Richter-Rauzer Variation (ECO B62) ينتهي الخط المكوّن من 13 نصف نقلة بنقلة الحصان إلى b3 في النقلة 7. الخطأ الشائع هو الهجوم قبل إكمال التطوير وتأمين الملك، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-sicilian-b63-sicilian-defense-richter-rauzer-variation-traditional-variation",
+      "name": "Sicilian Defense: Richter-Rauzer Variation, Traditional Variation",
+      "opening": "sicilian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Richter-Rauzer Variation (ECO B63), the 13-ply line closes with the queen move to d2 on move 7. The typical mistake is attacking before completing development and securing the king, and the final position is balanced.",
+      "ar": "في خط Richter-Rauzer Variation (ECO B63) ينتهي الخط المكوّن من 13 نصف نقلة بنقلة الملكة إلى d2 في النقلة 7. الخطأ الشائع هو الهجوم قبل إكمال التطوير وتأمين الملك، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-sicilian-b62-sicilian-defense-richter-rauzer-variation-vitolins-variation",
+      "name": "Sicilian Defense: Richter-Rauzer Variation, Vitolins Variation",
+      "opening": "sicilian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Richter-Rauzer Variation (ECO B62), the 13-ply line closes with the bishop move to b5 on move 7. The typical mistake is attacking before completing development and securing the king, and the final position is balanced.",
+      "ar": "في خط Richter-Rauzer Variation (ECO B62) ينتهي الخط المكوّن من 13 نصف نقلة بنقلة الفيل إلى b5 في النقلة 7. الخطأ الشائع هو الهجوم قبل إكمال التطوير وتأمين الملك، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-sicilian-b90-sicilian-defense-scheveningen-variation-delayed-keres-attack",
+      "name": "Sicilian Defense: Scheveningen Variation, Delayed Keres Attack",
+      "opening": "sicilian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Scheveningen Variation (ECO B90) is a 13-ply line that ends on the pawn move to g4 on move 7. The line leads to an asymmetrical structure with a queenside pawn majority for Black and more central space for White, and the final position is balanced.",
+      "ar": "خط Scheveningen Variation (ECO B90) من 13 نصف نقلة ينتهي بنقلة البيدق إلى g4 في النقلة 7. ويؤدي الخط إلى بنية غير متماثلة بأغلبية بيادق وزيرية للأسود ومساحة مركزية أكبر للأبيض، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-sicilian-b21-sicilian-defense-smith-morra-gambit-accepted-morphy-defense",
+      "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Morphy Defense",
+      "opening": "sicilian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Smith-Morra Gambit Accepted (ECO B21), the 12-ply line closes with the bishop move to c5 on move 6. The typical mistake is attacking before completing development and securing the king, and the final position is balanced.",
+      "ar": "في خط Smith-Morra Gambit Accepted (ECO B21) ينتهي الخط المكوّن من 12 نصف نقلة بنقلة الفيل إلى c5 في النقلة 6. الخطأ الشائع هو الهجوم قبل إكمال التطوير وتأمين الملك، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-sicilian-b21-sicilian-defense-smith-morra-gambit-accepted-paulsen-formation",
+      "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Paulsen Formation",
+      "opening": "sicilian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Smith-Morra Gambit Accepted (ECO B21), the 12-ply line closes with the pawn move to a6 on move 6. The typical mistake is attacking before completing development and securing the king, and the final position is balanced.",
+      "ar": "في خط Smith-Morra Gambit Accepted (ECO B21) ينتهي الخط المكوّن من 12 نصف نقلة بنقلة البيدق إلى a6 في النقلة 6. الخطأ الشائع هو الهجوم قبل إكمال التطوير وتأمين الملك، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-sicilian-b21-sicilian-defense-smith-morra-gambit-accepted-pin-defense",
+      "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Pin Defense",
+      "opening": "sicilian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Smith-Morra Gambit Accepted (ECO B21), the 12-ply line closes with the bishop move to b4 on move 6. The typical mistake is attacking before completing development and securing the king, and the final position is balanced.",
+      "ar": "في خط Smith-Morra Gambit Accepted (ECO B21) ينتهي الخط المكوّن من 12 نصف نقلة بنقلة الفيل إلى b4 في النقلة 6. الخطأ الشائع هو الهجوم قبل إكمال التطوير وتأمين الملك، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-sicilian-b21-sicilian-defense-smith-morra-gambit-accepted-siberian-variation",
+      "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Siberian Variation",
+      "opening": "sicilian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Smith-Morra Gambit Accepted (ECO B21) is a 12-ply line that ends on the queen move to c7 on move 6. The line leads to an asymmetrical structure with a queenside pawn majority for Black and more central space for White, and the final position is balanced.",
+      "ar": "خط Smith-Morra Gambit Accepted (ECO B21) من 12 نصف نقلة ينتهي بنقلة الملكة إلى c7 في النقلة 6. ويؤدي الخط إلى بنية غير متماثلة بأغلبية بيادق وزيرية للأسود ومساحة مركزية أكبر للأبيض، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-sicilian-b21-sicilian-defense-smith-morra-gambit-accepted-siberian-variation-siberian-trap",
+      "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Siberian Variation, Siberian Trap",
+      "opening": "sicilian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Smith-Morra Gambit Accepted (ECO B21) branches with the knight move to f6 on move 7 and runs 16 plies to the knight move to g4 on move 8. The line leads to an asymmetrical structure with a queenside pawn majority for Black and more central space for White, and the final position is balanced.",
+      "ar": "يتفرّع خط Smith-Morra Gambit Accepted (ECO B21) بنقلة الحصان إلى f6 في النقلة 7 ويمتد 16 نصف نقلة إلى نقلة الحصان إلى g4 في النقلة 8. ويؤدي الخط إلى بنية غير متماثلة بأغلبية بيادق وزيرية للأسود ومساحة مركزية أكبر للأبيض، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-sicilian-b21-sicilian-defense-smith-morra-gambit-accepted-sozin-formation",
+      "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Sozin Formation",
+      "opening": "sicilian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Smith-Morra Gambit Accepted (ECO B21) is a 16-ply line that ends on the pawn move to b5 on move 8. The line leads to an asymmetrical structure with a queenside pawn majority for Black and more central space for White, and the final position is balanced.",
+      "ar": "خط Smith-Morra Gambit Accepted (ECO B21) من 16 نصف نقلة ينتهي بنقلة البيدق إلى b5 في النقلة 8. ويؤدي الخط إلى بنية غير متماثلة بأغلبية بيادق وزيرية للأسود ومساحة مركزية أكبر للأبيض، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-sicilian-b21-sicilian-defense-smith-morra-gambit-accepted-taimanov-formation",
+      "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Taimanov Formation",
+      "opening": "sicilian",
+      "reasons": [
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Smith-Morra Gambit Accepted (ECO B21) diverges with the bishop move to c4 on move 5 and closes with the knight move to e7 on move 6 after 12 plies. Black should trade the flank pawn for a central pawn and create queenside counterplay, and the final position is balanced.",
+      "ar": "يختلف خط Smith-Morra Gambit Accepted (ECO B21) بنقلة الفيل إلى c4 في النقلة 5 وينتهي بنقلة الحصان إلى e7 في النقلة 6 بعد 12 نصف نقلة. خطة الأسود هي أن يتبادل البيدق الجناحي ببيدق مركزي ويصنع هجومًا مضادًا وزيريًا، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-sicilian-b89-sicilian-defense-sozin-attack-main-line-sherbakov-variation",
+      "name": "Sicilian Defense: Sozin Attack, Main Line, Sherbakov Variation",
+      "opening": "sicilian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Sozin Attack (ECO B89) turns on the bishop move to c4 on move 6; the line runs 20 plies and closes with the pawn move to b6 on move 10. White should use the space advantage and attack on the kingside or in the centre before Black's counterplay arrive, and the final position is balanced.",
+      "ar": "يقوم خط Sozin Attack (ECO B89) على نقلة الفيل إلى c4 في النقلة 6؛ ويمتد 20 نصف نقلة وينتهي بنقلة البيدق إلى b6 في النقلة 10. خطة الأبيض هي أن يستفيد من تفوق المساحة ويهاجم على الجناح الملكي أو في المركز قبل وصول هجوم الأسود المضاد، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-kings-indian-e73-kings-indian-defense-averbakh-variation-flexible-defense",
+      "name": "King's Indian Defense: Averbakh Variation, Flexible Defense",
+      "opening": "kings-indian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Averbakh Variation (ECO E73) turns on the pawn move to h6 on move 6, the last move of the 12-ply line. White should use the queenside space and try to break through before Black's kingside attack arrive, and the final position is balanced.",
+      "ar": "يقوم خط Averbakh Variation (ECO E73) على نقلة البيدق إلى h6 في النقلة 6، وهي النقلة الأخيرة في خط من 12 نصف نقلة. خطة الأبيض هي أن يستخدم المساحة الوزيرية ويحاول الاختراق قبل وصول هجوم الأسود الملكي، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-kings-indian-e75-kings-indian-defense-averbakh-variation-main-line",
+      "name": "King's Indian Defense: Averbakh Variation, Main Line",
+      "opening": "kings-indian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Averbakh Variation (ECO E75) turns on the pawn move to e6 on move 7, the last move of the 14-ply line. White should use the queenside space and try to break through before Black's kingside attack arrive, and the final position is balanced.",
+      "ar": "يقوم خط Averbakh Variation (ECO E75) على نقلة البيدق إلى e6 في النقلة 7، وهي النقلة الأخيرة في خط من 14 نصف نقلة. خطة الأبيض هي أن يستخدم المساحة الوزيرية ويحاول الاختراق قبل وصول هجوم الأسود الملكي، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-kings-indian-e73-kings-indian-defense-averbakh-variation-modern-defense",
+      "name": "King's Indian Defense: Averbakh Variation, Modern Defense",
+      "opening": "kings-indian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Averbakh Variation (ECO E73) turns on the knight move to a6 on move 6, the last move of the 12-ply line. White should use the queenside space and try to break through before Black's kingside attack arrive, and the final position is balanced.",
+      "ar": "يقوم خط Averbakh Variation (ECO E73) على نقلة الحصان إلى a6 في النقلة 6، وهي النقلة الأخيرة في خط من 12 نصف نقلة. خطة الأبيض هي أن يستخدم المساحة الوزيرية ويحاول الاختراق قبل وصول هجوم الأسود الملكي، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-kings-indian-e67-kings-indian-defense-fianchetto-variation-debrecen-defense",
+      "name": "King's Indian Defense: Fianchetto Variation, Debrecen Defense",
+      "opening": "kings-indian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Fianchetto Variation (ECO E67) is a 12-ply line that ends on the knight move to d7 on move 6. The line leads to a closed centre with Black's pawn chain facing White's central pawns and play on opposite wings, and the final position is balanced.",
+      "ar": "خط Fianchetto Variation (ECO E67) من 12 نصف نقلة ينتهي بنقلة الحصان إلى d7 في النقلة 6. ويؤدي الخط إلى مركز مغلق بسلسلة بيادق سوداء تواجه بيادق الأبيض المركزية ولعب على جناحين متقابلين، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-kings-indian-e64-kings-indian-defense-fianchetto-variation-hungarian-variation",
+      "name": "King's Indian Defense: Fianchetto Variation, Hungarian Variation",
+      "opening": "kings-indian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Fianchetto Variation (ECO E64), the 14-ply line closes with the pawn move to a6 on move 7. The typical mistake is delaying the kingside attack and allowing White to break through on the queenside, and the final position is slightly better for White.",
+      "ar": "في خط Fianchetto Variation (ECO E64) ينتهي الخط المكوّن من 14 نصف نقلة بنقلة البيدق إلى a6 في النقلة 7. الخطأ الشائع هو تأخير الهجوم الملكي والسماح للأبيض بالاختراق على الجناح الوزيري، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "lichess-kings-indian-e62-kings-indian-defense-fianchetto-variation-uhlmann-szabo-system",
+      "name": "King's Indian Defense: Fianchetto Variation, Uhlmann-Szabo System",
+      "opening": "kings-indian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Fianchetto Variation (ECO E62), the 14-ply line closes with the pawn move to e5 on move 7. The typical mistake is delaying the kingside attack and allowing White to break through on the queenside, and the final position is balanced.",
+      "ar": "في خط Fianchetto Variation (ECO E62) ينتهي الخط المكوّن من 14 نصف نقلة بنقلة البيدق إلى e5 في النقلة 7. الخطأ الشائع هو تأخير الهجوم الملكي والسماح للأبيض بالاختراق على الجناح الوزيري، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-kings-indian-e64-kings-indian-defense-fianchetto-variation-yugoslav-system",
+      "name": "King's Indian Defense: Fianchetto Variation, Yugoslav System",
+      "opening": "kings-indian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Fianchetto Variation (ECO E64) is a 12-ply line that ends on the pawn move to c5 on move 6. The line leads to a closed centre with Black's pawn chain facing White's central pawns and play on opposite wings, and the final position is balanced.",
+      "ar": "خط Fianchetto Variation (ECO E64) من 12 نصف نقلة ينتهي بنقلة البيدق إلى c5 في النقلة 6. ويؤدي الخط إلى مركز مغلق بسلسلة بيادق سوداء تواجه بيادق الأبيض المركزية ولعب على جناحين متقابلين، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-kings-indian-e66-kings-indian-defense-fianchetto-variation-yugoslav-variation-advance-line",
+      "name": "King's Indian Defense: Fianchetto Variation, Yugoslav Variation, Advance Line",
+      "opening": "kings-indian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Fianchetto Variation (ECO E66) is a 15-ply line that ends on the pawn move to d5 on move 8. The line leads to a closed centre with Black's pawn chain facing White's central pawns and play on opposite wings, and the final position is balanced.",
+      "ar": "خط Fianchetto Variation (ECO E66) من 15 نصف نقلة ينتهي بنقلة البيدق إلى d5 في النقلة 8. ويؤدي الخط إلى مركز مغلق بسلسلة بيادق سوداء تواجه بيادق الأبيض المركزية ولعب على جناحين متقابلين، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-kings-indian-e77-kings-indian-defense-four-pawns-attack-normal-attack",
+      "name": "King's Indian Defense: Four Pawns Attack, Normal Attack",
+      "opening": "kings-indian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Four Pawns Attack (ECO E77) is a 15-ply line that ends on the bishop move to e2 on move 8. The line leads to a closed centre with Black's pawn chain facing White's central pawns and play on opposite wings, and the final position is balanced.",
+      "ar": "خط Four Pawns Attack (ECO E77) من 15 نصف نقلة ينتهي بنقلة الفيل إلى e2 في النقلة 8. ويؤدي الخط إلى مركز مغلق بسلسلة بيادق سوداء تواجه بيادق الأبيض المركزية ولعب على جناحين متقابلين، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-kings-indian-e91-kings-indian-defense-kazakh-variation",
+      "name": "King's Indian Defense: Kazakh Variation",
+      "opening": "kings-indian",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Kazakh Variation (ECO E91) is a 12-ply line that ends on the knight move to a6 on move 6. The line leads to a closed centre with Black's pawn chain facing White's central pawns and play on opposite wings, and the final position is slightly better for White.",
+      "ar": "خط Kazakh Variation (ECO E91) من 12 نصف نقلة ينتهي بنقلة الحصان إلى a6 في النقلة 6. ويؤدي الخط إلى مركز مغلق بسلسلة بيادق سوداء تواجه بيادق الأبيض المركزية ولعب على جناحين متقابلين، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "lichess-kings-indian-e94-kings-indian-defense-orthodox-variation-donner-defense",
+      "name": "King's Indian Defense: Orthodox Variation, Donner Defense",
+      "opening": "kings-indian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Orthodox Variation (ECO E94) is a 14-ply line that ends on the pawn move to c6 on move 7. The line leads to a closed centre with Black's pawn chain facing White's central pawns and play on opposite wings, and the final position is slightly better for White.",
+      "ar": "خط Orthodox Variation (ECO E94) من 14 نصف نقلة ينتهي بنقلة البيدق إلى c6 في النقلة 7. ويؤدي الخط إلى مركز مغلق بسلسلة بيادق سوداء تواجه بيادق الأبيض المركزية ولعب على جناحين متقابلين، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "lichess-kings-indian-e97-kings-indian-defense-orthodox-variation-modern-system",
+      "name": "King's Indian Defense: Orthodox Variation, Modern System",
+      "opening": "kings-indian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Orthodox Variation (ECO E97), the 17-ply line closes with the knight move to d2 on move 9. The typical mistake is delaying the kingside attack and allowing White to break through on the queenside, and the final position is balanced.",
+      "ar": "في خط Orthodox Variation (ECO E97) ينتهي الخط المكوّن من 17 نصف نقلة بنقلة الحصان إلى d2 في النقلة 9. الخطأ الشائع هو تأخير الهجوم الملكي والسماح للأبيض بالاختراق على الجناح الوزيري، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-kings-indian-e83-kings-indian-defense-samisch-variation-panno-formation",
+      "name": "King's Indian Defense: Sämisch Variation, Panno Formation",
+      "opening": "kings-indian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Sämisch Variation (ECO E83) is a 14-ply line that ends on the pawn move to a6 on move 7. The line leads to a closed centre with Black's pawn chain facing White's central pawns and play on opposite wings, and the final position is slightly better for White.",
+      "ar": "خط Sämisch Variation (ECO E83) من 14 نصف نقلة ينتهي بنقلة البيدق إلى a6 في النقلة 7. ويؤدي الخط إلى مركز مغلق بسلسلة بيادق سوداء تواجه بيادق الأبيض المركزية ولعب على جناحين متقابلين، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "lichess-kings-indian-e81-kings-indian-defense-steiner-attack-3",
+      "name": "King's Indian Defense: Steiner Attack",
+      "opening": "kings-indian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Steiner Attack (ECO E81) diverges with the pawn move to h6 on move 8 and closes with the capture on h6 on move 9 after 17 plies. Black should advance the kingside pawns, and the final position is balanced.",
+      "ar": "يختلف خط Steiner Attack (ECO E81) بنقلة البيدق إلى h6 في النقلة 8 وينتهي بالتبادل على h6 في النقلة 9 بعد 17 نصف نقلة. خطة الأسود هي أن يقدّم بيادق الجناح الملكي، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-dutch-a97-dutch-defense-classical-variation-ilyin-zhenevsky-variation-winter-variation",
+      "name": "Dutch Defense: Classical Variation, Ilyin-Zhenevsky Variation, Winter Variation",
+      "opening": "dutch",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Classical Variation (ECO A97), the 15-ply line closes with the rook move to e1 on move 8. The typical mistake is weakening the king with the early pawn move without completing development, and the final position is slightly better for White.",
+      "ar": "في خط Classical Variation (ECO A97) ينتهي الخط المكوّن من 15 نصف نقلة بنقلة الرخ إلى e1 في النقلة 8. الخطأ الشائع هو إضعاف الملك بنقلة البيدق المبكرة دون إكمال التطوير، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "lichess-dutch-a88-dutch-defense-leningrad-variation-warsaw-variation",
+      "name": "Dutch Defense: Leningrad Variation, Warsaw Variation",
+      "opening": "dutch",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Leningrad Variation (ECO A88) reaches the pawn move to c6 on move 7 and stops after 14 plies. Black should build a kingside attack and try to justify the early pawn commitment, and the final position is slightly better for White.",
+      "ar": "يصل خط Leningrad Variation (ECO A88) إلى نقلة البيدق إلى c6 في النقلة 7 ويتوقف بعد 14 نصف نقلة. خطة الأسود هي أن يبني هجومًا ملكيًا ويحاول تبرير التزام البيدق المبكر، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "lichess-dutch-a92-dutch-defense-stonewall-variation",
+      "name": "Dutch Defense: Stonewall Variation",
+      "opening": "dutch",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Stonewall Variation (ECO A92) is a 13-ply line that ends on the knight move to c3 on move 7. The line leads to a Dutch structure with an advanced kingside pawn and a possible central break, and the final position is balanced.",
+      "ar": "خط Stonewall Variation (ECO A92) من 13 نصف نقلة ينتهي بنقلة الحصان إلى c3 في النقلة 7. ويؤدي الخط إلى بنية هولندية ببيدق ملكي متقدم وكسر مركزي محتمل، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-slav-d48-semi-slav-defense-meran-variation-old-variation",
+      "name": "Semi-Slav Defense: Meran Variation, Old Variation",
+      "opening": "slav",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Meran Variation (ECO D48) turns on the pawn move to e5 on move 10, the last move of the 19-ply line. White should pressure the centre, and the final position is balanced.",
+      "ar": "يقوم خط Meran Variation (ECO D48) على نقلة البيدق إلى e5 في النقلة 10، وهي النقلة الأخيرة في خط من 19 نصف نقلة. خطة الأبيض هي أن يضغط على المركز، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-slav-d49-semi-slav-defense-meran-variation-rabinovich-variation",
+      "name": "Semi-Slav Defense: Meran Variation, Rabinovich Variation",
+      "opening": "slav",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Meran Variation (ECO D49) is a 22-ply line that ends on the knight move to g4 on move 11. The line leads to a solid central structure with a possible wing pawn trade and active piece play, and the final position is balanced.",
+      "ar": "خط Meran Variation (ECO D49) من 22 نصف نقلة ينتهي بنقلة الحصان إلى g4 في النقلة 11. ويؤدي الخط إلى بنية مركزية متينة مع تبادل بيدق جناحي محتمل ولعب نشط بالقطع، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-slav-d48-semi-slav-defense-meran-variation-reynolds-variation",
+      "name": "Semi-Slav Defense: Meran Variation, Reynolds' Variation",
+      "opening": "slav",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Meran Variation (ECO D48) is a 19-ply line that ends on the pawn move to d5 on move 10. The line leads to a solid central structure with a possible wing pawn trade and active piece play, and the final position is balanced.",
+      "ar": "خط Meran Variation (ECO D48) من 19 نصف نقلة ينتهي بنقلة البيدق إلى d5 في النقلة 10. ويؤدي الخط إلى بنية مركزية متينة مع تبادل بيدق جناحي محتمل ولعب نشط بالقطع، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-slav-d49-semi-slav-defense-meran-variation-stahlberg-variation",
+      "name": "Semi-Slav Defense: Meran Variation, Stahlberg Variation",
+      "opening": "slav",
+      "reasons": [
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Meran Variation (ECO D49), the capture on e5 on move 11 is the branch point; play runs 25 plies and ends with the queen move to f3 on move 13. The typical mistake is trading the light-squared bishop too early and accepting a passive position, and the final position is balanced.",
+      "ar": "في خط Meran Variation (ECO D49) يكون التبادل على e5 في النقلة 11 نقطة التفرّع؛ ويمتد اللعب 25 نصف نقلة وينتهي بنقلة الملكة إلى f3 في النقلة 13. الخطأ الشائع هو تبادل الفيل الفاتح مبكرًا وقبول وضع سلبي، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-slav-d47-semi-slav-defense-meran-variation-wade-variation",
+      "name": "Semi-Slav Defense: Meran Variation, Wade Variation",
+      "opening": "slav",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Meran Variation (ECO D47) is a 16-ply line that ends on the bishop move to b7 on move 8. The line leads to a solid central structure with a possible wing pawn trade and active piece play, and the final position is balanced.",
+      "ar": "خط Meran Variation (ECO D47) من 16 نصف نقلة ينتهي بنقلة الفيل إلى b7 في النقلة 8. ويؤدي الخط إلى بنية مركزية متينة مع تبادل بيدق جناحي محتمل ولعب نشط بالقطع، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-slav-d47-semi-slav-defense-meran-variation-wade-variation-larsen-variation",
+      "name": "Semi-Slav Defense: Meran Variation, Wade Variation, Larsen Variation",
+      "opening": "slav",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Meran Variation (ECO D47) is a 22-ply line that ends on the knight move to d5 on move 11. The line leads to a solid central structure with a possible wing pawn trade and active piece play, and the final position is balanced.",
+      "ar": "خط Meran Variation (ECO D47) من 22 نصف نقلة ينتهي بنقلة الحصان إلى d5 في النقلة 11. ويؤدي الخط إلى بنية مركزية متينة مع تبادل بيدق جناحي محتمل ولعب نشط بالقطع، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-slav-d45-semi-slav-defense-stoltz-variation-3",
+      "name": "Semi-Slav Defense: Stoltz Variation",
+      "opening": "slav",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Stoltz Variation (ECO D45) turns on the pawn move to b3 on move 7, the last move of the 13-ply line. White should pressure the centre, and the final position is balanced.",
+      "ar": "يقوم خط Stoltz Variation (ECO D45) على نقلة البيدق إلى b3 في النقلة 7، وهي النقلة الأخيرة في خط من 13 نصف نقلة. خطة الأبيض هي أن يضغط على المركز، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-slav-d45-semi-slav-defense-stoltz-variation-center-variation",
+      "name": "Semi-Slav Defense: Stoltz Variation, Center Variation",
+      "opening": "slav",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Stoltz Variation (ECO D45) turns on the pawn move to e4 on move 7, the last move of the 13-ply line. White should pressure the centre, and the final position is balanced.",
+      "ar": "يقوم خط Stoltz Variation (ECO D45) على نقلة البيدق إلى e4 في النقلة 7، وهي النقلة الأخيرة في خط من 13 نصف نقلة. خطة الأبيض هي أن يضغط على المركز، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-petrov-c42-petrovs-defense-classical-attack-chigorin-variation-main-line",
+      "name": "Petrov's Defense: Classical Attack, Chigorin Variation, Main Line",
+      "opening": "petrov",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Classical Attack (ECO C42) is a 17-ply line that ends on the bishop move to e2 on move 9. The line leads to a symmetrical central structure with a possible early pawn trade, and the final position is balanced.",
+      "ar": "خط Classical Attack (ECO C42) من 17 نصف نقلة ينتهي بنقلة الفيل إلى e2 في النقلة 9. ويؤدي الخط إلى بنية مركزية متماثلة مع تبادل بيدق مبكر محتمل، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-petrov-c42-petrovs-defense-classical-attack-jaenisch-variation",
+      "name": "Petrov's Defense: Classical Attack, Jaenisch Variation",
+      "opening": "petrov",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Classical Attack (ECO C42), the 15-ply line closes with the pawn move to c4 on move 8. The typical mistake is grabbing the advanced pawn and falling behind in development, and the final position is balanced.",
+      "ar": "في خط Classical Attack (ECO C42) ينتهي الخط المكوّن من 15 نصف نقلة بنقلة البيدق إلى c4 في النقلة 8. الخطأ الشائع هو أخذ البيدق المتقدم والتخلّف في التطوير، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-petrov-c42-petrovs-defense-classical-attack-maroczy-variation",
+      "name": "Petrov's Defense: Classical Attack, Maróczy Variation",
+      "opening": "petrov",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Classical Attack (ECO C42) turns on the pawn move to c4 on move 10; the line runs 20 plies and closes with the bishop move to h4 on move 10. White should avoid the symmetrical trade and try to keep a small initiative with active pieces, and the final position is balanced.",
+      "ar": "يقوم خط Classical Attack (ECO C42) على نقلة البيدق إلى c4 في النقلة 10؛ ويمتد 20 نصف نقلة وينتهي بنقلة الفيل إلى h4 في النقلة 10. خطة الأبيض هي أن يتجنب التبادل المتماثل ويحاول الاحتفاظ بمبادرة صغيرة بقطع نشطة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-petrov-c42-petrovs-defense-classical-attack-marshall-variation",
+      "name": "Petrov's Defense: Classical Attack, Marshall Variation",
+      "opening": "petrov",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Classical Attack (ECO C42) is a 12-ply line that ends on the bishop move to d6 on move 6. The line leads to a symmetrical central structure with a possible early pawn trade, and the final position is balanced.",
+      "ar": "خط Classical Attack (ECO C42) من 12 نصف نقلة ينتهي بنقلة الفيل إلى d6 في النقلة 6. ويؤدي الخط إلى بنية مركزية متماثلة مع تبادل بيدق مبكر محتمل، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-petrov-c42-petrovs-defense-classical-attack-mason-variation",
+      "name": "Petrov's Defense: Classical Attack, Mason Variation",
+      "opening": "petrov",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Classical Attack (ECO C42) is a 14-ply line that ends on short castling on move 7. The line leads to a symmetrical central structure with a possible early pawn trade, and the final position is balanced.",
+      "ar": "خط Classical Attack (ECO C42) من 14 نصف نقلة ينتهي بالتحصيل القصير في النقلة 7. ويؤدي الخط إلى بنية مركزية متماثلة مع تبادل بيدق مبكر محتمل، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-petrov-c42-petrovs-defense-classical-attack-staunton-variation",
+      "name": "Petrov's Defense: Classical Attack, Staunton Variation",
+      "opening": "petrov",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Classical Attack (ECO C42) is a 16-ply line that ends on the pawn move to c6 on move 8. The line leads to a symmetrical central structure with a possible early pawn trade, and the final position is balanced.",
+      "ar": "خط Classical Attack (ECO C42) من 16 نصف نقلة ينتهي بنقلة البيدق إلى c6 في النقلة 8. ويؤدي الخط إلى بنية مركزية متماثلة مع تبادل بيدق مبكر محتمل، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-nimzo-indian-e36-nimzo-indian-defense-classical-variation-noa-variation-botvinnik-variation",
+      "name": "Nimzo-Indian Defense: Classical Variation, Noa Variation, Botvinnik Variation",
+      "opening": "nimzo-indian",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Classical Variation (ECO E36) reaches the knight move to c6 on move 6 and stops after 12 plies. Black should trade the bishop for the knight and target the resulting pawn weaknesses, and the final position is balanced.",
+      "ar": "يصل خط Classical Variation (ECO E36) إلى نقلة الحصان إلى c6 في النقلة 6 ويتوقف بعد 12 نصف نقلة. خطة الأسود هي أن يتبادل الفيل بالحصان ويستهدف ضعف البيادق الناتج، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-nimzo-indian-e36-nimzo-indian-defense-classical-variation-romanishin-gambit",
+      "name": "Nimzo-Indian Defense: Classical Variation, Romanishin Gambit",
+      "opening": "nimzo-indian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Classical Variation (ECO E36) is a 12-ply line that ends on the pawn move to c5 on move 6. The line leads to a flexible structure that can leave White with doubled pawns and a central majority, and the final position is balanced.",
+      "ar": "خط Classical Variation (ECO E36) من 12 نصف نقلة ينتهي بنقلة البيدق إلى c5 في النقلة 6. ويؤدي الخط إلى بنية مرنة قد تترك للأبيض بيادق مزدوجة وأغلبية مركزية، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-nimzo-indian-e54-nimzo-indian-defense-normal-variation-gligoric-system-exchange-variation-2",
+      "name": "Nimzo-Indian Defense: Normal Variation, Gligoric System, Exchange Variation",
+      "opening": "nimzo-indian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Normal Variation (ECO E54) diverges with the capture on d4 on move 8 and closes with the capture on d4 on move 9 after 17 plies. Black should trade the bishop for the knight and target the resulting pawn weaknesses, and the final position is balanced.",
+      "ar": "يختلف خط Normal Variation (ECO E54) بالتبادل على d4 في النقلة 8 وينتهي بالتبادل على d4 في النقلة 9 بعد 17 نصف نقلة. خطة الأسود هي أن يتبادل الفيل بالحصان ويستهدف ضعف البيادق الناتج، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-nimzo-indian-e53-nimzo-indian-defense-normal-variation-gligoric-system-keres-variation",
+      "name": "Nimzo-Indian Defense: Normal Variation, Gligoric System, Keres Variation",
+      "opening": "nimzo-indian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Normal Variation (ECO E53), the 14-ply line closes with the pawn move to b6 on move 7. The typical mistake is trading on the pinned knight without a clear plan for the resulting structure, and the final position is balanced.",
+      "ar": "في خط Normal Variation (ECO E53) ينتهي الخط المكوّن من 14 نصف نقلة بنقلة البيدق إلى b6 في النقلة 7. الخطأ الشائع هو التبادل على الحصان المثبّت دون خطة واضحة للبنية الناتجة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-nimzo-indian-e42-nimzo-indian-defense-rubinstein-system-rubinstein-variation-sherbakov-attack",
+      "name": "Nimzo-Indian Defense: Rubinstein System, Rubinstein Variation, Sherbakov Attack",
+      "opening": "nimzo-indian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Rubinstein System (ECO E42) reaches the pawn move to c5 on move 7 and stops after 13 plies. Black should trade the bishop for the knight and target the resulting pawn weaknesses, and the final position is balanced.",
+      "ar": "يصل خط Rubinstein System (ECO E42) إلى نقلة البيدق إلى c5 في النقلة 7 ويتوقف بعد 13 نصف نقلة. خطة الأسود هي أن يتبادل الفيل بالحصان ويستهدف ضعف البيادق الناتج، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-nimzo-indian-e25-nimzo-indian-defense-samisch-variation-romanovsky-variation",
+      "name": "Nimzo-Indian Defense: Sämisch Variation, Romanovsky Variation",
+      "opening": "nimzo-indian",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Sämisch Variation (ECO E25) turns on the pawn move to f5 on move 8, the last move of the 16-ply line. White should build a broad centre and try to use the bishop pair or a space advantage, and the final position is balanced.",
+      "ar": "يقوم خط Sämisch Variation (ECO E25) على نقلة البيدق إلى f5 في النقلة 8، وهي النقلة الأخيرة في خط من 16 نصف نقلة. خطة الأبيض هي أن يبني مركزًا عريضًا ويحاول استخدام زوج الفيلة أو تفوق المساحة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "catalan-nbd7",
+      "name": "Closed Catalan: ...Nbd7",
+      "opening": "catalan",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Closed Catalan (ECO E06), the 12-ply line closes with the knight move to d7 on move 6. The typical mistake is releasing the central tension too early and losing the bishop's long-term scope, and the final position is balanced.",
+      "ar": "في خط Closed Catalan (ECO E06) ينتهي الخط المكوّن من 12 نصف نقلة بنقلة الحصان إلى d7 في النقلة 6. الخطأ الشائع هو تخفيف التوتر المركزي مبكرًا وفقدان مدى الفيل الطويل، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-catalan-e08-catalan-opening-closed-3",
+      "name": "Catalan Opening: Closed",
+      "opening": "catalan",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Closed (ECO E08) reaches the pawn move to b6 on move 8 and stops after 16 plies. Black should challenge the centre, and the final position is balanced.",
+      "ar": "يصل خط Closed (ECO E08) إلى نقلة البيدق إلى b6 في النقلة 8 ويتوقف بعد 16 نصف نقلة. خطة الأسود هي أن ينافس المركز, ويحرّر وضعه، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-catalan-e08-catalan-opening-closed-5",
+      "name": "Catalan Opening: Closed",
+      "opening": "catalan",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Closed (ECO E08) branches with the knight move to d2 on move 9 and runs 19 plies to the pawn move to e4 on move 10. The line leads to a closed queen-pawn structure with a fianchettoed bishop and a possible central break, and the final position is balanced.",
+      "ar": "يتفرّع خط Closed (ECO E08) بنقلة الحصان إلى d2 في النقلة 9 ويمتد 19 نصف نقلة إلى نقلة البيدق إلى e4 في النقلة 10. ويؤدي الخط إلى بنية مغلقة ببيدق الوزير مع فيل فيانكيتو وكسر مركزي محتمل، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "lichess-catalan-e09-catalan-opening-closed-sokolsky-variation",
+      "name": "Catalan Opening: Closed, Sokolsky Variation",
+      "opening": "catalan",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Closed (ECO E09), the knight move to d2 on move 8 is the branch point; play runs 20 plies and ends with the bishop move to a6 on move 10. The typical mistake is releasing the central tension too early and losing the bishop's long-term scope, and the final position is slightly better for White.",
+      "ar": "في خط Closed (ECO E09) يكون نقلة الحصان إلى d2 في النقلة 8 نقطة التفرّع؛ ويمتد اللعب 20 نصف نقلة وينتهي بنقلة الفيل إلى a6 في النقلة 10. الخطأ الشائع هو تخفيف التوتر المركزي مبكرًا وفقدان مدى الفيل الطويل، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "kia-open",
+      "name": "KIA vs 1...e5",
+      "opening": "kings-indian-attack",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The KIA (ECO A07) turns on the pawn move to e5 on move 1; the line runs 12 plies and closes with short castling on move 6. White should castle, complete development and attack on the kingside, and the final position is balanced.",
+      "ar": "يقوم خط KIA (ECO A07) على نقلة البيدق إلى e5 في النقلة 1؛ ويمتد 12 نصف نقلة وينتهي بالتحصيل القصير في النقلة 6. خطة الأبيض هي أن يحصّن , ويكمل تطويره، والوضع النهائي متوازن."
+    }
+  ]
+}

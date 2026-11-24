@@ -49,6 +49,12 @@ AUDIT_OPENING=italian npm run audit
   names with a pure prefix move order. Removed lines are listed in
   `review/duplicate-lines.md`. Famous short entry lines are kept and marked
   `partial: true` (metadata only).
+- Whole-line study notes are generated, not hand-written per line: add or edit
+  the course note in `data/parent-ideas.json`, then run `npm run ideas` and
+  `npm run review:notes`. The generator drops any note that fails the text,
+  move/square, evaluation or near-duplicate checks; `npm run validate` refuses
+  to ship a bad one. Dropped notes are listed in `review/idea-report.json` and
+  the line is shown without a note.
 - Stockfish is a checker only (`npm run audit`). It never authors move orders.
 - Every move needs exactly one `idea` and at least one highlight. The validator
   checks this for you.
@@ -85,3 +91,7 @@ interface flips with `dir="rtl"`.
 
 Open an issue with the course, line id and move number (for example
 `italian-giuoco-piano #7`). A screenshot of the board helps.
+
+The "Report an issue" link under the board stores a report in this browser
+(`localStorage`, key `chess-coach:line-reports`) with the line id, locale and
+your message. Nothing is uploaded, so copy the report into the issue yourself.

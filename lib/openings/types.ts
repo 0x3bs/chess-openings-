@@ -72,6 +72,11 @@ export type OpeningLine = {
   source?: "lichess" | "manual";
   /** Famous short entry line that also has a longer named continuation. */
   partial?: boolean;
+  /**
+   * One short auto-generated study note for the whole line, already in the
+   * active locale. Absent when the generator dropped the note.
+   */
+  idea?: string;
 };
 
 export type Opening = {
