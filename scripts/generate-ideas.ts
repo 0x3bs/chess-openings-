@@ -52,13 +52,16 @@ const parents = JSON.parse(
 
 function loadEvalCache(): Record<string, number> {
   try {
-    return JSON.parse(readFileSync(EVAL_CACHE_PATH, "utf8")) as Record<
-      string,
-      number
-    >;
+    const parsed = JSON.parse(readFileSync(EVAL_CACHE_PATH, "utf8")) as {
+      depth?: number;
+      evals?: Record<string, number>;
+    };
+    // Never reuse numbers produced at a different search depth.
+    if (parsed.depth === DEPTH && parsed.evals) return parsed.evals;
   } catch {
-    return {};
+    // Missing or unreadable cache: evaluate everything again.
   }
+  return {};
 }
 
 const diskEvalCache = loadEvalCache();
@@ -489,7 +492,10 @@ function buildTexts(
 }
 
 function saveEvalCache(): void {
-  writeFileSync(EVAL_CACHE_PATH, `${JSON.stringify(diskEvalCache, null, 2)}\n`);
+  writeFileSync(
+    EVAL_CACHE_PATH,
+    `${JSON.stringify({ depth: DEPTH, evals: diskEvalCache }, null, 2)}\n`,
+  );
 }
 
 async function run(): Promise<void> {
