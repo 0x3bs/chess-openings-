@@ -2,6 +2,7 @@ import { Chess, type Move } from "chess.js";
 import type { Locale } from "../i18n/config";
 import { translateSeed } from "../i18n/content/catalog-ar";
 import { attachIdeas } from "./apply-ideas";
+import generatedExtraRaw from "../../data/extra-lines.json";
 import lichessLines from "./lichess-lines.json";
 import { partialLineIds } from "./partial";
 import type { LineLevel, Opening, OpeningLine } from "./types";
@@ -232,7 +233,8 @@ export function buildOpening(
       family: line.family,
       level: line.level,
       source: line.source ?? (line.parentName ? "lichess" : "manual"),
-      partial: line.partial || partialIds.has(line.id) || undefined,
+      // A stale `partial` flag on a full line is cleared here.
+      partial: partialIds.has(line.id) || undefined,
     })),
   };
 
@@ -1109,7 +1111,7 @@ const seeds: OpeningSeed[] = [
   },
 ];
 
-const extraLines: Record<string, LineSeed[]> = {
+const manualExtraLines: Record<string, LineSeed[]> = {
   italian: [
     {
       id: "italian-evans",
@@ -1942,9 +1944,23 @@ const extraLines: Record<string, LineSeed[]> = {
   ],
 };
 
+/** Lines mined from real Lichess master games for courses the TSV files miss. */
+const generatedExtraLines = (
+  generatedExtraRaw as unknown as {
+    courses?: Record<string, LineSeed[]>;
+  }
+).courses ?? {};
+
+function extraLinesFor(slug: string): LineSeed[] {
+  return [
+    ...(manualExtraLines[slug] ?? []),
+    ...(generatedExtraLines[slug] ?? []),
+  ];
+}
+
 const baseSeeds: OpeningSeed[] = seeds.map((seed) => ({
   ...seed,
-  lines: [...seed.lines, ...(extraLines[seed.slug] ?? [])],
+  lines: [...seed.lines, ...extraLinesFor(seed.slug)],
 }));
 
 /** Course data before the named Lichess lines are merged in. */

@@ -81,6 +81,9 @@ type Entry = { opening: Opening; line: OpeningLine; idea: StoredLineIdea };
 const allEntries: Entry[] = [];
 for (const opening of openings) {
   for (const line of opening.lines) {
+    // Only the curated study set belongs in the review lists; extra lines stay
+    // available in the app behind "Show all lines".
+    if (!line.curated) continue;
     const idea = ideaById.get(line.id);
     if (idea) allEntries.push({ opening, line, idea });
   }

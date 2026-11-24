@@ -211,73 +211,19 @@ for (const id of Object.keys(englishIdeas)) {
   if (!exists) fail(id, "English idea list has no matching line");
 }
 
-const EXPECTED_LINES: Record<string, number> = {
-  english: 62,
-  italian: 128,
-  "ruy-lopez": 134,
-  scotch: 53,
-  vienna: 15,
-  "kings-gambit": 66,
-  london: 6,
-  "jobava-london": 5,
-  "bishops-opening": 9,
-  ponziani: 6,
-  "queens-gambit": 150,
-  "queens-gambit-accepted": 31,
-  "caro-kann": 27,
-  french: 74,
-  sicilian: 158,
-  scandinavian: 8,
-  pirc: 8,
-  "kings-indian": 89,
-  dutch: 21,
-  slav: 68,
-  "anti-london": 5,
-  petrov: 21,
-  "nimzo-indian": 56,
-  catalan: 26,
-  "fried-liver": 6,
-  "kings-indian-attack": 10,
-  "open-game": 15,
-  "vienna-gambit": 9,
-  "white-vs-caro-kann": 5,
-  "englund-gambit": 6,
-};
+// Exact per-course counts are owned by `data/curation.json` and checked by
+// `validate-curation.ts`. This file only guarantees that the catalogue is not
+// empty and that every move is legal, explained and highlighted, so the
+// master-game expansion can grow a course without editing a second list.
 
-for (const [slug, expected] of Object.entries(EXPECTED_LINES)) {
-  const opening = openings.find((entry) => entry.slug === slug);
-  if (!opening) {
-    fail(slug, "expected course is missing");
-    continue;
-  }
-  if (opening.lines.length !== expected) {
-    fail(
-      slug,
-      `expected ${expected} lines, found ${opening.lines.length}`,
-    );
-  }
-}
-
-const expectedTotal = Object.values(EXPECTED_LINES).reduce(
-  (sum, count) => sum + count,
-  0,
-);
-
-const totalLines = openings.reduce(
-  (total, opening) => total + opening.lines.length,
-  0,
-);
-
-if (totalLines !== expectedTotal) {
-  fail(
-    "catalogue",
-    `expected ${expectedTotal} lines in total, found ${totalLines}`,
-  );
-}
 const plies = openings.reduce(
   (total, opening) =>
     total +
     opening.lines.reduce((sum, line) => sum + line.moves.length, 0),
+  0,
+);
+const totalLines = openings.reduce(
+  (total, opening) => total + opening.lines.length,
   0,
 );
 const notes = openings.reduce(

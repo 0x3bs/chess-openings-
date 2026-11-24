@@ -1,4 +1,5 @@
 import { buildOpening, catalogueOpenings, type LineSeed } from "./catalog";
+import { applyCuration } from "./curation";
 import { englishOpening } from "./english";
 import lichessLines from "./lichess-lines.json";
 import { markPartialLines, partialLineIds } from "./partial";
@@ -38,5 +39,5 @@ const partialIds = partialLineIds(
 
 /** Every course the trainer knows about. Add a new Opening here. */
 export const openings: Opening[] = allOpenings.map((opening) =>
-  markPartialLines(opening, partialIds),
+  applyCuration(markPartialLines(opening, partialIds)),
 );

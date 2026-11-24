@@ -55,6 +55,9 @@ export type LineMove = {
 
 export type LineLevel = "basic" | "common" | "advanced";
 
+/** Cumulative teaching stage inside a course. */
+export type LineTier = "beginner" | "intermediate" | "advanced";
+
 export type OpeningLine = {
   id: string;
   name: string;
@@ -72,6 +75,10 @@ export type OpeningLine = {
   source?: "lichess" | "manual";
   /** Famous short entry line that also has a longer named continuation. */
   partial?: boolean;
+  /** In the small curated study set shown by default. */
+  curated?: boolean;
+  /** Cumulative difficulty stage inside the curated set. */
+  tier?: LineTier;
   /**
    * One short auto-generated study note for the whole line, already in the
    * active locale. Absent when the generator dropped the note.

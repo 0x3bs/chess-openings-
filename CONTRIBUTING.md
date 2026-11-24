@@ -49,6 +49,15 @@ AUDIT_OPENING=italian npm run audit
   names with a pure prefix move order. Removed lines are listed in
   `review/duplicate-lines.md`. Famous short entry lines are kept and marked
   `partial: true` (metadata only).
+- Each course shows a curated Beginner → Intermediate → Advanced study set.
+  After changing move data run `npm run curate`; it keeps at least 12 plies per
+  line, removes move-order twins and lines that share their first 12 plies,
+  and writes `data/curation.json` plus `review/curation.md`. Hidden lines are
+  never deleted; they stay behind "Show all lines".
+- Courses the CC0 opening-name files do not cover are grown from real Lichess
+  master games with `npm run expand`. It only records moves that were actually
+  played; game ids are kept in `data/extra-lines.json`. Do not hand-pad a
+  course with invented moves.
 - Whole-line study notes are generated, not hand-written per line: add or edit
   the course note in `data/parent-ideas.json`, then run `npm run ideas` and
   `npm run review:notes`. The generator drops any note that fails the text,

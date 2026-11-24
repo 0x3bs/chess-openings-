@@ -20,6 +20,7 @@ import { fill } from "@/lib/i18n/plural";
 import { buildPositions, legalDests, sanForMove } from "@/lib/chess";
 import type {
   CoachPoint,
+  LineTier,
   MoveIdea,
   Opening,
   TextHotspot,
@@ -58,6 +59,12 @@ type DrillResult = {
 };
 
 const EMPTY_DESTS = new Map<string, string[]>();
+
+const TIER_RANK: Record<LineTier, number> = {
+  beginner: 0,
+  intermediate: 1,
+  advanced: 2,
+};
 
 const BOARD_SIZE_KEY = "chess-coach-board-size";
 const BOARD_SIZE_DEFAULT = 460;
@@ -112,12 +119,23 @@ function shuffle<T>(items: T[]): T[] {
 
 export function EnglishCourse({ opening }: { opening: Opening }) {
   const { m, p, locale } = useI18n();
-  const [selectedId, setSelectedId] = useState(opening.lines[0]?.id ?? "");
+  const [selectedId, setSelectedId] = useState(
+    (opening.lines.find((item) => item.curated && item.tier === "beginner") ??
+      opening.lines.find((item) => item.curated) ??
+      opening.lines[0])?.id ?? "",
+  );
   const line = useMemo(
     () =>
       opening.lines.find((item) => item.id === selectedId) ?? opening.lines[0],
     [opening.lines, selectedId],
   );
+
+  const curatedLines = useMemo(
+    () => opening.lines.filter((item) => item.curated),
+    [opening.lines],
+  );
+  const hasCurated = curatedLines.length > 0;
+  const courseLines = hasCurated ? curatedLines : opening.lines;
 
   const positions = useMemo(() => buildPositions(line), [line]);
   const totalPlies = line.moves.length;
@@ -148,6 +166,8 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
   const [reportText, setReportText] = useState("");
   const [reportSaved, setReportSaved] = useState(false);
   const [reportError, setReportError] = useState(false);
+  const [tier, setTier] = useState<LineTier>("beginner");
+  const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
     setReportOpen(false);
@@ -429,13 +449,15 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
   );
 
   const nextPracticeLine = useCallback(() => {
-    const index = opening.lines.findIndex((item) => item.id === line.id);
-    const next = opening.lines[(index + 1) % opening.lines.length];
+    const index = courseLines.findIndex((item) => item.id === line.id);
+    const next = courseLines[
+      (Math.max(0, index) + 1) % Math.max(1, courseLines.length)
+    ];
     if (!next) return;
     setSelectedId(next.id);
     setMode("train");
     resetAttempt();
-  }, [opening.lines, line.id, resetAttempt]);
+  }, [courseLines, line.id, resetAttempt]);
 
   // The opponent's replies are played automatically while training, drilling
   // or sitting an exam.
@@ -652,34 +674,65 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [mode, totalPlies]);
 
-  const learned = opening.lines.filter((item) =>
+  const tierCounts = useMemo(() => {
+    const counts: Record<LineTier, number> = {
+      beginner: 0,
+      intermediate: 0,
+      advanced: 0,
+    };
+    for (const item of curatedLines) counts[item.tier ?? "advanced"] += 1;
+    return {
+      beginner: counts.beginner,
+      intermediate: counts.beginner + counts.intermediate,
+      advanced: curatedLines.length,
+    };
+  }, [curatedLines]);
+  const tierLines = useMemo(() => {
+    if (!hasCurated || showAll) return opening.lines;
+    return curatedLines.filter(
+      (item) => TIER_RANK[item.tier ?? "advanced"] <= TIER_RANK[tier],
+    );
+  }, [hasCurated, opening.lines, curatedLines, showAll, tier]);
+
+  const learned = courseLines.filter((item) =>
     learnedOf(progress[item.id]),
   ).length;
-  const finished = opening.lines.filter((item) =>
+  const finished = courseLines.filter((item) =>
     completedOf(progress[item.id]),
   ).length;
-  const dueCount = opening.lines.filter((item) => isDue(progress[item.id])).length;
+  const dueCount = courseLines.filter((item) => isDue(progress[item.id])).length;
   const streak = dayStreak(stats);
   const lineLearned = learnedOf(progress[line.id]);
   const lineFinished = completedOf(progress[line.id]);
-  const lineIndex = opening.lines.findIndex((item) => item.id === line.id);
-  const coursePct = opening.lines.length
-    ? Math.round((learned / opening.lines.length) * 100)
+  const lineIndex = courseLines.findIndex((item) => item.id === line.id);
+  const coursePct = courseLines.length
+    ? Math.round((learned / courseLines.length) * 100)
     : 0;
   const nextLine = lineFinished
-    ? (opening.lines[(lineIndex + 1) % Math.max(1, opening.lines.length)] ??
-      line)
+    ? (courseLines[
+        (Math.max(0, lineIndex) + 1) % Math.max(1, courseLines.length)
+      ] ?? line)
     : line;
+
+  const orderedTierLines = useMemo(() => {
+    const rank = (item: (typeof tierLines)[number]) =>
+      item.curated ? TIER_RANK[item.tier ?? "advanced"] : 3;
+    return [...tierLines].sort(
+      (left, right) =>
+        rank(left) - rank(right) ||
+        left.name.localeCompare(right.name, "en"),
+    );
+  }, [tierLines]);
 
   const query = filter.trim().toLowerCase();
   const filteredLines = useMemo(() => {
-    if (!query) return opening.lines;
-    return opening.lines.filter((item) =>
+    if (!query) return orderedTierLines;
+    return orderedTierLines.filter((item) =>
       `${item.name} ${item.eco} ${item.summary} ${item.tags.join(" ")}`
         .toLowerCase()
         .includes(query),
     );
-  }, [opening.lines, query]);
+  }, [orderedTierLines, query]);
 
   const boardViewOnly = mode === "learn" || completed || !isUserTurn;
   const positionKey = `${current.fen}:${syncToken}`;
@@ -805,7 +858,7 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
               <span>{m.course.courseProgress}</span>
               <strong>
                 {learned}
-                <em>/{opening.lines.length}</em>
+                <em>/{courseLines.length}</em>
               </strong>
             </div>
             <span className="study-progress-pct">{coursePct}%</span>
@@ -814,7 +867,7 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
             className="study-progress-bar"
             role="progressbar"
             aria-valuemin={0}
-            aria-valuemax={opening.lines.length}
+            aria-valuemax={courseLines.length}
             aria-valuenow={learned}
             aria-label={m.course.linesLearned}
           >
@@ -823,9 +876,9 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
           <p className="study-progress-note">
             {learned === 0
               ? m.course.progressEmpty
-              : learned >= opening.lines.length
+              : learned >= courseLines.length
                 ? m.course.progressDone
-                : p(m.course.progressLeft, opening.lines.length - learned)}
+                : p(m.course.progressLeft, courseLines.length - learned)}
           </p>
 
           <div className="study-hero-stats">
@@ -848,6 +901,46 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
       </section>
 
       <div className="study-toolbar">
+        {hasCurated ? (
+          <div className="study-levels">
+            <div
+              className="study-level-tabs"
+              role="group"
+              aria-label={m.course.levelAria}
+            >
+              {(["beginner", "intermediate", "advanced"] as const).map(
+                (value) => {
+                  const active = !showAll && tier === value;
+                  return (
+                    <button
+                      key={value}
+                      type="button"
+                      className={`study-level${active ? " is-active" : ""}`}
+                      aria-pressed={active}
+                      onClick={() => {
+                        setTier(value);
+                        setShowAll(false);
+                      }}
+                    >
+                      <span>{m.course.levels[value]}</span>
+                      <small>{tierCounts[value]}</small>
+                    </button>
+                  );
+                },
+              )}
+            </div>
+            <button
+              type="button"
+              className="study-show-all"
+              aria-pressed={showAll}
+              title={m.course.curatedNote}
+              onClick={() => setShowAll((value) => !value)}
+            >
+              {showAll ? m.course.showCuratedLines : m.course.showAllLines}
+            </button>
+          </div>
+        ) : null}
+
         <details className="study-picker" ref={pickerRef}>
           <summary>
             <span className="study-picker-label">{m.course.line}</span>
@@ -1012,7 +1105,12 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
         </div>
 
         <span className="study-toolbar-note">
-          {fill(m.course.toolbarNote, { count: opening.lines.length })}
+          {hasCurated
+            ? fill(m.course.levelCount, {
+                visible: tierLines.length,
+                total: opening.lines.length,
+              })
+            : fill(m.course.toolbarNote, { count: opening.lines.length })}
         </span>
 
         <button
@@ -1067,8 +1165,8 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
               <div className="study-line-title-row">
                 <span className="study-lesson-label">
                   {fill(m.course.lesson, {
-                    index: lineIndex + 1,
-                    total: opening.lines.length,
+                    index: Math.max(0, lineIndex) + 1,
+                    total: courseLines.length,
                   })}
                 </span>
                 <p className="study-line-name">{line.name}</p>

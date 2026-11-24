@@ -35,6 +35,9 @@ export function partialLineIds(lines: readonly NamedMoves[]): Set<string> {
   const ids = new Set<string>();
   for (const line of lines) {
     if (!isPartialEntryName(line.name)) continue;
+    // The partial flag is only for famous short entry points. A full
+    // master-game line that happens to share the family name is not one.
+    if (line.moves.length >= 12) continue;
     if (
       lines.some(
         (other) =>
@@ -65,8 +68,10 @@ export function markPartialLines(
 
   return {
     ...opening,
-    lines: opening.lines.map<OpeningLine>((line) =>
-      partialIds.has(line.id) ? { ...line, partial: true } : line,
-    ),
+    lines: opening.lines.map<OpeningLine>((line) => {
+      const shouldMark = partialIds.has(line.id);
+      if (shouldMark === Boolean(line.partial)) return line;
+      return { ...line, partial: shouldMark || undefined };
+    }),
   };
 }

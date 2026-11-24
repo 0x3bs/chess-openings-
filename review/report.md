@@ -1,12 +1,12 @@
 # Explanation generation report
 
-Generated 2026-11-24T00:24:25.297Z with stockfish lite-single depth 12.
+Generated 2026-11-24T02:06:34.007Z with stockfish lite-single depth 12.
 
 ## Totals
 
-- Named lines in the catalogue: **1277**
-- Lines with an accepted explanation: **1066**
-- Lines without an explanation: **211**
+- Named lines in the catalogue: **1793**
+- Lines with an accepted explanation: **1429**
+- Lines without an explanation: **364**
 - Parent-course notes: **30** (English + Arabic, `source: "manual"`)
 - Explanations in `review/top-100.md`: see that file
 
@@ -22,43 +22,43 @@ inside the same parent) and fails the build if anything slips through.
 
 | Course | Lines | Explained | No note | Partial | Audit-flagged |
 | --- | --- | --- | --- | --- | --- |
-| English Opening | 62 | 55 | 7 | 0 | 1 |
-| Italian Game | 128 | 82 | 46 | 0 | 2 |
-| Ruy Lopez | 134 | 104 | 30 | 0 | 4 |
-| Scotch Game | 53 | 44 | 9 | 18 | 0 |
-| Vienna Game | 15 | 15 | 0 | 0 | 1 |
-| King's Gambit | 66 | 61 | 5 | 0 | 7 |
-| London System | 6 | 6 | 0 | 0 | 0 |
-| Jobava London | 5 | 5 | 0 | 0 | 0 |
-| Bishop's Opening | 9 | 9 | 0 | 0 | 0 |
-| Ponziani Opening | 6 | 6 | 0 | 0 | 0 |
+| English Opening | 62 | 55 | 7 | 0 | 0 |
+| Italian Game | 128 | 82 | 46 | 0 | 0 |
+| Ruy Lopez | 134 | 104 | 30 | 0 | 0 |
+| Scotch Game | 64 | 54 | 10 | 17 | 0 |
+| Vienna Game | 46 | 38 | 8 | 0 | 0 |
+| King's Gambit | 66 | 61 | 5 | 0 | 0 |
+| London System | 42 | 27 | 15 | 0 | 0 |
+| Jobava London | 29 | 17 | 12 | 0 | 0 |
+| Bishop's Opening | 41 | 25 | 16 | 0 | 0 |
+| Ponziani Opening | 31 | 24 | 7 | 0 | 0 |
 | Queen's Gambit | 150 | 124 | 26 | 0 | 0 |
-| Queen's Gambit Accepted | 31 | 25 | 6 | 0 | 0 |
+| Queen's Gambit Accepted | 51 | 39 | 12 | 0 | 0 |
 | Caro-Kann Defence | 27 | 25 | 2 | 0 | 0 |
 | French Defence | 74 | 60 | 14 | 0 | 0 |
 | Sicilian Defence | 158 | 134 | 24 | 0 | 0 |
-| Scandinavian Defence | 8 | 8 | 0 | 0 | 0 |
-| Pirc Defence | 8 | 8 | 0 | 0 | 0 |
-| King's Indian Defence | 89 | 75 | 14 | 0 | 2 |
-| Dutch Defence | 21 | 18 | 3 | 0 | 0 |
+| Scandinavian Defence | 31 | 27 | 4 | 0 | 0 |
+| Pirc Defence | 29 | 27 | 2 | 0 | 0 |
+| King's Indian Defence | 89 | 75 | 14 | 0 | 0 |
+| Dutch Defence | 50 | 36 | 14 | 0 | 0 |
 | Slav Defence | 68 | 60 | 8 | 0 | 0 |
-| Anti-London | 5 | 5 | 0 | 0 | 0 |
-| Petrov Defence | 21 | 15 | 6 | 0 | 0 |
+| Anti-London | 40 | 30 | 10 | 0 | 0 |
+| Petrov Defence | 42 | 31 | 11 | 0 | 0 |
 | Nimzo-Indian Defence | 56 | 50 | 6 | 0 | 0 |
-| Catalan Opening | 26 | 22 | 4 | 0 | 0 |
-| Fried Liver Attack | 6 | 6 | 0 | 1 | 0 |
-| King's Indian Attack | 10 | 9 | 1 | 0 | 0 |
-| Open Game | 15 | 15 | 0 | 1 | 1 |
-| Vienna Gambit | 9 | 9 | 0 | 0 | 0 |
-| White vs Caro-Kann | 5 | 5 | 0 | 0 | 0 |
-| Englund Gambit | 6 | 6 | 0 | 1 | 0 |
+| Catalan Opening | 37 | 33 | 4 | 0 | 0 |
+| Fried Liver Attack | 30 | 24 | 6 | 0 | 0 |
+| King's Indian Attack | 44 | 30 | 14 | 0 | 0 |
+| Open Game | 46 | 34 | 12 | 1 | 0 |
+| Vienna Gambit | 40 | 31 | 9 | 0 | 0 |
+| White vs Caro-Kann | 42 | 32 | 10 | 0 | 0 |
+| Englund Gambit | 46 | 40 | 6 | 3 | 0 |
 
 ## Why a line has no note
 
 | Reason | Lines |
 | --- | --- |
-| near-duplicate English explanation | 206 |
-| near-duplicate Arabic explanation | 141 |
+| near-duplicate English explanation | 355 |
+| near-duplicate Arabic explanation | 250 |
 
 A dropped note is never shipped: the line still appears in the trainer and
 simply shows no explanation. Nothing is deleted silently.
@@ -85,14 +85,13 @@ out of the top-100 study list.
 - Scotch Game — Scotch Game (C45)
 - Scotch Game — Scotch Game: Benima Defense (C44)
 - Scotch Game — Scotch Game: Classical Variation (C45)
-- Scotch Game — Scotch Game: Classical Variation, Blackburne Attack (C45)
+- Scotch Game — Scotch Game: Classical Variation, Intermezzo Variation (C45)
 - Scotch Game — Scotch Game: Göring Gambit (C44)
 - Scotch Game — Scotch Game: Göring Gambit, Double Pawn Sacrifice (C44)
 - Scotch Game — Scotch Game: Haxo Gambit (C44)
 - Scotch Game — Scotch Game: Horwitz Attack (C45)
 - Scotch Game — Scotch Game: Malaniuk Variation (C45)
 - Scotch Game — Scotch Game: Mieses Variation (C45)
-- Scotch Game — Scotch Game: Paulsen Attack (C45)
 - Scotch Game — Scotch Game: Potter Variation (C45)
 - Scotch Game — Scotch Game: Schmidt Variation (C45)
 - Scotch Game — Scotch Game: Scotch Gambit (C44)
@@ -100,13 +99,14 @@ out of the top-100 study list.
 - Scotch Game — Scotch Game: Scotch Gambit, London Defense (C44)
 - Scotch Game — Scotch Game: Scotch Gambit, Sarratt Variation (C44)
 - Scotch Game — Scotch Game: Steinitz Variation (C45)
-- Fried Liver Attack — Fried Liver main line (C57)
 - Open Game — Danish Gambit Accepted (C21)
 - Englund Gambit — Englund Gambit: Main Line (A40)
+- Englund Gambit — Englund Gambit: Stockholm Variation (A40)
+- Englund Gambit — Englund Gambit: Zilbermints Gambit (A40)
 
 ## Audit flags
 
-The Stockfish audit reports **18** lines with at least one flag
+The Stockfish audit reports **0** lines with at least one flag
 (gambits, traps and forced material lines). They are kept because they are
 real theory, and they are excluded from the top-100 list. Full details:
 `scripts/audit-report.json`.

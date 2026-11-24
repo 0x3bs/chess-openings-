@@ -4,6 +4,7 @@ import {
   buildOpening,
   type LineSeed,
 } from "@/lib/openings/catalog";
+import { applyCuration } from "@/lib/openings/curation";
 import { englishBaseOpening, englishOpening } from "@/lib/openings/english";
 import { englishIdeas } from "@/lib/openings/english-ideas";
 import lichessLines from "@/lib/openings/lichess-lines.json";
@@ -112,7 +113,7 @@ export function getLocalizedOpenings(locale: Locale): Opening[] {
   if (cache[locale]) return cache[locale] as Opening[];
 
   if (locale === "en") {
-    cache[locale] = withLineIdeas(openings, locale);
+    cache[locale] = withLineIdeas(openings.map(applyCuration), locale);
     return cache[locale] as Opening[];
   }
 
@@ -129,7 +130,7 @@ export function getLocalizedOpenings(locale: Locale): Opening[] {
     [
       englishWithImported(locale),
       ...buildCatalogueOpenings(locale),
-    ].map((opening) => markPartialLines(opening, partialIds)),
+    ].map((opening) => applyCuration(markPartialLines(opening, partialIds))),
     locale,
   );
   return cache[locale] as Opening[];

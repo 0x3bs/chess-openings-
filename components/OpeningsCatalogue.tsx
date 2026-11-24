@@ -21,11 +21,17 @@ import {
   loadRemoteStats,
 } from "@/lib/db/progress";
 
+/** Curated study lines, falling back to every line for an uncurated course. */
+function courseLines(opening: Opening) {
+  const curated = opening.lines.filter((line) => line.curated);
+  return curated.length ? curated : opening.lines;
+}
+
 type SideFilter = "all" | "white" | "black";
 type SortMode = "last" | "progress" | "az";
 
 function lastPlayed(opening: Opening, store: ProgressStore): number {
-  return opening.lines.reduce((latest, line) => {
+  return courseLines(opening).reduce((latest, line) => {
     const value = store[line.id]?.lastPracticed;
     const time = value ? new Date(value).getTime() : 0;
     return Math.max(latest, Number.isFinite(time) ? time : 0);
@@ -59,7 +65,7 @@ export function OpeningsCatalogue({ openings }: { openings: Opening[] }) {
   const previews = useMemo(() => {
     const map: Record<string, string> = {};
     for (const opening of openings) {
-      const firstLine = opening.lines[0];
+      const firstLine = courseLines(opening)[0];
       if (!firstLine) continue;
       const positions = buildPositions(firstLine);
       const index = Math.min(12, firstLine.moves.length);
@@ -69,17 +75,19 @@ export function OpeningsCatalogue({ openings }: { openings: Opening[] }) {
   }, [openings]);
 
   const totalLines = openings.reduce(
-    (total, opening) => total + opening.lines.length,
+    (total, opening) => total + courseLines(opening).length,
     0,
   );
   const learnedLines = openings.reduce(
     (total, opening) =>
-      total + opening.lines.filter((line) => learnedOf(store[line.id])).length,
+      total +
+      courseLines(opening).filter((line) => learnedOf(store[line.id])).length,
     0,
   );
   const dueLines = openings.reduce(
     (total, opening) =>
-      total + opening.lines.filter((line) => isDue(store[line.id])).length,
+      total +
+      courseLines(opening).filter((line) => isDue(store[line.id])).length,
     0,
   );
   const streak = dayStreak(stats);
@@ -260,14 +268,15 @@ export function OpeningsCatalogue({ openings }: { openings: Opening[] }) {
         ) : (
           <div className="catalogue-grid">
             {cards.map((opening) => {
-              const total = opening.lines.length;
-              const finished = opening.lines.filter((line) =>
+              const lines = courseLines(opening);
+              const total = lines.length;
+              const finished = lines.filter((line) =>
                 completedOf(store[line.id]),
               ).length;
-              const clean = opening.lines.filter((line) =>
+              const clean = lines.filter((line) =>
                 learnedOf(store[line.id]),
               ).length;
-              const due = opening.lines.filter((line) =>
+              const due = lines.filter((line) =>
                 isDue(store[line.id]),
               ).length;
               const pct = total ? (clean / total) * 100 : 0;

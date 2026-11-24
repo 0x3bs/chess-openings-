@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { isLocale, localePath } from "@/lib/i18n/config";
 import { getLocalizedOpenings } from "@/lib/i18n/openings";
+import { courseLines } from "@/lib/openings/curation";
 import { getMessages } from "@/lib/i18n/messages";
 
 type PageProps = {
@@ -29,13 +30,13 @@ export default async function HomePage({ params }: PageProps) {
   const m = getMessages(locale);
   const openings = getLocalizedOpenings(locale);
   const totalLines = openings.reduce(
-    (total, opening) => total + opening.lines.length,
+    (total, opening) => total + courseLines(opening).length,
     0,
   );
   const totalMoves = openings.reduce(
     (total, opening) =>
       total +
-      opening.lines.reduce((sum, line) => sum + line.moves.length, 0),
+      courseLines(opening).reduce((sum, line) => sum + line.moves.length, 0),
     0,
   );
 

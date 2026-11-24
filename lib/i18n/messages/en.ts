@@ -7,7 +7,7 @@ export const en = {
   meta: {
     siteTitle: "ChessCoach — Learn chess openings line by line",
     siteDescription:
-      "A free opening trainer with 30 courses and 954 lines: one idea for every move, a board that answers back, drills, exams and spaced review.",
+      "A free opening trainer with 30 courses and 1,793 named lines: one idea for every move, a board that answers back, drills, exams and spaced review.",
     openingsTitle: "Opening Trainer — ChessCoach",
     openingsDescription:
       "Learn chess openings line by line with one clear idea per move, a board that answers back, and spaced review.",
@@ -224,6 +224,17 @@ export const en = {
       "Reports stay on this device; nothing is uploaded or shared.",
     reportIssueEmpty: "Write a short note before saving.",
     reportIssueFailed: "Could not save in this browser.",
+    levelAria: "Study level",
+    levels: {
+      beginner: "Beginner",
+      intermediate: "Intermediate",
+      advanced: "Advanced",
+    },
+    showAllLines: "Show all lines",
+    showCuratedLines: "Show curated lines",
+    levelCount: "{visible} of {total} lines",
+    curatedNote:
+      "Curated main lines from real games. Extra lines stay available.",
     score: pluralScore(),
     controlStart: "Start",
     controlBack: "← Back",

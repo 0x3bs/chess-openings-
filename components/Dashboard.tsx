@@ -23,6 +23,12 @@ import {
   loadRemoteStats,
 } from "@/lib/db/progress";
 
+/** Curated study lines, falling back to every line for an uncurated course. */
+function studyLines(opening: Opening) {
+  const curated = opening.lines.filter((line) => line.curated);
+  return curated.length ? curated : opening.lines;
+}
+
 type LineRow = {
   opening: Opening;
   line: OpeningLine;
@@ -37,7 +43,7 @@ function formatDate(iso: string, locale: "en" | "ar"): string {
 }
 
 function lastPracticedOf(opening: Opening, store: ProgressStore): number {
-  return opening.lines.reduce((latest, line) => {
+  return studyLines(opening).reduce((latest, line) => {
     const value = store[line.id]?.lastPracticed;
     const time = value ? new Date(value).getTime() : 0;
     return Math.max(latest, Number.isFinite(time) ? time : 0);
@@ -87,7 +93,7 @@ export function Dashboard({ openings }: { openings: Opening[] }) {
   const allRows = useMemo<LineRow[]>(
     () =>
       openings.flatMap((opening) =>
-        opening.lines.map((line) => ({
+        studyLines(opening).map((line) => ({
           opening,
           line,
           progress: store[line.id],
@@ -112,7 +118,7 @@ export function Dashboard({ openings }: { openings: Opening[] }) {
   const cleanRate = attempts > 0 ? Math.round((clean / attempts) * 100) : 0;
   const streak = dayStreak(stats);
   const coursesStarted = openings.filter((opening) =>
-    opening.lines.some((line) => store[line.id]?.attempts),
+    studyLines(opening).some((line) => store[line.id]?.attempts),
   ).length;
 
   const recent = [...practiced]

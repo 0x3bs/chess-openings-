@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-24T00:24:25.307Z",
-  "totalLines": 1277,
-  "accepted": 1066,
-  "rejectedCount": 211,
+  "generatedAt": "2026-11-24T02:06:34.082Z",
+  "totalLines": 1793,
+  "accepted": 1429,
+  "rejectedCount": 364,
   "reasonCounts": {
-    "near-duplicate English explanation": 206,
-    "near-duplicate Arabic explanation": 141
+    "near-duplicate English explanation": 355,
+    "near-duplicate Arabic explanation": 250
   },
   "perOpening": {
     "english": {
@@ -21,40 +21,40 @@
       "accepted": 104
     },
     "scotch": {
-      "total": 53,
-      "accepted": 44
+      "total": 64,
+      "accepted": 54
     },
     "vienna": {
-      "total": 15,
-      "accepted": 15
+      "total": 46,
+      "accepted": 38
     },
     "kings-gambit": {
       "total": 66,
       "accepted": 61
     },
     "london": {
-      "total": 6,
-      "accepted": 6
+      "total": 42,
+      "accepted": 27
     },
     "jobava-london": {
-      "total": 5,
-      "accepted": 5
+      "total": 29,
+      "accepted": 17
     },
     "bishops-opening": {
-      "total": 9,
-      "accepted": 9
+      "total": 41,
+      "accepted": 25
     },
     "ponziani": {
-      "total": 6,
-      "accepted": 6
+      "total": 31,
+      "accepted": 24
     },
     "queens-gambit": {
       "total": 150,
       "accepted": 124
     },
     "queens-gambit-accepted": {
-      "total": 31,
-      "accepted": 25
+      "total": 51,
+      "accepted": 39
     },
     "caro-kann": {
       "total": 27,
@@ -69,64 +69,64 @@
       "accepted": 134
     },
     "scandinavian": {
-      "total": 8,
-      "accepted": 8
+      "total": 31,
+      "accepted": 27
     },
     "pirc": {
-      "total": 8,
-      "accepted": 8
+      "total": 29,
+      "accepted": 27
     },
     "kings-indian": {
       "total": 89,
       "accepted": 75
     },
     "dutch": {
-      "total": 21,
-      "accepted": 18
+      "total": 50,
+      "accepted": 36
     },
     "slav": {
       "total": 68,
       "accepted": 60
     },
     "anti-london": {
-      "total": 5,
-      "accepted": 5
+      "total": 40,
+      "accepted": 30
     },
     "petrov": {
-      "total": 21,
-      "accepted": 15
+      "total": 42,
+      "accepted": 31
     },
     "nimzo-indian": {
       "total": 56,
       "accepted": 50
     },
     "catalan": {
-      "total": 26,
-      "accepted": 22
+      "total": 37,
+      "accepted": 33
     },
     "fried-liver": {
-      "total": 6,
-      "accepted": 6
+      "total": 30,
+      "accepted": 24
     },
     "kings-indian-attack": {
-      "total": 10,
-      "accepted": 9
+      "total": 44,
+      "accepted": 30
     },
     "open-game": {
-      "total": 15,
-      "accepted": 15
+      "total": 46,
+      "accepted": 34
     },
     "vienna-gambit": {
-      "total": 9,
-      "accepted": 9
+      "total": 40,
+      "accepted": 31
     },
     "white-vs-caro-kann": {
-      "total": 5,
-      "accepted": 5
+      "total": 42,
+      "accepted": 32
     },
     "englund-gambit": {
-      "total": 6,
-      "accepted": 6
+      "total": 46,
+      "accepted": 40
     }
   },
   "rejected": [
@@ -1004,6 +1004,17 @@
       "ar": "في خط Steinitz Defense (ECO C62) ينتهي الخط المكوّن من 11 نصف نقلة بالتبادل على c6 في النقلة 6. الخطأ الشائع هو تبادل الفيل النشط مبكرًا والسماح للأسود بالتعادل دون ضغط حقيقي، والوضع النهائي يميل قليلًا لصالح الأبيض."
     },
     {
+      "lineId": "explorer-scotch-c44-scotch-game-5-bb6",
+      "name": "Scotch Game — 5...Bb6",
+      "opening": "scotch",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Scotch Game — (ECO C44) diverges with the bishop move to b6 on move 5 and closes with the knight move to e5 on move 9 after 18 plies. Black should equalise by developing quickly and challenging the centre before White can organise an attack, and the final position is balanced.",
+      "ar": "يختلف خط Scotch Game — (ECO C44) بنقلة الفيل إلى b6 في النقلة 5 وينتهي بنقلة الحصان إلى e5 في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن يعادل بتطوير سريع ومنافسة المركز قبل أن ينظّم الأبيض هجومه، والوضع النهائي متوازن."
+    },
+    {
       "lineId": "lichess-scotch-c45-scotch-game-classical-variation-millennium-variation",
       "name": "Scotch Game: Classical Variation, Millennium Variation",
       "opening": "scotch",
@@ -1097,6 +1108,92 @@
       "ar": "يقوم خط Scotch Gambit (ECO C44) على نقلة الفيل إلى c4 في النقلة 4، وهي النقلة الأخيرة في خط من 7 نصف نقلة. خطة الأبيض هي أن يستعيد البيدق بنشاط، والوضع النهائي متوازن."
     },
     {
+      "lineId": "explorer-vienna-c25-vienna-game-5-nxc4",
+      "name": "Vienna Game — 5...Nxc4",
+      "opening": "vienna",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Vienna Game — (ECO C25) branches with the bishop move to e7 on move 6 and runs 18 plies to the pawn move to c6 on move 9. The line leads to a tense central structure with an advanced kingside pawn and a possible central counterbreak, and the final position is balanced.",
+      "ar": "يتفرّع خط Vienna Game — (ECO C25) بنقلة الفيل إلى e7 في النقلة 6 ويمتد 18 نصف نقلة إلى نقلة البيدق إلى c6 في النقلة 9. ويؤدي الخط إلى بنية مركزية متوترة ببيدق ملكي متقدم وكسر مضاد مركزي محتمل، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-vienna-c25-vienna-game-3-bc5-2",
+      "name": "Vienna Game — 3...Bc5 (2)",
+      "opening": "vienna",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Vienna Game — (ECO C25) branches with the knight move to e2 on move 5 and runs 18 plies to the bishop move to g4 on move 9. The line leads to a tense central structure with an advanced kingside pawn and a possible central counterbreak, and the final position is balanced.",
+      "ar": "يتفرّع خط Vienna Game — (ECO C25) بنقلة الحصان إلى e2 في النقلة 5 ويمتد 18 نصف نقلة إلى نقلة الفيل إلى g4 في النقلة 9. ويؤدي الخط إلى بنية مركزية متوترة ببيدق ملكي متقدم وكسر مضاد مركزي محتمل، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-vienna-c25-vienna-game-4-nge2",
+      "name": "Vienna Game — 4.Nge2",
+      "opening": "vienna",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Vienna Game — (ECO C25) branches with the knight move to e2 on move 4 and runs 18 plies to the pawn move to b5 on move 9. The line leads to a tense central structure with an advanced kingside pawn and a possible central counterbreak, and the final position is balanced.",
+      "ar": "يتفرّع خط Vienna Game — (ECO C25) بنقلة الحصان إلى e2 في النقلة 4 ويمتد 18 نصف نقلة إلى نقلة البيدق إلى b5 في النقلة 9. ويؤدي الخط إلى بنية مركزية متوترة ببيدق ملكي متقدم وكسر مضاد مركزي محتمل، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-vienna-c25-vienna-game-4-c6",
+      "name": "Vienna Game — 4...c6",
+      "opening": "vienna",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Vienna Game — (ECO C25) turns on the pawn move to c6 on move 4; the line runs 18 plies and closes with the pawn move to g5 on move 9. White should support the kingside advance, and the final position is balanced.",
+      "ar": "يقوم خط Vienna Game — (ECO C25) على نقلة البيدق إلى c6 في النقلة 4؛ ويمتد 18 نصف نقلة وينتهي بنقلة البيدق إلى g5 في النقلة 9. خطة الأبيض هي أن يدعم التقدم الملكي، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-vienna-c25-vienna-game-5-d6",
+      "name": "Vienna Game — 5...d6",
+      "opening": "vienna",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "In the Vienna Game — (ECO C25), the pawn move to d6 on move 5 is the branch point; play runs 18 plies and ends with the knight move to d7 on move 9. The typical mistake is starting the kingside attack before the king is safe and the centre is stable, and the final position is balanced.",
+      "ar": "في خط Vienna Game — (ECO C25) يكون نقلة البيدق إلى d6 في النقلة 5 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة الحصان إلى d7 في النقلة 9. الخطأ الشائع هو بدء الهجوم الملكي قبل تأمين الملك واستقرار المركز، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-vienna-c25-vienna-game-3-a3",
+      "name": "Vienna Game — 3.a3",
+      "opening": "vienna",
+      "reasons": [
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Vienna Game — (ECO C25), the pawn move to a3 on move 3 is the branch point; play runs 18 plies and ends with the pawn move to h6 on move 9. The typical mistake is starting the kingside attack before the king is safe and the centre is stable, and the final position is balanced.",
+      "ar": "في خط Vienna Game — (ECO C25) يكون نقلة البيدق إلى a3 في النقلة 3 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة البيدق إلى h6 في النقلة 9. الخطأ الشائع هو بدء الهجوم الملكي قبل تأمين الملك واستقرار المركز، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-vienna-c25-vienna-game-5-qf3-2",
+      "name": "Vienna Game — 5.Qf3 (2)",
+      "opening": "vienna",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Vienna Game — (ECO C25) branches with the queen move to f3 on move 5 and runs 18 plies to the knight move to d7 on move 9. The line leads to a tense central structure with an advanced kingside pawn and a possible central counterbreak, and the final position is balanced.",
+      "ar": "يتفرّع خط Vienna Game — (ECO C25) بنقلة الملكة إلى f3 في النقلة 5 ويمتد 18 نصف نقلة إلى نقلة الحصان إلى d7 في النقلة 9. ويؤدي الخط إلى بنية مركزية متوترة ببيدق ملكي متقدم وكسر مضاد مركزي محتمل، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-vienna-c25-vienna-game-6-h6",
+      "name": "Vienna Game — 6...h6",
+      "opening": "vienna",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Vienna Game — (ECO C25) branches with the pawn move to h6 on move 6 and runs 18 plies to the bishop move to a7 on move 9. The line leads to a tense central structure with an advanced kingside pawn and a possible central counterbreak, and the final position is balanced.",
+      "ar": "يتفرّع خط Vienna Game — (ECO C25) بنقلة البيدق إلى h6 في النقلة 6 ويمتد 18 نصف نقلة إلى نقلة الفيل إلى a7 في النقلة 9. ويؤدي الخط إلى بنية مركزية متوترة ببيدق ملكي متقدم وكسر مضاد مركزي محتمل، والوضع النهائي متوازن."
+    },
+    {
       "lineId": "lichess-kings-gambit-c39-kings-gambit-accepted-allgaier-gambit-urusov-attack",
       "name": "King's Gambit Accepted: Allgaier Gambit, Urusov Attack",
       "opening": "kings-gambit",
@@ -1147,6 +1244,540 @@
       ],
       "en": "The Salvio Gambit (ECO C37) turns on the knight move to h6 on move 6, the last move of the 12-ply line. White should develop quickly, castle and attack along the opened files before Black consolidate, and the final position is balanced.",
       "ar": "يقوم خط Salvio Gambit (ECO C37) على نقلة الحصان إلى h6 في النقلة 6، وهي النقلة الأخيرة في خط من 12 نصف نقلة. خطة الأبيض هي أن يطوّر بسرعة, ويحصّن، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-london-d02-london-system-6-be7",
+      "name": "London System — 6...Be7",
+      "opening": "london",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the London System — (ECO D02), the bishop move to e7 on move 6 is the branch point; play runs 18 plies and ends with the capture on d4 on move 9. The typical mistake is leaving the dark-squared bishop passive and allowing Black to trade it off, and the final position is balanced.",
+      "ar": "في خط London System — (ECO D02) يكون نقلة الفيل إلى e7 في النقلة 6 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بالتبادل على d4 في النقلة 9. الخطأ الشائع هو ترك الفيل الداكن سلبيًا والسماح للأسود بتبادله، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-london-d02-london-system-6-nh5",
+      "name": "London System — 6...Nh5",
+      "opening": "london",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "London System — (ECO D02) branches with the knight move to h5 on move 6 and runs 18 plies to the capture on d4 on move 9. The line leads to a closed queen-pawn centre with a possible central break and a queenside pawn majority, and the final position is balanced.",
+      "ar": "يتفرّع خط London System — (ECO D02) بنقلة الحصان إلى h5 في النقلة 6 ويمتد 18 نصف نقلة إلى التبادل على d4 في النقلة 9. ويؤدي الخط إلى مركز مغلق ببيدق الوزير مع كسر مركزي محتمل وأغلبية بيادق وزيرية، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-london-d02-london-system-6-nf3",
+      "name": "London System — 6.Nf3",
+      "opening": "london",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "London System — (ECO D02) branches with the knight move to f3 on move 6 and runs 18 plies to the knight move to g6 on move 9. The line leads to a closed queen-pawn centre with a possible central break and a queenside pawn majority, and the final position is balanced.",
+      "ar": "يتفرّع خط London System — (ECO D02) بنقلة الحصان إلى f3 في النقلة 6 ويمتد 18 نصف نقلة إلى نقلة الحصان إلى g6 في النقلة 9. ويؤدي الخط إلى مركز مغلق ببيدق الوزير مع كسر مركزي محتمل وأغلبية بيادق وزيرية، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-london-d02-london-system-4-nf6-2",
+      "name": "London System — 4...Nf6 (2)",
+      "opening": "london",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "London System — (ECO D02) diverges with the knight move to f6 on move 4 and closes with the bishop move to e7 on move 9 after 18 plies. Black should challenge the bishop, and the final position is balanced.",
+      "ar": "يختلف خط London System — (ECO D02) بنقلة الحصان إلى f6 في النقلة 4 وينتهي بنقلة الفيل إلى e7 في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن ينافس الفيل, ويحتدم على المركز، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-london-d02-london-system-3-nf6",
+      "name": "London System — 3...Nf6",
+      "opening": "london",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "London System — (ECO D02) branches with the knight move to f6 on move 3 and runs 18 plies to the pawn move to g6 on move 9. The line leads to a closed queen-pawn centre with a possible central break and a queenside pawn majority, and the final position is balanced.",
+      "ar": "يتفرّع خط London System — (ECO D02) بنقلة الحصان إلى f6 في النقلة 3 ويمتد 18 نصف نقلة إلى نقلة البيدق إلى g6 في النقلة 9. ويؤدي الخط إلى مركز مغلق ببيدق الوزير مع كسر مركزي محتمل وأغلبية بيادق وزيرية، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-london-d02-london-system-5-f6",
+      "name": "London System — 5...f6",
+      "opening": "london",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "London System — (ECO D02) branches with the pawn move to f6 on move 5 and runs 18 plies to the bishop move to b4 on move 9. The line leads to a closed queen-pawn centre with a possible central break and a queenside pawn majority, and the final position is balanced.",
+      "ar": "يتفرّع خط London System — (ECO D02) بنقلة البيدق إلى f6 في النقلة 5 ويمتد 18 نصف نقلة إلى نقلة الفيل إلى b4 في النقلة 9. ويؤدي الخط إلى مركز مغلق ببيدق الوزير مع كسر مركزي محتمل وأغلبية بيادق وزيرية، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-london-d02-london-system-6-qb3",
+      "name": "London System — 6.Qb3",
+      "opening": "london",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The London System — (ECO D02) turns on the queen move to b3 on move 6; the line runs 18 plies and closes with the pawn move to g5 on move 9. White should castle, support the centre and improve the pieces before choosing a central or kingside expansion, and the final position is balanced.",
+      "ar": "يقوم خط London System — (ECO D02) على نقلة الملكة إلى b3 في النقلة 6؛ ويمتد 18 نصف نقلة وينتهي بنقلة البيدق إلى g5 في النقلة 9. خطة الأبيض هي أن يحصّن , ويدعم المركز، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-london-d02-london-system-6-bd3",
+      "name": "London System — 6.Bd3",
+      "opening": "london",
+      "reasons": [
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "London System — (ECO D02) diverges with the bishop move to d3 on move 6 and closes with the knight move to h5 on move 9 after 18 plies. Black should challenge the bishop, and the final position is balanced.",
+      "ar": "يختلف خط London System — (ECO D02) بنقلة الفيل إلى d3 في النقلة 6 وينتهي بنقلة الحصان إلى h5 في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن ينافس الفيل, ويحتدم على المركز، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-london-d02-london-system-2-d5",
+      "name": "London System — 2...d5",
+      "opening": "london",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "London System — (ECO D02) branches with the knight move to f3 on move 4 and runs 18 plies to the pawn move to g6 on move 9. The line leads to a closed queen-pawn centre with a possible central break and a queenside pawn majority, and the final position is balanced.",
+      "ar": "يتفرّع خط London System — (ECO D02) بنقلة الحصان إلى f3 في النقلة 4 ويمتد 18 نصف نقلة إلى نقلة البيدق إلى g6 في النقلة 9. ويؤدي الخط إلى مركز مغلق ببيدق الوزير مع كسر مركزي محتمل وأغلبية بيادق وزيرية، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-london-d02-london-system-4-nc3",
+      "name": "London System — 4.Nc3",
+      "opening": "london",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the London System — (ECO D02), the knight move to c3 on move 4 is the branch point; play runs 18 plies and ends with the knight move to c6 on move 9. The typical mistake is leaving the dark-squared bishop passive and allowing Black to trade it off, and the final position is balanced.",
+      "ar": "في خط London System — (ECO D02) يكون نقلة الحصان إلى c3 في النقلة 4 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة الحصان إلى c6 في النقلة 9. الخطأ الشائع هو ترك الفيل الداكن سلبيًا والسماح للأسود بتبادله، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-london-d02-london-system-2-b6",
+      "name": "London System — 2...b6",
+      "opening": "london",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the London System — (ECO D02), the pawn move to b6 on move 2 is the branch point; play runs 18 plies and ends with the pawn move to d6 on move 9. The typical mistake is leaving the dark-squared bishop passive and allowing Black to trade it off, and the final position is balanced.",
+      "ar": "في خط London System — (ECO D02) يكون نقلة البيدق إلى b6 في النقلة 2 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة البيدق إلى d6 في النقلة 9. الخطأ الشائع هو ترك الفيل الداكن سلبيًا والسماح للأسود بتبادله، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-london-d02-london-system-2-c5",
+      "name": "London System — 2...c5",
+      "opening": "london",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "In the London System — (ECO D02), the capture on c5 on move 3 is the branch point; play runs 18 plies and ends with the bishop move to e6 on move 9. The typical mistake is leaving the dark-squared bishop passive and allowing Black to trade it off, and the final position is balanced.",
+      "ar": "في خط London System — (ECO D02) يكون التبادل على c5 في النقلة 3 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة الفيل إلى e6 في النقلة 9. الخطأ الشائع هو ترك الفيل الداكن سلبيًا والسماح للأسود بتبادله، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-london-d02-london-system-3-d5",
+      "name": "London System — 3.d5",
+      "opening": "london",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The London System — (ECO D02) turns on the pawn move to d5 on move 3; the line runs 18 plies and closes with the bishop move to c5 on move 9. White should castle, support the centre and improve the pieces before choosing a central or kingside expansion, and the final position is slightly better for White.",
+      "ar": "يقوم خط London System — (ECO D02) على نقلة البيدق إلى d5 في النقلة 3؛ ويمتد 18 نصف نقلة وينتهي بنقلة الفيل إلى c5 في النقلة 9. خطة الأبيض هي أن يحصّن , ويدعم المركز، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "explorer-london-d02-london-system-3-e3",
+      "name": "London System — 3.e3",
+      "opening": "london",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "London System — (ECO D02) diverges with the pawn move to e3 on move 3 and closes with short castling on move 9 after 18 plies. Black should challenge the bishop, and the final position is balanced.",
+      "ar": "يختلف خط London System — (ECO D02) بنقلة البيدق إلى e3 في النقلة 3 وينتهي بالتحصيل القصير في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن ينافس الفيل, ويحتدم على المركز، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-london-d02-london-system-3-e6-2",
+      "name": "London System — 3...e6 (2)",
+      "opening": "london",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "London System — (ECO D02) diverges with the pawn move to e6 on move 3 and closes with the pawn move to e5 on move 9 after 18 plies. Black should challenge the bishop, and the final position is balanced.",
+      "ar": "يختلف خط London System — (ECO D02) بنقلة البيدق إلى e6 في النقلة 3 وينتهي بنقلة البيدق إلى e5 في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن ينافس الفيل, ويحتدم على المركز، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-jobava-london-d00-jobava-london-6-h4",
+      "name": "Jobava London — 6.h4",
+      "opening": "jobava-london",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Jobava London — (ECO D00) turns on the pawn move to h4 on move 6; the line runs 18 plies and closes with the pawn move to c5 on move 9. White should castle quickly, create tactical threats and use the active pieces before the structure be fixed, and the final position is balanced.",
+      "ar": "يقوم خط Jobava London — (ECO D00) على نقلة البيدق إلى h4 في النقلة 6؛ ويمتد 18 نصف نقلة وينتهي بنقلة البيدق إلى c5 في النقلة 9. خطة الأبيض هي أن يحصّن بسرعة, ويصنع تهديدات تكتيكية، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-jobava-london-d00-jobava-london-4-h6",
+      "name": "Jobava London — 4...h6",
+      "opening": "jobava-london",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Jobava London — (ECO D00) turns on the pawn move to h6 on move 4; the line runs 18 plies and closes with short castling on move 9. White should castle quickly, create tactical threats and use the active pieces before the structure be fixed, and the final position is balanced.",
+      "ar": "يقوم خط Jobava London — (ECO D00) على نقلة البيدق إلى h6 في النقلة 4؛ ويمتد 18 نصف نقلة وينتهي بالتحصيل القصير في النقلة 9. خطة الأبيض هي أن يحصّن بسرعة, ويصنع تهديدات تكتيكية، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-jobava-london-d00-jobava-london-4-cxd4",
+      "name": "Jobava London — 4...cxd4",
+      "opening": "jobava-london",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Jobava London — (ECO D00) branches with the knight move to c6 on move 6 and runs 18 plies to short castling on move 9. The line leads to a flexible queen-pawn structure with active pieces and a delayed central decision, and the final position is balanced.",
+      "ar": "يتفرّع خط Jobava London — (ECO D00) بنقلة الحصان إلى c6 في النقلة 6 ويمتد 18 نصف نقلة إلى التحصيل القصير في النقلة 9. ويؤدي الخط إلى بنية مرنة ببيدق الوزير مع قطع نشطة وتأجيل القرار المركزي، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-jobava-london-d00-jobava-london-3-e6-2",
+      "name": "Jobava London — 3...e6 (2)",
+      "opening": "jobava-london",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Jobava London — (ECO D00) branches with the bishop move to d6 on move 6 and runs 18 plies to the pawn move to c5 on move 9. The line leads to a flexible queen-pawn structure with active pieces and a delayed central decision, and the final position is balanced.",
+      "ar": "يتفرّع خط Jobava London — (ECO D00) بنقلة الفيل إلى d6 في النقلة 6 ويمتد 18 نصف نقلة إلى نقلة البيدق إلى c5 في النقلة 9. ويؤدي الخط إلى بنية مرنة ببيدق الوزير مع قطع نشطة وتأجيل القرار المركزي، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-jobava-london-d00-jobava-london-6-be7",
+      "name": "Jobava London — 6...Be7",
+      "opening": "jobava-london",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Jobava London — (ECO D00) turns on the bishop move to e7 on move 6; the line runs 18 plies and closes with the capture on f4 on move 9. White should castle quickly, create tactical threats and use the active pieces before the structure be fixed, and the final position is balanced.",
+      "ar": "يقوم خط Jobava London — (ECO D00) على نقلة الفيل إلى e7 في النقلة 6؛ ويمتد 18 نصف نقلة وينتهي بالتبادل على f4 في النقلة 9. خطة الأبيض هي أن يحصّن بسرعة, ويصنع تهديدات تكتيكية، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-jobava-london-d00-jobava-london-5-nh5",
+      "name": "Jobava London — 5...Nh5",
+      "opening": "jobava-london",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Jobava London — (ECO D00), the knight move to h5 on move 5 is the branch point; play runs 18 plies and ends with the pawn move to a6 on move 9. The typical mistake is pushing the central pawn too early and leaving holes around the king, and the final position is balanced.",
+      "ar": "في خط Jobava London — (ECO D00) يكون نقلة الحصان إلى h5 في النقلة 5 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة البيدق إلى a6 في النقلة 9. الخطأ الشائع هو دفع البيدق المركزي مبكرًا وترك ثغرات حول الملك، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-jobava-london-d00-jobava-london-5-be7",
+      "name": "Jobava London — 5...Be7",
+      "opening": "jobava-london",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Jobava London — (ECO D00) branches with the pawn move to h3 on move 6 and runs 18 plies to the bishop move to d7 on move 9. The line leads to a flexible queen-pawn structure with active pieces and a delayed central decision, and the final position is balanced.",
+      "ar": "يتفرّع خط Jobava London — (ECO D00) بنقلة البيدق إلى h3 في النقلة 6 ويمتد 18 نصف نقلة إلى نقلة الفيل إلى d7 في النقلة 9. ويؤدي الخط إلى بنية مرنة ببيدق الوزير مع قطع نشطة وتأجيل القرار المركزي، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-jobava-london-d00-jobava-london-4-bb4",
+      "name": "Jobava London — 4...Bb4+",
+      "opening": "jobava-london",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Jobava London — + (ECO D00) turns on the bishop move to b4 on move 4; the line runs 18 plies and closes with the bishop move to c7 on move 9. White should castle quickly, create tactical threats and use the active pieces before the structure be fixed, and the final position is balanced.",
+      "ar": "يقوم خط Jobava London — + (ECO D00) على نقلة الفيل إلى b4 في النقلة 4؛ ويمتد 18 نصف نقلة وينتهي بنقلة الفيل إلى c7 في النقلة 9. خطة الأبيض هي أن يحصّن بسرعة, ويصنع تهديدات تكتيكية، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-jobava-london-d00-jobava-london-6-nf3",
+      "name": "Jobava London — 6.Nf3",
+      "opening": "jobava-london",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Jobava London — (ECO D00) diverges with the knight move to f3 on move 6 and closes with the pawn move to c6 on move 9 after 18 plies. Black should challenge the centre and try to exploit the early commitment of White's pieces, and the final position is balanced.",
+      "ar": "يختلف خط Jobava London — (ECO D00) بنقلة الحصان إلى f3 في النقلة 6 وينتهي بنقلة البيدق إلى c6 في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن ينافس المركز ويحاول استغلال التزام قطع الأبيض المبكر، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-jobava-london-d00-jobava-london-4-a6",
+      "name": "Jobava London — 4...a6",
+      "opening": "jobava-london",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Jobava London — (ECO D00) branches with the pawn move to a6 on move 4 and runs 18 plies to the pawn move to e6 on move 9. The line leads to a flexible queen-pawn structure with active pieces and a delayed central decision, and the final position is balanced.",
+      "ar": "يتفرّع خط Jobava London — (ECO D00) بنقلة البيدق إلى a6 في النقلة 4 ويمتد 18 نصف نقلة إلى نقلة البيدق إلى e6 في النقلة 9. ويؤدي الخط إلى بنية مرنة ببيدق الوزير مع قطع نشطة وتأجيل القرار المركزي، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-jobava-london-d00-jobava-london-5-bg4",
+      "name": "Jobava London — 5...Bg4",
+      "opening": "jobava-london",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Jobava London — (ECO D00), the bishop move to g4 on move 5 is the branch point; play runs 18 plies and ends with the pawn move to e6 on move 9. The typical mistake is pushing the central pawn too early and leaving holes around the king, and the final position is balanced.",
+      "ar": "في خط Jobava London — (ECO D00) يكون نقلة الفيل إلى g4 في النقلة 5 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة البيدق إلى e6 في النقلة 9. الخطأ الشائع هو دفع البيدق المركزي مبكرًا وترك ثغرات حول الملك، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-jobava-london-d00-jobava-london-6-bb4",
+      "name": "Jobava London — 6...Bb4",
+      "opening": "jobava-london",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Jobava London — (ECO D00), the bishop move to b4 on move 6 is the branch point; play runs 18 plies and ends with the bishop move to a6 on move 9. The typical mistake is pushing the central pawn too early and leaving holes around the king, and the final position is balanced.",
+      "ar": "في خط Jobava London — (ECO D00) يكون نقلة الفيل إلى b4 في النقلة 6 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة الفيل إلى a6 في النقلة 9. الخطأ الشائع هو دفع البيدق المركزي مبكرًا وترك ثغرات حول الملك، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-bishops-opening-c23-bishops-opening-3-nc6",
+      "name": "Bishop's Opening — 3...Nc6",
+      "opening": "bishops-opening",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Bishop's Opening — (ECO C23) turns on the pawn move to h6 on move 4; the line runs 18 plies and closes with the bishop move to e7 on move 9. White should build a classical centre, and the final position is balanced.",
+      "ar": "يقوم خط Bishop's Opening — (ECO C23) على نقلة البيدق إلى h6 في النقلة 4؛ ويمتد 18 نصف نقلة وينتهي بنقلة الفيل إلى e7 في النقلة 9. خطة الأبيض هي أن يبني مركزًا كلاسيكيًا، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-bishops-opening-c23-bishops-opening-4-nc3",
+      "name": "Bishop's Opening — 4.Nc3",
+      "opening": "bishops-opening",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Bishop's Opening — (ECO C23), the queen move to f3 on move 5 is the branch point; play runs 18 plies and ends with the pawn move to c6 on move 9. The typical mistake is attacking the weak point before completing development and securing the centre, and the final position is balanced.",
+      "ar": "في خط Bishop's Opening — (ECO C23) يكون نقلة الملكة إلى f3 في النقلة 5 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة البيدق إلى c6 في النقلة 9. الخطأ الشائع هو مهاجمة النقطة الضعيفة قبل إكمال التطوير وتأمين المركز، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-bishops-opening-c23-bishops-opening-5-nge2",
+      "name": "Bishop's Opening — 5.Nge2",
+      "opening": "bishops-opening",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Bishop's Opening — (ECO C23) branches with the knight move to e2 on move 5 and runs 18 plies to the pawn move to c6 on move 9. The line leads to an open central structure with the bishop placed on a long diagonal, and the final position is balanced.",
+      "ar": "يتفرّع خط Bishop's Opening — (ECO C23) بنقلة الحصان إلى e2 في النقلة 5 ويمتد 18 نصف نقلة إلى نقلة البيدق إلى c6 في النقلة 9. ويؤدي الخط إلى بنية مركزية مفتوحة مع فيل على قطر طويل، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-bishops-opening-c23-bishops-opening-4-bb4",
+      "name": "Bishop's Opening — 4...Bb4",
+      "opening": "bishops-opening",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Bishop's Opening — (ECO C23), the bishop move to b4 on move 4 is the branch point; play runs 18 plies and ends with the rook move to e8 on move 9. The typical mistake is attacking the weak point before completing development and securing the centre, and the final position is balanced.",
+      "ar": "في خط Bishop's Opening — (ECO C23) يكون نقلة الفيل إلى b4 في النقلة 4 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة الرخ إلى e8 في النقلة 9. الخطأ الشائع هو مهاجمة النقطة الضعيفة قبل إكمال التطوير وتأمين المركز، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-bishops-opening-c23-bishops-opening-5-bd6",
+      "name": "Bishop's Opening — 5...Bd6",
+      "opening": "bishops-opening",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Bishop's Opening — (ECO C23) branches with the bishop move to d6 on move 5 and runs 18 plies to the knight move to c6 on move 9. The line leads to an open central structure with the bishop placed on a long diagonal, and the final position is balanced.",
+      "ar": "يتفرّع خط Bishop's Opening — (ECO C23) بنقلة الفيل إلى d6 في النقلة 5 ويمتد 18 نصف نقلة إلى نقلة الحصان إلى c6 في النقلة 9. ويؤدي الخط إلى بنية مركزية مفتوحة مع فيل على قطر طويل، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-bishops-opening-c23-bishops-opening-5-nc3",
+      "name": "Bishop's Opening — 5.Nc3",
+      "opening": "bishops-opening",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Bishop's Opening — (ECO C23) branches with the knight move to c3 on move 5 and runs 18 plies to short castling on move 9. The line leads to an open central structure with the bishop placed on a long diagonal, and the final position is balanced.",
+      "ar": "يتفرّع خط Bishop's Opening — (ECO C23) بنقلة الحصان إلى c3 في النقلة 5 ويمتد 18 نصف نقلة إلى التحصيل القصير في النقلة 9. ويؤدي الخط إلى بنية مركزية مفتوحة مع فيل على قطر طويل، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-bishops-opening-c23-bishops-opening-4-nc6",
+      "name": "Bishop's Opening — 4...Nc6",
+      "opening": "bishops-opening",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Bishop's Opening — (ECO C23) branches with the knight move to c6 on move 4 and runs 18 plies to the capture on c6 on move 9. The line leads to an open central structure with the bishop placed on a long diagonal, and the final position is balanced.",
+      "ar": "يتفرّع خط Bishop's Opening — (ECO C23) بنقلة الحصان إلى c6 في النقلة 4 ويمتد 18 نصف نقلة إلى التبادل على c6 في النقلة 9. ويؤدي الخط إلى بنية مركزية مفتوحة مع فيل على قطر طويل، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-bishops-opening-c23-bishops-opening-4-bb4-2",
+      "name": "Bishop's Opening — 4...Bb4 (2)",
+      "opening": "bishops-opening",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Bishop's Opening — (ECO C23) branches with the bishop move to b4 on move 4 and runs 18 plies to short castling on move 9. The line leads to an open central structure with the bishop placed on a long diagonal, and the final position is balanced.",
+      "ar": "يتفرّع خط Bishop's Opening — (ECO C23) بنقلة الفيل إلى b4 في النقلة 4 ويمتد 18 نصف نقلة إلى التحصيل القصير في النقلة 9. ويؤدي الخط إلى بنية مركزية مفتوحة مع فيل على قطر طويل، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-bishops-opening-c23-bishops-opening-4-bc5",
+      "name": "Bishop's Opening — 4...Bc5",
+      "opening": "bishops-opening",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Bishop's Opening — (ECO C23) turns on the knight move to c3 on move 5; the line runs 18 plies and closes with the bishop move to e6 on move 9. White should build a classical centre, and the final position is balanced.",
+      "ar": "يقوم خط Bishop's Opening — (ECO C23) على نقلة الحصان إلى c3 في النقلة 5؛ ويمتد 18 نصف نقلة وينتهي بنقلة الفيل إلى e6 في النقلة 9. خطة الأبيض هي أن يبني مركزًا كلاسيكيًا، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-bishops-opening-c23-bishops-opening-4-d6",
+      "name": "Bishop's Opening — 4...d6",
+      "opening": "bishops-opening",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Bishop's Opening — (ECO C23), the pawn move to d6 on move 4 is the branch point; play runs 18 plies and ends with the bishop move to g4 on move 9. The typical mistake is attacking the weak point before completing development and securing the centre, and the final position is balanced.",
+      "ar": "في خط Bishop's Opening — (ECO C23) يكون نقلة البيدق إلى d6 في النقلة 4 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة الفيل إلى g4 في النقلة 9. الخطأ الشائع هو مهاجمة النقطة الضعيفة قبل إكمال التطوير وتأمين المركز، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-bishops-opening-c23-bishops-opening-3-d3-2",
+      "name": "Bishop's Opening — 3.d3 (2)",
+      "opening": "bishops-opening",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Bishop's Opening — (ECO C23) branches with short castling on move 5 and runs 18 plies to the knight move to e7 on move 9. The line leads to an open central structure with the bishop placed on a long diagonal, and the final position is balanced.",
+      "ar": "يتفرّع خط Bishop's Opening — (ECO C23) بالتحصيل القصير في النقلة 5 ويمتد 18 نصف نقلة إلى نقلة الحصان إلى e7 في النقلة 9. ويؤدي الخط إلى بنية مركزية مفتوحة مع فيل على قطر طويل، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-bishops-opening-c23-bishops-opening-3-bc5-3",
+      "name": "Bishop's Opening — 3...Bc5 (3)",
+      "opening": "bishops-opening",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Bishop's Opening — (ECO C23) branches with the knight move to f3 on move 4 and runs 18 plies to the bishop move to b6 on move 9. The line leads to an open central structure with the bishop placed on a long diagonal, and the final position is balanced.",
+      "ar": "يتفرّع خط Bishop's Opening — (ECO C23) بنقلة الحصان إلى f3 في النقلة 4 ويمتد 18 نصف نقلة إلى نقلة الفيل إلى b6 في النقلة 9. ويؤدي الخط إلى بنية مركزية مفتوحة مع فيل على قطر طويل، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-bishops-opening-c23-bishops-opening-4-bb4-3",
+      "name": "Bishop's Opening — 4...Bb4 (3)",
+      "opening": "bishops-opening",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Bishop's Opening — (ECO C23), the bishop move to b4 on move 4 is the branch point; play runs 18 plies and ends with short castling on move 9. The typical mistake is attacking the weak point before completing development and securing the centre, and the final position is balanced.",
+      "ar": "في خط Bishop's Opening — (ECO C23) يكون نقلة الفيل إلى b4 في النقلة 4 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بالتحصيل القصير في النقلة 9. الخطأ الشائع هو مهاجمة النقطة الضعيفة قبل إكمال التطوير وتأمين المركز، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-bishops-opening-c23-bishops-opening-5-ne2",
+      "name": "Bishop's Opening — 5.Ne2",
+      "opening": "bishops-opening",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Bishop's Opening — (ECO C23) turns on the knight move to e2 on move 5; the line runs 18 plies and closes with short castling on move 9. White should build a classical centre, and the final position is balanced.",
+      "ar": "يقوم خط Bishop's Opening — (ECO C23) على نقلة الحصان إلى e2 في النقلة 5؛ ويمتد 18 نصف نقلة وينتهي بالتحصيل القصير في النقلة 9. خطة الأبيض هي أن يبني مركزًا كلاسيكيًا، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-bishops-opening-c23-bishops-opening-4-nc3-3",
+      "name": "Bishop's Opening — 4.Nc3 (3)",
+      "opening": "bishops-opening",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Bishop's Opening — (ECO C23), the knight move to c3 on move 4 is the branch point; play runs 18 plies and ends with the pawn move to a6 on move 9. The typical mistake is attacking the weak point before completing development and securing the centre, and the final position is balanced.",
+      "ar": "في خط Bishop's Opening — (ECO C23) يكون نقلة الحصان إلى c3 في النقلة 4 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة البيدق إلى a6 في النقلة 9. الخطأ الشائع هو مهاجمة النقطة الضعيفة قبل إكمال التطوير وتأمين المركز، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-bishops-opening-c23-bishops-opening-4-a3",
+      "name": "Bishop's Opening — 4.a3",
+      "opening": "bishops-opening",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Bishop's Opening — (ECO C23) turns on the pawn move to a3 on move 4; the line runs 18 plies and closes with short castling on move 9. White should build a classical centre, and the final position is balanced.",
+      "ar": "يقوم خط Bishop's Opening — (ECO C23) على نقلة البيدق إلى a3 في النقلة 4؛ ويمتد 18 نصف نقلة وينتهي بالتحصيل القصير في النقلة 9. خطة الأبيض هي أن يبني مركزًا كلاسيكيًا، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-ponziani-c44-ponziani-opening-6-bd6",
+      "name": "Ponziani Opening — 6...Bd6",
+      "opening": "ponziani",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Ponziani Opening — (ECO C44) turns on the bishop move to d6 on move 6; the line runs 18 plies and closes with the queen move to e8 on move 9. White should support the centre, and the final position is balanced.",
+      "ar": "يقوم خط Ponziani Opening — (ECO C44) على نقلة الفيل إلى d6 في النقلة 6؛ ويمتد 18 نصف نقلة وينتهي بنقلة الملكة إلى e8 في النقلة 9. خطة الأبيض هي أن يدعم المركز, ويطوّر فيله بنشاط، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-ponziani-c44-ponziani-opening-5-bc5",
+      "name": "Ponziani Opening — 5...Bc5",
+      "opening": "ponziani",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Ponziani Opening — (ECO C44) diverges with the bishop move to c5 on move 5 and closes with the capture on d5 on move 9 after 18 plies. Black should challenge the centre immediately and try to free the position with active piece play, and the final position is balanced.",
+      "ar": "يختلف خط Ponziani Opening — (ECO C44) بنقلة الفيل إلى c5 في النقلة 5 وينتهي بالتبادل على d5 في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن ينافس المركز فورًا ويحاول تحرير الوضع بلعب نشط بالقطع، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-ponziani-c44-ponziani-opening-4-d3-2",
+      "name": "Ponziani Opening — 4.d3 (2)",
+      "opening": "ponziani",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "In the Ponziani Opening — (ECO C44), the bishop move to e2 on move 6 is the branch point; play runs 18 plies and ends with the pawn move to d4 on move 9. The typical mistake is advancing the central pawn before the supporting pawn and bishop are ready, and the final position is balanced.",
+      "ar": "في خط Ponziani Opening — (ECO C44) يكون نقلة الفيل إلى e2 في النقلة 6 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة البيدق إلى d4 في النقلة 9. الخطأ الشائع هو تقديم البيدق المركزي قبل جاهزية البيدق الداعم والفيل، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-ponziani-c44-ponziani-opening-4-bd7",
+      "name": "Ponziani Opening — 4...Bd7",
+      "opening": "ponziani",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Ponziani Opening — (ECO C44) branches with the bishop move to d7 on move 4 and runs 18 plies to the bishop move to d6 on move 9. The line leads to a classical central pawn duo facing a solid black centre, and the final position is balanced.",
+      "ar": "يتفرّع خط Ponziani Opening — (ECO C44) بنقلة الفيل إلى d7 في النقلة 4 ويمتد 18 نصف نقلة إلى نقلة الفيل إلى d6 في النقلة 9. ويؤدي الخط إلى ثنائي بيادق مركزي كلاسيكي يواجه مركزًا أسود متينًا، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-ponziani-c44-ponziani-opening-6-o-o",
+      "name": "Ponziani Opening — 6...O-O",
+      "opening": "ponziani",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Ponziani Opening — (ECO C44) branches with short castling on move 6 and runs 18 plies to the knight move to e7 on move 9. The line leads to a classical central pawn duo facing a solid black centre, and the final position is balanced.",
+      "ar": "يتفرّع خط Ponziani Opening — (ECO C44) بالتحصيل القصير في النقلة 6 ويمتد 18 نصف نقلة إلى نقلة الحصان إلى e7 في النقلة 9. ويؤدي الخط إلى ثنائي بيادق مركزي كلاسيكي يواجه مركزًا أسود متينًا، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-ponziani-c44-ponziani-opening-5-qd5",
+      "name": "Ponziani Opening — 5...Qd5",
+      "opening": "ponziani",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Ponziani Opening — (ECO C44) branches with the queen move to d5 on move 5 and runs 18 plies to the bishop move to d6 on move 9. The line leads to a classical central pawn duo facing a solid black centre, and the final position is slightly better for White.",
+      "ar": "يتفرّع خط Ponziani Opening — (ECO C44) بنقلة الملكة إلى d5 في النقلة 5 ويمتد 18 نصف نقلة إلى نقلة الفيل إلى d6 في النقلة 9. ويؤدي الخط إلى ثنائي بيادق مركزي كلاسيكي يواجه مركزًا أسود متينًا، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "explorer-ponziani-c44-ponziani-opening-5-nf6",
+      "name": "Ponziani Opening — 5...Nf6",
+      "opening": "ponziani",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Ponziani Opening — (ECO C44) diverges with the knight move to f6 on move 5 and closes with the king move to f7 on move 9 after 18 plies. Black should challenge the centre immediately and try to free the position with active piece play, and the final position is slightly better for White.",
+      "ar": "يختلف خط Ponziani Opening — (ECO C44) بنقلة الحصان إلى f6 في النقلة 5 وينتهي بنقلة الملك إلى f7 في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن ينافس المركز فورًا ويحاول تحرير الوضع بلعب نشط بالقطع، والوضع النهائي يميل قليلًا لصالح الأبيض."
     },
     {
       "lineId": "lichess-queens-gambit-d52-queens-gambit-declined-cambridge-springs-defense-yugoslav-variation",
@@ -1423,6 +2054,70 @@
       ],
       "en": "Swedish Variation (ECO D33) is a 12-ply line that ends on the pawn move to c4 on move 6. The line leads to a closed queen-pawn structure that can become an isolated queen's pawn or a hanging-pawns position, and the final position is balanced.",
       "ar": "خط Swedish Variation (ECO D33) من 12 نصف نقلة ينتهي بنقلة البيدق إلى c4 في النقلة 6. ويؤدي الخط إلى بنية مغلقة ببيدق الوزير قد تتحول إلى بيدق وزير معزول أو وضع بيادق معلقة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-queens-gambit-accepted-d20-queens-gambit-accepted-5-nc6",
+      "name": "Queen's Gambit Accepted — 5...Nc6",
+      "opening": "queens-gambit-accepted",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "In the Queen's Gambit Accepted — (ECO D20), the bishop move to e6 on move 6 is the branch point; play runs 18 plies and ends with the queen move to d5 on move 9. The typical mistake is trying to hold the extra pawn too long and getting cramped, and the final position is balanced.",
+      "ar": "في خط Queen's Gambit Accepted — (ECO D20) يكون نقلة الفيل إلى e6 في النقلة 6 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة الملكة إلى d5 في النقلة 9. الخطأ الشائع هو محاولة الاحتفاظ بالبيدق الإضافي وقتًا طويلًا والتعرض للانحصار، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-queens-gambit-accepted-d20-queens-gambit-accepted-3-nf6",
+      "name": "Queen's Gambit Accepted — 3...Nf6",
+      "opening": "queens-gambit-accepted",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Queen's Gambit Accepted — (ECO D20) branches with the bishop move to b3 on move 6 and runs 18 plies to the bishop move to e7 on move 9. The line leads to an open queenside after the pawn capture, and the final position is balanced.",
+      "ar": "يتفرّع خط Queen's Gambit Accepted — (ECO D20) بنقلة الفيل إلى b3 في النقلة 6 ويمتد 18 نصف نقلة إلى نقلة الفيل إلى e7 في النقلة 9. ويؤدي الخط إلى جناح وزيري مفتوح بعد أخذ البيدق، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-queens-gambit-accepted-d20-queens-gambit-accepted-6-o-o",
+      "name": "Queen's Gambit Accepted — 6.O-O",
+      "opening": "queens-gambit-accepted",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Queen's Gambit Accepted — (ECO D20) branches with short castling on move 6 and runs 18 plies to the capture on d4 on move 9. The line leads to an open queenside after the pawn capture, and the final position is balanced.",
+      "ar": "يتفرّع خط Queen's Gambit Accepted — (ECO D20) بالتحصيل القصير في النقلة 6 ويمتد 18 نصف نقلة إلى التبادل على d4 في النقلة 9. ويؤدي الخط إلى جناح وزيري مفتوح بعد أخذ البيدق، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-queens-gambit-accepted-d20-queens-gambit-accepted-4-b5",
+      "name": "Queen's Gambit Accepted — 4...b5",
+      "opening": "queens-gambit-accepted",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Queen's Gambit Accepted — (ECO D20) branches with the pawn move to b5 on move 4 and runs 18 plies to the pawn move to c5 on move 9. The line leads to an open queenside after the pawn capture, and the final position is balanced.",
+      "ar": "يتفرّع خط Queen's Gambit Accepted — (ECO D20) بنقلة البيدق إلى b5 في النقلة 4 ويمتد 18 نصف نقلة إلى نقلة البيدق إلى c5 في النقلة 9. ويؤدي الخط إلى جناح وزيري مفتوح بعد أخذ البيدق، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-queens-gambit-accepted-d20-queens-gambit-accepted-5-nf6",
+      "name": "Queen's Gambit Accepted — 5...Nf6",
+      "opening": "queens-gambit-accepted",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Queen's Gambit Accepted — (ECO D20) diverges with the capture on e5 on move 6 and closes with the pawn move to a6 on move 9 after 18 plies. Black should return the pawn at the right moment and try to reach a comfortable equal position, and the final position is balanced.",
+      "ar": "يختلف خط Queen's Gambit Accepted — (ECO D20) بالتبادل على e5 في النقلة 6 وينتهي بنقلة البيدق إلى a6 في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن يعيد البيدق في الوقت المناسب ويحاول الوصول إلى وضع متعادل مريح، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-queens-gambit-accepted-d20-queens-gambit-accepted-6-bxc4",
+      "name": "Queen's Gambit Accepted — 6.Bxc4",
+      "opening": "queens-gambit-accepted",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Queen's Gambit Accepted — (ECO D20) diverges with the capture on c4 on move 6 and closes with the capture on e4 on move 9 after 18 plies. Black should return the pawn at the right moment and try to reach a comfortable equal position, and the final position is balanced.",
+      "ar": "يختلف خط Queen's Gambit Accepted — (ECO D20) بالتبادل على c4 في النقلة 6 وينتهي بالتبادل على e4 في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن يعيد البيدق في الوقت المناسب ويحاول الوصول إلى وضع متعادل مريح، والوضع النهائي متوازن."
     },
     {
       "lineId": "lichess-queens-gambit-accepted-d27-queens-gambit-accepted-classical-defense-main-line-2",
@@ -1924,6 +2619,70 @@
       "ar": "يقوم خط Sozin Attack (ECO B89) على نقلة الفيل إلى c4 في النقلة 6؛ ويمتد 20 نصف نقلة وينتهي بنقلة البيدق إلى b6 في النقلة 10. خطة الأبيض هي أن يستفيد من تفوق المساحة ويهاجم على الجناح الملكي أو في المركز قبل وصول هجوم الأسود المضاد، والوضع النهائي متوازن."
     },
     {
+      "lineId": "explorer-scandinavian-b01-scandinavian-defense-6-qd8",
+      "name": "Scandinavian Defense — 6...Qd8",
+      "opening": "scandinavian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Scandinavian Defense — (ECO B01) branches with the queen move to d8 on move 6 and runs 18 plies to the bishop move to g7 on move 9. The line leads to an open centre after the early pawn trade, and the final position is slightly better for White.",
+      "ar": "يتفرّع خط Scandinavian Defense — (ECO B01) بنقلة الملكة إلى d8 في النقلة 6 ويمتد 18 نصف نقلة إلى نقلة الفيل إلى g7 في النقلة 9. ويؤدي الخط إلى مركز مفتوح بعد تبادل البيادق المبكر، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "explorer-scandinavian-b01-scandinavian-defense-5-g6-3",
+      "name": "Scandinavian Defense — 5...g6 (3)",
+      "opening": "scandinavian",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Scandinavian Defense — (ECO B01), the pawn move to g6 on move 5 is the branch point; play runs 18 plies and ends with the knight move to c6 on move 9. The typical mistake is moving the queen repeatedly and falling behind in development, and the final position is slightly better for White.",
+      "ar": "في خط Scandinavian Defense — (ECO B01) يكون نقلة البيدق إلى g6 في النقلة 5 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة الحصان إلى c6 في النقلة 9. الخطأ الشائع هو تحريك الملكة مرارًا والتخلّف في التطوير، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "explorer-scandinavian-b01-scandinavian-defense-2-nc3",
+      "name": "Scandinavian Defense — 2.Nc3",
+      "opening": "scandinavian",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "In the Scandinavian Defense — (ECO B01), the capture on e4 on move 2 is the branch point; play runs 18 plies and ends with the queen move to f6 on move 9. The typical mistake is moving the queen repeatedly and falling behind in development, and the final position is balanced.",
+      "ar": "في خط Scandinavian Defense — (ECO B01) يكون التبادل على e4 في النقلة 2 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة الملكة إلى f6 في النقلة 9. الخطأ الشائع هو تحريك الملكة مرارًا والتخلّف في التطوير، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-scandinavian-b01-scandinavian-defense-3-e5",
+      "name": "Scandinavian Defense — 3...e5",
+      "opening": "scandinavian",
+      "reasons": [
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Scandinavian Defense — (ECO B01) diverges with the pawn move to e5 on move 3 and closes with the pawn move to c5 on move 9 after 18 plies. Black should develop the queen and bishop actively and try to reach a solid equal position, and the final position is slightly better for Black.",
+      "ar": "يختلف خط Scandinavian Defense — (ECO B01) بنقلة البيدق إلى e5 في النقلة 3 وينتهي بنقلة البيدق إلى c5 في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن يطوّر الملكة والفيل بنشاط ويحاول الوصول إلى وضع متعادل متين، والوضع النهائي يميل قليلًا لصالح الأسود."
+    },
+    {
+      "lineId": "explorer-pirc-b07-pirc-defense-5-nc6",
+      "name": "Pirc Defense — 5...Nc6",
+      "opening": "pirc",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Pirc Defense — (ECO B07) turns on the knight move to c6 on move 5; the line runs 18 plies and closes with the pawn move to e5 on move 9. White should build a broad centre and try to overrun Black before the counterattack land, and the final position is slightly better for White.",
+      "ar": "يقوم خط Pirc Defense — (ECO B07) على نقلة الحصان إلى c6 في النقلة 5؛ ويمتد 18 نصف نقلة وينتهي بنقلة البيدق إلى e5 في النقلة 9. خطة الأبيض هي أن يبني مركزًا عريضًا ويحاول اجتياح الأسود قبل وصول الهجوم المضاد، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "explorer-pirc-b07-pirc-defense-6-c6",
+      "name": "Pirc Defense — 6...c6",
+      "opening": "pirc",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Pirc Defense — (ECO B07) branches with the pawn move to c6 on move 6 and runs 18 plies to the knight move to d7 on move 9. The line leads to a flexible structure with a large White centre and Black's pieces aimed at it, and the final position is slightly better for White.",
+      "ar": "يتفرّع خط Pirc Defense — (ECO B07) بنقلة البيدق إلى c6 في النقلة 6 ويمتد 18 نصف نقلة إلى نقلة الحصان إلى d7 في النقلة 9. ويؤدي الخط إلى بنية مرنة بمركز أبيض كبير وقطع سوداء موجهة إليه، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
       "lineId": "lichess-kings-indian-e73-kings-indian-defense-averbakh-variation-flexible-defense",
       "name": "King's Indian Defense: Averbakh Variation, Flexible Defense",
       "opening": "kings-indian",
@@ -2077,6 +2836,126 @@
       "ar": "يختلف خط Steiner Attack (ECO E81) بنقلة البيدق إلى h6 في النقلة 8 وينتهي بالتبادل على h6 في النقلة 9 بعد 17 نصف نقلة. خطة الأسود هي أن يقدّم بيادق الجناح الملكي، والوضع النهائي متوازن."
     },
     {
+      "lineId": "explorer-dutch-a80-dutch-defense-3-d6",
+      "name": "Dutch Defense — 3...d6",
+      "opening": "dutch",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Dutch Defense — (ECO A80) branches with the pawn move to d6 on move 3 and runs 18 plies to the knight move to h5 on move 9. The line leads to a Dutch structure with an advanced kingside pawn and a possible central break, and the final position is balanced.",
+      "ar": "يتفرّع خط Dutch Defense — (ECO A80) بنقلة البيدق إلى d6 في النقلة 3 ويمتد 18 نصف نقلة إلى نقلة الحصان إلى h5 في النقلة 9. ويؤدي الخط إلى بنية هولندية ببيدق ملكي متقدم وكسر مركزي محتمل، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-dutch-a80-dutch-defense-3-g6",
+      "name": "Dutch Defense — 3...g6",
+      "opening": "dutch",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Dutch Defense — (ECO A80), the pawn move to g6 on move 3 is the branch point; play runs 18 plies and ends with the knight move to c6 on move 9. The typical mistake is weakening the king with the early pawn move without completing development, and the final position is slightly better for White.",
+      "ar": "في خط Dutch Defense — (ECO A80) يكون نقلة البيدق إلى g6 في النقلة 3 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة الحصان إلى c6 في النقلة 9. الخطأ الشائع هو إضعاف الملك بنقلة البيدق المبكرة دون إكمال التطوير، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "explorer-dutch-a80-dutch-defense-3-nf3",
+      "name": "Dutch Defense — 3.Nf3",
+      "opening": "dutch",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Dutch Defense — (ECO A80), the pawn move to g3 on move 4 is the branch point; play runs 18 plies and ends with the king move to h8 on move 9. The typical mistake is weakening the king with the early pawn move without completing development, and the final position is slightly better for White.",
+      "ar": "في خط Dutch Defense — (ECO A80) يكون نقلة البيدق إلى g3 في النقلة 4 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة الملك إلى h8 في النقلة 9. الخطأ الشائع هو إضعاف الملك بنقلة البيدق المبكرة دون إكمال التطوير، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "explorer-dutch-a80-dutch-defense-6-b3",
+      "name": "Dutch Defense — 6.b3",
+      "opening": "dutch",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Dutch Defense — (ECO A80) branches with the knight move to c6 on move 6 and runs 18 plies to the pawn move to g5 on move 9. The line leads to a Dutch structure with an advanced kingside pawn and a possible central break, and the final position is slightly better for White.",
+      "ar": "يتفرّع خط Dutch Defense — (ECO A80) بنقلة الحصان إلى c6 في النقلة 6 ويمتد 18 نصف نقلة إلى نقلة البيدق إلى g5 في النقلة 9. ويؤدي الخط إلى بنية هولندية ببيدق ملكي متقدم وكسر مركزي محتمل، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "explorer-dutch-a80-dutch-defense-4-nd2",
+      "name": "Dutch Defense — 4.Nd2",
+      "opening": "dutch",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Dutch Defense — (ECO A80), the knight move to d2 on move 4 is the branch point; play runs 18 plies and ends with the knight move to c6 on move 9. The typical mistake is weakening the king with the early pawn move without completing development, and the final position is balanced.",
+      "ar": "في خط Dutch Defense — (ECO A80) يكون نقلة الحصان إلى d2 في النقلة 4 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة الحصان إلى c6 في النقلة 9. الخطأ الشائع هو إضعاف الملك بنقلة البيدق المبكرة دون إكمال التطوير، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-dutch-a80-dutch-defense-5-nh3",
+      "name": "Dutch Defense — 5.Nh3",
+      "opening": "dutch",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Dutch Defense — (ECO A80), the knight move to h3 on move 5 is the branch point; play runs 18 plies and ends with the pawn move to b6 on move 9. The typical mistake is weakening the king with the early pawn move without completing development, and the final position is slightly better for White.",
+      "ar": "في خط Dutch Defense — (ECO A80) يكون نقلة الحصان إلى h3 في النقلة 5 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة البيدق إلى b6 في النقلة 9. الخطأ الشائع هو إضعاف الملك بنقلة البيدق المبكرة دون إكمال التطوير، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "explorer-dutch-a80-dutch-defense-3-bg5",
+      "name": "Dutch Defense — 3.Bg5",
+      "opening": "dutch",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Dutch Defense — (ECO A80) branches with the bishop move to g5 on move 3 and runs 18 plies to short castling on move 9. The line leads to a Dutch structure with an advanced kingside pawn and a possible central break, and the final position is balanced.",
+      "ar": "يتفرّع خط Dutch Defense — (ECO A80) بنقلة الفيل إلى g5 في النقلة 3 ويمتد 18 نصف نقلة إلى التحصيل القصير في النقلة 9. ويؤدي الخط إلى بنية هولندية ببيدق ملكي متقدم وكسر مركزي محتمل، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-dutch-a80-dutch-defense-2-d6",
+      "name": "Dutch Defense — 2...d6",
+      "opening": "dutch",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Dutch Defense — (ECO A80) turns on the pawn move to d6 on move 2; the line runs 18 plies and closes with the queen move to a5 on move 9. White should exploit the weakened enemy king and prepare a central or queenside advance, and the final position is slightly better for White.",
+      "ar": "يقوم خط Dutch Defense — (ECO A80) على نقلة البيدق إلى d6 في النقلة 2؛ ويمتد 18 نصف نقلة وينتهي بنقلة الملكة إلى a5 في النقلة 9. خطة الأبيض هي أن يستغل ملك الخصم المكشوف ويهيّئ تقدمًا مركزيًا أو وزيريًا، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "explorer-dutch-a80-dutch-defense-4-e3",
+      "name": "Dutch Defense — 4.e3",
+      "opening": "dutch",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Dutch Defense — (ECO A80) turns on the pawn move to e3 on move 4; the line runs 18 plies and closes with the pawn move to c6 on move 9. White should exploit the weakened enemy king and prepare a central or queenside advance, and the final position is slightly better for White.",
+      "ar": "يقوم خط Dutch Defense — (ECO A80) على نقلة البيدق إلى e3 في النقلة 4؛ ويمتد 18 نصف نقلة وينتهي بنقلة البيدق إلى c6 في النقلة 9. خطة الأبيض هي أن يستغل ملك الخصم المكشوف ويهيّئ تقدمًا مركزيًا أو وزيريًا، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "explorer-dutch-a80-dutch-defense-3-h3",
+      "name": "Dutch Defense — 3.h3",
+      "opening": "dutch",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Dutch Defense — (ECO A80), the pawn move to h3 on move 3 is the branch point; play runs 18 plies and ends with the knight move to e4 on move 9. The typical mistake is weakening the king with the early pawn move without completing development, and the final position is slightly better for White.",
+      "ar": "في خط Dutch Defense — (ECO A80) يكون نقلة البيدق إلى h3 في النقلة 3 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة الحصان إلى e4 في النقلة 9. الخطأ الشائع هو إضعاف الملك بنقلة البيدق المبكرة دون إكمال التطوير، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "explorer-dutch-a80-dutch-defense-3-e6-2",
+      "name": "Dutch Defense — 3...e6 (2)",
+      "opening": "dutch",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Dutch Defense — (ECO A80) diverges with the pawn move to e6 on move 3 and closes with the knight move to d7 on move 9 after 18 plies. Black should build a kingside attack and try to justify the early pawn commitment, and the final position is slightly better for White.",
+      "ar": "يختلف خط Dutch Defense — (ECO A80) بنقلة البيدق إلى e6 في النقلة 3 وينتهي بنقلة الحصان إلى d7 في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن يبني هجومًا ملكيًا ويحاول تبرير التزام البيدق المبكر، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
       "lineId": "lichess-dutch-a97-dutch-defense-classical-variation-ilyin-zhenevsky-variation-winter-variation",
       "name": "Dutch Defense: Classical Variation, Ilyin-Zhenevsky Variation, Winter Variation",
       "opening": "dutch",
@@ -2195,6 +3074,167 @@
       ],
       "en": "The Stoltz Variation (ECO D45) turns on the pawn move to e4 on move 7, the last move of the 13-ply line. White should pressure the centre, and the final position is balanced.",
       "ar": "يقوم خط Stoltz Variation (ECO D45) على نقلة البيدق إلى e4 في النقلة 7، وهي النقلة الأخيرة في خط من 13 نصف نقلة. خطة الأبيض هي أن يضغط على المركز، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-anti-london-d00-anti-london-system-4-nf6-2",
+      "name": "Anti-London System — 4...Nf6 (2)",
+      "opening": "anti-london",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Anti-London System — (ECO D00) branches with the bishop move to g4 on move 5 and runs 18 plies to the bishop move to e7 on move 9. The line leads to a closed central structure with Black's pawns pressing from the queenside, and the final position is balanced.",
+      "ar": "يتفرّع خط Anti-London System — (ECO D00) بنقلة الفيل إلى g4 في النقلة 5 ويمتد 18 نصف نقلة إلى نقلة الفيل إلى e7 في النقلة 9. ويؤدي الخط إلى بنية مركزية مغلقة ببيادق سوداء تضغط من الجناح الوزيري، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-anti-london-d00-anti-london-system-3-nf6",
+      "name": "Anti-London System — 3...Nf6",
+      "opening": "anti-london",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Anti-London System — (ECO D00) diverges with the knight move to f6 on move 3 and closes with the pawn move to g6 on move 9 after 18 plies. Black should pressure the central pawn and try to create queenside chances, and the final position is balanced.",
+      "ar": "يختلف خط Anti-London System — (ECO D00) بنقلة الحصان إلى f6 في النقلة 3 وينتهي بنقلة البيدق إلى g6 في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن يضغط على البيدق المركزي ويحاول صنع فرص وزيرية، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-anti-london-d00-anti-london-system-4-bf5",
+      "name": "Anti-London System — 4...Bf5",
+      "opening": "anti-london",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Anti-London System — (ECO D00) diverges with the knight move to d2 on move 6 and closes with the pawn move to e6 on move 9 after 18 plies. Black should pressure the central pawn and try to create queenside chances, and the final position is balanced.",
+      "ar": "يختلف خط Anti-London System — (ECO D00) بنقلة الحصان إلى d2 في النقلة 6 وينتهي بنقلة البيدق إلى e6 في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن يضغط على البيدق المركزي ويحاول صنع فرص وزيرية، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-anti-london-d00-anti-london-system-6-bg4",
+      "name": "Anti-London System — 6...Bg4",
+      "opening": "anti-london",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Anti-London System — (ECO D00) diverges with the bishop move to g4 on move 6 and closes with the bishop move to g7 on move 9 after 18 plies. Black should pressure the central pawn and try to create queenside chances, and the final position is balanced.",
+      "ar": "يختلف خط Anti-London System — (ECO D00) بنقلة الفيل إلى g4 في النقلة 6 وينتهي بنقلة الفيل إلى g7 في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن يضغط على البيدق المركزي ويحاول صنع فرص وزيرية، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-anti-london-d00-anti-london-system-4-cxd4",
+      "name": "Anti-London System — 4...cxd4",
+      "opening": "anti-london",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Anti-London System — (ECO D00) branches with the capture on d4 on move 4 and runs 18 plies to the pawn move to g5 on move 9. The line leads to a closed central structure with Black's pawns pressing from the queenside, and the final position is slightly better for Black.",
+      "ar": "يتفرّع خط Anti-London System — (ECO D00) بالتبادل على d4 في النقلة 4 ويمتد 18 نصف نقلة إلى نقلة البيدق إلى g5 في النقلة 9. ويؤدي الخط إلى بنية مركزية مغلقة ببيادق سوداء تضغط من الجناح الوزيري، والوضع النهائي يميل قليلًا لصالح الأسود."
+    },
+    {
+      "lineId": "explorer-anti-london-d00-anti-london-system-5-nd2",
+      "name": "Anti-London System — 5.Nd2",
+      "opening": "anti-london",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Anti-London System — (ECO D00) diverges with the queen move to b3 on move 6 and closes with the bishop move to e7 on move 9 after 18 plies. Black should pressure the central pawn and try to create queenside chances, and the final position is balanced.",
+      "ar": "يختلف خط Anti-London System — (ECO D00) بنقلة الملكة إلى b3 في النقلة 6 وينتهي بنقلة الفيل إلى e7 في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن يضغط على البيدق المركزي ويحاول صنع فرص وزيرية، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-anti-london-d00-anti-london-system-6-nf3-2",
+      "name": "Anti-London System — 6.Nf3 (2)",
+      "opening": "anti-london",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Anti-London System — (ECO D00) turns on the knight move to f3 on move 6; the line runs 18 plies and closes with the pawn move to g5 on move 9. White should keep the centre stable, and the final position is balanced.",
+      "ar": "يقوم خط Anti-London System — (ECO D00) على نقلة الحصان إلى f3 في النقلة 6؛ ويمتد 18 نصف نقلة وينتهي بنقلة البيدق إلى g5 في النقلة 9. خطة الأبيض هي أن يحافظ على استقرار المركز، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-anti-london-d00-anti-london-system-6-ngf3",
+      "name": "Anti-London System — 6.Ngf3",
+      "opening": "anti-london",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Anti-London System — (ECO D00) turns on the knight move to f3 on move 6; the line runs 18 plies and closes with the capture on g6 on move 9. White should keep the centre stable, and the final position is balanced.",
+      "ar": "يقوم خط Anti-London System — (ECO D00) على نقلة الحصان إلى f3 في النقلة 6؛ ويمتد 18 نصف نقلة وينتهي بالتبادل على g6 في النقلة 9. خطة الأبيض هي أن يحافظ على استقرار المركز، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-anti-london-d00-anti-london-system-6-nbd7",
+      "name": "Anti-London System — 6...Nbd7",
+      "opening": "anti-london",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Anti-London System — (ECO D00) branches with the knight move to d7 on move 6 and runs 18 plies to the bishop move to g7 on move 9. The line leads to a closed central structure with Black's pawns pressing from the queenside, and the final position is balanced.",
+      "ar": "يتفرّع خط Anti-London System — (ECO D00) بنقلة الحصان إلى d7 في النقلة 6 ويمتد 18 نصف نقلة إلى نقلة الفيل إلى g7 في النقلة 9. ويؤدي الخط إلى بنية مركزية مغلقة ببيادق سوداء تضغط من الجناح الوزيري، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-anti-london-d00-anti-london-system-3-e6-2",
+      "name": "Anti-London System — 3...e6 (2)",
+      "opening": "anti-london",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Anti-London System — (ECO D00) branches with the pawn move to e6 on move 3 and runs 18 plies to the queen move to b6 on move 9. The line leads to a closed central structure with Black's pawns pressing from the queenside, and the final position is balanced.",
+      "ar": "يتفرّع خط Anti-London System — (ECO D00) بنقلة البيدق إلى e6 في النقلة 3 ويمتد 18 نصف نقلة إلى نقلة الملكة إلى b6 في النقلة 9. ويؤدي الخط إلى بنية مركزية مغلقة ببيادق سوداء تضغط من الجناح الوزيري، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-petrov-c42-petrov-defense-3-nxe4",
+      "name": "Petrov Defense — 3...Nxe4",
+      "opening": "petrov",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "In the Petrov Defense — (ECO C42), the capture on e4 on move 3 is the branch point; play runs 18 plies and ends with the capture on e5 on move 9. The typical mistake is grabbing the advanced pawn and falling behind in development, and the final position is balanced.",
+      "ar": "في خط Petrov Defense — (ECO C42) يكون التبادل على e4 في النقلة 3 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بالتبادل على e5 في النقلة 9. الخطأ الشائع هو أخذ البيدق المتقدم والتخلّف في التطوير، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-petrov-c42-petrov-defense-4-nc6",
+      "name": "Petrov Defense — 4...Nc6",
+      "opening": "petrov",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Petrov Defense — (ECO C42) diverges with the knight move to c6 on move 4 and closes with short castling on move 9 after 18 plies. Black should equalise through active piece play and precise defence, and the final position is balanced.",
+      "ar": "يختلف خط Petrov Defense — (ECO C42) بنقلة الحصان إلى c6 في النقلة 4 وينتهي بالتحصيل القصير في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن يعادل بلعب نشط بالقطع ودفاع دقيق، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-petrov-c42-petrov-defense-6-nc3",
+      "name": "Petrov Defense — 6.Nc3",
+      "opening": "petrov",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "In the Petrov Defense — (ECO C42), the capture on c3 on move 6 is the branch point; play runs 18 plies and ends with the pawn move to c5 on move 9. The typical mistake is grabbing the advanced pawn and falling behind in development, and the final position is balanced.",
+      "ar": "في خط Petrov Defense — (ECO C42) يكون التبادل على c3 في النقلة 6 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة البيدق إلى c5 في النقلة 9. الخطأ الشائع هو أخذ البيدق المتقدم والتخلّف في التطوير، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-petrov-c42-petrov-defense-5-dxe5",
+      "name": "Petrov Defense — 5.dxe5",
+      "opening": "petrov",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Petrov Defense — (ECO C42) branches with the capture on e5 on move 5 and runs 18 plies to the knight move to c5 on move 9. The line leads to a symmetrical central structure with a possible early pawn trade, and the final position is slightly better for White.",
+      "ar": "يتفرّع خط Petrov Defense — (ECO C42) بالتبادل على e5 في النقلة 5 ويمتد 18 نصف نقلة إلى نقلة الحصان إلى c5 في النقلة 9. ويؤدي الخط إلى بنية مركزية متماثلة مع تبادل بيدق مبكر محتمل، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "explorer-petrov-c42-petrov-defense-6-c5",
+      "name": "Petrov Defense — 6...c5",
+      "opening": "petrov",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Petrov Defense — (ECO C42) turns on the pawn move to c5 on move 6; the line runs 18 plies and closes with the bishop move to e7 on move 9. White should avoid the symmetrical trade and try to keep a small initiative with active pieces, and the final position is balanced.",
+      "ar": "يقوم خط Petrov Defense — (ECO C42) على نقلة البيدق إلى c5 في النقلة 6؛ ويمتد 18 نصف نقلة وينتهي بنقلة الفيل إلى e7 في النقلة 9. خطة الأبيض هي أن يتجنب التبادل المتماثل ويحاول الاحتفاظ بمبادرة صغيرة بقطع نشطة، والوضع النهائي متوازن."
     },
     {
       "lineId": "lichess-petrov-c42-petrovs-defense-classical-attack-chigorin-variation-main-line",
@@ -2366,6 +3406,69 @@
       "ar": "في خط Closed (ECO E09) يكون نقلة الحصان إلى d2 في النقلة 8 نقطة التفرّع؛ ويمتد اللعب 20 نصف نقلة وينتهي بنقلة الفيل إلى a6 في النقلة 10. الخطأ الشائع هو تخفيف التوتر المركزي مبكرًا وفقدان مدى الفيل الطويل، والوضع النهائي يميل قليلًا لصالح الأبيض."
     },
     {
+      "lineId": "explorer-fried-liver-c57-fried-liver-attack-6-nxd4",
+      "name": "Fried Liver Attack — 6...Nxd4",
+      "opening": "fried-liver",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Fried Liver Attack — (ECO C57) turns on the capture on d4 on move 6; the line runs 18 plies and closes with the capture on f7 on move 9. White should use the exposed king and active pieces to build a direct attack, and the final position is slightly better for White.",
+      "ar": "يقوم خط Fried Liver Attack — (ECO C57) على التبادل على d4 في النقلة 6؛ ويمتد 18 نصف نقلة وينتهي بالتبادل على f7 في النقلة 9. خطة الأبيض هي أن يستفيد من الملك المكشوف والقطع النشطة لبناء هجوم مباشر، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "explorer-fried-liver-c57-fried-liver-attack-6-kf1",
+      "name": "Fried Liver Attack — 6.Kf1",
+      "opening": "fried-liver",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Fried Liver Attack — (ECO C57) turns on the king move to f1 on move 6; the line runs 18 plies and closes with the capture on d6 on move 9. White should use the exposed king and active pieces to build a direct attack, and the final position is slightly better for White.",
+      "ar": "يقوم خط Fried Liver Attack — (ECO C57) على نقلة الملك إلى f1 في النقلة 6؛ ويمتد 18 نصف نقلة وينتهي بالتبادل على d6 في النقلة 9. خطة الأبيض هي أن يستفيد من الملك المكشوف والقطع النشطة لبناء هجوم مباشر، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "explorer-fried-liver-c57-fried-liver-attack-6-qe8-2",
+      "name": "Fried Liver Attack — 6...Qe8 (2)",
+      "opening": "fried-liver",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Fried Liver Attack — (ECO C57) branches with the queen move to e8 on move 6 and runs 18 plies to the queen move to h5 on move 9. The line leads to an open centre with the enemy king exposed and pieces actively placed, and the final position is balanced.",
+      "ar": "يتفرّع خط Fried Liver Attack — (ECO C57) بنقلة الملكة إلى e8 في النقلة 6 ويمتد 18 نصف نقلة إلى نقلة الملكة إلى h5 في النقلة 9. ويؤدي الخط إلى مركز مفتوح بملك خصم مكشوف وقطع في مواقع نشطة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-fried-liver-c57-fried-liver-attack-6-bc4",
+      "name": "Fried Liver Attack — 6.Bc4",
+      "opening": "fried-liver",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Fried Liver Attack — (ECO C57) branches with the bishop move to c4 on move 6 and runs 18 plies to the rook move to f8 on move 9. The line leads to an open centre with the enemy king exposed and pieces actively placed, and the final position is slightly better for White.",
+      "ar": "يتفرّع خط Fried Liver Attack — (ECO C57) بنقلة الفيل إلى c4 في النقلة 6 ويمتد 18 نصف نقلة إلى نقلة الرخ إلى f8 في النقلة 9. ويؤدي الخط إلى مركز مفتوح بملك خصم مكشوف وقطع في مواقع نشطة، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "explorer-fried-liver-c57-fried-liver-attack-6-bd6",
+      "name": "Fried Liver Attack — 6...Bd6",
+      "opening": "fried-liver",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The Fried Liver Attack — (ECO C57) turns on the bishop move to d6 on move 6; the line runs 18 plies and closes with the capture on e4 on move 9. White should use the exposed king and active pieces to build a direct attack, and the final position is slightly better for White.",
+      "ar": "يقوم خط Fried Liver Attack — (ECO C57) على نقلة الفيل إلى d6 في النقلة 6؛ ويمتد 18 نصف نقلة وينتهي بالتبادل على e4 في النقلة 9. خطة الأبيض هي أن يستفيد من الملك المكشوف والقطع النشطة لبناء هجوم مباشر، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "explorer-fried-liver-c57-fried-liver-attack-6-bg4",
+      "name": "Fried Liver Attack — 6...Bg4",
+      "opening": "fried-liver",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Fried Liver Attack — (ECO C57) branches with the bishop move to g4 on move 6 and runs 18 plies to the bishop move to d6 on move 9. The line leads to an open centre with the enemy king exposed and pieces actively placed, and the final position is slightly better for White.",
+      "ar": "يتفرّع خط Fried Liver Attack — (ECO C57) بنقلة الفيل إلى g4 في النقلة 6 ويمتد 18 نصف نقلة إلى نقلة الفيل إلى d6 في النقلة 9. ويؤدي الخط إلى مركز مفتوح بملك خصم مكشوف وقطع في مواقع نشطة، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
       "lineId": "kia-open",
       "name": "KIA vs 1...e5",
       "opening": "kings-indian-attack",
@@ -2375,6 +3478,538 @@
       ],
       "en": "The KIA (ECO A07) turns on the pawn move to e5 on move 1; the line runs 12 plies and closes with short castling on move 6. White should castle, complete development and attack on the kingside, and the final position is balanced.",
       "ar": "يقوم خط KIA (ECO A07) على نقلة البيدق إلى e5 في النقلة 1؛ ويمتد 12 نصف نقلة وينتهي بالتحصيل القصير في النقلة 6. خطة الأبيض هي أن يحصّن , ويكمل تطويره، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-kings-indian-attack-a07-kings-indian-attack-3-dxc4",
+      "name": "King's Indian Attack — 3...dxc4",
+      "opening": "kings-indian-attack",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The King's Indian Attack — (ECO A07) turns on the capture on c4 on move 3; the line runs 18 plies and closes with the pawn move to h5 on move 9. White should castle, complete development and attack on the kingside, and the final position is balanced.",
+      "ar": "يقوم خط King's Indian Attack — (ECO A07) على التبادل على c4 في النقلة 3؛ ويمتد 18 نصف نقلة وينتهي بنقلة البيدق إلى h5 في النقلة 9. خطة الأبيض هي أن يحصّن , ويكمل تطويره، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-kings-indian-attack-a07-kings-indian-attack-5-c6",
+      "name": "King's Indian Attack — 5...c6",
+      "opening": "kings-indian-attack",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The King's Indian Attack — (ECO A07) turns on the pawn move to c6 on move 5; the line runs 18 plies and closes with the capture on c3 on move 9. White should castle, complete development and attack on the kingside, and the final position is balanced.",
+      "ar": "يقوم خط King's Indian Attack — (ECO A07) على نقلة البيدق إلى c6 في النقلة 5؛ ويمتد 18 نصف نقلة وينتهي بالتبادل على c3 في النقلة 9. خطة الأبيض هي أن يحصّن , ويكمل تطويره، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-kings-indian-attack-a07-kings-indian-attack-3-g6",
+      "name": "King's Indian Attack — 3...g6",
+      "opening": "kings-indian-attack",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "In the King's Indian Attack — (ECO A07), the pawn move to g6 on move 3 is the branch point; play runs 18 plies and ends with the bishop move to g4 on move 9. The typical mistake is advancing the central pawn too early and weakening the centre, and the final position is balanced.",
+      "ar": "في خط King's Indian Attack — (ECO A07) يكون نقلة البيدق إلى g6 في النقلة 3 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة الفيل إلى g4 في النقلة 9. الخطأ الشائع هو تقديم البيدق المركزي مبكرًا وإضعاف المركز، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-kings-indian-attack-a07-kings-indian-attack-5-c4-2",
+      "name": "King's Indian Attack — 5.c4 (2)",
+      "opening": "kings-indian-attack",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "King's Indian Attack — (ECO A07) branches with the pawn move to d4 on move 6 and runs 18 plies to the queen move to e8 on move 9. The line leads to a flexible structure with a central pawn and a fianchettoed bishop, and the final position is balanced.",
+      "ar": "يتفرّع خط King's Indian Attack — (ECO A07) بنقلة البيدق إلى d4 في النقلة 6 ويمتد 18 نصف نقلة إلى نقلة الملكة إلى e8 في النقلة 9. ويؤدي الخط إلى بنية مرنة ببيدق مركزي وفيل فيانكيتو، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-kings-indian-attack-a07-kings-indian-attack-5-d3-2",
+      "name": "King's Indian Attack — 5.d3 (2)",
+      "opening": "kings-indian-attack",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "King's Indian Attack — (ECO A07) diverges with the knight move to f6 on move 5 and closes with the bishop move to c5 on move 9 after 18 plies. Black should challenge the centre and try to create counterplay before the attack develop, and the final position is balanced.",
+      "ar": "يختلف خط King's Indian Attack — (ECO A07) بنقلة الحصان إلى f6 في النقلة 5 وينتهي بنقلة الفيل إلى c5 في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن ينافس المركز ويحاول صنع هجوم مضاد قبل تطور هجوم الأبيض، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-kings-indian-attack-a07-kings-indian-attack-5-e6",
+      "name": "King's Indian Attack — 5...e6",
+      "opening": "kings-indian-attack",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the King's Indian Attack — (ECO A07), the pawn move to e6 on move 5 is the branch point; play runs 18 plies and ends with the pawn move to a5 on move 9. The typical mistake is advancing the central pawn too early and weakening the centre, and the final position is balanced.",
+      "ar": "في خط King's Indian Attack — (ECO A07) يكون نقلة البيدق إلى e6 في النقلة 5 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة البيدق إلى a5 في النقلة 9. الخطأ الشائع هو تقديم البيدق المركزي مبكرًا وإضعاف المركز، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-kings-indian-attack-a07-kings-indian-attack-4-e6",
+      "name": "King's Indian Attack — 4...e6",
+      "opening": "kings-indian-attack",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "King's Indian Attack — (ECO A07) diverges with the pawn move to d3 on move 5 and closes with the knight move to d7 on move 9 after 18 plies. Black should challenge the centre and try to create counterplay before the attack develop, and the final position is balanced.",
+      "ar": "يختلف خط King's Indian Attack — (ECO A07) بنقلة البيدق إلى d3 في النقلة 5 وينتهي بنقلة الحصان إلى d7 في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن ينافس المركز ويحاول صنع هجوم مضاد قبل تطور هجوم الأبيض، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-kings-indian-attack-a07-kings-indian-attack-3-c4-2",
+      "name": "King's Indian Attack — 3.c4 (2)",
+      "opening": "kings-indian-attack",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "King's Indian Attack — (ECO A07) diverges with the pawn move to c4 on move 3 and closes with the bishop move to a6 on move 9 after 18 plies. Black should challenge the centre and try to create counterplay before the attack develop, and the final position is balanced.",
+      "ar": "يختلف خط King's Indian Attack — (ECO A07) بنقلة البيدق إلى c4 في النقلة 3 وينتهي بنقلة الفيل إلى a6 في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن ينافس المركز ويحاول صنع هجوم مضاد قبل تطور هجوم الأبيض، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-kings-indian-attack-a07-kings-indian-attack-4-d3",
+      "name": "King's Indian Attack — 4.d3",
+      "opening": "kings-indian-attack",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "King's Indian Attack — (ECO A07) branches with the pawn move to d3 on move 4 and runs 18 plies to the bishop move to c5 on move 9. The line leads to a flexible structure with a central pawn and a fianchettoed bishop, and the final position is balanced.",
+      "ar": "يتفرّع خط King's Indian Attack — (ECO A07) بنقلة البيدق إلى d3 في النقلة 4 ويمتد 18 نصف نقلة إلى نقلة الفيل إلى c5 في النقلة 9. ويؤدي الخط إلى بنية مرنة ببيدق مركزي وفيل فيانكيتو، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-kings-indian-attack-a07-kings-indian-attack-5-o-o",
+      "name": "King's Indian Attack — 5.O-O",
+      "opening": "kings-indian-attack",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "The King's Indian Attack — (ECO A07) turns on short castling on move 5; the line runs 18 plies and closes with the knight move to f6 on move 9. White should castle, complete development and attack on the kingside, and the final position is balanced.",
+      "ar": "يقوم خط King's Indian Attack — (ECO A07) على التحصيل القصير في النقلة 5؛ ويمتد 18 نصف نقلة وينتهي بنقلة الحصان إلى f6 في النقلة 9. خطة الأبيض هي أن يحصّن , ويكمل تطويره، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-kings-indian-attack-a07-kings-indian-attack-6-c4",
+      "name": "King's Indian Attack — 6.c4",
+      "opening": "kings-indian-attack",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "King's Indian Attack — (ECO A07) branches with the pawn move to c4 on move 6 and runs 18 plies to the capture on d5 on move 9. The line leads to a flexible structure with a central pawn and a fianchettoed bishop, and the final position is balanced.",
+      "ar": "يتفرّع خط King's Indian Attack — (ECO A07) بنقلة البيدق إلى c4 في النقلة 6 ويمتد 18 نصف نقلة إلى التبادل على d5 في النقلة 9. ويؤدي الخط إلى بنية مرنة ببيدق مركزي وفيل فيانكيتو، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-kings-indian-attack-a07-kings-indian-attack-2-nf6-2",
+      "name": "King's Indian Attack — 2...Nf6 (2)",
+      "opening": "kings-indian-attack",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "King's Indian Attack — (ECO A07) branches with the capture on e4 on move 4 and runs 18 plies to the queen move to e7 on move 9. The line leads to a flexible structure with a central pawn and a fianchettoed bishop, and the final position is balanced.",
+      "ar": "يتفرّع خط King's Indian Attack — (ECO A07) بالتبادل على e4 في النقلة 4 ويمتد 18 نصف نقلة إلى نقلة الملكة إلى e7 في النقلة 9. ويؤدي الخط إلى بنية مرنة ببيدق مركزي وفيل فيانكيتو، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-kings-indian-attack-a07-kings-indian-attack-2-b5",
+      "name": "King's Indian Attack — 2...b5",
+      "opening": "kings-indian-attack",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "King's Indian Attack — (ECO A07) diverges with the pawn move to b5 on move 2 and closes with the knight move to d7 on move 9 after 18 plies. Black should challenge the centre and try to create counterplay before the attack develop, and the final position is balanced.",
+      "ar": "يختلف خط King's Indian Attack — (ECO A07) بنقلة البيدق إلى b5 في النقلة 2 وينتهي بنقلة الحصان إلى d7 في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن ينافس المركز ويحاول صنع هجوم مضاد قبل تطور هجوم الأبيض، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-open-game-c44-open-game-6-bxc6-2",
+      "name": "Open Game — 6.Bxc6 (2)",
+      "opening": "open-game",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Open Game — (ECO C44) diverges with the capture on c6 on move 6 and closes with the capture on e4 on move 9 after 18 plies. Black should equalise with solid development and precise central play, and the final position is balanced.",
+      "ar": "يختلف خط Open Game — (ECO C44) بالتبادل على c6 في النقلة 6 وينتهي بالتبادل على e4 في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن يعادل بتطوير متين ولعب مركزي دقيق، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-open-game-c44-open-game-5-b5",
+      "name": "Open Game — 5...b5",
+      "opening": "open-game",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Open Game — (ECO C44) branches with the pawn move to b5 on move 5 and runs 18 plies to the pawn move to d6 on move 9. The line leads to an open central structure with rapid piece play and clear plans on both wings, and the final position is balanced.",
+      "ar": "يتفرّع خط Open Game — (ECO C44) بنقلة البيدق إلى b5 في النقلة 5 ويمتد 18 نصف نقلة إلى نقلة البيدق إلى d6 في النقلة 9. ويؤدي الخط إلى بنية مركزية مفتوحة مع لعب سريع بالقطع وخطط واضحة على الجناحين، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-open-game-c44-open-game-5-bc5",
+      "name": "Open Game — 5...Bc5",
+      "opening": "open-game",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Open Game — (ECO C44) turns on the bishop move to c5 on move 5; the line runs 18 plies and closes with the pawn move to h6 on move 9. White should use the open lines, and the final position is balanced.",
+      "ar": "يقوم خط Open Game — (ECO C44) على نقلة الفيل إلى c5 في النقلة 5؛ ويمتد 18 نصف نقلة وينتهي بنقلة البيدق إلى h6 في النقلة 9. خطة الأبيض هي أن يستخدم الخطوط المفتوحة والقطع النشطة والتطوير السريع لصنع الفرص، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-open-game-c44-open-game-6-d6",
+      "name": "Open Game — 6...d6",
+      "opening": "open-game",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Open Game — (ECO C44) branches with the pawn move to d6 on move 6 and runs 18 plies to the bishop move to f8 on move 9. The line leads to an open central structure with rapid piece play and clear plans on both wings, and the final position is balanced.",
+      "ar": "يتفرّع خط Open Game — (ECO C44) بنقلة البيدق إلى d6 في النقلة 6 ويمتد 18 نصف نقلة إلى نقلة الفيل إلى f8 في النقلة 9. ويؤدي الخط إلى بنية مركزية مفتوحة مع لعب سريع بالقطع وخطط واضحة على الجناحين، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-open-game-c44-open-game-6-bc5",
+      "name": "Open Game — 6...Bc5",
+      "opening": "open-game",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Open Game — (ECO C44) branches with the bishop move to c5 on move 6 and runs 18 plies to the capture on d4 on move 9. The line leads to an open central structure with rapid piece play and clear plans on both wings, and the final position is slightly better for White.",
+      "ar": "يتفرّع خط Open Game — (ECO C44) بنقلة الفيل إلى c5 في النقلة 6 ويمتد 18 نصف نقلة إلى التبادل على d4 في النقلة 9. ويؤدي الخط إلى بنية مركزية مفتوحة مع لعب سريع بالقطع وخطط واضحة على الجناحين، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "explorer-open-game-c44-open-game-6-a4",
+      "name": "Open Game — 6.a4",
+      "opening": "open-game",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Open Game — (ECO C44), the pawn move to a4 on move 6 is the branch point; play runs 18 plies and ends with the bishop move to e6 on move 9. The typical mistake is attacking before development is complete and the king is safe, and the final position is balanced.",
+      "ar": "في خط Open Game — (ECO C44) يكون نقلة البيدق إلى a4 في النقلة 6 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة الفيل إلى e6 في النقلة 9. الخطأ الشائع هو الهجوم قبل إكمال التطوير وتأمين الملك، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-open-game-c44-open-game-6-a5",
+      "name": "Open Game — 6...a5",
+      "opening": "open-game",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Open Game — (ECO C44) branches with the pawn move to a5 on move 6 and runs 18 plies to the bishop move to b8 on move 9. The line leads to an open central structure with rapid piece play and clear plans on both wings, and the final position is balanced.",
+      "ar": "يتفرّع خط Open Game — (ECO C44) بنقلة البيدق إلى a5 في النقلة 6 ويمتد 18 نصف نقلة إلى نقلة الفيل إلى b8 في النقلة 9. ويؤدي الخط إلى بنية مركزية مفتوحة مع لعب سريع بالقطع وخطط واضحة على الجناحين، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-open-game-c44-open-game-5-c3",
+      "name": "Open Game — 5.c3",
+      "opening": "open-game",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "In the Open Game — (ECO C44), the pawn move to d6 on move 5 is the branch point; play runs 18 plies and ends with short castling on move 9. The typical mistake is attacking before development is complete and the king is safe, and the final position is balanced.",
+      "ar": "في خط Open Game — (ECO C44) يكون نقلة البيدق إلى d6 في النقلة 5 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بالتحصيل القصير في النقلة 9. الخطأ الشائع هو الهجوم قبل إكمال التطوير وتأمين الملك، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-open-game-c44-open-game-6-a5-2",
+      "name": "Open Game — 6...a5 (2)",
+      "opening": "open-game",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Open Game — (ECO C44), the pawn move to a5 on move 6 is the branch point; play runs 18 plies and ends with the bishop move to e6 on move 9. The typical mistake is attacking before development is complete and the king is safe, and the final position is balanced.",
+      "ar": "في خط Open Game — (ECO C44) يكون نقلة البيدق إلى a5 في النقلة 6 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة الفيل إلى e6 في النقلة 9. الخطأ الشائع هو الهجوم قبل إكمال التطوير وتأمين الملك، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-open-game-c44-open-game-6-nbd2",
+      "name": "Open Game — 6.Nbd2",
+      "opening": "open-game",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Open Game — (ECO C44) branches with the knight move to d2 on move 6 and runs 18 plies to the bishop move to a7 on move 9. The line leads to an open central structure with rapid piece play and clear plans on both wings, and the final position is balanced.",
+      "ar": "يتفرّع خط Open Game — (ECO C44) بنقلة الحصان إلى d2 في النقلة 6 ويمتد 18 نصف نقلة إلى نقلة الفيل إلى a7 في النقلة 9. ويؤدي الخط إلى بنية مركزية مفتوحة مع لعب سريع بالقطع وخطط واضحة على الجناحين، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-open-game-c44-open-game-5-h6",
+      "name": "Open Game — 5...h6",
+      "opening": "open-game",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "In the Open Game — (ECO C44), the pawn move to h6 on move 5 is the branch point; play runs 18 plies and ends with short castling on move 9. The typical mistake is attacking before development is complete and the king is safe, and the final position is balanced.",
+      "ar": "في خط Open Game — (ECO C44) يكون نقلة البيدق إلى h6 في النقلة 5 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بالتحصيل القصير في النقلة 9. الخطأ الشائع هو الهجوم قبل إكمال التطوير وتأمين الملك، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-open-game-c44-open-game-5-d6",
+      "name": "Open Game — 5...d6",
+      "opening": "open-game",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "In the Open Game — (ECO C44), the pawn move to d6 on move 5 is the branch point; play runs 18 plies and ends with short castling on move 9. The typical mistake is attacking before development is complete and the king is safe, and the final position is balanced.",
+      "ar": "في خط Open Game — (ECO C44) يكون نقلة البيدق إلى d6 في النقلة 5 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بالتحصيل القصير في النقلة 9. الخطأ الشائع هو الهجوم قبل إكمال التطوير وتأمين الملك، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-vienna-gambit-c29-vienna-gambit-5-fxe5",
+      "name": "Vienna Gambit — 5.fxe5",
+      "opening": "vienna-gambit",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Vienna Gambit — (ECO C29) diverges with the capture on c3 on move 5 and closes with the queen move to h5 on move 9 after 18 plies. Black should challenge the centre and try to blunt the attack with accurate defence, and the final position is balanced.",
+      "ar": "يختلف خط Vienna Gambit — (ECO C29) بالتبادل على c3 في النقلة 5 وينتهي بنقلة الملكة إلى h5 في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن ينافس المركز ويحاول إضعاف الهجوم بدفاع دقيق، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-vienna-gambit-c29-vienna-gambit-4-exf4",
+      "name": "Vienna Gambit — 4...exf4",
+      "opening": "vienna-gambit",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Vienna Gambit — (ECO C29) branches with the pawn move to c6 on move 5 and runs 18 plies to the bishop move to b4 on move 9. The line leads to a tense central structure with an advanced kingside pawn and open lines, and the final position is balanced.",
+      "ar": "يتفرّع خط Vienna Gambit — (ECO C29) بنقلة البيدق إلى c6 في النقلة 5 ويمتد 18 نصف نقلة إلى نقلة الفيل إلى b4 في النقلة 9. ويؤدي الخط إلى بنية مركزية متوترة ببيدق ملكي متقدم وخطوط مفتوحة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-vienna-gambit-c29-vienna-gambit-6-qe2",
+      "name": "Vienna Gambit — 6.Qe2",
+      "opening": "vienna-gambit",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Vienna Gambit — (ECO C29), the queen move to e2 on move 6 is the branch point; play runs 18 plies and ends with the bishop move to e6 on move 9. The typical mistake is attacking before the king is safe and the centre is stable, and the final position is balanced.",
+      "ar": "في خط Vienna Gambit — (ECO C29) يكون نقلة الملكة إلى e2 في النقلة 6 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة الفيل إلى e6 في النقلة 9. الخطأ الشائع هو الهجوم قبل تأمين الملك واستقرار المركز، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-vienna-gambit-c29-vienna-gambit-3-d6",
+      "name": "Vienna Gambit — 3...d6",
+      "opening": "vienna-gambit",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Vienna Gambit — (ECO C29) diverges with the capture on f4 on move 4 and closes with the bishop move to g4 on move 9 after 18 plies. Black should challenge the centre and try to blunt the attack with accurate defence, and the final position is slightly better for Black.",
+      "ar": "يختلف خط Vienna Gambit — (ECO C29) بالتبادل على f4 في النقلة 4 وينتهي بنقلة الفيل إلى g4 في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن ينافس المركز ويحاول إضعاف الهجوم بدفاع دقيق، والوضع النهائي يميل قليلًا لصالح الأسود."
+    },
+    {
+      "lineId": "explorer-vienna-gambit-c29-vienna-gambit-5-qh4",
+      "name": "Vienna Gambit — 5...Qh4+",
+      "opening": "vienna-gambit",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Vienna Gambit — + (ECO C29) turns on the queen move to h4 on move 5; the line runs 18 plies and closes with the capture on e2 on move 9. White should open the kingside files and attack before Black can organise a defence, and the final position is balanced.",
+      "ar": "يقوم خط Vienna Gambit — + (ECO C29) على نقلة الملكة إلى h4 في النقلة 5؛ ويمتد 18 نصف نقلة وينتهي بالتبادل على e2 في النقلة 9. خطة الأبيض هي أن يفتح أعمدة الجناح الملكي ويهاجم قبل أن ينظّم الأسود دفاعه، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-vienna-gambit-c29-vienna-gambit-5-nbd7",
+      "name": "Vienna Gambit — 5...Nbd7",
+      "opening": "vienna-gambit",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Vienna Gambit — (ECO C29), the bishop move to d6 on move 6 is the branch point; play runs 18 plies and ends with the pawn move to h6 on move 9. The typical mistake is attacking before the king is safe and the centre is stable, and the final position is balanced.",
+      "ar": "في خط Vienna Gambit — (ECO C29) يكون نقلة الفيل إلى d6 في النقلة 6 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة البيدق إلى h6 في النقلة 9. الخطأ الشائع هو الهجوم قبل تأمين الملك واستقرار المركز، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-vienna-gambit-c29-vienna-gambit-6-nf3",
+      "name": "Vienna Gambit — 6.Nf3",
+      "opening": "vienna-gambit",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Vienna Gambit — (ECO C29) diverges with the knight move to f3 on move 6 and closes with the capture on f3 on move 9 after 18 plies. Black should challenge the centre and try to blunt the attack with accurate defence, and the final position is balanced.",
+      "ar": "يختلف خط Vienna Gambit — (ECO C29) بنقلة الحصان إلى f3 في النقلة 6 وينتهي بالتبادل على f3 في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن ينافس المركز ويحاول إضعاف الهجوم بدفاع دقيق، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-vienna-gambit-c29-vienna-gambit-5-be7",
+      "name": "Vienna Gambit — 5...Be7",
+      "opening": "vienna-gambit",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Vienna Gambit — (ECO C29) branches with the bishop move to e7 on move 5 and runs 18 plies to the pawn move to c5 on move 9. The line leads to a tense central structure with an advanced kingside pawn and open lines, and the final position is balanced.",
+      "ar": "يتفرّع خط Vienna Gambit — (ECO C29) بنقلة الفيل إلى e7 في النقلة 5 ويمتد 18 نصف نقلة إلى نقلة البيدق إلى c5 في النقلة 9. ويؤدي الخط إلى بنية مركزية متوترة ببيدق ملكي متقدم وخطوط مفتوحة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-vienna-gambit-c29-vienna-gambit-5-nc6-2",
+      "name": "Vienna Gambit — 5...Nc6 (2)",
+      "opening": "vienna-gambit",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Vienna Gambit — (ECO C29) diverges with the knight move to c6 on move 5 and closes with the knight move to e7 on move 9 after 18 plies. Black should challenge the centre and try to blunt the attack with accurate defence, and the final position is clearly better for White.",
+      "ar": "يختلف خط Vienna Gambit — (ECO C29) بنقلة الحصان إلى c6 في النقلة 5 وينتهي بنقلة الحصان إلى e7 في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن ينافس المركز ويحاول إضعاف الهجوم بدفاع دقيق، والوضع النهائي أفضل بوضوح للأبيض."
+    },
+    {
+      "lineId": "explorer-white-vs-caro-kann-b10-white-vs-the-caro-kann-4-nf6",
+      "name": "White vs the Caro-Kann — 4...Nf6",
+      "opening": "white-vs-caro-kann",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "White vs the Caro-Kann — (ECO B10) branches with the knight move to f6 on move 4 and runs 18 plies to the bishop move to d6 on move 9. The line leads to a solid central structure with White holding more space, and the final position is balanced.",
+      "ar": "يتفرّع خط White vs the Caro-Kann — (ECO B10) بنقلة الحصان إلى f6 في النقلة 4 ويمتد 18 نصف نقلة إلى نقلة الفيل إلى d6 في النقلة 9. ويؤدي الخط إلى بنية مركزية متينة يملك فيها الأبيض مساحة أكبر، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-white-vs-caro-kann-b10-white-vs-the-caro-kann-5-c5",
+      "name": "White vs the Caro-Kann — 5...c5",
+      "opening": "white-vs-caro-kann",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "In the White vs the Caro-Kann — (ECO B10), short castling on move 6 is the branch point; play runs 18 plies and ends with the capture on f5 on move 9. The typical mistake is overextending before completing development, and the final position is balanced.",
+      "ar": "في خط White vs the Caro-Kann — (ECO B10) يكون التحصيل القصير في النقلة 6 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بالتبادل على f5 في النقلة 9. الخطأ الشائع هو التوسع الزائد قبل إكمال التطوير، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-white-vs-caro-kann-b10-white-vs-the-caro-kann-5-bb4",
+      "name": "White vs the Caro-Kann — 5...Bb4+",
+      "opening": "white-vs-caro-kann",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The White vs the Caro-Kann — + (ECO B10) turns on the bishop move to b4 on move 5; the line runs 18 plies and closes with the pawn move to f6 on move 9. White should build a space advantage, and the final position is balanced.",
+      "ar": "يقوم خط White vs the Caro-Kann — + (ECO B10) على نقلة الفيل إلى b4 في النقلة 5؛ ويمتد 18 نصف نقلة وينتهي بنقلة البيدق إلى f6 في النقلة 9. خطة الأبيض هي أن يبني تفوقًا في المساحة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-white-vs-caro-kann-b10-white-vs-the-caro-kann-6-a6",
+      "name": "White vs the Caro-Kann — 6...a6",
+      "opening": "white-vs-caro-kann",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the White vs the Caro-Kann — (ECO B10), the pawn move to a6 on move 6 is the branch point; play runs 18 plies and ends with the pawn move to c4 on move 9. The typical mistake is overextending before completing development, and the final position is balanced.",
+      "ar": "في خط White vs the Caro-Kann — (ECO B10) يكون نقلة البيدق إلى a6 في النقلة 6 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة البيدق إلى c4 في النقلة 9. الخطأ الشائع هو التوسع الزائد قبل إكمال التطوير، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-white-vs-caro-kann-b10-white-vs-the-caro-kann-4-c5",
+      "name": "White vs the Caro-Kann — 4...c5",
+      "opening": "white-vs-caro-kann",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "White vs the Caro-Kann — (ECO B10) diverges with the pawn move to c5 on move 4 and closes with the knight move to h6 on move 9 after 18 plies. Black should develop solidly and challenge the centre at the right moment, and the final position is slightly better for White.",
+      "ar": "يختلف خط White vs the Caro-Kann — (ECO B10) بنقلة البيدق إلى c5 في النقلة 4 وينتهي بنقلة الحصان إلى h6 في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن يطوّر بثبات وينافس المركز في اللحظة المناسبة، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "explorer-white-vs-caro-kann-b10-white-vs-the-caro-kann-4-nf6-2",
+      "name": "White vs the Caro-Kann — 4...Nf6 (2)",
+      "opening": "white-vs-caro-kann",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the White vs the Caro-Kann — (ECO B10), the knight move to f6 on move 4 is the branch point; play runs 18 plies and ends with the pawn move to h5 on move 9. The typical mistake is overextending before completing development, and the final position is balanced.",
+      "ar": "في خط White vs the Caro-Kann — (ECO B10) يكون نقلة الحصان إلى f6 في النقلة 4 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بنقلة البيدق إلى h5 في النقلة 9. الخطأ الشائع هو التوسع الزائد قبل إكمال التطوير، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-white-vs-caro-kann-b10-white-vs-the-caro-kann-5-nf3",
+      "name": "White vs the Caro-Kann — 5.Nf3",
+      "opening": "white-vs-caro-kann",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "White vs the Caro-Kann — (ECO B10) branches with the knight move to f3 on move 5 and runs 18 plies to the queen move to d5 on move 9. The line leads to a solid central structure with White holding more space, and the final position is balanced.",
+      "ar": "يتفرّع خط White vs the Caro-Kann — (ECO B10) بنقلة الحصان إلى f3 في النقلة 5 ويمتد 18 نصف نقلة إلى نقلة الملكة إلى d5 في النقلة 9. ويؤدي الخط إلى بنية مركزية متينة يملك فيها الأبيض مساحة أكبر، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-white-vs-caro-kann-b10-white-vs-the-caro-kann-6-nf3",
+      "name": "White vs the Caro-Kann — 6.Nf3",
+      "opening": "white-vs-caro-kann",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The White vs the Caro-Kann — (ECO B10) turns on the knight move to f3 on move 6; the line runs 18 plies and closes with short castling on move 9. White should build a space advantage, and the final position is balanced.",
+      "ar": "يقوم خط White vs the Caro-Kann — (ECO B10) على نقلة الحصان إلى f3 في النقلة 6؛ ويمتد 18 نصف نقلة وينتهي بالتحصيل القصير في النقلة 9. خطة الأبيض هي أن يبني تفوقًا في المساحة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-white-vs-caro-kann-b10-white-vs-the-caro-kann-3-g6",
+      "name": "White vs the Caro-Kann — 3...g6",
+      "opening": "white-vs-caro-kann",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "White vs the Caro-Kann — (ECO B10) branches with the pawn move to g6 on move 3 and runs 18 plies to the knight move to c6 on move 9. The line leads to a solid central structure with White holding more space, and the final position is balanced.",
+      "ar": "يتفرّع خط White vs the Caro-Kann — (ECO B10) بنقلة البيدق إلى g6 في النقلة 3 ويمتد 18 نصف نقلة إلى نقلة الحصان إلى c6 في النقلة 9. ويؤدي الخط إلى بنية مركزية متينة يملك فيها الأبيض مساحة أكبر، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-white-vs-caro-kann-b10-white-vs-the-caro-kann-4-nc3",
+      "name": "White vs the Caro-Kann — 4.Nc3",
+      "opening": "white-vs-caro-kann",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "White vs the Caro-Kann — (ECO B10) diverges with the pawn move to e6 on move 4 and closes with the knight move to c6 on move 9 after 18 plies. Black should develop solidly and challenge the centre at the right moment, and the final position is balanced.",
+      "ar": "يختلف خط White vs the Caro-Kann — (ECO B10) بنقلة البيدق إلى e6 في النقلة 4 وينتهي بنقلة الحصان إلى c6 في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن يطوّر بثبات وينافس المركز في اللحظة المناسبة، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-englund-gambit-a40-englund-gambit-5-e3",
+      "name": "Englund Gambit — 5.e3",
+      "opening": "englund-gambit",
+      "reasons": [
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "The Englund Gambit — (ECO A40) turns on the pawn move to e3 on move 5; the line runs 18 plies and closes with the queen move to g5 on move 9. White should accept the pawn, and the final position is balanced.",
+      "ar": "يقوم خط Englund Gambit — (ECO A40) على نقلة البيدق إلى e3 في النقلة 5؛ ويمتد 18 نصف نقلة وينتهي بنقلة الملكة إلى g5 في النقلة 9. خطة الأبيض هي أن يقبل البيدق, ويحصّن وضعه، والوضع النهائي متوازن."
+    },
+    {
+      "lineId": "explorer-englund-gambit-a40-englund-gambit-4-nc3-3",
+      "name": "Englund Gambit — 4.Nc3 (3)",
+      "opening": "englund-gambit",
+      "reasons": [
+        "near-duplicate English explanation"
+      ],
+      "en": "Englund Gambit — (ECO A40) branches with the knight move to c3 on move 4 and runs 18 plies to the capture on d6 on move 9. The line leads to an open centre with a temporary material imbalance and active pieces, and the final position is with a large advantage for White.",
+      "ar": "يتفرّع خط Englund Gambit — (ECO A40) بنقلة الحصان إلى c3 في النقلة 4 ويمتد 18 نصف نقلة إلى التبادل على d6 في النقلة 9. ويؤدي الخط إلى مركز مفتوح مع اختلال مؤقت في المادة وقطع نشطة، والوضع النهائي بتفوق كبير للأبيض."
+    },
+    {
+      "lineId": "explorer-englund-gambit-a40-englund-gambit-6-nc3",
+      "name": "Englund Gambit — 6.Nc3",
+      "opening": "englund-gambit",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Englund Gambit — (ECO A40) diverges with the knight move to c3 on move 6 and closes with the bishop move to h5 on move 9 after 18 plies. Black should develop quickly and attack the centre before White consolidate, and the final position is slightly better for White.",
+      "ar": "يختلف خط Englund Gambit — (ECO A40) بنقلة الحصان إلى c3 في النقلة 6 وينتهي بنقلة الفيل إلى h5 في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن يطوّر بسرعة ويهاجم المركز قبل أن يحصّن الأبيض وضعه، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "explorer-englund-gambit-a40-englund-gambit-5-nd5",
+      "name": "Englund Gambit — 5.Nd5",
+      "opening": "englund-gambit",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Englund Gambit — (ECO A40) diverges with the knight move to d5 on move 5 and closes with the knight move to e7 on move 9 after 18 plies. Black should develop quickly and attack the centre before White consolidate, and the final position is slightly better for White.",
+      "ar": "يختلف خط Englund Gambit — (ECO A40) بنقلة الحصان إلى d5 في النقلة 5 وينتهي بنقلة الحصان إلى e7 في النقلة 9 بعد 18 نصف نقلة. خطة الأسود هي أن يطوّر بسرعة ويهاجم المركز قبل أن يحصّن الأبيض وضعه، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "explorer-englund-gambit-a40-englund-gambit-5-c6",
+      "name": "Englund Gambit — 5...c6",
+      "opening": "englund-gambit",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "Englund Gambit — (ECO A40) branches with the bishop move to e2 on move 6 and runs 18 plies to the capture on f4 on move 9. The line leads to an open centre with a temporary material imbalance and active pieces, and the final position is slightly better for White.",
+      "ar": "يتفرّع خط Englund Gambit — (ECO A40) بنقلة الفيل إلى e2 في النقلة 6 ويمتد 18 نصف نقلة إلى التبادل على f4 في النقلة 9. ويؤدي الخط إلى مركز مفتوح مع اختلال مؤقت في المادة وقطع نشطة، والوضع النهائي يميل قليلًا لصالح الأبيض."
+    },
+    {
+      "lineId": "explorer-englund-gambit-a40-englund-gambit-5-bf4",
+      "name": "Englund Gambit — 5.Bf4",
+      "opening": "englund-gambit",
+      "reasons": [
+        "near-duplicate English explanation",
+        "near-duplicate Arabic explanation"
+      ],
+      "en": "In the Englund Gambit — (ECO A40), the bishop move to f4 on move 5 is the branch point; play runs 18 plies and ends with long castling on move 9. The typical mistake is grabbing too many pawns and falling behind in development, and the final position is slightly better for White.",
+      "ar": "في خط Englund Gambit — (ECO A40) يكون نقلة الفيل إلى f4 في النقلة 5 نقطة التفرّع؛ ويمتد اللعب 18 نصف نقلة وينتهي بالتحصيل الطويل في النقلة 9. الخطأ الشائع هو جمع الكثير من البيادق والتخلّف في التطوير، والوضع النهائي يميل قليلًا لصالح الأبيض."
     }
   ]
 }
