@@ -2,7 +2,7 @@
 
 A chess-opening trainer with **30 courses**, **1,793 named lines** and
 **28,067 explained moves**. Every course is curated into a **20–60 line study
-set** with Beginner, Intermediate and Advanced stages; the full named-line tree
+set** with Beginner, Intermediate and Advanced levels; the full named-line tree
 stays available behind **Show all lines**.
 
 This is a learning tool, not an engine: the value is in the explanations.
@@ -24,8 +24,9 @@ Licensed under the [MIT License](LICENSE).
   Petrov, Fried Liver, KIA, Open Game, Vienna Gambit, White vs the Caro-Kann
   and the Englund Gambit.
 - **Study levels.** Each course is curated into 22–60 genuinely different
-  lines, shown as Beginner → Intermediate → Advanced. Extra named branches stay
-  one click away behind **Show all lines**, so nothing and no progress is lost.
+  lines, split into separate Beginner, Intermediate and Advanced bands. Extra
+  named branches stay one click away behind **Show all lines**, so nothing and
+  no progress is lost.
 - **One idea per move.** Every one of the 28,067 plies has a single short
   explanation and one highlighted destination square. The English course also
   has 71 deeper, colour-coded notes.
@@ -173,9 +174,11 @@ under the board in the app with an `auto-generated` badge and a local
 
 ### Study levels and the curated set
 
-Every course shows a **Beginner**, **Intermediate** and **Advanced** stage.
-The stages are cumulative: each one adds deeper lines to the previous stage,
-so a reader never loses a line when moving up.
+Every course shows a **Beginner**, **Intermediate** and **Advanced** level.
+The levels are separate bands: each curated line belongs to exactly one level,
+so choosing Intermediate hides the beginner lines instead of repeating them.
+**Show all lines** reveals the whole course, including lines outside the
+curated set.
 
 `npm run curate` picks the study set deterministically: at least 12 plies per
 line, no two lines may reach the same position, no two lines may share their
@@ -361,7 +364,7 @@ scripts/
   import-lichess-lines.ts  TSV -> named-line JSON converter
   validate-lines.ts        line/idea/shape/source validator
   validate-ideas.ts        parent notes + generated line-note gate
-  validate-curation.ts     curated-set and cumulative-tier gate
+  validate-curation.ts     curated-set and per-level tier gate
   generate-ideas.ts        writes data/line-ideas.json from line facts
   curate.ts                picks the diverse 20–60 line study set
   expand-courses.ts        mines real Lichess master games for small courses
@@ -373,7 +376,7 @@ data/
   parent-ideas.json        hand-written notes for all 30 courses (EN + AR)
   line-ideas.json          accepted per-line notes (generated)
   line-evals.json          Stockfish final-position cache (generated)
-  curation.json            curated line ids and cumulative study tiers
+  curation.json            curated line ids and their study level
   extra-lines.json         master-game lines for the small courses (generated)
   progress.json            shared progress (git-ignored, created on first save)
   progress.backup.json     local backup before a progress reset (git-ignored)

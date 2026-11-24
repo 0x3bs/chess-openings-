@@ -1,9 +1,9 @@
 /**
  * Curation gate.
  *
- * Fails if a course has no curated study set, if the beginner → intermediate →
- * advanced stages are not cumulative, if a curated line is too short, or if two
- * curated lines are still move-order twins / share their first twelve plies.
+ * Fails if a course has no curated study set, if a level is empty or the level
+ * counts do not match the curated lines, if a curated line is too short, or if
+ * two curated lines are still move-order twins / share their first twelve plies.
  *
  * Run with `npm run validate:curation` (also part of `npm run check`).
  */
@@ -78,21 +78,18 @@ for (const opening of openings) {
     }
   }
 
-  // Each line gets exactly one tier; the course view is cumulative, so check
-  // the running totals rather than the disjoint per-tier counts.
-  const running = {
-    beginner: tierCount.beginner,
-    intermediate: tierCount.beginner + tierCount.intermediate,
-    advanced:
-      tierCount.beginner + tierCount.intermediate + tierCount.advanced,
-  };
-  const cumulative =
-    running.beginner > 0 &&
-    running.intermediate > running.beginner &&
-    running.advanced > running.intermediate;
-  if (!cumulative) {
+  // Each line gets exactly one tier and the level tabs are separate bands, so
+  // every level must contain at least one line and the counts must add up.
+  const emptyTiers = TIERS.filter((tier) => tierCount[tier] === 0);
+  const sum = TIERS.reduce((total, tier) => total + tierCount[tier], 0);
+  if (emptyTiers.length) {
     fail(
-      `${opening.slug}: tiers are not cumulative (${TIERS.map((tier) => `${tier}=${running[tier]}`).join(", ")})`,
+      `${opening.slug}: empty level(s) ${emptyTiers.join(", ")} (${TIERS.map((tier) => `${tier}=${tierCount[tier]}`).join(", ")})`,
+    );
+  }
+  if (sum !== curated.length) {
+    fail(
+      `${opening.slug}: level counts add up to ${sum}, expected ${curated.length}`,
     );
   }
 
@@ -147,4 +144,4 @@ console.log(
 console.log(
   `Tier split: beginner ${tierTotals.beginner}, intermediate ${tierTotals.intermediate}, advanced ${tierTotals.advanced}.`,
 );
-console.log("✓ Every course has a diverse, cumulative study set.");
+console.log("✓ Every course has three non-empty, disjoint study levels.");

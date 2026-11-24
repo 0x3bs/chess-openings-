@@ -1,6 +1,6 @@
 /**
- * Pick a small, diverse study set for every course and a cumulative difficulty
- * tier for each line.
+ * Pick a small, diverse study set for every course and put each line in one of
+ * three separate difficulty levels.
  *
  * Rules (all deterministic, no hand-picking):
  *  - a line must be at least MIN_PLIES long to be studied;
@@ -8,7 +8,8 @@
  *  - two lines may not share their first LCP_PLIES plies, so every line in the
  *    set branches early instead of differing on move seven;
  *  - at most MAX_PER_COURSE lines per course;
- *  - tiers are cumulative: beginner ⊂ intermediate ⊂ advanced.
+ *  - each level is a separate band: beginner, intermediate and advanced do not
+ *    repeat each other's lines.
  *
  * Nothing is deleted. Lines outside the set stay in the catalogue and are
  * revealed by the "Show all lines" switch in the course page.
@@ -118,7 +119,8 @@ function tierKey(line: OpeningLine): number {
 
 function assignTiers(selected: OpeningLine[]): Record<string, LineTier> {
   // Beginner = the simplest lines first: hand-written core, then basic, then
-  // short common lines. Advanced = everything in the curated set.
+  // short common lines. Intermediate takes the next band; Advanced keeps the
+  // deepest named theory. The bands never overlap.
   const ordered = [...selected].sort(
     (a, b) =>
       tierKey(a) - tierKey(b) ||
@@ -266,6 +268,7 @@ function main() {
     `shared first ${LCP_PLIES} plies, no duplicate final position, at most`,
     `${MAX_PER_COURSE} lines per course, target at least ${MIN_PER_COURSE}.`,
     "Nothing is deleted: hidden lines remain available behind \"Show all lines\".",
+    "Levels are separate bands: every curated line belongs to exactly one of Beginner, Intermediate or Advanced.",
     "",
     "| Course | Total | Curated | Beginner | Intermediate | Advanced | Hidden |",
     "| --- | ---: | ---: | ---: | ---: | ---: | ---: |",
@@ -290,13 +293,8 @@ function main() {
       relaxed,
     };
 
-    const running = {
-      beginner: counts.beginner,
-      intermediate: counts.beginner + counts.intermediate,
-      advanced: selected.length,
-    };
     report.push(
-      `| ${opening.name} | ${opening.lines.length} | ${selected.length} | ${running.beginner} | ${running.intermediate} | ${running.advanced} | ${hidden.length} |`,
+      `| ${opening.name} | ${opening.lines.length} | ${selected.length} | ${counts.beginner} | ${counts.intermediate} | ${counts.advanced} | ${hidden.length} |`,
     );
 
     if (selected.length < MIN_PER_COURSE) {

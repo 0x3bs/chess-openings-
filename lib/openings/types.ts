@@ -55,7 +55,7 @@ export type LineMove = {
 
 export type LineLevel = "basic" | "common" | "advanced";
 
-/** Cumulative teaching stage inside a course. */
+/** Teaching level inside a course; each curated line belongs to exactly one. */
 export type LineTier = "beginner" | "intermediate" | "advanced";
 
 export type OpeningLine = {

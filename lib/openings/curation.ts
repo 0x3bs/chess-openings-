@@ -24,7 +24,7 @@ const stored = raw as unknown as StoredCuration;
 export const CURATION_RULES = stored.rules;
 
 /**
- * Mark the small curated study set and the cumulative tier of every line.
+ * Mark the small curated study set and the study level of every line.
  * Lines outside the set are kept in the catalogue; the UI hides them until the
  * reader asks for "all lines", so no progress and no id ever disappears.
  */

@@ -49,7 +49,8 @@ AUDIT_OPENING=italian npm run audit
   names with a pure prefix move order. Removed lines are listed in
   `review/duplicate-lines.md`. Famous short entry lines are kept and marked
   `partial: true` (metadata only).
-- Each course shows a curated Beginner → Intermediate → Advanced study set.
+- Each course shows a curated study set split into separate Beginner,
+  Intermediate and Advanced levels.
   After changing move data run `npm run curate`; it keeps at least 12 plies per
   line, removes move-order twins and lines that share their first 12 plies,
   and writes `data/curation.json` plus `review/curation.md`. Hidden lines are

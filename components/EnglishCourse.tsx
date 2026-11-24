@@ -119,6 +119,10 @@ function shuffle<T>(items: T[]): T[] {
 
 export function EnglishCourse({ opening }: { opening: Opening }) {
   const { m, p, locale } = useI18n();
+  // The three levels are separate bands, not nested: choosing Intermediate
+  // hides the beginner lines instead of repeating them.
+  const [tier, setTier] = useState<LineTier>("beginner");
+  const [showAll, setShowAll] = useState(false);
   const [selectedId, setSelectedId] = useState(
     (opening.lines.find((item) => item.curated && item.tier === "beginner") ??
       opening.lines.find((item) => item.curated) ??
@@ -135,7 +139,12 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
     [opening.lines],
   );
   const hasCurated = curatedLines.length > 0;
-  const courseLines = hasCurated ? curatedLines : opening.lines;
+  const tierLines = useMemo(() => {
+    if (!hasCurated || showAll) return opening.lines;
+    return curatedLines.filter((item) => (item.tier ?? "advanced") === tier);
+  }, [hasCurated, opening.lines, curatedLines, showAll, tier]);
+  // Progress, counters and the next-line button follow the level on screen.
+  const courseLines = tierLines;
 
   const positions = useMemo(() => buildPositions(line), [line]);
   const totalPlies = line.moves.length;
@@ -166,8 +175,22 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
   const [reportText, setReportText] = useState("");
   const [reportSaved, setReportSaved] = useState(false);
   const [reportError, setReportError] = useState(false);
-  const [tier, setTier] = useState<LineTier>("beginner");
-  const [showAll, setShowAll] = useState(false);
+
+  // Switching level must also move the board to a line that belongs to that
+  // level, otherwise the list and the trainer disagree.
+  useEffect(() => {
+    if (!hasCurated || !tierLines.length) return;
+    if (tierLines.some((item) => item.id === selectedId)) return;
+    setSelectedId(tierLines[0].id);
+    setPly(0);
+    setMode("learn");
+    setCompleted(false);
+    setFeedback(null);
+    setMistakes(0);
+    setHints(0);
+    setHintedPlies(new Set());
+    setHintOpen(false);
+  }, [hasCurated, tierLines, selectedId]);
 
   useEffect(() => {
     setReportOpen(false);
@@ -350,7 +373,7 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
       const fresh: string[] = [];
       const rest: string[] = [];
 
-      for (const item of opening.lines) {
+      for (const item of courseLines) {
         const entry = progress[item.id];
         if (!entry) fresh.push(item.id);
         else if (new Date(entry.dueAt).getTime() <= now) due.push(item.id);
@@ -367,7 +390,7 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
       }
       return ordered;
     },
-    [opening.lines, progress, line.id],
+    [courseLines, progress, line.id],
   );
 
   const startDrill = useCallback(
@@ -394,7 +417,7 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
   );
 
   const startExam = useCallback(() => {
-    const finished = opening.lines
+    const finished = courseLines
       .filter((item) => completedOf(progress[item.id]))
       .map((item) => item.id);
 
@@ -413,7 +436,7 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
     setSelectedId(queue[0]);
     resetAttempt();
     scrollToBoard();
-  }, [opening.lines, progress, resetAttempt, scrollToBoard]);
+  }, [courseLines, progress, resetAttempt, scrollToBoard]);
 
   const advanceDrill = useCallback(() => {
     const nextIndex = drillIndex + 1;
@@ -542,8 +565,19 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
     const lineParam = params.get("line");
     const drillParam = params.get("drill");
 
-    if (lineParam && opening.lines.some((item) => item.id === lineParam)) {
-      setSelectedId(lineParam);
+    const linked = lineParam
+      ? opening.lines.find((item) => item.id === lineParam)
+      : undefined;
+    if (linked) {
+      setSelectedId(linked.id);
+      // Match the level to the linked line, otherwise the level
+      // reconciliation effect would replace it with another level's first line.
+      if (linked.curated && linked.tier) {
+        setTier(linked.tier);
+        setShowAll(false);
+      } else {
+        setShowAll(true);
+      }
       setMode(params.get("train") === "1" ? "train" : "learn");
     }
 
@@ -681,18 +715,8 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
       advanced: 0,
     };
     for (const item of curatedLines) counts[item.tier ?? "advanced"] += 1;
-    return {
-      beginner: counts.beginner,
-      intermediate: counts.beginner + counts.intermediate,
-      advanced: curatedLines.length,
-    };
+    return counts;
   }, [curatedLines]);
-  const tierLines = useMemo(() => {
-    if (!hasCurated || showAll) return opening.lines;
-    return curatedLines.filter(
-      (item) => TIER_RANK[item.tier ?? "advanced"] <= TIER_RANK[tier],
-    );
-  }, [hasCurated, opening.lines, curatedLines, showAll, tier]);
 
   const learned = courseLines.filter((item) =>
     learnedOf(progress[item.id]),
@@ -917,6 +941,7 @@ export function EnglishCourse({ opening }: { opening: Opening }) {
                       type="button"
                       className={`study-level${active ? " is-active" : ""}`}
                       aria-pressed={active}
+                      disabled={tierCounts[value] === 0}
                       onClick={() => {
                         setTier(value);
                         setShowAll(false);
