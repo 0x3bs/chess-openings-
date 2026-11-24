@@ -53,20 +53,142 @@ Licensed under the [MIT License](LICENSE).
   clean runs get a stronger green mark. The board has a size slider with −/+
   controls that grow or shrink width and height together.
 
-## Download and run
+## Installation and first run
 
-No account, database or API key is needed. You only need **Node.js 22** or newer
-(`node -v`). [INSTALL.md](INSTALL.md) explains how to install Node on Windows,
-macOS and Linux.
+ChessCoach is a local Next.js app. No account, database or API key is needed.
 
-### 1. Get the project
+You need three tools:
 
-**Option A — download the ZIP (no Git needed)**
+| Tool | What it is for | Do you install it separately? |
+| --- | --- | --- |
+| **Node.js 22 or newer** | Runs the app and the build | Yes |
+| **npm** | Installs dependencies and runs scripts | No — it comes with Node.js |
+| **Git** | Clones and updates the project | Only if you clone instead of downloading a ZIP |
+
+You can check what you already have:
+
+```bash
+node -v   # should print v22.x or newer
+npm -v
+git --version
+```
+
+If a command is missing, install that tool using the section for your operating
+system below.
+
+### 1. Install the tools
+
+#### Windows (PowerShell)
+
+Option A — `winget`:
+
+```powershell
+winget install OpenJS.NodeJS.LTS
+winget install Git.Git
+```
+
+Option B — installers:
+
+- Node.js: download the **LTS** installer from <https://nodejs.org>.
+- Git: download the installer from <https://git-scm.com/download/win>.
+
+After installing, **close and reopen PowerShell**, then check:
+
+```powershell
+node -v
+npm -v
+git --version
+```
+
+`npm` is installed with Node.js, so you do not need a separate npm download.
+
+#### macOS
+
+Option A — Homebrew:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install node git
+```
+
+If Homebrew is already installed, run only `brew install node git`.
+
+Option B — installers:
+
+- Node.js: download the **LTS** `.pkg` from <https://nodejs.org>.
+- Git: download it from <https://git-scm.com/download/mac>, or run
+  `xcode-select --install`.
+
+Check the versions:
+
+```bash
+node -v
+npm -v
+git --version
+```
+
+#### Linux
+
+The recommended way is **nvm**, because some distributions still ship an old
+Node.js version:
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+# close and reopen the terminal
+nvm install 22
+nvm use 22
+```
+
+The project includes `.nvmrc`, so inside the project folder you can later run
+`nvm use` to select Node 22 again.
+
+Install Git with your package manager:
+
+```bash
+# Ubuntu / Debian
+sudo apt update
+sudo apt install git
+
+# Fedora
+sudo dnf install git
+
+# Arch Linux
+sudo pacman -S git
+```
+
+If you install Node.js from the distribution instead of nvm, check it first:
+
+```bash
+node -v
+```
+
+It must be **v22 or newer**. If it is older, use nvm instead.
+
+Then check all three tools:
+
+```bash
+node -v
+npm -v
+git --version
+```
+
+### 2. Get the project
+
+**Option A — download the ZIP (Git is not required)**
 
 1. Open <https://github.com/0x3bs/chess-openings->.
 2. Click the green **Code** button, then **Download ZIP**.
-3. Extract the ZIP and open a terminal in the extracted folder. It contains
-   `package.json`, `app/`, `lib/` and the other project files.
+3. Extract the ZIP.
+4. Open a terminal in the extracted folder. It contains `package.json`,
+   `app/`, `lib/` and the other project files.
+
+To open a terminal in the right folder:
+
+- **Windows:** hold `Shift`, right-click the folder, then choose
+  **Open PowerShell window here**.
+- **macOS:** right-click the folder, then choose
+  **Services → New Terminal at Folder**.
+- **Linux:** open a terminal and `cd` into the folder.
 
 **Option B — clone with Git**
 
@@ -77,10 +199,21 @@ cd chess-openings-
 
 If you forked the project, use your own repository URL instead.
 
-### 2. Start the server
+### 3. Install dependencies
+
+From inside the project folder:
 
 ```bash
 npm install
+```
+
+This downloads Next.js, React, chess.js and chessground. Do not run this command
+with `sudo`; if npm asks for elevated permissions on Linux or macOS, use nvm
+instead of changing system folders.
+
+### 4. Start the app
+
+```bash
 npm run dev
 ```
 
@@ -95,11 +228,32 @@ npm run build
 npm start
 ```
 
+### 5. Check the installation (optional)
+
+```bash
+npm run check
+```
+
+This validates the courses, checks the Arabic translations and runs the
+TypeScript compiler.
+
+### Troubleshooting
+
+| Problem | Fix |
+| --- | --- |
+| `node: command not found` | Close and reopen the terminal after installing Node.js, then run `node -v` again. |
+| `npm: command not found` | npm comes with Node.js; reinstall Node.js from <https://nodejs.org>. |
+| `git: command not found` | Install Git for your operating system, or download the ZIP instead. |
+| Linux/macOS says `EACCES` during `npm install` | Do not use `sudo`. Install Node with nvm and run `npm install` again. |
+| Port 3000 is already in use | Run `npm run dev -- -p 3001` and open <http://localhost:3001>. |
+| Build fails after pulling an update | Delete `node_modules` and `.next`, then run `npm install` and `npm run build` again. |
+| Phone cannot open the site | Use the laptop’s LAN IP and start with `npm run dev -- -H <your-ip>`. See [INSTALL.md](INSTALL.md). |
+
 > **Progress file.** On the first finished line the server creates
 > `data/progress.json`. It is git-ignored, needs no database or API key, and is
 > shared by every device that opens this server. Back it up. See
-> [INSTALL.md](INSTALL.md) for Windows, macOS and Linux steps, including how to
-> open the site from your phone.
+> [INSTALL.md](INSTALL.md) for the longer walkthrough, including opening the
+> site from your phone and moving progress to another computer.
 
 ### Languages
 
